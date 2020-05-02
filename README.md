@@ -23,7 +23,7 @@ Solar System object location calculation for The Expanse RPG.
 
 Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot Solar System map.
 
-Jplephem should automatically install ephem, but for some reason that did not happen in Windows. Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10. Probably works wherever Python works.
+Jplephem should automatically install ephem, but for some reason that did not happen in Windows. Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10. Probably works wherever Python and above mentioned modules work.
 
 ## Running program
 
@@ -53,13 +53,13 @@ To make files smaller, we extract only few years from them:
 
 Extracted files can be found from the data subdirectory in this repository.
 
-Above ast343de430.bsp contains only some 300+ most important asteroids. Others must be fetched separately.
+Above ast343de430.bsp contains only some 300+ most important asteroids. Others must be fetched separately:
 
 	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1677&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=mikko@syrja.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=434&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=mikko@syrja.org&TYPE=-B
 
-Books, TV Show and Role-playing game all lack some tehcnical details. Some improvisation is needed.
+Books, TV Show and Role-playing game all lack technical details. Some improvisation is needed.
 
-For example, I have used Tycho Brahe (asteroid 1677) as a location of Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just rotates around sun like any other asteroid.
+For example, I have used Tycho Brahe (asteroid 1677) as a location of Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
 Same goes with destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". So. I just searched suitably located asteroid (127 Johanna) with more or less same orbital period and used its position.
-
