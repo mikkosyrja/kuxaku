@@ -1,0 +1,5 @@
+*~
+*.spec
+*.pro.user*
+*.kate-swp
+/output/
