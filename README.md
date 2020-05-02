@@ -16,13 +16,14 @@ Solar System object location calculation for The Expanse RPG.
 
 ## Required Python modules
 
+- ephem <https://pypi.org/project/ephem/>
 - jplephem <https://pypi.org/project/jplephem/>
 - spktype21 <https://pypi.org/project/spktype21/>
 - matplotlib <https://matplotlib.org/index.html>
 
-Jplephem makes most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot Solar System map.
+Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot Solar System map.
 
-Program is tested in OpenSuse Tumbleweed Linux and Windows 10. Probably works wherever Python works.
+Jplephem should automatically install ephem, but for some reason that did not happen in Windows. Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10. Probably works wherever Python works.
 
 ## Running program
 
@@ -40,7 +41,7 @@ Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/gene
 
 Some files contain ephemerides data only until year 2050 and The Expanse happens in 2350. So, we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all Solar System objects in 2350.
 
-This is acceptable for gaming purposes and most players will never notice. What is important here, is that heavenly bodies move predictably during the campaign and their relative distances can be used as a plot points.
+This is acceptable for gaming purposes and most players will never notice. What is important here, is that heavenly bodies move predictably during the campaign and their relative distances can be used as a plot point.
 
 To make files smaller, we extract only few years from them:
 
