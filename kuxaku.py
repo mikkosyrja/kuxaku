@@ -28,6 +28,7 @@ au = 149597870.691	# astronomical unit in kilometers
 
 numpy.set_printoptions(precision=5)
 
+plot.figure(1)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor('black')
 
@@ -37,7 +38,8 @@ axis.spines['right'].set_color('white')
 axis.spines['left'].set_color('white')
 axis.tick_params(labelcolor='white', colors='white')
 
-boxsize = 5		# ±au
+innersize = 5		# ±au
+outersize = 32		# ±au
 
 planetcolor = [0, 0.5, 0]
 colonycolor = [0.6, 0, 0.6]
@@ -54,6 +56,12 @@ stationsize = 0.3
 
 orbitplosize = 0.04
 
+def addellipse(auposition, color, size):
+	ellipse = Ellipse(xy = auposition, width = size, height = size)
+	axis.add_artist(ellipse)
+	ellipse.set_facecolor(color)
+	ellipse.set_clip_box(axis.bbox)
+
 def distance(position):		# position in kilometers
 	return math.sqrt(position[0] * position[0] + position[1] * position[1] + position[2] * position[2]) / au
 
@@ -63,21 +71,15 @@ def direction(position):	# direction in radians
 def printposition(name, position, color, size):
 	print(name + ":", position, distance(position), direction(position) / math.pi * 180)
 	auposition = position / au
-	ellipse = Ellipse(xy = auposition, width = size / 2, height = size / 2)
-	axis.add_artist(ellipse)
-	ellipse.set_facecolor(color)
-	ellipse.set_clip_box(axis.bbox)
+	addellipse(auposition, color, size / 2)
 	vertical = ('top' if position[1] < 0 else 'bottom')
 	horizontal = ('right' if position[0] < 0 else 'left')
 	plot.text(auposition[0], auposition[1], name, fontsize = 5, color='white', ha = horizontal, va = vertical)
 
-def planetorbit(kernel, center, planet, months, color):
+def planetorbit(kernel, center, planet, months, color, size = orbitplosize):
 	for index in range(0, months * 30 + 1, 30):
 		pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
-		ellipse = Ellipse(xy = pos / au, width = orbitplosize, height = orbitplosize)
-		axis.add_artist(ellipse)
-		ellipse.set_facecolor(color)
-		ellipse.set_clip_box(axis.bbox)
+		addellipse(pos / au, color, size)
 
 planets = SPK.open('data/planets.bsp')
 #print(planets)
@@ -92,7 +94,8 @@ printposition("", sun, [1, 1, 0], sunsize)
 printposition("mercury", planets[1,199].compute(julian) + planets[0,1].compute(julian), mooncolor, moonsize)
 printposition("venus", planets[2,299].compute(julian) + planets[0,2].compute(julian), planetcolor, moonsize)
 
-planetorbit(planets, 2, 299, 3, planetcolor)
+planetorbit(planets, 1, 199, 1, mooncolor)		# mercury
+planetorbit(planets, 2, 299, 3, planetcolor)	# venus
 
 earthbary = planets[0,3].compute(julian)
 planetorbit(planets, 3, 399, 6, [0, 0, 1])
@@ -124,10 +127,7 @@ def printasteroid(name, id, color = asteroidcolor, size = asteroidsize):
 def asteroidorbit(id, months, color):
 	for index in range(0, months * 30 + 1, 30):
 		pos = asteroids[10, 2000000 + id].compute(julian + index)[:3] + planets[0,10].compute(julian + index)
-		ellipse = Ellipse(xy = pos / au, width = orbitplosize, height = orbitplosize)
-		axis.add_artist(ellipse)
-		ellipse.set_clip_box(axis.bbox)
-		ellipse.set_facecolor(color)
+		addellipse(pos / au, color, orbitplosize)
 
 asteroidorbit(1, 6, colonycolor)	# ceres
 asteroidorbit(2, 6, colonycolor)	# pallas
@@ -176,10 +176,7 @@ def asteroidorbit21(filename, id, months, color):
 	kernel = SPKType21.open(filename)
 	for index in range(0, months * 30 + 1, 30):
 		pos = kernel.compute_type21(0, 2000000 + id, julian + index)[0]
-		ellipse = Ellipse(xy = pos / au, width = orbitplosize, height = orbitplosize)
-		axis.add_artist(ellipse)
-		ellipse.set_clip_box(axis.bbox)
-		ellipse.set_facecolor(color)
+		addellipse(pos / au, color, orbitplosize)
 
 #printasteroid21('data/2000434.bsp', "hungaria", 434)
 printasteroid21('data/2000588.bsp', "achilles", 588)
@@ -199,6 +196,39 @@ jupiterbary = jovian[0,5].compute(julian)
 planetorbit(jovian, 5, 599, 24, planetcolor)
 
 printposition("jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize)
+
+axis.set_xlim(-innersize, innersize)
+axis.set_ylim(-innersize, innersize)
+
+plot.title('Inner System ' + str(expansedate.date()), color='white')
+plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight')
+
+#
+#	outer planets
+#
+outerscale = 3	# size multiplier
+
+plot.figure(2)
+figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
+axis.patch.set_facecolor('black')
+
+axis.spines['bottom'].set_color('white')
+axis.spines['top'].set_color('white') 
+axis.spines['right'].set_color('white')
+axis.spines['left'].set_color('white')
+axis.tick_params(labelcolor='white', colors='white')
+
+printposition("", sun, [1, 1, 0], sunsize * outerscale)
+
+printposition("earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], planetsize * outerscale)
+printposition("mars", martian[4,499].compute(julian)[:3] + marsbary, [1, 0, 0], planetsize * outerscale)
+
+printasteroid("ceres", 1, colonycolor, asteroidsize * outerscale)
+printasteroid21('data/2001677.bsp', "tycho", 1677, stationcolor, stationsize * outerscale)
+
+planetorbit(jovian, 5, 599, 24, planetcolor, orbitplosize * outerscale)
+
+printposition("jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize * outerscale)
 #printposition("io", jovian[5,501].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
 #printposition("europa", jovian[5,502].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
 #printposition("ganymede", jovian[5,503].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
@@ -212,7 +242,9 @@ cronian = SPK.open('data/cronian.bsp')
 #print(cronian)
 
 saturnbary = cronian[0,6].compute(julian)
+planetorbit(cronian, 6, 699, 24, planetcolor, orbitplosize * outerscale)
 
+printposition("saturn", cronian[6,699].compute(julian)[:3] + saturnbary, planetcolor, gasgiantsize * outerscale)
 #printposition("saturn", cronian[6,699].compute(julian)[:3] + saturnbary, planetcolor, gasgiantsize)
 #printposition("mimas", cronian[6,601].compute(julian)[:3] + saturnbary, mooncolor, moonsize)
 #printposition("enceladus", cronian[6,602].compute(julian)[:3] + saturnbary, mooncolor, moonsize)
@@ -224,8 +256,26 @@ saturnbary = cronian[0,6].compute(julian)
 #printposition("iapetus", cronian[6,608].compute(julian)[:3] + saturnbary, colonycolor, moonsize)
 #printposition("phoebe", cronian[6,609].compute(julian)[:3] + saturnbary, mooncolor, moonsize)		# destroyed by mars
 
-axis.set_xlim(-boxsize, boxsize)
-axis.set_ylim(-boxsize, boxsize)
+uranian = SPK.open('data/uranian.bsp')
+#print(uranian)
 
-plot.title('Inner System ' + str(expansedate.date()), color='white')
-plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight')
+uranusbary = uranian[0,7].compute(julian)
+planetorbit(uranian, 7, 799, 24, planetcolor, orbitplosize * outerscale)
+
+printposition("uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale)
+planetorbit(uranian, 7, 799, 24, planetcolor)
+
+neptunian = SPK.open('data/neptunian.bsp')
+#print(neptunian)
+
+neptunebary = neptunian[0,8].compute(julian)
+planetorbit(neptunian, 8, 899, 24, planetcolor)
+
+printposition("neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale)
+planetorbit(neptunian, 8, 899, 24, planetcolor, orbitplosize * outerscale)
+
+axis.set_xlim(-outersize, outersize)
+axis.set_ylim(-outersize, outersize)
+
+plot.title('Outer System ' + str(expansedate.date()), color='white')
+plot.savefig('output/outer.png', dpi=300, facecolor='black', bbox_inches='tight')

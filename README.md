@@ -23,15 +23,19 @@ Solar System object location calculation for The Expanse RPG.
 
 Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot Solar System map.
 
-Jplephem should automatically install ephem, but for some reason that did not happen in Windows. Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10. Probably works wherever Python and above mentioned modules work.
+Jplephem should automatically install ephem, but for some reason that did not happen in Windows. So, may need manual installation with pip.
+
+Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10 with Python 3.8. Probably works wherever some recent Python version and above mentioned modules work.
 
 ## Running program
 
-Copy or clone the repository and run kuxaku.py. It prints locations to console and creates simple map kuxaku.png to output subdirectory.
+Copy or clone the repository and run kuxaku.py. It creates two simple maps inner.png and outer.png to output subdirectory. First one has inner planet and asteroid locations within five AUs (Jupiters's orbit). Second map contains rest of the Solar System.
 
-### Solar System Map
+### Solar System Maps
 
-Map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
+Inner planet map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
+
+Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune.
 
 ### Communication Delay
 
@@ -50,6 +54,8 @@ Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/gene
 - ast343de430.bsp (Asteroid Belt)
 - jup310.bsp (Jupiter and its moons)
 - sat427.bsp (Saturn and its moons)
+- ura111.bsp (Uranus and its moons)
+- nep081.bsp (Neptune and its moons)
 
 Some files contain ephemerides data only until year 2050 and The Expanse happens in 2350. So, we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all Solar System objects in 2350.
 
@@ -62,6 +68,8 @@ To make files smaller, we extract only few years from them:
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 mar097.bsp martian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 jup310.bsp jovian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 sat427.bsp cronian.bsp
+	python3 -m jplephem excerpt 2020/1/1 2025/1/1 ura111.bsp uranian.bsp
+	python3 -m jplephem excerpt 2020/1/1 2025/1/1 nep081.bsp neptunian.bsp
 
 Extracted files can be found from the data subdirectory in this repository.
 
