@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1677&OPT=Make+SPK&OPTION=Make+SPK&START=2000-JAN-01&STOP=2101-JAN-01&EMAIL=mikko@syrja.org&TYPE=-B
-
 import math
 import numpy
 import ephem
@@ -9,7 +7,7 @@ import ephem
 from jplephem.spk import SPK
 
 import matplotlib
-matplotlib.use('ps')
+#matplotlib.use('ps')
 
 import matplotlib.pyplot as plot
 from matplotlib.patches import Ellipse
@@ -51,7 +49,7 @@ earthbary = planets[0,3].compute(julian)
 printposition("earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], 1)
 #printposition("moon", planets[3,301].compute(julian) + earthbary, [0, 0, 1], 0.5)
 
-#l4 = SPK.open('L4_de431.bsp')
+#l4 = SPK.open('../original/ephemerides/L4_de431.bsp')
 #print("l4: ", l4[10,394].compute(2457061.5) - sun)
 
 martian = SPK.open('data/martian.bsp')
@@ -61,10 +59,11 @@ marsbary = martian[0,4].compute(julian)
 
 printposition("mars", martian[4,499].compute(julian)[:3] + marsbary, [1, 0, 0], 1)
 #printposition("phobos", martian[4,401].compute(julian)[:3] + marsbary, [1, 0, 0], 0.5)
+#printposition("deimos", martian[4,402].compute(julian)[:3] + marsbary, [1, 0, 0], 0.5)
 
 #asteroids = SPK.open('data/asteroids.bsp')
 #asteroids = SPK.open('data/original/codes_300ast_20100725.bsp')
-asteroids = SPK.open('data/original/ast343de430.bsp')
+asteroids = SPK.open('../original/ephemerides/ast343de430.bsp')
 #print(asteroids)
 
 printposition("ceres", asteroids[10,2000001].compute(julian) + sun, [0, 0, 1], 0.5)
@@ -105,7 +104,7 @@ printposition("massalia", asteroids[10,2000020].compute(julian) + sun, [0, 1, 1]
 def printasteroid(id):	# for testing
 	printposition(str(id), asteroids[10,2000000 + id].compute(julian) + sun, [0, 0, 0], 0.3)
 
-printposition("Anderson", asteroids[10,2000127].compute(julian) + sun, [0, 0, 0], 0.3)	# johanna
+printposition("anderson", asteroids[10,2000127].compute(julian) + sun, [0, 0, 0], 0.3)	# johanna
 
 tycho = SPKType21.open('data/2001677.bsp')
 printposition("tycho", tycho.compute_type21(0, 2001677, julian)[0], [0, 0, 0], 0.3)
@@ -140,6 +139,7 @@ printposition("saturn", cronian[6,699].compute(julian)[:3] + saturnbary, [0, 1, 
 #printposition("titan", cronian[6,606].compute(julian)[:3] + saturnbary, [0, 1, 0], 1)
 #printposition("hyperion", cronian[6,607].compute(julian)[:3] + saturnbary, [0, 1, 0], 1)
 #printposition("iapetus", cronian[6,608].compute(julian)[:3] + saturnbary, [0, 1, 0], 1)
+#printposition("phoebe", cronian[6,609].compute(julian)[:3] + saturnbary, [0, 1, 0], 1)
 
 axis.set_xlim(-5, 5)
 axis.set_ylim(-5, 5)
