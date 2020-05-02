@@ -29,6 +29,18 @@ Jplephem should automatically install ephem, but for some reason that did not ha
 
 Copy or clone the repository and run kuxaku.py. It prints locations to console and creates simple map kuxaku.png to output subdirectory.
 
+### Solar System Map
+
+Map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
+
+### Communication Delay
+
+xxx
+
+### Travel Time
+
+xxx
+
 ## Ephemerides data
 
 Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
@@ -55,8 +67,11 @@ Extracted files can be found from the data subdirectory in this repository.
 
 Above ast343de430.bsp contains only some 300+ most important asteroids. Others must be fetched separately:
 
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1677&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=mikko@syrja.org&TYPE=-B
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=434&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=mikko@syrja.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1677&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=588&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=624&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=617&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=884&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
 
 Books, TV Show and Role-playing game all lack technical details. Some improvisation is needed.
 
