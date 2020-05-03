@@ -38,9 +38,6 @@ axis.spines['right'].set_color('white')
 axis.spines['left'].set_color('white')
 axis.tick_params(labelcolor='white', colors='white')
 
-innersize = 5		# ±au
-outersize = 32		# ±au
-
 planetcolor = [0, 0.5, 0]
 colonycolor = [0.6, 0, 0.6]
 stationcolor = [0.6, 0.6, 0]
@@ -197,6 +194,7 @@ planetorbit(jovian, 5, 599, 24, planetcolor)
 
 printposition("jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize)
 
+innersize = 5		# ±au
 axis.set_xlim(-innersize, innersize)
 axis.set_ylim(-innersize, innersize)
 
@@ -206,7 +204,7 @@ plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight'
 #
 #	outer planets
 #
-outerscale = 3	# size multiplier
+outerscale = 3		# size multiplier
 
 plot.figure(2)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
@@ -229,14 +227,6 @@ printasteroid21('data/2001677.bsp', "tycho", 1677, stationcolor, stationsize * o
 planetorbit(jovian, 5, 599, 24, planetcolor, orbitplosize * outerscale)
 
 printposition("jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize * outerscale)
-#printposition("io", jovian[5,501].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
-#printposition("europa", jovian[5,502].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
-#printposition("ganymede", jovian[5,503].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
-#printposition("callisto", jovian[5,504].compute(julian)[:3] + jupiterbary, colonycolor, moonsize)
-#printposition("amalthea", jovian[5,505].compute(julian)[:3] + jupiterbary, mooncolor, moonsize)
-#printposition("thebe", jovian[5,514].compute(julian)[:3] + jupiterbary, mooncolor, moonsize)
-#printposition("adrastea", jovian[5,515].compute(julian)[:3] + jupiterbary, mooncolor, moonsize)
-#printposition("metis", jovian[5,516].compute(julian)[:3] + jupiterbary, mooncolor, moonsize)
 
 cronian = SPK.open('data/cronian.bsp')
 #print(cronian)
@@ -274,8 +264,42 @@ planetorbit(neptunian, 8, 899, 24, planetcolor)
 printposition("neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale)
 planetorbit(neptunian, 8, 899, 24, planetcolor, orbitplosize * outerscale)
 
+outersize = 32		# ±au
 axis.set_xlim(-outersize, outersize)
 axis.set_ylim(-outersize, outersize)
 
 plot.title('Outer System ' + str(expansedate.date()), color='white')
 plot.savefig('output/outer.png', dpi=300, facecolor='black', bbox_inches='tight')
+
+#
+#	jovian system
+#
+jovianscale = 0.001		# size multiplier
+
+plot.figure(3)
+figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
+axis.patch.set_facecolor('black')
+
+axis.spines['bottom'].set_color('white')
+axis.spines['top'].set_color('white') 
+axis.spines['right'].set_color('white')
+axis.spines['left'].set_color('white')
+axis.tick_params(labelcolor='white', colors='white')
+
+printposition("jupiter", jovian[5,599].compute(julian)[:3], planetcolor, gasgiantsize * jovianscale)
+printposition("io", jovian[5,501].compute(julian)[:3], colonycolor, moonsize * jovianscale)
+printposition("europa", jovian[5,502].compute(julian)[:3], colonycolor, moonsize * jovianscale)
+printposition("ganymede", jovian[5,503].compute(julian)[:3], colonycolor, moonsize * jovianscale)
+printposition("callisto", jovian[5,504].compute(julian)[:3], colonycolor, moonsize * jovianscale)
+printposition("amalthea", jovian[5,505].compute(julian)[:3], mooncolor, moonsize * jovianscale)
+printposition("thebe", jovian[5,514].compute(julian)[:3], mooncolor, moonsize * jovianscale)
+printposition("adrastea", jovian[5,515].compute(julian)[:3], mooncolor, moonsize * jovianscale)
+printposition("metis", jovian[5,516].compute(julian)[:3], mooncolor, moonsize * jovianscale)
+
+joviansize = 0.01		# ±au
+axis.set_xlim(-joviansize, joviansize)
+axis.set_ylim(-joviansize, joviansize)
+
+plot.title('Jovian System ' + str(expansedate.date()), color='white')
+plot.savefig('output/jovian.png', dpi=300, facecolor='black', bbox_inches='tight')
+

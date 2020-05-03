@@ -29,13 +29,13 @@ Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10 with
 
 ## Running program
 
-Copy or clone the repository and run kuxaku.py. It creates two simple maps inner.png and outer.png to output subdirectory. First one has inner planet and asteroid locations within five AUs (Jupiters's orbit). Second map contains rest of the Solar System.
+Copy or clone the repository and run kuxaku.py. It creates some maps to output subdirectory.
 
 ### Solar System Maps
 
 Inner planet map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
 
-Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune.
+Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune. Separate Jovian map displays positions of major Jovian moons.
 
 ### Communication Delay
 
