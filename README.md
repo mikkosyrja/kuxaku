@@ -35,7 +35,9 @@ Copy or clone the repository and run kuxaku.py. It creates some maps to output s
 
 Inner planet map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
 
-Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune. Separate Jovian map displays positions of major Jovian moons.
+Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
+
+Separate Jovian and Cronian maps display major moon positions around Jupiter and Saturnus. Future orbit positions for some moons are plotted at one hour intervals.
 
 ### Communication Delay
 
@@ -51,7 +53,6 @@ Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/gene
 
 - de430.bsp (Mercury, Venus, Earth and Moon)
 - mar097.bsp (Mars, Phobos and Deimos)
-- ast343de430.bsp (Asteroid Belt)
 - jup310.bsp (Jupiter and its moons)
 - sat427.bsp (Saturn and its moons)
 - ura111.bsp (Uranus and its moons)
@@ -64,24 +65,21 @@ This is acceptable for gaming purposes and most players will never notice. What 
 To make files smaller, we extract only few years from them:
 
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 de430.bsp planets.bsp
-	python3 -m jplephem excerpt 2020/1/1 2025/1/1 ast343de430.bsp asteroids.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 mar097.bsp martian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 jup310.bsp jovian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 sat427.bsp cronian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 ura111.bsp uranian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 nep081.bsp neptunian.bsp
 
-Extracted files can be found from the data subdirectory in this repository.
+Asteroids must be fetched separately with following parameters:
 
-Above ast343de430.bsp contains only some 300+ most important asteroids. Others must be fetched separately:
+	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
 
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1677&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=588&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=624&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=617&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
-	https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=884&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B
+Just change the OBJECT parameter to asteroid id number (for example, OBJECT=433 for Eros).
 
-Books, TV Show and Role-playing game all lack technical details. Some improvisation is needed.
+Extracted ephemerides files can be found from the data subdirectory in this repository.
+
+Because books, TV Show and role-playing game all lack technical details, some improvisation is needed.
 
 For example, I have used Tycho Brahe (asteroid 1677) as a location of Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
