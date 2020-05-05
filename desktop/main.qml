@@ -5,8 +5,7 @@ ApplicationWindow
 {
 	id: window
 	visible: true
-	width: 640
-	height: 480
+	width: 640; height: 480
 	title: qsTr("Kuxaku")
 
 	header: ToolBar
@@ -40,12 +39,13 @@ ApplicationWindow
 		width: window.width * 0.66
 		height: window.height
 
-		Column {
+		Column
+		{
 			anchors.fill: parent
 
 			ItemDelegate
 			{
-				text: qsTr("Page 1")
+				text: qsTr("Inner Planets")
 				width: parent.width
 				onClicked:
 				{
@@ -55,11 +55,31 @@ ApplicationWindow
 			}
 			ItemDelegate
 			{
-				text: qsTr("Page 2")
+				text: qsTr("Outer Planets")
 				width: parent.width
 				onClicked:
 				{
 					stackView.push("Page2Form.ui.qml")
+					drawer.close()
+				}
+			}
+			ItemDelegate
+			{
+				text: qsTr("Communication Delay")
+				width: parent.width
+				onClicked:
+				{
+					stackView.push("Page3Form.ui.qml")
+					drawer.close()
+				}
+			}
+			ItemDelegate
+			{
+				text: qsTr("Travel Times")
+				width: parent.width
+				onClicked:
+				{
+					stackView.push("Page4Form.ui.qml")
 					drawer.close()
 				}
 			}

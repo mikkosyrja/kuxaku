@@ -11,4 +11,14 @@ Page {
 		text: qsTr("You are on Page 1.")
 		anchors.centerIn: parent
 	}
+
+ Image {
+	 id: image
+	 x: 141
+	 y: 64
+	 width: 318
+	 height: 272
+	 fillMode: Image.PreserveAspectFit
+	 source: "../output/inner.png"
+ }
 }
