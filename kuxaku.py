@@ -344,7 +344,8 @@ cell_text = []
 for row in range(len(places)):
 	cell_row = []
 	for col in range(len(places)):
-		cell_row.append('{0:.2g}'.format(distance(positions[row] - positions[col]) * delay))
+		value = distance(positions[row] - positions[col]) * delay
+		cell_row.append('{0:.2g}'.format(value) if value < 100 else '{0:.3g}'.format(value))
 	cell_text.append(cell_row)
 
 axis.axis('off')

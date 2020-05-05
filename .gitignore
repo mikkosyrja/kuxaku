@@ -2,3 +2,4 @@
 *.spec
 *.pro.user*
 *.kate-swp
+/build*/
