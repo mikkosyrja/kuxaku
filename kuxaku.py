@@ -38,7 +38,7 @@ acc = au * 1000 / 9.81		# distance in meters and acceleration
 minx = miny = maxx = maxy = 0	# boundaries
 
 places = ('Mercury', 'Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
-positions = []
+positions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
 
@@ -81,7 +81,7 @@ def addtextbox(text, axis):
 		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = [0.6, 0.6, 0.6]))
 
 def addellipse(auposition, color, size):
-	ellipse = Ellipse(xy = auposition, width = size, height = size, label='$y = numbers')
+	ellipse = Ellipse(xy = auposition, width = size, height = size)
 	axis.add_artist(ellipse)
 	ellipse.set_facecolor(color)
 	ellipse.set_clip_box(axis.bbox)
@@ -274,6 +274,11 @@ outerorbit(uranian, 7, 799, 8, planetcolor, orbitplotsize * outerscale)
 
 plotposition("uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale)
 
+#gatedistance = 22 * au	# "little less than 2 AU outside the orbit of Uranus"
+#gatedirection = -math.pi / 4
+#solgate = numpy.array([gatedistance * math.cos(gatedirection), gatedistance * math.sin(gatedirection), 0.0])
+#plotposition("sol gate", solgate, stationcolor, stationsize * outerscale)
+
 neptunian = SPK.open('data/neptunian.bsp')
 #print(neptunian)
 
@@ -383,7 +388,10 @@ distances = []	# distances in au
 for row in range(len(places)):
 	cellrow = []
 	for col in range(len(places)):
-		cellrow.append(distance(positions[row] - positions[col]))
+		if ( col >= row ):
+			cellrow.append(distance(positions[row] - positions[col]))
+		else:	# mirror value
+			cellrow.append(distances[col][row])
 	distances.append(cellrow)
 
 #
@@ -391,22 +399,24 @@ for row in range(len(places)):
 #
 plot.figure(5)
 figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
-axis.patch.set_facecolor('black')
 
 celltext = []
 for row in range(len(places)):
 	cellrow = []
 	for col in range(len(places)):
-		value = distances[row][col] * delay
-		cellrow.append('{0:.2g}'.format(value) if value < 100 else '{0:.3g}'.format(value))
+		if ( col >= row ):
+			value = distances[row][col] * delay
+			cellrow.append('{0:.2g}'.format(value) if value < 100 else '{0:.3g}'.format(value))
+		else:	# mirror value
+			cellrow.append(celltext[col][row])
 	celltext.append(cellrow)
 
 axis.axis('off')
 axis.axis('tight')
+axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+axis.set_title('Communication Delay in Minutes ' + str(expansedate.date()), color='white')
+axis.patch.set_facecolor('black')
 
-table = plot.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-
-plot.title('Communication Delay in Minutes ' + str(expansedate.date()), color='white')
 plot.savefig('output/delay.png', dpi=300, facecolor='black', bbox_inches='tight')
 
 #
@@ -414,49 +424,27 @@ plot.savefig('output/delay.png', dpi=300, facecolor='black', bbox_inches='tight'
 #
 plot.figure(6)
 figure, axis = plot.subplots(3, 1, figsize=(10, 9), subplot_kw={'aspect': 'equal'})
-axis[0].patch.set_facecolor('black')
-axis[1].patch.set_facecolor('black')
-axis[2].patch.set_facecolor('black')
 
-celltext03 = []		# 0.3 g
-for row in range(len(places)):
-	cellrow = []
-	for col in range(len(places)):
-		value = 2 * math.sqrt(distances[row][col] * acc / 0.3)
-		cellrow.append('{0:.3g}'.format(value / 3600))
-	celltext03.append(cellrow)
+def traveltime(g, axis):
+	celltext = []
+	for row in range(len(places)):
+		cellrow = []
+		for col in range(len(places)):
+			if ( col >= row ):
+				value = 2 * math.sqrt(distances[row][col] * acc / g)
+				cellrow.append('{0:.3g}'.format(value / 3600))
+			else:	# mirror value
+				cellrow.append(celltext[col][row])
+		celltext.append(cellrow)
 
-celltext10 = []		# 1.0 g
-for row in range(len(places)):
-	cellrow = []
-	for col in range(len(places)):
-		value = 2 * math.sqrt(distances[row][col] * acc / 1.0)
-		cellrow.append('{0:.3g}'.format(value / 3600))
-	celltext10.append(cellrow)
+	axis.axis('off')
+	axis.axis('tight')
+	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color='white')
+	axis.patch.set_facecolor('black')
 
-celltext20 = []		# 2.0 g
-for row in range(len(places)):
-	cellrow = []
-	for col in range(len(places)):
-		value = 2 * math.sqrt(distances[row][col] * acc / 2.0)
-		cellrow.append('{0:.3g}'.format(value / 3600))
-	celltext20.append(cellrow)
-
-axis[0].axis('off')
-axis[0].axis('tight')
-
-axis[1].axis('off')
-axis[1].axis('tight')
-
-axis[2].axis('off')
-axis[2].axis('tight')
-
-table = axis[0].table(cellText = celltext03, rowLabels = places, colLabels = places, loc = 'center')
-table = axis[1].table(cellText = celltext10, rowLabels = places, colLabels = places, loc = 'center')
-table = axis[2].table(cellText = celltext20, rowLabels = places, colLabels = places, loc = 'center')
-
-axis[0].set_title('Travel Time in Hours (0.3g) ' + str(expansedate.date()), color='white')
-axis[1].set_title('Travel Time in Hours (1.0g) ' + str(expansedate.date()), color='white')
-axis[2].set_title('Travel Time in Hours (2.0g) ' + str(expansedate.date()), color='white')
+traveltime(0.3, axis[0])
+traveltime(1.0, axis[1])
+traveltime(2.0, axis[2])
 
 plot.savefig('output/travel.png', dpi=300, facecolor='black', bbox_inches='tight')
