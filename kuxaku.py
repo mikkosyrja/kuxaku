@@ -20,13 +20,22 @@ if ( len(sys.argv) > 1 ):
 	datestring = sys.argv[1]
 
 expansedate = dateutil.parser.parse(datestring)
-if ( expansedate.year < 2350 or expansedate.year >= 2355 ):
-	print("illegal date:", expansedate, "Year must be between 2050 - 2054")
+if ( expansedate.year < 2350 or expansedate.year >= 2360 ):
+	print("illegal date:", expansedate, "Year must be between 2050 - 2059")
 	sys.exit(1)
+
+date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
+julian = ephem.julian_date(date)
+print("date:", date, "julian:", julian)
+
+lastdate = ephem.Date(expansedate.replace(year = 2029))
+lastjulian = ephem.julian_date(lastdate)
 
 au = 149597870.691			# astronomical unit in kilometers
 delay = au / 17987547.48	# communication delay in minutes/au
 acc = au * 1000 / 9.81		# distance in meters and acceleration 
+
+minx = miny = maxx = maxy = 0	# boundaries
 
 places = ('Mercury', 'Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
 positions = []
@@ -58,11 +67,29 @@ stationsize = 0.3
 
 orbitplotsize = 0.04
 
+def addtextbox(text, axis):
+	xpos = ypos = 0.05
+	horizontal = 'left'
+	vertical = 'bottom'
+	if ( abs(minx) > abs(maxx) ):
+		xpos = 0.95
+		horizontal = 'right'
+	if ( abs(miny) > abs(maxy) ):
+		ypos = 0.95
+		vertical = 'top'
+	axis.text(xpos, ypos, text, horizontalalignment = horizontal, verticalalignment = vertical,
+		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = [0.6, 0.6, 0.6]))
+
 def addellipse(auposition, color, size):
-	ellipse = Ellipse(xy = auposition, width = size, height = size)
+	ellipse = Ellipse(xy = auposition, width = size, height = size, label='$y = numbers')
 	axis.add_artist(ellipse)
 	ellipse.set_facecolor(color)
 	ellipse.set_clip_box(axis.bbox)
+	global minx, miny, maxx, maxy
+	minx = min(minx, auposition[0])
+	miny = min(miny, auposition[1])
+	maxx = max(maxx, auposition[0])
+	maxy = max(maxy, auposition[1])
 
 def distance(position):		# position in kilometers
 	return math.sqrt(position[0] * position[0] + position[1] * position[1] + position[2] * position[2]) / au
@@ -80,18 +107,17 @@ def plotposition(name, position, color, size):
 
 def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 	for index in range(30, months * 30 + 1, 30):
-		pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
-		addellipse(pos / au, color, size)
+		if ( julian + index < lastjulian ):
+			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
+			addellipse(pos / au, color, size)
 
 #
 #	inner planets
 #
+minx = miny = maxx = maxy = 0
+
 planets = SPK.open('data/planets.bsp')
 #print(planets)
-
-date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
-julian = ephem.julian_date(date)
-print("date:", date, "julian:", julian)
 
 sun = planets[0, 10].compute(julian)
 plotposition("", sun, [1, 1, 0], sunsize)
@@ -186,9 +212,11 @@ planetorbit(jovian, 5, 599, 24, planetcolor)
 
 plotposition("jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize)
 
-innersize = 5		# ±au
+innersize = 5.5		# ±au
 axis.set_xlim(-innersize, innersize)
 axis.set_ylim(-innersize, innersize)
+
+addtextbox('1 orbit dot = 1 month', axis)
 
 plot.title('Inner System ' + str(expansedate.date()), color='white')
 plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight')
@@ -196,6 +224,8 @@ plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight'
 #
 #	outer planets
 #
+minx = miny = maxx = maxy = 0
+
 outerscale = 3		# size multiplier
 
 plot.figure(2)
@@ -218,8 +248,9 @@ plotasteroid("tycho", 1677, stationcolor, stationsize * outerscale)
 
 def outerorbit(kernel, center, planet, years, color, size = orbitplotsize):
 	for index in range(365, years * 365 + 1, 365):
-		pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
-		addellipse(pos / au, color, size * outerscale)
+		if ( julian + index < lastjulian ):
+			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
+			addellipse(pos / au, color, size * outerscale)
 
 outerorbit(jovian, 5, 599, 8, planetcolor, orbitplotsize * outerscale)
 
@@ -255,12 +286,16 @@ outersize = 32		# ±au
 axis.set_xlim(-outersize, outersize)
 axis.set_ylim(-outersize, outersize)
 
+addtextbox('1 orbit dot = 1 year', axis)
+    
 plot.title('Outer System ' + str(expansedate.date()), color='white')
 plot.savefig('output/outer.png', dpi=300, facecolor='black', bbox_inches='tight')
 
 #
 #	jovian system
 #
+minx = miny = maxx = maxy = 0
+
 jovianscale = 0.0015		# size multiplier
 
 plot.figure(3)
@@ -293,12 +328,16 @@ joviansize = 0.015		# ±au
 axis.set_xlim(-joviansize, joviansize)
 axis.set_ylim(-joviansize, joviansize)
 
+addtextbox('1 orbit dot = 1 hour', axis)
+
 plot.title('Jovian System ' + str(expansedate.date()), color='white')
 plot.savefig('output/jovian.png', dpi=300, facecolor='black', bbox_inches='tight')
 
 #
 #	cronian system
 #
+minx = miny = maxx = maxy = 0
+
 cronianscale = 0.0025		# size multiplier
 
 plot.figure(4)
@@ -331,6 +370,8 @@ printcronian("iapetus", 608, colonycolor, moonsize, 12)
 croniansize = 0.025		# ±au
 axis.set_xlim(-croniansize, croniansize)
 axis.set_ylim(-croniansize, croniansize)
+
+addtextbox('1 orbit dot = 1 hour', axis)
 
 plot.title('Cronian System ' + str(expansedate.date()), color='white')
 plot.savefig('output/cronian.png', dpi=300, facecolor='black', bbox_inches='tight')
