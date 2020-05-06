@@ -29,7 +29,7 @@ Sol Ring is another problem. It is said to be "stationary positioned little less
 - spktype21 <https://pypi.org/project/spktype21/>
 - matplotlib <https://matplotlib.org/index.html>
 
-Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot Solar System map.
+Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot tables and Solar System maps.
 
 Jplephem should automatically install ephem, but for some reason that did not happen in Windows. So, may need manual installation with pip.
 
@@ -68,7 +68,7 @@ Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/gene
 - ura111.bsp (Uranus and its moons)
 - nep081.bsp (Neptune and its moons)
 
-To make files smaller, we extract only few years from them:
+To make files smaller, only few years are extracted from them:
 
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 de430.bsp planets.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 mar097.bsp martian.bsp
@@ -77,13 +77,13 @@ To make files smaller, we extract only few years from them:
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 ura111.bsp uranian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2025/1/1 nep081.bsp neptunian.bsp
 
-Asteroids must be fetched separately with following parameters:
+Asteroid data is fetched separately with following URL:
 
 <https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2025-JAN-01&EMAIL=foo@bar.org&TYPE=-B>
 
 Just change the OBJECT parameter to asteroid id number (for example, OBJECT=433 for Eros). Downloaded files have name <2000000+id>.bsp (2000433.bsp for Eros).
 
-Files required by the script can be found from the data subdirectory in this repository.
+Preloaded files required by the script can be found from the data subdirectory of this repository.
 
 ## Sources
 

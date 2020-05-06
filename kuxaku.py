@@ -79,7 +79,7 @@ def plotposition(name, position, color, size):
 	plot.text(auposition[0], auposition[1], name, fontsize = 5, color='white', ha = horizontal, va = vertical)
 
 def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
-	for index in range(1, months * 30 + 1, 30):
+	for index in range(30, months * 30 + 1, 30):
 		pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 		addellipse(pos / au, color, size)
 
@@ -110,7 +110,6 @@ planetorbit(planets, 3, 399, 6, [0, 0, 1])
 
 positions.append(planets[3, 399].compute(julian) + earthbary)
 plotposition("earth", positions[-1], [0, 0, 1], planetsize)
-
 #plotposition("moon", planets[3, 301].compute(julian) + earthbary, mooncolor, moonsize)
 
 #l4 = SPK.open('../original/ephemerides/L4_de431.bsp')
@@ -120,7 +119,7 @@ martian = SPK.open('data/martian.bsp')
 #print(martian)
 
 marsbary = martian[0,4].compute(julian)
-planetorbit(martian, 4, 499, 12, [1, 0, 0])
+planetorbit(martian, 4, 499, 8, [1, 0, 0])
 
 positions.append(martian[4, 499].compute(julian)[:3] + marsbary)
 plotposition("mars", positions[-1], [1, 0, 0], planetsize)
@@ -218,11 +217,11 @@ plotasteroid("ceres", 1, colonycolor, asteroidsize * outerscale)
 plotasteroid("tycho", 1677, stationcolor, stationsize * outerscale)
 
 def outerorbit(kernel, center, planet, years, color, size = orbitplotsize):
-	for index in range(0, years * 365 + 1, 365):
+	for index in range(365, years * 365 + 1, 365):
 		pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 		addellipse(pos / au, color, size * outerscale)
 
-outerorbit(jovian, 5, 599, 3, planetcolor, orbitplotsize * outerscale)
+outerorbit(jovian, 5, 599, 8, planetcolor, orbitplotsize * outerscale)
 
 positions.append(jovian[5,599].compute(julian)[:3] + jupiterbary)
 plotposition("jupiter", positions[-1], planetcolor, gasgiantsize * outerscale)
@@ -231,7 +230,7 @@ cronian = SPK.open('data/cronian.bsp')
 #print(cronian)
 
 saturnbary = cronian[0,6].compute(julian)
-outerorbit(cronian, 6, 699, 3, planetcolor, orbitplotsize * outerscale)
+outerorbit(cronian, 6, 699, 8, planetcolor, orbitplotsize * outerscale)
 
 positions.append(cronian[6,699].compute(julian)[:3] + saturnbary)
 plotposition("saturn", positions[-1], planetcolor, gasgiantsize * outerscale)
@@ -240,7 +239,7 @@ uranian = SPK.open('data/uranian.bsp')
 #print(uranian)
 
 uranusbary = uranian[0,7].compute(julian)
-outerorbit(uranian, 7, 799, 3, planetcolor, orbitplotsize * outerscale)
+outerorbit(uranian, 7, 799, 8, planetcolor, orbitplotsize * outerscale)
 
 plotposition("uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale)
 
@@ -248,7 +247,7 @@ neptunian = SPK.open('data/neptunian.bsp')
 #print(neptunian)
 
 neptunebary = neptunian[0,8].compute(julian)
-outerorbit(neptunian, 8, 899, 3, planetcolor, orbitplotsize * outerscale)
+outerorbit(neptunian, 8, 899, 8, planetcolor, orbitplotsize * outerscale)
 
 plotposition("neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale)
 
