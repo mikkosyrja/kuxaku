@@ -3,3 +3,6 @@
 *.pro.user*
 *.kate-swp
 /build*/
+/output/
+\#*#
+*.pdf

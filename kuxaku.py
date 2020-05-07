@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import sys
 import math
 import datetime
@@ -30,6 +31,10 @@ print("date:", date, "julian:", julian)
 
 lastdate = ephem.Date(expansedate.replace(year = 2029))
 lastjulian = ephem.julian_date(lastdate)
+
+outputdir = 'output/'
+if not os.path.exists(outputdir):
+	os.mkdir(outputdir)
 
 au = 149597870.691			# astronomical unit in kilometers
 delay = au / 17987547.48	# communication delay in minutes/au
@@ -67,19 +72,6 @@ stationsize = 0.3
 
 orbitplotsize = 0.04
 
-def addtextbox(text, axis):
-	xpos = ypos = 0.05
-	horizontal = 'left'
-	vertical = 'bottom'
-	if ( abs(minx) > abs(maxx) ):
-		xpos = 0.95
-		horizontal = 'right'
-	if ( abs(miny) > abs(maxy) ):
-		ypos = 0.95
-		vertical = 'top'
-	axis.text(xpos, ypos, text, horizontalalignment = horizontal, verticalalignment = vertical,
-		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = [0.6, 0.6, 0.6]))
-
 def addellipse(auposition, color, size):
 	ellipse = Ellipse(xy = auposition, width = size, height = size)
 	axis.add_artist(ellipse)
@@ -110,6 +102,21 @@ def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 		if ( julian + index < lastjulian ):
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 			addellipse(pos / au, color, size)
+
+def savemap(axis, title, name, legend):
+	xpos = ypos = 0.05
+	horizontal = 'left'
+	vertical = 'bottom'
+	if ( abs(minx) > abs(maxx) ):
+		xpos = 0.95
+		horizontal = 'right'
+	if ( abs(miny) > abs(maxy) ):
+		ypos = 0.95
+		vertical = 'top'
+	axis.text(xpos, ypos, 'orbit dot = ' + legend + '\naxis units in AU', horizontalalignment = horizontal, verticalalignment = vertical,
+		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = [0.6, 0.6, 0.6]))
+	plot.title(title + ' ' + str(expansedate.date()), color='white')
+	plot.savefig(outputdir + name, dpi = 300, facecolor = 'black', bbox_inches = 'tight')
 
 #
 #	inner planets
@@ -216,10 +223,7 @@ innersize = 5.5		# ±au
 axis.set_xlim(-innersize, innersize)
 axis.set_ylim(-innersize, innersize)
 
-addtextbox('1 orbit dot = 1 month', axis)
-
-plot.title('Inner System ' + str(expansedate.date()), color='white')
-plot.savefig('output/inner.png', dpi=300, facecolor='black', bbox_inches='tight')
+savemap(axis, 'Inner System', 'inner.png', 'month')
 
 #
 #	outer planets
@@ -291,10 +295,7 @@ outersize = 32		# ±au
 axis.set_xlim(-outersize, outersize)
 axis.set_ylim(-outersize, outersize)
 
-addtextbox('1 orbit dot = 1 year', axis)
-    
-plot.title('Outer System ' + str(expansedate.date()), color='white')
-plot.savefig('output/outer.png', dpi=300, facecolor='black', bbox_inches='tight')
+savemap(axis, 'Outer System', 'outer.png', 'year')
 
 #
 #	jovian system
@@ -329,14 +330,11 @@ printjovian("thebe", 514)
 printjovian("adrastea", 515)
 printjovian("metis", 516)
 
-joviansize = 0.015		# ±au
+joviansize = 0.014		# ±au
 axis.set_xlim(-joviansize, joviansize)
 axis.set_ylim(-joviansize, joviansize)
 
-addtextbox('1 orbit dot = 1 hour', axis)
-
-plot.title('Jovian System ' + str(expansedate.date()), color='white')
-plot.savefig('output/jovian.png', dpi=300, facecolor='black', bbox_inches='tight')
+savemap(axis, 'Jovian System', 'jovian.png', 'hour')
 
 #
 #	cronian system
@@ -376,10 +374,7 @@ croniansize = 0.025		# ±au
 axis.set_xlim(-croniansize, croniansize)
 axis.set_ylim(-croniansize, croniansize)
 
-addtextbox('1 orbit dot = 1 hour', axis)
-
-plot.title('Cronian System ' + str(expansedate.date()), color='white')
-plot.savefig('output/cronian.png', dpi=300, facecolor='black', bbox_inches='tight')
+savemap(axis, 'Cronian System', 'cronian.png', 'hour')
 
 #
 #	common tables
@@ -417,15 +412,17 @@ axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'c
 axis.set_title('Communication Delay in Minutes ' + str(expansedate.date()), color='white')
 axis.patch.set_facecolor('black')
 
-plot.savefig('output/delay.png', dpi=300, facecolor='black', bbox_inches='tight')
+plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = 'black', bbox_inches = 'tight')
 
 #
 #	travel time
 #
-plot.figure(6)
-figure, axis = plot.subplots(3, 1, figsize=(10, 9), subplot_kw={'aspect': 'equal'})
+#plot.figure(6)
+#figure, axis = plot.subplots(3, 1, figsize=(10, 9), subplot_kw={'aspect': 'equal'})
 
-def traveltime(g, axis):
+def traveltime(index, g):
+	plot.figure(index)
+	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
 	celltext = []
 	for row in range(len(places)):
 		cellrow = []
@@ -443,8 +440,9 @@ def traveltime(g, axis):
 	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color='white')
 	axis.patch.set_facecolor('black')
 
-traveltime(0.3, axis[0])
-traveltime(1.0, axis[1])
-traveltime(2.0, axis[2])
+	plot.savefig(outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png', dpi = 300, facecolor = 'black', bbox_inches = 'tight')
 
-plot.savefig('output/travel.png', dpi=300, facecolor='black', bbox_inches='tight')
+traveltime(6, 0.3)
+traveltime(7, 1.0)
+traveltime(8, 2.0)
+

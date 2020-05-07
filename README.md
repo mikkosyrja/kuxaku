@@ -12,11 +12,11 @@
 
 Solar System object location calculation for The Expanse role-playing game.
 
-Uses real orbit data from NASA, but not real year 2350 locations. Some files contain ephemerides data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all objects. This is acceptable for gaming purposes and most players will never notice.
+Program uses real orbit data from NASA, but not real year 2350 locations. Some files contain ephemerides data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all objects. This is acceptable for gaming purposes and most players will never notice.
 
 What is important here, is that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, real distance is much longer.
 
-Because books, series and role-playing game all lack lots of technical detail, some additional improvisation is needed.
+Because books, TV series and role-playing game all lack lots of technical detail, some additional improvisation is needed.
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
@@ -53,7 +53,7 @@ Coordinate system origin used in maps is the barycenter of the Solar System, whi
 
 Inner planet map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant, and few trojans too). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
 
-Outer planet map shows positions of gas giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
+Outer planet map shows positions of giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
 
 Separate Jovian and Cronian maps display major moon positions around Jupiter and Saturnus. Future orbit positions for some moons are plotted at one hour intervals.
 
@@ -61,7 +61,7 @@ Separate Jovian and Cronian maps display major moon positions around Jupiter and
 
 Communication delay table shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tabels show travel times in hours between same locations using 0.3g, 1.0g and 2.0g accelerations. Simple brachistochrone equation t=2*sqrt(d/a) is used.
+Travel time tables show travel times in hours between same locations using 0.3g, 1.0g and 2.0g accelerations. Simple brachistochrone equation t=2*sqrt(d/a) is used.
 
 ## Ephemerides data
 
