@@ -12,9 +12,9 @@
 
 Solar System object location calculation for The Expanse role-playing game.
 
-Program uses real orbit data from NASA, but not real year 2350 locations. Some files contain ephemerides data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all objects. This is acceptable for gaming purposes and most players will never notice.
+Program uses real orbit data from NASA, but not real year 2350 locations. Some ephemerides files contain orbit data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses 2020 locations for all objects. This is acceptable for gaming purposes and most players will never notice.
 
-What is important here, is that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, real distance is much longer.
+What is important here, is that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, the real distance is much longer.
 
 Because books, TV series and role-playing game all lack lots of technical detail, some additional improvisation is needed.
 
@@ -74,7 +74,7 @@ Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/gene
 - ura111.bsp (Uranus and its moons)
 - nep081.bsp (Neptune and its moons)
 
-To make files smaller, only ten years are extracted from them:
+To make files smaller, ten year perioid is extracted from them:
 
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 de430.bsp planets.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 mar097.bsp martian.bsp
