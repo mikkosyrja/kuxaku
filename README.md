@@ -26,18 +26,18 @@ Sol Ring is another problem. It is said to be "stationary positioned little less
 
 ## Required Python modules
 
-Following Python modules are required:
+In addition to the Python itself, following modules are required:
 
 - ephem <https://pypi.org/project/ephem/>
 - jplephem <https://pypi.org/project/jplephem/>
 - spktype21 <https://pypi.org/project/spktype21/>
 - matplotlib <https://matplotlib.org/index.html>
 
-Some can be found from Linux distribution package repositories and other can be installed using pip tool.
+These can be installed with Python pip tool (for example: pip install jplephem). Some can also be found from Linux distribution package repositories.
 
 Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot tables and Solar System maps.
 
-Program is tested and developed in OpenSuse Tumbleweed Linux and Windows 10 with Python 3.8. Probably works wherever some recent Python version and above modules work.
+Program is developed in OpenSuse Tumbleweed Linux and tested also in Windows 10 with Python 3.8. Probably works wherever some recent Python version and above modules work.
 
 ## Running program
 
@@ -53,7 +53,7 @@ Coordinate system origin used in maps is the barycenter of the Solar System, whi
 
 Inner planet map shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant, and few trojans too). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
 
-Outer planet map shows positions of giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
+Outer planet map shows positions of some Centaurs and giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
 
 Separate Jovian and Cronian maps display major moon positions around Jupiter and Saturnus. Future orbit positions for some moons are plotted at one hour intervals.
 
@@ -65,7 +65,7 @@ Travel time tables show travel times in hours between same locations using 0.3g,
 
 ## Ephemerides data
 
-Following data files are dowloaded from <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
+Following data files are downloaded from <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
 
 - de430.bsp (Mercury, Venus, Earth and Moon)
 - mar097.bsp (Mars, Phobos and Deimos)
