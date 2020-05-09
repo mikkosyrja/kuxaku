@@ -41,6 +41,20 @@ Program is developed in OpenSuse Tumbleweed Linux and tested also in Windows 10 
 
 ## Running program
 
+Instructions for Windows users not familiar with Python and GitHub:
+
+- Download and install Python: <https://www.python.org/downloads/>
+- Install above mentioned Python modules:
+	- pip install ephem
+	- pip install jplephem
+	- pip install spktype21
+	- pip install matplotlib
+- Download kuxaku repository zip-package:
+	- top-right green button with text "Clone or download"
+	- Select download ZIP, currently about 100MB
+- Extract downloaded package kuxaku-master.zip
+
+
 Copy or clone the repository and run kuxaku.py with some date as a command line parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
 	./kuxaku.py 2351-07-08
