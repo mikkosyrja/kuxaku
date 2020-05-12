@@ -17,12 +17,12 @@ from matplotlib.patches import Ellipse
 from spktype21 import SPKType21
 
 datestring = '2351-06-06'
-if ( len(sys.argv) > 1 ):
+if len(sys.argv) > 1:
 	datestring = sys.argv[1]
 
 expansedate = dateutil.parser.parse(datestring)
-if ( expansedate.year < 2350 or expansedate.year >= 2360 ):
-	print("illegal date:", expansedate, "Year must be between 2050 - 2059")
+if expansedate.year < 2350 or expansedate.year >= 2360:
+	print("illegal date:", expansedate, "Year must be between 2350 - 2359")
 	sys.exit(1)
 
 date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
@@ -94,16 +94,16 @@ def plotposition(name, position, color, size, auedge = 0):
 	auposition = position / au
 	addellipse(auposition, color, size / 2)
 	horizontal = ('right' if position[0] < 0 else 'left')
-	if ( auedge and auposition[0] < auedge * -0.8 ):
+	if auedge and auposition[0] < auedge * -0.8:
 		horizontal = 'left'		# keep text inside
-	if ( auedge and auposition[0] > auedge * 0.8 ):
+	if auedge and auposition[0] > auedge * 0.8:
 		horizontal = 'right'	# keep text inside
 	vertical = ('top' if position[1] < 0 else 'bottom')
 	plot.text(auposition[0], auposition[1], name, fontsize = 5, color='white', ha = horizontal, va = vertical)
 
 def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 	for index in range(30, months * 30 + 1, 30):
-		if ( julian + index < lastjulian ):
+		if julian + index < lastjulian:
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 			addellipse(pos / au, color, size)
 
@@ -111,10 +111,10 @@ def savemap(axis, title, name, legend):
 	xpos = ypos = 0.05
 	horizontal = 'left'
 	vertical = 'bottom'
-	if ( abs(minx) > abs(maxx) ):
+	if abs(minx) > abs(maxx):
 		xpos = 0.95
 		horizontal = 'right'
-	if ( abs(miny) > abs(maxy) ):
+	if abs(miny) > abs(maxy):
 		ypos = 0.95
 		vertical = 'top'
 	axis.text(xpos, ypos, 'orbit dot = ' + legend + '\naxis units in AU', horizontalalignment = horizontal, verticalalignment = vertical,
@@ -173,9 +173,9 @@ def plotasteroid(name, id, color = asteroidcolor, size = asteroidsize, months = 
 		pos = kernel.compute_type21(0, 2000000 + id, julian + index)[0]
 		addellipse(pos / au, color, orbitplotsize)
 	pos = kernel.compute_type21(0, 2000000 + id, julian)[0]
-	if ( months ):
+	if months:
 		positions.append(pos)
-	if ( id != 127 and id != 1677 ):
+	if id != 127 and id != 1677:
 		name = str(id) + ' ' + name
 	plotposition(name, pos, color, size, innersize)
 
@@ -266,7 +266,7 @@ plotasteroid("Tycho", 1677, stationcolor, stationsize * outerscale)
 
 def outerorbit(kernel, center, planet, years, color, size = orbitplotsize):
 	for index in range(365, years * 365 + 1, 365):
-		if ( julian + index < lastjulian ):
+		if julian + index < lastjulian:
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 			addellipse(pos / au, color, size * outerscale * outerscale)
 
@@ -413,7 +413,7 @@ distances = []	# distances in au
 for row in range(len(places)):
 	cellrow = []
 	for col in range(len(places)):
-		if ( col >= row ):
+		if col >= row:
 			cellrow.append(distance(positions[row] - positions[col]))
 		else:	# mirror value
 			cellrow.append(distances[col][row])
@@ -429,7 +429,7 @@ celltext = []
 for row in range(len(places)):
 	cellrow = []
 	for col in range(len(places)):
-		if ( col >= row ):
+		if col >= row:
 			value = distances[row][col] * delay
 			cellrow.append('{0:.2g}'.format(value) if value < 100 else '{0:.3g}'.format(value))
 		else:	# mirror value
@@ -454,7 +454,7 @@ def traveltime(index, g):
 	for row in range(len(places)):
 		cellrow = []
 		for col in range(len(places)):
-			if ( col >= row ):
+			if col >= row:
 				value = 2 * math.sqrt(distances[row][col] * acc / g)
 				cellrow.append('{0:.3g}'.format(value / 3600))
 			else:	# mirror value
