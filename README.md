@@ -10,15 +10,7 @@
 >
 > -- <https://twitter.com/Nfarmerlinguist/status/692757569236959232>
 
-Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For a background, see: [background.md](background.md)
-
-Example map:
-
-![example image](inner.png)
-
-Example table:
-
-![example table](delay.png)
+Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For a background and examples, see: [background.md](background.md)
 
 ## Required Python modules
 
@@ -31,7 +23,7 @@ In addition to the Python itself, following modules are required:
 
 These can be installed with Python pip tool (for example: pip install jplephem). Some can also be found from Linux distribution package repositories.
 
-Ephem and Jplephem make most location calculations. Spktype21 is needed by some asteroid data using type 21 format. Matplotlib is used to plot tables and Solar System maps.
+Ephem and Jplephem make most location calculations. Spktype21 is needed by asteroid data using type 21 format. Matplotlib is used to plot tables and Solar System maps.
 
 Program is developed in OpenSuse Tumbleweed Linux and tested also in Windows 10 with Python 3.8. Probably works wherever some recent Python version and above modules work.
 
@@ -70,7 +62,7 @@ There are some command line options:
 	  -h, --help     show this help message and exit
 	  -p, --printer  printable images with white background
 
-Option -p creates printer-friendly images with white background. Second optional parameter g defines acceleration for third travel time table.
+Second optional parameter g defines acceleration for third travel time table. Option -p creates printer-friendly images with white background.
 
 ### Solar System Maps
 
