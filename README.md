@@ -10,21 +10,15 @@
 >
 > -- <https://twitter.com/Nfarmerlinguist/status/692757569236959232>
 
-Solar System object location calculation for The Expanse role-playing game.
+Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For a background, see: [background.md](background.md)
 
-Program uses real orbit data from NASA, but not real year 2350 locations. Some ephemerides files contain orbit data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses locations starting from year 2020. This is quite acceptable for gaming purposes and especially for The Expance, where actual dates are somewhat vague anyway.
+Example map:
 
-Use of this data was just the easiest way to populate otherwise very empty space with real asteroids and moons without too much work. You may never visit 7066 Nessus, but its strange orbit alone makes outer planet map so much more interesting.
+![example image](inner.png)
 
-The most important thing here is, that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, the real distance is much longer.
+Example table:
 
-Because, in addition to dates, The Expance universe lacks lots of other technical details, some additional improvisation is needed.
-
-For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
-
-Same goes with destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". Suitably located asteroid (127 Johanna) with more or less same orbital period is used for its position.
-
-Sol Ring is another problem. It is said to be "stationary positioned little less than 2 AU outside the orbit of Uranus". That means about 22 AU from Sun to random direction. I decided to put it to direction -PI/4 in ecliptic plane, which is in the same hemisphere as current locations of outer planets.
+![example table](delay.png)
 
 ## Required Python modules
 
@@ -60,9 +54,23 @@ Instructions for Windows users not familiar with Python or GitHub:
 
 Go to the program directory and run script kuxaku.py with desired date as a parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
-	./kuxaku.py 2351-07-08
+	kuxaku.py 2351-07-08
 
 Program creates maps and tables as PNG images and puts them into the output subdirectory.
+
+There are some command line options:
+
+	usage: kuxaku.py [-h] [-p] date [g]
+
+	positional arguments:
+	  date           date in ISO format: YYYY-MM-DD
+	  g              third travel time acceleration (default: 2.0)
+
+	optional arguments:
+	  -h, --help     show this help message and exit
+	  -p, --printer  printable images with white background
+
+Option -p creates printer-friendly images with white background. Second optional parameter g defines acceleration for third travel time table.
 
 ### Solar System Maps
 
@@ -78,9 +86,7 @@ Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon p
 
 Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in hours between same locations using 0.3g, 1.0g, 2.0g and 5.0g accelerations. Simple brachistochrone equation t=2*sqrt(d/a) is currently used. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
-
-Simple travel profile above does not always make sense. Faster one could be: initial high-g acceleration with the juice for a few hours, 1g cruise to a halfway point, 1g deceleration cruise and final high-g braking with the juice again. Belters, of course, would prefer cruising at 0.3g and some would like to brake earlier to avoid the juice hangover at arrival. Tables alone cannot handle all that. We may need some kind of travel calculator program.
+Travel time tables (travel\*.png) show travel times in hours between same locations using 0.3g, 1.0g and 2.0g accelerations. Last acceleration value can be changed with command line argument. Simple brachistochrone equation t=2*sqrt(d/a) is currently used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
 
 ## Ephemerides data
 

@@ -6,21 +6,24 @@ import math
 import datetime
 import dateutil.parser
 
+import argparse
+
 import numpy
 import ephem
 
 from jplephem.spk import SPK
+from spktype21 import SPKType21
 
 import matplotlib.pyplot as plot
 from matplotlib.patches import Ellipse
 
-from spktype21 import SPKType21
+parser = argparse.ArgumentParser()
+parser.add_argument("date", help = "date in ISO format: YYYY-MM-DD")
+parser.add_argument("g", help = "third travel time acceleration (default: %(default)s)", type = float, nargs = '?', default = 2.0)
+parser.add_argument("-p", "--printer", help = "printable images with white background", action = "store_true")
+arguments = parser.parse_args()
 
-datestring = '2351-06-06'
-if len(sys.argv) > 1:
-	datestring = sys.argv[1]
-
-expansedate = dateutil.parser.parse(datestring)
+expansedate = dateutil.parser.parse(arguments.date)
 if expansedate.year < 2350 or expansedate.year >= 2360:
 	print("illegal date:", expansedate, "Year must be between 2350 - 2359")
 	sys.exit(1)
@@ -38,24 +41,32 @@ if not os.path.exists(outputdir):
 
 au = 149597870.691			# astronomical unit in kilometers
 delay = au / 17987547.48	# communication delay in minutes/au
-acc = au * 1000 / 9.81		# distance in meters and acceleration 
+acc = au * 1000 / 9.81		# acceleration scale factor
 
-minx = miny = maxx = maxy = 0	# boundaries
+minx = miny = maxx = maxy = 0	# current boundaries
 
 places = ('Mercury', 'Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
 positions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
 
+foreground = 'white'
+background = 'black'
+legendbox = [0.6, 0.6, 0.6]
+if arguments.printer:
+	foreground = 'black'
+	background = 'white'
+	legendbox = [0.9, 0.9, 0.9]
+
 plot.figure(1)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
-axis.patch.set_facecolor('black')
+axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color('white')
-axis.spines['top'].set_color('white') 
-axis.spines['right'].set_color('white')
-axis.spines['left'].set_color('white')
-axis.tick_params(labelcolor='white', colors='white')
+axis.spines['bottom'].set_color(foreground)
+axis.spines['top'].set_color(foreground) 
+axis.spines['right'].set_color(foreground)
+axis.spines['left'].set_color(foreground)
+axis.tick_params(labelcolor = foreground, colors = foreground)
 
 planetcolor = [0, 0.5, 0]
 colonycolor = [0.6, 0, 0.6]
@@ -99,7 +110,7 @@ def plotposition(name, position, color, size, auedge = 0):
 	if auedge and auposition[0] > auedge * 0.8:
 		horizontal = 'right'	# keep text inside
 	vertical = ('top' if position[1] < 0 else 'bottom')
-	plot.text(auposition[0], auposition[1], name, fontsize = 5, color='white', ha = horizontal, va = vertical)
+	plot.text(auposition[0], auposition[1], name, fontsize = 5, color = foreground, ha = horizontal, va = vertical)
 
 def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 	for index in range(30, months * 30 + 1, 30):
@@ -118,12 +129,11 @@ def savemap(axis, title, name, legend):
 		ypos = 0.95
 		vertical = 'top'
 	axis.text(xpos, ypos, 'orbit dot = ' + legend + '\naxis units in AU', horizontalalignment = horizontal, verticalalignment = vertical,
-		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = [0.6, 0.6, 0.6]))
-#	plot.tick_params(axis = 'both', which = 'minor', labelsize = 7)
+		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = legendbox))
 	plot.xticks(fontsize = 7)
 	plot.yticks(fontsize = 7)
-	plot.title(title + ' ' + str(expansedate.date()), color='white', fontsize = 8)
-	plot.savefig(outputdir + name, dpi = 300, facecolor = 'black', bbox_inches = 'tight')
+	plot.title(title + ' ' + str(expansedate.date()), color = foreground, fontsize = 8)
+	plot.savefig(outputdir + name, dpi = 300, facecolor = background, bbox_inches = 'tight')
 
 #
 #	inner planets
@@ -248,13 +258,13 @@ minx = miny = maxx = maxy = 0
 
 plot.figure(2)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
-axis.patch.set_facecolor('black')
+axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color('white')
-axis.spines['top'].set_color('white') 
-axis.spines['right'].set_color('white')
-axis.spines['left'].set_color('white')
-axis.tick_params(labelcolor='white', colors='white')
+axis.spines['bottom'].set_color(foreground)
+axis.spines['top'].set_color(foreground) 
+axis.spines['right'].set_color(foreground)
+axis.spines['left'].set_color(foreground)
+axis.tick_params(labelcolor = foreground, colors = foreground)
 
 plotposition("", sun, [1, 1, 0], sunsize * outerscale)
 
@@ -336,13 +346,13 @@ jovianscale = 0.0015		# size multiplier
 
 plot.figure(3)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
-axis.patch.set_facecolor('black')
+axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color('white')
-axis.spines['top'].set_color('white') 
-axis.spines['right'].set_color('white')
-axis.spines['left'].set_color('white')
-axis.tick_params(labelcolor='white', colors='white')
+axis.spines['bottom'].set_color(foreground)
+axis.spines['top'].set_color(foreground) 
+axis.spines['right'].set_color(foreground)
+axis.spines['left'].set_color(foreground)
+axis.tick_params(labelcolor = foreground, colors = foreground)
 
 def printjovian(name, id, color = mooncolor, size = moonsize, hours = 0):
 	for index in range(1, hours + 1, 1):
@@ -375,13 +385,13 @@ cronianscale = 0.0025		# size multiplier
 
 plot.figure(4)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
-axis.patch.set_facecolor('black')
+axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color('white')
-axis.spines['top'].set_color('white') 
-axis.spines['right'].set_color('white')
-axis.spines['left'].set_color('white')
-axis.tick_params(labelcolor='white', colors='white')
+axis.spines['bottom'].set_color(foreground)
+axis.spines['top'].set_color(foreground) 
+axis.spines['right'].set_color(foreground)
+axis.spines['left'].set_color(foreground)
+axis.tick_params(labelcolor = foreground, colors = foreground)
 
 def printcronian(name, id, color = mooncolor, size = moonsize, hours = 0):
 	for index in range(1, hours + 1, 1):
@@ -439,10 +449,10 @@ for row in range(len(places)):
 axis.axis('off')
 axis.axis('tight')
 axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-axis.set_title('Communication Delay in Minutes ' + str(expansedate.date()), color='white')
-axis.patch.set_facecolor('black')
+axis.set_title('Communication Delay in Minutes ' + str(expansedate.date()), color = foreground)
+axis.patch.set_facecolor(background)
 
-plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = 'black', bbox_inches = 'tight')
+plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
 
 #
 #	travel time
@@ -464,12 +474,11 @@ def traveltime(index, g):
 	axis.axis('off')
 	axis.axis('tight')
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color='white')
-	axis.patch.set_facecolor('black')
+	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color = foreground)
+	axis.patch.set_facecolor(background)
 
-	plot.savefig(outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png', dpi = 300, facecolor = 'black', bbox_inches = 'tight')
+	plot.savefig(outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
 
 traveltime(6, 0.3)
 traveltime(7, 1.0)
-traveltime(8, 2.0)
-traveltime(9, 5.0)
+traveltime(8, arguments.g)
