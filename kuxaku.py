@@ -19,7 +19,8 @@ from matplotlib.patches import Ellipse
 
 parser = argparse.ArgumentParser()
 parser.add_argument("date", help = "date in ISO format: YYYY-MM-DD")
-parser.add_argument("g", help = "third travel time acceleration (default: %(default)s)", type = float, nargs = '?', default = 2.0)
+parser.add_argument("juiceg", help = "optional juice acceleration in standard gravities", type = float, nargs = '?', default = 0)
+parser.add_argument("juicet", help = "optional juice acceleration time in hours", type = float, nargs = '?', default = 0)
 parser.add_argument("-p", "--printer", help = "printable images with white background", action = "store_true")
 arguments = parser.parse_args()
 
@@ -39,9 +40,10 @@ outputdir = 'output/'
 if not os.path.exists(outputdir):
 	os.mkdir(outputdir)
 
+gravity = 9.80665			# standard gravity
 au = 149597870.691			# astronomical unit in kilometers
 delay = au / 17987547.48	# communication delay in minutes/au
-acc = au * 1000 / 9.81		# acceleration scale factor
+acc = au * 1000 / gravity	# acceleration scale factor
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
@@ -63,7 +65,7 @@ figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
 axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground) 
+axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
@@ -119,6 +121,7 @@ def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 			addellipse(pos / au, color, size)
 
 def savemap(axis, title, name, legend):
+	print('Writing:', outputdir + name)
 	xpos = ypos = 0.05
 	horizontal = 'left'
 	vertical = 'bottom'
@@ -261,7 +264,7 @@ figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
 axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground) 
+axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
@@ -349,7 +352,7 @@ figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
 axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground) 
+axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
@@ -388,7 +391,7 @@ figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
 axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground) 
+axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
@@ -417,9 +420,9 @@ axis.set_ylim(-croniansize, croniansize)
 savemap(axis, 'Cronian System', 'cronian.png', 'hour')
 
 #
-#	common tables
+#	common tables for distances in au
 #
-distances = []	# distances in au
+distances = []
 for row in range(len(places)):
 	cellrow = []
 	for col in range(len(places)):
@@ -432,6 +435,8 @@ for row in range(len(places)):
 #
 #	communication delay
 #
+print('Writing:', outputdir + 'delay.png')
+
 plot.figure(5)
 figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
 
@@ -458,6 +463,9 @@ plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = background, bbox_in
 #	travel time
 #
 def traveltime(index, g):
+	filename = outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png'
+	print('Writing:', filename)
+
 	plot.figure(index)
 	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
 	celltext = []
@@ -476,9 +484,54 @@ def traveltime(index, g):
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
 	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color = foreground)
 	axis.patch.set_facecolor(background)
+	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
 
-	plot.savefig(outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
-
-traveltime(6, 0.3)
+traveltime(6, 0.5)
 traveltime(7, 1.0)
-traveltime(8, arguments.g)
+
+## juice
+def traveltimex(index, cruiseg, juiceg, juicet):
+	title = 'Travel Time in Hours (' + str(cruiseg) + 'g'
+	filename = outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10)
+	if juiceg and juicet:
+		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
+		filename += '+' + '{:02.0f}'.format(juiceg * 10) + 'x' + '{:02.0f}'.format(juicet * 10)
+	title += ') ' + str(expansedate.date())
+	filename += '.png'
+	print('Writing:', filename)
+
+	plot.figure(index)
+	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
+	celltext = []
+	for row in range(len(places)):
+		cellrow = []
+		for col in range(len(places)):
+			if col > row:
+				jt = juicet * 3600
+				js = gravity * juiceg * jt
+				jd = js * jt
+				cd = distances[row][col] * au * 1000 - jd
+				if cd > 0:	# juice + cruise
+					cg = gravity * cruiseg
+					ct = (math.sqrt(js * js + cg * cd) - js) / cg
+					value = (jt * 2 + ct * 2) / 3600
+					cellrow.append('{0:.3g}'.format(value))
+				else:	# all juice
+					value = 2 * math.sqrt((distances[row][col]) * acc / juiceg)
+					cellrow.append('{0:.3g}'.format(value / 3600))
+			elif col == row:	# diagonal
+				cellrow.append('0')
+			else:	# mirror value
+				cellrow.append(celltext[col][row])
+		celltext.append(cellrow)
+
+	axis.axis('off')
+	axis.axis('tight')
+	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+	axis.patch.set_facecolor(background)
+	axis.set_title(title, color = foreground)
+	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
+
+if arguments.juiceg and arguments.juicet:
+	traveltimex(8, 0.5, arguments.juiceg, arguments.juicet)
+	traveltimex(8, 1.0, arguments.juiceg, arguments.juicet)

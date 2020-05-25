@@ -52,11 +52,12 @@ Program creates maps and tables as PNG images and puts them into the output subd
 
 There are some command line options:
 
-	usage: kuxaku.py [-h] [-p] date [g]
+	usage: kuxaku.py [-h] [-p] date [juiceg] [juicet]
 
 	positional arguments:
 	  date           date in ISO format: YYYY-MM-DD
-	  g              third travel time acceleration (default: 2.0)
+	  juiceg         optional juice acceleration in standard gravities
+	  juicet         optional juice acceleration time in hours
 
 	optional arguments:
 	  -h, --help     show this help message and exit
@@ -78,7 +79,9 @@ Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon p
 
 Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in hours between same locations using 0.3g, 1.0g and 2.0g accelerations. Last acceleration value can be changed with command line argument. Simple brachistochrone equation t=2*sqrt(d/a) is currently used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
+Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. First one is tolerable for belters and the second one suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
+
+Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5g acceleration for 4 hours. After that cruise acceleration of 0.5 or 1.0 is used normally. At the end of the journey, final deceleration is again done with 5g for 4 hours.
 
 ## Ephemerides data
 
