@@ -63,7 +63,7 @@ There are some command line options:
 	  -h, --help     show this help message and exit
 	  -p, --printer  printable images with white background
 
-Second optional parameter g defines acceleration for third travel time table. Option -p creates printer-friendly images with white background.
+Optional parameters juiceg and juicet define faster acceleration at both ends of the journey. Option -p creates printer-friendly images with white background.
 
 ### Solar System Maps
 
@@ -79,9 +79,11 @@ Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon p
 
 Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. First one is tolerable for belters and the second one suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
+Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. The first one is tolerable for belters and the second one suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination.
 
-Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5g acceleration for 4 hours. After that cruise acceleration of 0.5 or 1.0 is used normally. At the end of the journey, final deceleration is again done with 5g for 4 hours.
+Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5.0g acceleration for 4 hours. After that cruise acceleration of 0.5g or 1.0g is used normally. At the end of the journey, final deceleration is again done with 5.0g for 4 hours.
+
+Technically it would be possible to have several boost perioids during a long journey, but that is not implemented yet.
 
 ## Ephemerides data
 

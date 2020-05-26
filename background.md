@@ -20,14 +20,20 @@ Because, in addition to dates, The Expance universe lacks lots of other technica
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
-Same goes with destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". Suitably located asteroid (127 Johanna) with more or less same orbital period is used for its position.
+Same goes with the destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". Suitably located asteroid (127 Johanna) with more or less same orbital period is used for its position.
 
 Sol Ring is another problem. It is said to be "stationary positioned little less than 2 AU outside the orbit of Uranus". That means about 22 AU from Sun to random direction. I decided to put it to direction -PI/4 in ecliptic plane, which is in the same hemisphere as current locations of outer planets.
 
 # Communication and travel
 
-Communication delay is quite straightforward. Just the distance between objects divided by the light speed. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
+Communication delay is quite straightforward. Just the distance between objects divided by the speed of light. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
 ![communication delay](delay.png)
 
-Simple travel profiles used do not always make sense. Faster one could be: initial high-g acceleration with the juice for a few hours, 1g cruise to a halfway point, 1g deceleration cruise and final high-g braking with the juice again. Belters, of course, would prefer cruising at 0.3g and some would like to brake earlier to avoid the juice hangover at arrival. Tables alone cannot handle all that. We may need some kind of travel calculator program.
+Simple travel profiles with constant acceleration do not always make sense. Faster one for generic passengers would be: initial high-g acceleration with the juice for a few hours, 0.5g cruise to a halfway point, 0.5g deceleration cruise and final high-g braking with the juice again. 0.5g is tolerable for belters and 4 hours is probably near the upper limit of a single acceleration period with the juice.
+
+Following example tables display travel times with and without the juice boost:
+
+![travel time](travel05.png)
+
+![travel time](travel05+60x40.png)

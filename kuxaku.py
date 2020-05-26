@@ -462,35 +462,7 @@ plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = background, bbox_in
 #
 #	travel time
 #
-def traveltime(index, g):
-	filename = outputdir + 'travel' + '{:02.0f}'.format(g * 10) + '.png'
-	print('Writing:', filename)
-
-	plot.figure(index)
-	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
-	celltext = []
-	for row in range(len(places)):
-		cellrow = []
-		for col in range(len(places)):
-			if col >= row:
-				value = 2 * math.sqrt(distances[row][col] * acc / g)
-				cellrow.append('{0:.3g}'.format(value / 3600))
-			else:	# mirror value
-				cellrow.append(celltext[col][row])
-		celltext.append(cellrow)
-
-	axis.axis('off')
-	axis.axis('tight')
-	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title('Travel Time in Hours (' + str(g) + 'g) ' + str(expansedate.date()), color = foreground)
-	axis.patch.set_facecolor(background)
-	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
-
-traveltime(6, 0.5)
-traveltime(7, 1.0)
-
-## juice
-def traveltimex(index, cruiseg, juiceg, juicet):
+def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 	title = 'Travel Time in Hours (' + str(cruiseg) + 'g'
 	filename = outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10)
 	if juiceg and juicet:
@@ -532,6 +504,8 @@ def traveltimex(index, cruiseg, juiceg, juicet):
 	axis.set_title(title, color = foreground)
 	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
 
+traveltimex(6, 0.5)
+traveltimex(7, 1.0)
 if arguments.juiceg and arguments.juicet:
 	traveltimex(8, 0.5, arguments.juiceg, arguments.juicet)
-	traveltimex(8, 1.0, arguments.juiceg, arguments.juicet)
+	traveltimex(9, 1.0, arguments.juiceg, arguments.juicet)
