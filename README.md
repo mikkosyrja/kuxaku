@@ -46,7 +46,7 @@ Instructions for Windows users not familiar with Python or GitHub:
 
 Go to the program directory and run script kuxaku.py with desired date as a parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
-	kuxaku.py 2351-07-08
+	kuxaku.py 2350-05-16
 
 Program creates maps and tables as PNG images and puts them into the output subdirectory.
 
@@ -74,6 +74,8 @@ Inner planet map (inner.png) shows positions of Jupiter, inner planets, importan
 Outer planet map (outer.png) shows positions of some Centaurs (small Solar System bodies) and giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
 
 Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon positions around Jupiter and Saturnus, respectively. Future orbit positions for some moons are plotted at one hour intervals.
+
+Some objects (notably Eros, Sol Ring and Anderson Station) are currently commented out in the script. These can be turned on by removing the comment character.
 
 ### Communication Delay and Travel Times
 
