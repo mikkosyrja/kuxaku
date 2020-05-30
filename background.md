@@ -14,7 +14,7 @@ Use of this data was just the easiest way to populate otherwise very empty space
 
 The most important thing here is that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, the real distance is much longer.
 
-![inner system](inner.png)
+![inner system](images/inner.png)
 
 Because, in addition to dates, The Expance universe lacks lots of other technical details, some additional improvisation is needed.
 
@@ -28,12 +28,12 @@ Sol Ring is another problem. It is said to be "stationary positioned little less
 
 Communication delay is quite straightforward. Just the distance between objects divided by the speed of light. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-![communication delay](delay.png)
+![communication delay](images/delay.png)
 
 Simple travel profiles with constant acceleration do not always make sense. Faster one for generic passengers would be: initial high-g acceleration with the juice for a few hours, 0.5g cruise to a halfway point, 0.5g deceleration cruise and final high-g braking with the juice again. 0.5g is tolerable for belters and 4 hours is probably near the upper limit of a single acceleration period with the juice.
 
 Following example tables display travel times with and without the juice boost:
 
-![travel time](travel05.png)
+![travel time](images/travel05.png)
 
-![travel time](travel05+60x40.png)
+![travel time](images/travel05+60x40.png)
