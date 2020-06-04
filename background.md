@@ -16,15 +16,15 @@ The most important thing here is that heavenly bodies move predictably during th
 
 ![inner system](images/inner.png)
 
-Because, in addition to dates, The Expance universe lacks lots of other technical details, some additional improvisation is needed.
+Because, in addition to dates, The Expanse universe lacks lots of other technical details, some additional improvisation is needed.
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
 Same goes with the destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". Suitably located asteroid (127 Johanna) with more or less same orbital period is used for its position.
 
-Sol Ring is another problem. It is said to be "stationary positioned little less than 2 AU outside the orbit of Uranus". That means about 22 AU from Sun to random direction. I decided to put it to direction -PI/4 in ecliptic plane, which is in the same hemisphere as current locations of outer planets.
+Sol Ring is another problem. It is said to be "stationary positioned little less than 2 AU outside the orbit of Uranus". That means about 22 AU from Sun to random direction. In Abaddon's Gate Holden says: "This is the Ring. And this is Uranus. They are literally the two spots furthest from each other in the universe that have humans near them". Uranus happens to be in the top right quadrant and that puts the Sol Ring to the bottom left quadrant in the outer planet map.
 
-# Communication and travel
+### Communication Delay and Travel Times
 
 Communication delay is quite straightforward. Just the distance between objects divided by the speed of light. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
@@ -36,4 +36,8 @@ Following example tables display travel times with and without the juice boost:
 
 ![travel time](images/travel05.png)
 
-![travel time](images/travel05+60x40.png)
+![travel time](images/travel05+boost.png)
+
+### Solar system Document
+
+Most asteroid descriptions are taken from Wikipedia with some modifications. Unfortunately, we don't yet know much about them and their original decriptions are full of words like 'may be', 'estimated' or 'assumed'. I just edited those out and ended up with more or less credible sounding 'facts'.

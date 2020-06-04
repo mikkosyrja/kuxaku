@@ -12,6 +12,8 @@
 
 Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For a background and examples, see: [background.md](background.md)
 
+Latest changes can be found from [CHANGELOG.md](CHANGELOG.md)
+
 ## Required Python modules
 
 In addition to the Python itself, following modules are required:
@@ -81,11 +83,17 @@ Some objects (notably Eros, Sol Ring and Anderson Station) are currently comment
 
 Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. The first one is tolerable for belters and the second one suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it. This needs to be fixed at some point.
+Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. The first one (travel05.png) is tolerable for belters and the second (travel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it. This needs to be fixed at some point.
 
-Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5.0g acceleration for 4 hours. After that cruise acceleration of 0.5g or 1.0g is used normally. At the end of the journey, final deceleration is again done with 5.0g for 4 hours.
+Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5.0g acceleration for 4 hours. After that cruise acceleration of 0.5g or 1.0g is used normally. At the end of the journey, final deceleration is again done with 5.0g for 4 hours. These tables are stored to files with given parameters in their names (travel05+60x40.png) and also copied to files with more generic names (travel05+boost.png).
 
 Technically it would be possible to have several boost perioids during a long journey, but that is not implemented yet.
+
+### Solar system Document
+
+The file kuxaku.lyx is a document describing the Solar System and Asteroid Belt for players with Python script generated images. It requires LaTeX (<https://www.latex-project.org/>) and LyX (<https://www.lyx.org/>) to produce PDF output. Example file [example.pdf](example.pdf) shows the result.
+
+Colonized asteroid information comes from the RPG rulebook. Other asteroid descriptions are taken from Wikipedia with some modifications.
 
 ## Ephemerides data
 

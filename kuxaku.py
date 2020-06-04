@@ -3,6 +3,7 @@
 import os
 import sys
 import math
+import shutil
 import datetime
 import dateutil.parser
 
@@ -306,7 +307,7 @@ outerorbit(uranian, 7, 799, 8, planetcolor)
 plotposition("Uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale)
 
 #gatedistance = 22 * au	# "little less than 2 AU outside the orbit of Uranus"
-#gatedirection = -math.pi / 4
+#gatedirection = -math.pi * 3 / 4 # “This is the Ring. And this is Uranus. They are literally the two spots furthest from each other in the universe that have humans near them”
 #solgate = numpy.array([gatedistance * math.cos(gatedirection), gatedistance * math.sin(gatedirection), 0.0])
 #plotposition("sol gate", solgate, stationcolor, stationsize * outerscale)
 
@@ -503,6 +504,8 @@ def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 	axis.patch.set_facecolor(background)
 	axis.set_title(title, color = foreground)
 	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
+	if juiceg and juicet:
+		shutil.copy2(filename, outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10) + '+boost.png')
 
 traveltimex(6, 0.5)
 traveltimex(7, 1.0)

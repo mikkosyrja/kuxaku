@@ -6,3 +6,4 @@
 /output/
 \#*#
 *.pdf
+!example.pdf

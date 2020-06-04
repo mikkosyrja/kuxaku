@@ -1,0 +1,33 @@
+\usepackage{colortbl,xcolor,titlesec}
+
+\definecolor{expansecolor}{RGB}{218, 218, 255}
+%\definecolor{expansecolor}{gray}{0.75}
+
+\titleformat{name=\section}[block]
+  {\normalfont\Large\bfseries}{}{0pt}{\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsection}[1]{%
+  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+
+\titleformat{name=\section,numberless}[block]
+  {\normalfont\Large\bfseries}{}{0pt}{\colorsectionnumberless}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsectionnumberless}[1]{%
+  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+\titleformat{name=\subsection}[block]
+  {\normalfont\large\bfseries}{}{0pt}{\colorsubsection}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsubsection}[1]{%
+  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+
+\titleformat{name=\subsection,numberless}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsectionnumberless}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsubsectionnumberless}[1]{%
+  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+\titleformat{name=\subsubsection}[block]
+  {\normalfont\large\bfseries}{}{0pt}{}
+
+\renewcommand\labelenumi{\bfseries\theenumi}
