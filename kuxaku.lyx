@@ -306,7 +306,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/mikko/Expanse/kuxaku/output/inner.png
+	filename output/inner.png
 	lyxscale 50
 	width 100col%
 
@@ -780,7 +780,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/mikko/Expanse/kuxaku/output/outer.png
+	filename output/outer.png
 	lyxscale 50
 	width 100col%
 
@@ -920,7 +920,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/mikko/Expanse/kuxaku/output/delay.png
+	filename output/delay.png
 	lyxscale 50
 	width 100col%
 
@@ -982,7 +982,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/mikko/Expanse/kuxaku/output/travel05.png
+	filename output/travel05.png
 	lyxscale 50
 	width 100col%
 
@@ -1005,7 +1005,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/mikko/Expanse/kuxaku/output/travel10.png
+	filename output/travel10.png
 	lyxscale 50
 	width 100col%
 
