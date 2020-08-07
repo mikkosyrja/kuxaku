@@ -7,6 +7,8 @@ import shutil
 import datetime
 import dateutil.parser
 
+import darian
+
 import argparse
 
 import numpy
@@ -32,7 +34,12 @@ if expansedate.year < 2350 or expansedate.year >= 2360:
 
 date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
 julian = ephem.julian_date(date)
-print("date:", date, "julian:", julian)
+darian = darian.Darian(expansedate.year, expansedate.month, expansedate.day)
+
+print("expanse date:", arguments.date)
+print("darian date:", darian.string())
+print("gregorian date:", date.datetime().date().isoformat())
+print("julian day:", julian)
 
 lastdate = ephem.Date(expansedate.replace(year = 2029))
 lastjulian = ephem.julian_date(lastdate)
@@ -121,6 +128,9 @@ def planetorbit(kernel, center, planet, months, color, size = orbitplotsize):
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
 			addellipse(pos / au, color, size)
 
+def titledate():
+	return ' ' + str(expansedate.date()) + ' (' + darian.string() + ')'
+
 def savemap(axis, title, name, legend):
 	print('Writing:', outputdir + name)
 	xpos = ypos = 0.05
@@ -136,7 +146,7 @@ def savemap(axis, title, name, legend):
 		transform = axis.transAxes, fontsize = 7, bbox = dict(boxstyle='round', facecolor = legendbox))
 	plot.xticks(fontsize = 7)
 	plot.yticks(fontsize = 7)
-	plot.title(title + ' ' + str(expansedate.date()), color = foreground, fontsize = 8)
+	plot.title(title + titledate(), color = foreground, fontsize = 8)
 	plot.savefig(outputdir + name, dpi = 300, facecolor = background, bbox_inches = 'tight')
 
 #
@@ -455,7 +465,7 @@ for row in range(len(places)):
 axis.axis('off')
 axis.axis('tight')
 axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-axis.set_title('Communication Delay in Minutes ' + str(expansedate.date()), color = foreground)
+axis.set_title('Communication Delay in Minutes' + titledate(), color = foreground)
 axis.patch.set_facecolor(background)
 
 plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
@@ -469,7 +479,7 @@ def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 	if juiceg and juicet:
 		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
 		filename += '+' + '{:02.0f}'.format(juiceg * 10) + 'x' + '{:02.0f}'.format(juicet * 10)
-	title += ') ' + str(expansedate.date())
+	title += ')' + titledate()
 	filename += '.png'
 	print('Writing:', filename)
 

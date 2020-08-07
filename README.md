@@ -14,7 +14,7 @@ Solar System object location calculation and map creation for The Expanse role-p
 
 Latest changes can be found from [CHANGELOG.md](CHANGELOG.md)
 
-## Required Python modules
+## Required Python Modules
 
 In addition to the Python itself, following modules are required:
 
@@ -44,7 +44,7 @@ Instructions for Windows users not familiar with Python or GitHub:
 	- Select download ZIP, currently about 100MB, includes orbit data
 - Extract downloaded package kuxaku-master.zip
 
-## Running program
+## Running Program
 
 Go to the program directory and run script kuxaku.py with desired date as a parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
@@ -89,13 +89,17 @@ Optional command line parameters juiceg and juicet can be used for faster accele
 
 Technically it would be possible to have several boost perioids during a long journey, but that is not implemented yet.
 
-### Solar system Document
+### Darian Calendar
+
+Separate Python module darian.py contains conversion from Gregorian calendar to Darian calendar used in Mars. Generated image titles display Darian date in parenthesis after the Gregorian date.
+
+### Solar System Document
 
 The file kuxaku.lyx is a document describing the Solar System and Asteroid Belt for players with Python script generated images. It requires LaTeX (<https://www.latex-project.org/>) and LyX (<https://www.lyx.org/>) to produce PDF output. Example file [example.pdf](example.pdf) shows the result.
 
 Colonized asteroid information comes from the RPG rulebook. Other asteroid descriptions are taken from Wikipedia with some modifications.
 
-## Ephemerides data
+## Ephemerides Data
 
 Following data files are downloaded from <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
 
@@ -130,3 +134,5 @@ Preloaded files required by the script can be found from the data subdirectory. 
 <https://expanse.fandom.com/wiki/The_Expanse_Wiki>
 
 <http://www.projectrho.com/public_html/rocket/>
+
+<https://en.wikipedia.org/wiki/Darian_calendar>

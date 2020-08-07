@@ -6,6 +6,16 @@ The fantasy world of The Expanse doesn't have a map. Yes, we have familiar names
 
 Planets and asteroids really don't exist all over their orbits like described in the RPG rulebook. They have their own constantly changing locations around the Sun. Miller does a quite remarkably orbital detective work when tracking down the location of Scopuli. In the universe of The Expanse, this kind of newtonian knowledge should be as common as ideas of north and east are for us earthers.
 
+# Calendars
+
+Standard Earth time is used almost everywhere. Most of the humanity lives on Earth, space habitats have no natural days and human biology is still accustomed to 24-hour sleep cycle. Belters may don't like it, but there are no real reasons to invent new timekeeping conventions. However, weeks and weekdays are mostly forgotten.
+
+Notable exception is Mars, where the day-to-day living is based on natural solar day called simply sol. They use standard hours and minutes, but add 37 minute and 22 second period after midnight to match local sol. Different day length means also different calendar and 24-month Darian calendar is commonly used.
+
+Other space habitats have their own baseline times, but these work just like time zones in Earth. For example, Luna uses New York time zone, because of resident UN offices and short enough communication delay.
+
+Also, each longer spaceship journey either decides or automatically generates its own local time zone bubble. Sometimes longer or shorter day cycle is used to adjust between origin and destination times.
+
 # Solar System Maps
 
 Program uses real orbit data from NASA, but not real year 2350 locations. Some ephemerides files contain orbit data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses locations starting from year 2020. This is quite acceptable for gaming purposes and especially for The Expance, where actual dates are somewhat vague anyway.
@@ -38,6 +48,6 @@ Following example tables display travel times with and without the juice boost:
 
 ![travel time](images/travel05+boost.png)
 
-### Solar system Document
+### Solar System Document
 
 Most asteroid descriptions are taken from Wikipedia with some modifications. Unfortunately, we don't yet know much about them and their original decriptions are full of words like 'may be', 'estimated' or 'assumed'. I just edited those out and ended up with more or less credible sounding 'facts'.

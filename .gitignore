@@ -4,6 +4,7 @@
 *.kate-swp
 /build*/
 /output/
+/__pycache__/
 \#*#
 *.pdf
 !example.pdf
