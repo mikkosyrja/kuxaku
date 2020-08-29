@@ -11,3 +11,9 @@ Added LyX document for creating PDF describing the Solar System and Asteroid Bel
 Added Darian calendar conversion for Martian dates. All generated image titles display Darian date in parenthesis after the Gregorian date. These are created by separate Python module darian.py.
 
 Updated example images and documents.
+
+## 2020-08-30
+
+Dropped Mercury from travel time tables.
+
+Changed LyX document paper size to A5. More suitable for tablets and 13 inch laptops.

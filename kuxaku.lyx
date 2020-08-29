@@ -34,7 +34,7 @@
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize a4paper
+\papersize a5paper
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -60,12 +60,12 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 2cm
-\topmargin 2cm
-\rightmargin 2cm
-\bottommargin 2cm
-\headheight 2cm
-\headsep 2cm
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
+\headheight 1.5cm
+\headsep 1.5cm
 \footskip 1cm
 \secnumdepth 3
 \tocdepth 3
@@ -172,6 +172,29 @@ Hygiea The fourth largest asteroid in the Asteroid Belt and somewhat oblong.
  that made survival expensive and kept the population routinely destitute.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/inner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Other Notable asteroids
 \end_layout
@@ -244,6 +267,28 @@ Flora Large, bright main-belt asteroid.
  at a closer mean distance known.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/asteroid.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 9
 \begin_inset space ~
@@ -297,29 +342,6 @@ Psyche One of the most massive asteroids in the asteroid belt.
  of the entire asteroid belt.
  It is thought to be the exposed iron core of a protoplanet, and is the
  most massive metallic M-type asteroid.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/inner.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -528,28 +550,6 @@ Kleopatra A metallic, ham-bone-shaped asteroid and trinary system orbiting
  in diameter.
  It is believed that Kleopatra's shape, rotation, and moons are due to an
  oblique impact perhaps 100 million years ago.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/asteroid.jpg
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -968,11 +968,34 @@ on of the ship.
 
 \begin_layout Standard
 The following tables show the time to travel the average distance between
- the two locations at an average acceleration of 0.5g and 1.0g, presented
+ the two locations at an average acceleration of 0.3g, 0.5g and 1.0g, presented
  as total required travel time under acceleration without any of the necessary
  breaks taken into consideration.
- The first one is tolerable for belters and the second one suitable for
- earthers.
+ The first acceleration is belter standard, the second one is tolerable
+ for belters and the third is suitable for earthers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/travel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

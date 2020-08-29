@@ -55,7 +55,7 @@ acc = au * 1000 / gravity	# acceleration scale factor
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
-places = ('Mercury', 'Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
+places = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
 positions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
@@ -161,8 +161,8 @@ planets = SPK.open('data/planets.bsp')
 sun = planets[0, 10].compute(julian)
 plotposition("", sun, [1, 1, 0], sunsize)
 
-positions.append(planets[1, 199].compute(julian) + planets[0,1].compute(julian))
-plotposition("Mercury", positions[-1], mooncolor, moonsize)
+position = planets[1, 199].compute(julian) + planets[0,1].compute(julian)
+plotposition("Mercury", position, mooncolor, moonsize)
 
 positions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
 plotposition("Venus", positions[-1], planetcolor, moonsize)
@@ -517,8 +517,9 @@ def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 	if juiceg and juicet:
 		shutil.copy2(filename, outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10) + '+boost.png')
 
-traveltimex(6, 0.5)
-traveltimex(7, 1.0)
+traveltimex(6, 0.3)		# belter default
+traveltimex(7, 0.5)		# belter tolerable
+traveltimex(8, 1.0)		# earth normal
 if arguments.juiceg and arguments.juicet:
-	traveltimex(8, 0.5, arguments.juiceg, arguments.juicet)
-	traveltimex(9, 1.0, arguments.juiceg, arguments.juicet)
+	traveltimex(9, 0.5, arguments.juiceg, arguments.juicet)
+	traveltimex(10, 1.0, arguments.juiceg, arguments.juicet)
