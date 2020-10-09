@@ -56,6 +56,7 @@ acc = au * 1000 / gravity	# acceleration scale factor
 minx = miny = maxx = maxy = 0	# current boundaries
 
 places = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
+#places = ('Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Herculina', 'Jupiter', 'Saturn')
 positions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
@@ -166,6 +167,8 @@ plotposition("Mercury", position, mooncolor, moonsize)
 
 positions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
 plotposition("Venus", positions[-1], planetcolor, moonsize)
+#position = planets[2, 299].compute(julian) + planets[0,2].compute(julian)
+#plotposition("Venus", position, planetcolor, moonsize)
 
 planetorbit(planets, 1, 199, 1, mooncolor)		# mercury
 planetorbit(planets, 2, 299, 3, planetcolor)	# venus
@@ -212,7 +215,7 @@ plotasteroid("Juno", 3)
 plotasteroid("Vesta", 4, colonycolor, asteroidsize, 6)
 plotasteroid("Astraea", 5)
 plotasteroid("Hebe", 6)
-#plotasteroid("Iris", 7)
+plotasteroid("Iris", 7)
 plotasteroid("Flora", 8)
 plotasteroid("Metis", 9)
 plotasteroid("Hygiea", 10, colonycolor, asteroidsize, 6)
@@ -234,17 +237,19 @@ plotasteroid("Camilla", 107)
 plotasteroid("Kleopatra", 216)
 #plotasteroid("Nausikaa", 192)
 plotasteroid("Ida", 243)
+plotasteroid("Mathilde", 253)
 #plotasteroid("Bamberga", 324)
 #plotasteroid("Ursula", 375)
 #plotasteroid("Eros", 433, colonycolor, asteroidsize, 6)		# destroyed by protomolecule
 #plotasteroid("Hungaria", 434)
 #plotasteroid("Patientia", 451)
-plotasteroid("Davida", 511)
-#plotasteroid("Herculina", 532)
+#plotasteroid("Davida", 511)
+plotasteroid("Herculina", 532)
+#plotasteroid("Herculina", 532, asteroidcolor, asteroidsize, 6)
 plotasteroid("Achilles", 588)
 plotasteroid("Patroclus", 617)
 plotasteroid("Hektor", 624)
-#plotasteroid("Interamnia", 704)
+plotasteroid("Interamnia", 704)
 #plotasteroid("Priamus", 884)
 plotasteroid("Hidalgo", 944)
 plotasteroid("Gaspra", 951)

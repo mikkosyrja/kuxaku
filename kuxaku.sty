@@ -1,7 +1,12 @@
 \usepackage{colortbl,xcolor,titlesec}
 
+\setlength{\extrarowheight}{2pt}
+
 \definecolor{expansecolor}{RGB}{218, 218, 255}
-%\definecolor{expansecolor}{gray}{0.75}
+\definecolor{lightgray}{RGB}{246,246,246}
+
+\newcommand{\rt}{\rowcolor{expansecolor}}
+\newcommand{\rc}{\rowcolor{lightgray}}
 
 \titleformat{name=\section}[block]
   {\normalfont\Large\bfseries}{}{0pt}{\colorsection}
@@ -29,5 +34,8 @@
 
 \titleformat{name=\subsubsection}[block]
   {\normalfont\large\bfseries}{}{0pt}{}
+
+\titleformat{name=\subsubsection,numberless}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{}
 
 \renewcommand\labelenumi{\bfseries\theenumi}

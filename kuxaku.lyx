@@ -88,12 +88,14 @@
 \begin_body
 
 \begin_layout Title
-Solar System
+Solar System Asteroids
 \end_layout
 
 \begin_layout Standard
-Positions of Solar System bodies and effective distances between them for
- communiation and travel.
+List of notable Solar System asteroids and distances between them for communicat
+ion and travel.
+ This is a living document: positions of bodies change over the time.
+ Effective date can be seen in the image and table titles.
 \end_layout
 
 \begin_layout Section
@@ -128,8 +130,9 @@ Colonized Asteroids
 
 Ceres The only dwarf planet in the inner solar system, and the first asteroid
  discovered by humanity.
+ Only object in the asteroid belt rounded by its own gravity.
  Tycho corporation spun up the asteroid in a dramatic feat of engineering,
- granting it a gravity of 0.3 g.
+ granting it a gravity of 0.3g.
  Now the most important port of call in the Belt with population of approximatel
 y six million permanent residents
 \end_layout
@@ -154,7 +157,9 @@ Pallas The third largest asteroid in the Asteroid Belt, and the second asteroid
 \begin_inset space ~
 \end_inset
 
-Vesta The second-most-massive asteroid in the Asteroid Belt after Ceres.
+Vesta The second-most-massive asteroid in the Asteroid Belt after Ceres
+ and the only known remaining rocky protoplanet of the kind that formed
+ the terrestrial planets.
  It hosts one of the largest settlements in the outer planets.
  At some time during the UN-MCR Cold War, Vesta was the site of the Vesta
  Blockade, a confrontation between the UN and MCR that would delay the Martian
@@ -205,7 +210,7 @@ Other Notable asteroids
 \end_inset
 
 Juno One of the two largest stony asteroids, along with 15 Eunomia.
- It is estimated to contain 1% of the total mass of the Asteroid Belt.
+ It contains about 1% of the total mass of the Asteroid Belt.
  Its orbit has an extreme eccentricity which brings Juno closer to the Sun
  at perihelion than Vesta and further out at aphelion than Ceres.
 \end_layout
@@ -236,38 +241,6 @@ Hebe Large main-belt asteroid, containing around 0.5% of the mass of the
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-7
-\begin_inset space ~
-\end_inset
-
-Iris Large main-belt asteroid orbiting the Sun between Mars and Jupiter.
- It is the fourth-brightest object in the asteroid belt.
- It is classified as an S-type asteroid, meaning that it has a stony composition.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-8
-\begin_inset space ~
-\end_inset
-
-Flora Large, bright main-belt asteroid.
- It is the innermost large asteroid: no asteroid closer to the Sun has a
- diameter above 25 kilometres or two-elevenths that of Flora itself, and
- not until the tiny 149 Medusa was discovered was a single asteroid orbiting
- at a closer mean distance known.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -287,6 +260,29 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+7
+\begin_inset space ~
+\end_inset
+
+Iris Large main-belt asteroid orbiting the Sun between Mars and Jupiter.
+ It is the fourth-brightest object in the asteroid belt.
+ It is classified as an S-type asteroid, meaning that it has a stony composition.
+ 
+\end_layout
+
+\begin_layout Description
+8
+\begin_inset space ~
+\end_inset
+
+Flora Large, bright main-belt asteroid.
+ It is the innermost large asteroid: no asteroid closer to the Sun has a
+ diameter above 25 kilometres or two-elevenths that of Flora itself, and
+ not until the tiny 149 Medusa was discovered was a single asteroid orbiting
+ at a closer mean distance known.
 \end_layout
 
 \begin_layout Description
@@ -353,10 +349,8 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-Melpomene Large, bright main-belt asteroid that was discovered by J.
- R.
- Hind on June 24, 1852, and named after Melpomenē, the Muse of tragedy in
- Greek mythology.
+Melpomene Large, bright main-belt asteroid that was discovered on 1852,
+ and named after Melpomenē, the Muse of tragedy in Greek mythology.
  It is classified as an S-type asteroid and is composed of silicates and
  metals.
 \end_layout
@@ -564,6 +558,22 @@ Ida An asteroid in the Koronis family of the asteroid belt.
  of Ida.
 \end_layout
 
+\begin_layout Description
+253
+\begin_inset space ~
+\end_inset
+
+Mathilde An asteroid with a relatively elliptical orbit that requires more
+ than four years to circle the Sun.
+ Nonetheless, the orbit lies entirely between the orbits of Mars and Jupiter;
+ it does not cross the planetary orbits.
+ This tumbling asteroid has an unusually slow rate of rotation, requiring
+ 17.4 days to complete a 360° revolution about its axis.
+ It is a primitive C-type asteroid, which means the surface has a high proportio
+n of carbon; giving it a dark surface that reflects only 4% of the light
+ that falls on it.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -600,12 +610,7 @@ Patientia The 15th-largest asteroid in the asteroid belt with a diameter
  of 225 km.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
+\begin_layout Plain Layout
 511
 \begin_inset space ~
 \end_inset
@@ -617,60 +622,21 @@ Davida One of the ten most-massive asteroids, and the 7th-largest asteroid.
  a carbonaceous chondrite composition.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\end_inset
 
-\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Description
 532
 \begin_inset space ~
 \end_inset
 
-Herculina One of the larger members of the main asteroid belt.
- It is believed to rank among the top 20 in size, but the exact dimensions
- of many large asteroids are still uncertain.
- The current estimate for its mass would rank it close to the top 10.
-\end_layout
-
-\begin_layout Plain Layout
-It has often been noted for its complex lightcurves, which made determination
- of its shape and rotation somewhat difficult.
- A set of 1982 speckle interferometry observations led to a simple preliminary
- model of Herculina as a three-axis object, perhaps 260 by 220 by 215 km.
- 1985 analysis of this data concluded there was a nonspherical shape with
- one bright spot, whilst a 1987 photometric astrometry study concluded the
- object was spherical with two dark spots (and rotated around a completely
- different pole), which was in turn negated by a 1988 thermal study which
- showed the object could not be spherical.
- By the late 1980s, the generally accepted model was a three-axis object
- with major albedo or topographical features.[5]
-\end_layout
-
-\begin_layout Plain Layout
-Recent (2002) modelling of photometric data indicates that Herculina is
- not spherical, but a blocky shape not unlike a battered cuboid – or, as
- the analysis described it, it "resembles a toaster".
- This analysis indicates the presence of multiple largish craters, similar
- to 253 Mathilde, but no major variation in albedo.
- The approximate ratios of the axes were suggested as 1:1.1:1.3, broadly consisten
-t with earlier models if slightly more elongated.
-\end_layout
-
-\begin_layout Plain Layout
-704
-\begin_inset space ~
-\end_inset
-
-Interamnia Large F-type asteroid with an estimated diameter of 350 kilometres.
- It is the fifth-most-massive asteroid with a mass estimated to be 1.2% of
- the mass of the Asteroid Belt.
- Interamnia may represent a transitional body between small solar system
- bodies and dwarf planets.
-\end_layout
-
-\end_inset
-
-
+Herculina One of the larger members of the main asteroid belt with size
+ of 260×220×215 km.
+ It is not spherical, but a blocky shape not unlike a battered cuboid -
+ or, as the original analysis described it, it "resembles a toaster".
+ It has multiple largish craters, but no major variation in albedo.
 \end_layout
 
 \begin_layout Description
@@ -680,8 +646,8 @@ Interamnia Large F-type asteroid with an estimated diameter of 350 kilometres.
 
 Achilles Large Jupiter trojan from the Greek camp.
  Archillies was the first Jupiter trojan to be discovered.
- The dark D-type asteroid measures approximately 133 kilometers in diameter
- which makes it one of the 10 largest Jupiter trojans.
+ The dark D-type asteroid measures 133 kilometers in diameter which makes
+ it one of the 10 largest Jupiter trojans.
 \end_layout
 
 \begin_layout Description
@@ -708,6 +674,18 @@ Hektor The largest Jupiter trojan and the namesake of the Hektor family,
 \end_layout
 
 \begin_layout Description
+704
+\begin_inset space ~
+\end_inset
+
+Interamnia Large F-type asteroid with an estimated diameter of 350 kilometres.
+ It is the fifth-most-massive asteroid with a mass estimated to be 1.2% of
+ the mass of the Asteroid Belt.
+ Interamnia may represent a transitional body between small solar system
+ bodies and dwarf planets.
+\end_layout
+
+\begin_layout Description
 944
 \begin_inset space ~
 \end_inset
@@ -727,7 +705,7 @@ Gaspra An S-type asteroid that orbits very close to the inner edge of the
  asteroid belt.
  Gaspra was the first asteroid ever to be closely approached when it was
  visited by the Galileo spacecraft, which flew by on its way to Jupiter
- on 29 October 1990.
+ on October 1990.
 \end_layout
 
 \begin_layout Description
@@ -768,7 +746,8 @@ Outer System
 \end_layout
 
 \begin_layout Standard
-The outer system map shows positions of giant planets within orbit of Neptune.
+The outer system map shows positions of giant planets within the orbit of
+ Neptune.
  Earth, Mars and some asteroid colonies are included for reference.
  Future orbit positions are displayed for some objects at one year intervals.
 \end_layout
@@ -956,6 +935,28 @@ Because the Epstein Drive removed ∆v limitations to space travel, ships
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/brachistochrone.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The time it takes to execute a flight path along a Brachistochrone trajectory
  depends on two factors: the distance between the two points, and the accelerati
 on of the ship.
@@ -1045,7 +1046,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-The last table starts and ends journey with acceleration boost.
+The last table starts and ends the journey with an acceleration boost.
  The central part of the journey uses normal 0.5g acceleration and flip at
  the middle.
 \end_layout
