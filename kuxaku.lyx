@@ -33,7 +33,16 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a5paper
 \use_geometry true
 \use_package amsmath 1
@@ -66,7 +75,7 @@
 \bottommargin 1.5cm
 \headheight 1.5cm
 \headsep 1.5cm
-\footskip 1cm
+\footskip 0.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -87,13 +96,39 @@
 
 \begin_body
 
-\begin_layout Title
-Solar System Asteroids
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/mikko/Expanse/The_Expanse_logo.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-List of notable Solar System asteroids and distances between them for communicat
-ion and travel.
+\align center
+
+\series bold
+\size giant
+System
+\end_layout
+
+\begin_layout Standard
+List of notable Solar System bodies and distances between them for communication
+ and travel.
  This is a living document: positions of bodies change over the time.
  Effective date can be seen in the image and table titles.
 \end_layout
@@ -901,7 +936,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/delay.png
+	filename output/systemdelay.png
 	lyxscale 50
 	width 100col%
 
@@ -977,75 +1012,6 @@ The following tables show the time to travel the average distance between
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/travel03.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/travel05.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/travel10.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The last table starts and ends the journey with an acceleration boost.
  The central part of the journey uses normal 0.5g acceleration and flip at
  the middle.
@@ -1053,6 +1019,117 @@ The last table starts and ends the journey with an acceleration boost.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel10.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel05+60x40.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Jovian system
+\end_layout
+
+\begin_layout Plain Layout
+Jovian system is a kind of miniature solar system.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
 placement h
 wide false
 sideways false
@@ -1060,9 +1137,233 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/travel05+boost.png
+	filename output/jovian.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+xxx
+\end_layout
+
+\begin_layout Subsection
+Galilean Moons
+\end_layout
+
+\begin_layout Description
+Io xxx
+\end_layout
+
+\begin_layout Description
+Europa xxx
+\end_layout
+
+\begin_layout Description
+Ganymede xxx
+\end_layout
+
+\begin_layout Description
+Callisto xxx
+\end_layout
+
+\begin_layout Subsection
+Inner Moons
+\end_layout
+
+\begin_layout Description
+Amalthea xxx
+\end_layout
+
+\begin_layout Description
+Thebe xxx
+\end_layout
+
+\begin_layout Description
+Adrastea xxx
+\end_layout
+
+\begin_layout Description
+Metis xxx
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviandelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+xxx
+\end_layout
+
+\begin_layout Subsection
+Outer Moons
+\end_layout
+
+\begin_layout Description
+Himalia xxx
+\end_layout
+
+\begin_layout Description
+Elara xxx
+\end_layout
+
+\begin_layout Description
+Pasiphae xxx
+\end_layout
+
+\begin_layout Description
+Sinope xxx
+\end_layout
+
+\begin_layout Description
+Lysithea xxx
+\end_layout
+
+\begin_layout Description
+Carme xxx
+\end_layout
+
+\begin_layout Description
+Ananke xxx
+\end_layout
+
+\begin_layout Description
+Leda xxx
+\end_layout
+
+\begin_layout Description
+Themisto xxx
+\end_layout
+
+\begin_layout Description
+Kalyke xxx
+\end_layout
+
+\begin_layout Description
+Iocaste xxx
+\end_layout
+
+\begin_layout Description
+Praxidike xxx
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/jovian2.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+xxx
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel10.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

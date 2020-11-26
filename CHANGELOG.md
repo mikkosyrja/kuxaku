@@ -17,3 +17,9 @@ Updated example images and documents.
 Dropped Mercury from travel time tables.
 
 Changed LyX document paper size to A5. More suitable for tablets and 13 inch laptops.
+
+## 2020-11-26
+
+Modified Lyx document style with borders.
+
+Renamed old communication delay and travel time tables with names systemdelay and systemtravel. Added Jovian outer moon orbits to separate jovian2.png map and calculated communication delay and travel time tables within Jovian system.

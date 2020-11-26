@@ -6,11 +6,9 @@ import math
 import shutil
 import datetime
 import dateutil.parser
-
-import darian
-
 import argparse
 
+import darian
 import numpy
 import ephem
 
@@ -55,9 +53,8 @@ acc = au * 1000 / gravity	# acceleration scale factor
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
-places = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
-#places = ('Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Herculina', 'Jupiter', 'Saturn')
-positions = []	# must be filled in above order
+systemplaces = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
+systempositions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
 
@@ -120,6 +117,7 @@ def plotposition(name, position, color, size, auedge = 0):
 		horizontal = 'left'		# keep text inside
 	if auedge and auposition[0] > auedge * 0.8:
 		horizontal = 'right'	# keep text inside
+#	print(name + ": " + str(auposition[0]))
 	vertical = ('top' if position[1] < 0 else 'bottom')
 	plot.text(auposition[0], auposition[1], name, fontsize = 5, color = foreground, ha = horizontal, va = vertical)
 
@@ -165,8 +163,8 @@ plotposition("", sun, [1, 1, 0], sunsize)
 position = planets[1, 199].compute(julian) + planets[0,1].compute(julian)
 plotposition("Mercury", position, mooncolor, moonsize)
 
-positions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
-plotposition("Venus", positions[-1], planetcolor, moonsize)
+systempositions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
+plotposition("Venus", systempositions[-1], planetcolor, moonsize)
 #position = planets[2, 299].compute(julian) + planets[0,2].compute(julian)
 #plotposition("Venus", position, planetcolor, moonsize)
 
@@ -176,8 +174,8 @@ planetorbit(planets, 2, 299, 3, planetcolor)	# venus
 earthbary = planets[0,3].compute(julian)
 planetorbit(planets, 3, 399, 6, [0, 0, 1])
 
-positions.append(planets[3, 399].compute(julian) + earthbary)
-plotposition("Earth", positions[-1], [0, 0, 1], planetsize)
+systempositions.append(planets[3, 399].compute(julian) + earthbary)
+plotposition("Earth", systempositions[-1], [0, 0, 1], planetsize)
 #plotposition("Moon", planets[3, 301].compute(julian) + earthbary, mooncolor, moonsize)
 
 #l4 = SPK.open('../original/ephemerides/L4_de431.bsp')
@@ -189,8 +187,8 @@ martian = SPK.open('data/martian.bsp')
 marsbary = martian[0,4].compute(julian)
 planetorbit(martian, 4, 499, 8, [1, 0, 0])
 
-positions.append(martian[4, 499].compute(julian)[:3] + marsbary)
-plotposition("Mars", positions[-1], [1, 0, 0], planetsize)
+systempositions.append(martian[4, 499].compute(julian)[:3] + marsbary)
+plotposition("Mars", systempositions[-1], [1, 0, 0], planetsize)
 #plotposition("Phobos", martian[4, 401].compute(julian)[:3] + marsbary, mooncolor, moonsize)
 #plotposition("Deimos", martian[4, 402].compute(julian)[:3] + marsbary, mooncolor, moonsize)	# destroyed by earth
 
@@ -201,7 +199,7 @@ def plotasteroid(name, id, color = asteroidcolor, size = asteroidsize, months = 
 		addellipse(pos / au, color, orbitplotsize)
 	pos = kernel.compute_type21(0, 2000000 + id, julian)[0]
 	if months:
-		positions.append(pos)
+		systempositions.append(pos)
 	if id != 127 and id != 1677:
 		name = str(id) + ' ' + name
 	plotposition(name, pos, color, size, innersize)
@@ -255,8 +253,13 @@ plotasteroid("Hidalgo", 944)
 plotasteroid("Gaspra", 951)
 plotasteroid("Ganymed", 1036)
 
+jovianplaces = ('Ganymede', 'Callisto', 'Himalia', 'Elara', 'Pasiphae', 'Sinope', 'Lysithea', 'Carme', 'Ananke', 'Leda')
+jovianpositions = []	# must be filled in above order
+
 jovian = SPK.open('data/jovian.bsp')
+jovian2 = SPK.open('data/jovian2.bsp')
 #print(jovian)
+#print(jovian2)
 
 jupiterbary = jovian[0,5].compute(julian)
 planetorbit(jovian, 5, 599, 24, planetcolor)
@@ -301,8 +304,8 @@ def outerorbit(kernel, center, planet, years, color, size = orbitplotsize):
 
 outerorbit(jovian, 5, 599, 8, planetcolor)
 
-positions.append(jovian[5,599].compute(julian)[:3] + jupiterbary)
-plotposition("Jupiter", positions[-1], planetcolor, gasgiantsize * outerscale)
+systempositions.append(jovian[5,599].compute(julian)[:3] + jupiterbary)
+plotposition("Jupiter", systempositions[-1], planetcolor, gasgiantsize * outerscale)
 
 cronian = SPK.open('data/cronian.bsp')
 #print(cronian)
@@ -310,8 +313,8 @@ cronian = SPK.open('data/cronian.bsp')
 saturnbary = cronian[0,6].compute(julian)
 outerorbit(cronian, 6, 699, 8, planetcolor)
 
-positions.append(cronian[6,699].compute(julian)[:3] + saturnbary)
-plotposition("Saturn", positions[-1], planetcolor, gasgiantsize * outerscale)
+systempositions.append(cronian[6,699].compute(julian)[:3] + saturnbary)
+plotposition("Saturn", systempositions[-1], planetcolor, gasgiantsize * outerscale)
 
 uranian = SPK.open('data/uranian.bsp')
 #print(uranian)
@@ -357,11 +360,11 @@ axis.set_ylim(-outersize, outersize)
 savemap(axis, 'Outer System', 'outer.png', 'year')
 
 #
-#	jovian system
+#	jovian inner system
 #
+joviansize = 0.013		# ±au
+jovianscale = 0.0015	# size multiplier
 minx = miny = maxx = maxy = 0
-
-jovianscale = 0.0015		# size multiplier
 
 plot.figure(3)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
@@ -373,34 +376,93 @@ axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
 
-def printjovian(name, id, color = mooncolor, size = moonsize, hours = 0):
-	for index in range(1, hours + 1, 1):
-		pos = jovian[5,id].compute(julian + index / 24.0)[:3]
+def printjovian(name, id, color = mooncolor, size = moonsize, quarters = 0):
+	for index in range(1, quarters + 1, 1):
+		pos = jovian[5,id].compute(julian + index / 4)[:3]
 		addellipse(pos / au, color, orbitplotsize * outerscale * jovianscale)
-	plotposition(name, jovian[5,id].compute(julian)[:3], color, size * jovianscale)
+	plotposition(name, jovian[5,id].compute(julian)[:3], color, size * jovianscale, joviansize)
 
 plotposition("", jovian[5,599].compute(julian)[:3], planetcolor, gasgiantsize * jovianscale)
-printjovian("Io", 501, colonycolor, moonsize, 12)
-printjovian("Europa", 502, colonycolor, moonsize, 12)
-printjovian("Ganymede", 503, colonycolor, moonsize, 12)
-printjovian("Callisto", 504, colonycolor, moonsize, 12)
+printjovian("Io", 501, colonycolor, moonsize, 6)
+printjovian("Europa", 502, colonycolor, moonsize, 6)
+printjovian("Ganymede", 503, colonycolor, moonsize, 6)
+printjovian("Callisto", 504, colonycolor, moonsize, 6)
 printjovian("Amalthea", 505)
 printjovian("Thebe", 514)
 printjovian("Adrastea", 515)
 printjovian("Metis", 516)
 
-joviansize = 0.014		# ±au
+jovianpositions.append(jovian[5,503].compute(julian)[:3])	# Ganymede
+jovianpositions.append(jovian[5,504].compute(julian)[:3])	# Callisto
+
 axis.set_xlim(-joviansize, joviansize)
 axis.set_ylim(-joviansize, joviansize)
 
-savemap(axis, 'Jovian System', 'jovian.png', 'hour')
+savemap(axis, 'Jovian Inner System', 'jovian.png', '6 hours')
+
+#
+#	jovian outer system
+#
+joviansize = 0.2		# ±au
+jovianscale = 0.02		# size multiplier
+minx = miny = maxx = maxy = 0
+
+plot.figure(3)
+figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
+axis.patch.set_facecolor(background)
+
+axis.spines['bottom'].set_color(foreground)
+axis.spines['top'].set_color(foreground)
+axis.spines['right'].set_color(foreground)
+axis.spines['left'].set_color(foreground)
+axis.tick_params(labelcolor = foreground, colors = foreground)
+
+def printjovian2(name, id, weeks = 0):
+	for index in range(1, weeks + 1, 1):
+		pos = jovian2[5,id].compute(julian + index * 7)[:3]
+		addellipse(pos / au, mooncolor, orbitplotsize * outerscale * jovianscale)
+	plotposition(name, jovian2[5,id].compute(julian)[:3], mooncolor, moonsize * jovianscale, joviansize)
+
+plotposition("", jovian[5,599].compute(julian)[:3], planetcolor, gasgiantsize * jovianscale)
+printjovian("", 501, colonycolor)	# Io
+printjovian("", 502, colonycolor)	# Europa
+printjovian("Ganymede", 503, colonycolor)
+printjovian("Callisto", 504, colonycolor)
+
+printjovian2("Himalia", 506, 6)
+printjovian2("Elara", 507, 6)
+printjovian2("Pasiphae", 508, 6)
+printjovian2("Sinope", 509, 6)
+printjovian2("Lysithea", 510, 6)
+printjovian2("Carme", 511, 6)
+printjovian2("Ananke", 512, 6)
+printjovian2("Leda", 513, 6)
+#printjovian2("Callirrhoe", 517, 6)
+printjovian2("Themisto", 518, 6)
+printjovian2("Kalyke", 523, 6)
+printjovian2("Iocaste", 524, 6)
+printjovian2("Praxidike", 527, 6)
+
+jovianpositions.append(jovian2[5,506].compute(julian)[:3])	# Himalia
+jovianpositions.append(jovian2[5,507].compute(julian)[:3])	# Elara
+jovianpositions.append(jovian2[5,508].compute(julian)[:3])	# Pasiphae
+jovianpositions.append(jovian2[5,509].compute(julian)[:3])	# Sinope
+jovianpositions.append(jovian2[5,510].compute(julian)[:3])	# Lysithea
+jovianpositions.append(jovian2[5,511].compute(julian)[:3])	# Carme
+jovianpositions.append(jovian2[5,512].compute(julian)[:3])	# Ananke
+jovianpositions.append(jovian2[5,513].compute(julian)[:3])	# Leda
+
+axis.set_xlim(-joviansize, joviansize)
+axis.set_ylim(-joviansize, joviansize)
+
+savemap(axis, 'Jovian Outer System', 'jovian2.png', 'week')
 
 #
 #	cronian system
 #
+croniansize = 0.024		# ±au
+cronianscale = 0.0024	# size multiplier
 minx = miny = maxx = maxy = 0
-
-cronianscale = 0.0025		# size multiplier
 
 plot.figure(4)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
@@ -412,75 +474,85 @@ axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
 
-def printcronian(name, id, color = mooncolor, size = moonsize, hours = 0):
-	for index in range(1, hours + 1, 1):
-		pos = cronian[6,id].compute(julian + index / 24.0)[:3]
+def printcronian(name, id, color = mooncolor, size = moonsize, quarters = 0):
+	for index in range(1, quarters + 1, 1):
+		pos = cronian[6,id].compute(julian + index / 4)[:3]
 		addellipse(pos / au, color, orbitplotsize * outerscale * cronianscale)
-	plotposition(name, cronian[6,id].compute(julian)[:3], color, size * cronianscale)
+	plotposition(name, cronian[6,id].compute(julian)[:3], color, size * cronianscale, croniansize)
 
 plotposition("", cronian[6,699].compute(julian)[:3], planetcolor, gasgiantsize * cronianscale)
 printcronian("Mimas", 601)
 printcronian("Enceladus", 602)
 printcronian("Tethys", 603)
 printcronian("Dione", 604)
-printcronian("Rhea", 605, colonycolor, moonsize, 12)
-printcronian("Titan", 606, colonycolor, moonsize, 12)
-printcronian("Hyperion", 607, mooncolor, moonsize, 12)
-printcronian("Iapetus", 608, colonycolor, moonsize, 12)
+printcronian("Rhea", 605, colonycolor, moonsize, 6)
+printcronian("Titan", 606, colonycolor, moonsize, 6)
+printcronian("Hyperion", 607, mooncolor, moonsize, 6)
+printcronian("Iapetus", 608, colonycolor, moonsize, 6)
 #printcronian("Phoebe", 609)	# destroyed by mars
 
-croniansize = 0.025		# ±au
 axis.set_xlim(-croniansize, croniansize)
 axis.set_ylim(-croniansize, croniansize)
 
-savemap(axis, 'Cronian System', 'cronian.png', 'hour')
+savemap(axis, 'Cronian System', 'cronian.png', '6 hours')
+
+#
+#	calculate distances between places
+#
+def calculatedistances(places, positions, distances):
+	for row in range(len(places)):
+		cellrow = []
+		for col in range(len(places)):
+			if col >= row:
+				cellrow.append(distance(positions[row] - positions[col]))
+			else:	# mirror value
+				cellrow.append(distances[col][row])
+		distances.append(cellrow)
 
 #
 #	common tables for distances in au
 #
-distances = []
-for row in range(len(places)):
-	cellrow = []
-	for col in range(len(places)):
-		if col >= row:
-			cellrow.append(distance(positions[row] - positions[col]))
-		else:	# mirror value
-			cellrow.append(distances[col][row])
-	distances.append(cellrow)
+systemdistances = []
+calculatedistances(systemplaces, systempositions, systemdistances)
+joviandistances = []
+calculatedistances(jovianplaces, jovianpositions, joviandistances)
 
 #
 #	communication delay
 #
-print('Writing:', outputdir + 'delay.png')
+def commdelay(name, places, distances, unit, index):
+	print('Writing:', outputdir + name + '.png')
 
-plot.figure(5)
-figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
+	plot.figure(index)
+	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
 
-celltext = []
-for row in range(len(places)):
-	cellrow = []
-	for col in range(len(places)):
-		if col >= row:
-			value = distances[row][col] * delay
-			cellrow.append('{0:.2g}'.format(value) if value < 100 else '{0:.3g}'.format(value))
-		else:	# mirror value
-			cellrow.append(celltext[col][row])
-	celltext.append(cellrow)
+	celltext = []
+	for row in range(len(places)):
+		cellrow = []
+		for col in range(len(places)):
+			if col >= row:
+				value = distances[row][col] * delay
+				if unit == 'Seconds':
+					value = value * 60
+				cellrow.append('{0:.0f}'.format(value))
+			else:	# mirror value
+				cellrow.append(celltext[col][row])
+		celltext.append(cellrow)
 
-axis.axis('off')
-axis.axis('tight')
-axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-axis.set_title('Communication Delay in Minutes' + titledate(), color = foreground)
-axis.patch.set_facecolor(background)
+	axis.axis('off')
+	axis.axis('tight')
+	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+	axis.set_title('Communication Delay in ' + unit + ' ' + titledate(), color = foreground)
+	#axis.patch.set_facecolor(background)
 
-plot.savefig(outputdir + 'delay.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
+	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
 
 #
 #	travel time
 #
-def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
-	title = 'Travel Time in Hours (' + str(cruiseg) + 'g'
-	filename = outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10)
+def traveltime(name, places, distances, unit, index, cruiseg, juiceg = 0, juicet = 0):
+	title = 'Travel Time in ' + unit + ' (' + str(cruiseg) + 'g'
+	filename = outputdir + name + '{:02.0f}'.format(cruiseg * 10)
 	if juiceg and juicet:
 		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
 		filename += '+' + '{:02.0f}'.format(juiceg * 10) + 'x' + '{:02.0f}'.format(juicet * 10)
@@ -503,10 +575,12 @@ def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 					cg = gravity * cruiseg
 					ct = (math.sqrt(js * js + cg * cd) - js) / cg
 					value = (jt * 2 + ct * 2) / 3600
-					cellrow.append('{0:.3g}'.format(value))
 				else:	# all juice
-					value = 2 * math.sqrt((distances[row][col]) * acc / juiceg)
-					cellrow.append('{0:.3g}'.format(value / 3600))
+					value = 2 * math.sqrt((distances[row][col]) * acc / juiceg) / 3600
+				if unit == 'Days':
+					cellrow.append('{0:.1f}'.format(value / 24))
+				else:
+					cellrow.append('{0:.0f}'.format(value))
 			elif col == row:	# diagonal
 				cellrow.append('0')
 			else:	# mirror value
@@ -519,12 +593,16 @@ def traveltimex(index, cruiseg, juiceg = 0, juicet = 0):
 	axis.patch.set_facecolor(background)
 	axis.set_title(title, color = foreground)
 	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
-	if juiceg and juicet:
-		shutil.copy2(filename, outputdir + 'travel' + '{:02.0f}'.format(cruiseg * 10) + '+boost.png')
 
-traveltimex(6, 0.3)		# belter default
-traveltimex(7, 0.5)		# belter tolerable
-traveltimex(8, 1.0)		# earth normal
+commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 5)
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 6, 0.3)			# belter default
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 7, 0.5)			# belter tolerable
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 8, 1.0)			# earth normal
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 9, 0.5, 6, 4)		# juice example
 if arguments.juiceg and arguments.juicet:
-	traveltimex(9, 0.5, arguments.juiceg, arguments.juicet)
-	traveltimex(10, 1.0, arguments.juiceg, arguments.juicet)
+	traveltime('systemtravel', systemplaces, systemdistances, 'Days', 10, 0.5, arguments.juiceg, arguments.juicet)
+
+commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 11)
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 12, 0.3)		# belter default
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 13, 0.5)		# belter tolerable
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 14, 1.0)		# earth normal

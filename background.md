@@ -38,15 +38,17 @@ Sol Ring is another problem. It is said to be "stationary positioned little less
 
 Communication delay is quite straightforward. Just the distance between objects divided by the speed of light. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-![communication delay](images/delay.png)
+![communication delay](images/systemdelay.png)
 
 Simple travel profiles with constant acceleration do not always make sense. Faster one for generic passengers would be: initial high-g acceleration with the juice for a few hours, 0.5g cruise to a halfway point, 0.5g deceleration cruise and final high-g braking with the juice again. 0.5g is tolerable for belters and 4 hours is probably near the upper limit of a single acceleration period with the juice.
 
+Technically it would be possible to have several boost periods during a long journey, but that is not implemented yet. Also, current scheme means that passengers arrive to the destination just after the braking boost with all annoying hangover effects. Optimal acceleration arrangement could be flip before midpoint and earlier boost deceleration with final cruise period before arriving to the destination. This slows down the journey a little, but allows recovery from juice before arrival. This also means that the travel time calculation becomes asymmetrical and much more complex.
+
 Following example tables display travel times with and without the juice boost:
 
-![travel time](images/travel05.png)
+![travel time](images/systemtravel05.png)
 
-![travel time](images/travel05+boost.png)
+![travel time](images/systemtravel05+60x40.png)
 
 ### Solar System Document
 

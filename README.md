@@ -10,7 +10,7 @@
 >
 > -- <https://twitter.com/Nfarmerlinguist/status/692757569236959232>
 
-Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For a background and examples, see: [background.md](background.md)
+Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For background and examples, see: [background.md](background.md)
 
 Latest changes can be found from [CHANGELOG.md](CHANGELOG.md)
 
@@ -75,19 +75,19 @@ Inner planet map (inner.png) shows positions of Jupiter, inner planets, importan
 
 Outer planet map (outer.png) shows positions of some Centaurs (small Solar System bodies) and giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
 
-Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon positions around Jupiter and Saturnus, respectively. Future orbit positions for some moons are plotted at one hour intervals.
+Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon positions around Jupiter and Saturnus, respectively. Future orbit positions for some moons are plotted at six hour intervals.
+
+Jovian outer system map (jovian2.png) shows some Jupiter's outer moons with future orbit positions at one week intervals.
 
 Some objects (notably Eros, Sol Ring and Anderson Station) are currently commented out in the script. These can be turned on by removing the comment character.
 
 ### Communication Delay and Travel Times
 
-Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Mercury, Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
+Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in hours between same locations using 0.5g and 1.0g accelerations. The first one (travel05.png) is tolerable for belters and the second (travel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it. This needs to be fixed at some point.
+Travel time tables (travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (systemtravel03.png) is comfortable for belters. The second (systemtravel05.png) is tolerable for belters and the third (systemtravel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it. This needs to be fixed at some point.
 
-Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 5 and juicet 4 start the journey with 5.0g acceleration for 4 hours. After that cruise acceleration of 0.5g or 1.0g is used normally. At the end of the journey, final deceleration is again done with 5.0g for 4 hours. These tables are stored to files with given parameters in their names (travel05+60x40.png) and also copied to files with more generic names (travel05+boost.png).
-
-Technically it would be possible to have several boost perioids during a long journey, but that is not implemented yet.
+Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 6 and juicet 4 start the journey with 6g acceleration for 4 hours. After that the cruise acceleration of 0.5g is used normally. At the end of the journey, final deceleration is again done with 6g for 4 hours. Tables have given parameters in their names (systemtravel05+60x40.png).
 
 ### Darian Calendar
 
@@ -105,7 +105,8 @@ Following data files are downloaded from <https://naif.jpl.nasa.gov/pub/naif/gen
 
 - de430.bsp (Mercury, Venus, Earth and Moon)
 - mar097.bsp (Mars, Phobos and Deimos)
-- jup310.bsp (Jupiter and its moons)
+- jup310.bsp (Jupiter and inner moons)
+- jup341.bsp (Jupiter's outer moons)
 - sat427.bsp (Saturn and its moons)
 - ura111.bsp (Uranus and its moons)
 - nep081.bsp (Neptune and its moons)
@@ -118,6 +119,11 @@ To make files smaller, ten year perioid is extracted from them:
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 sat427.bsp cronian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 ura111.bsp uranian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 nep081.bsp neptunian.bsp
+
+Jovian outer moons proved to be somewhat problematic. Jplephem couldn't extract all of them from the file jup341.bsp. However, the latest version 2.15 was able to extract some of them, when listed in command line with targets option.
+
+	python3 -m jplephem excerpt --targets 506,507,508,509,510,511,512,513,517,518,519,520,\
+		521,522,523,524,525,526,527,528,529,530 2020/1/1 2030/1/1 jup341.bsp jovian2.bsp
 
 Asteroid data is fetched separately with following URL:
 
