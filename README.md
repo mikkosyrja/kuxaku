@@ -48,7 +48,7 @@ Instructions for Windows users not familiar with Python or GitHub:
 
 Go to the program directory and run script kuxaku.py with desired date as a parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
-	kuxaku.py 2350-05-16
+	kuxaku.py 2351-05-16
 
 Program creates maps and tables as PNG images and puts them into the output subdirectory.
 
@@ -85,7 +85,7 @@ Some objects (notably Eros, Sol Ring and Anderson Station) are currently comment
 
 Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (systemtravel03.png) is comfortable for belters. The second (systemtravel05.png) is tolerable for belters and the third (systemtravel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it. This needs to be fixed at some point.
+Travel time tables (travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (systemtravel03.png) is comfortable for belters. The second (systemtravel05.png) is tolerable for belters and the third (systemtravel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it.
 
 Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 6 and juicet 4 start the journey with 6g acceleration for 4 hours. After that the cruise acceleration of 0.5g is used normally. At the end of the journey, final deceleration is again done with 6g for 4 hours. Tables have given parameters in their names (systemtravel05+60x40.png).
 
@@ -105,9 +105,10 @@ Following data files are downloaded from <https://naif.jpl.nasa.gov/pub/naif/gen
 
 - de430.bsp (Mercury, Venus, Earth and Moon)
 - mar097.bsp (Mars, Phobos and Deimos)
-- jup310.bsp (Jupiter and inner moons)
+- jup310.bsp (Jupiter and its inner moons)
 - jup341.bsp (Jupiter's outer moons)
-- sat427.bsp (Saturn and its moons)
+- sat427.bsp (Saturn and its outer moons)
+- sat393.bsp (Saturn's ring moons)
 - ura111.bsp (Uranus and its moons)
 - nep081.bsp (Neptune and its moons)
 
@@ -117,6 +118,7 @@ To make files smaller, ten year perioid is extracted from them:
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 mar097.bsp martian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 jup310.bsp jovian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 sat427.bsp cronian.bsp
+	python3 -m jplephem excerpt 2020/1/1 2030/1/1 sat393.bsp cronian2.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 ura111.bsp uranian.bsp
 	python3 -m jplephem excerpt 2020/1/1 2030/1/1 nep081.bsp neptunian.bsp
 

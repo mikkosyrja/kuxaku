@@ -127,6 +127,39 @@ System
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 List of notable Solar System bodies and distances between them for communication
  and travel.
  This is a living document: positions of bodies change over the time.
@@ -221,7 +254,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/inner.png
+	filename output/systeminner.png
 	lyxscale 50
 	width 100col%
 
@@ -273,28 +306,6 @@ Hebe Large main-belt asteroid, containing around 0.5% of the mass of the
  This high bulk density means an extremely solid body that has not been
  impacted by collisions, which is not typical of asteroids of its size.
  In brightness, Hebe is the fifth-brightest object in the Asteroid Belt.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/asteroid.jpg
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -504,6 +515,28 @@ Sylvia The 8th-largest asteroid in the asteroid belt.
  beyond the core of the belt.
  Sylvia was the first asteroid known to possess more than one moon.
  They have been named (87) Sylvia I Romulus and (87) Sylvia II Remus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/asteroid.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -796,7 +829,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/outer.png
+	filename output/systemouter.png
 	lyxscale 50
 	width 100col%
 
@@ -951,8 +984,37 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Communication delay between planet's moons is usually less than 10 seconds.
- Delay between Earth and Moon is about 1.3 seconds.
+Delay between Earth and Moon is about 1.3 seconds.
+ Likewise, in Saturn's inner system, delays are always within 2 seconds.
+ Delay between outmost Iapetus and inner Saturn system is less than 15 seconds.
+\end_layout
+
+\begin_layout Standard
+Jovian system outer satellites are farther away and communication delays
+ between them are significant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviandelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1110,10 +1172,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -1124,11 +1182,24 @@ status collapsed
 Jovian system
 \end_layout
 
-\begin_layout Plain Layout
-Jovian system is a kind of miniature solar system.
+\begin_layout Standard
+Named for the gas giant it surrounds, the Jovian System has drawn the largest
+ population in the Outer Planets to Jupiter’s moons.
+ The planet itself is — of course — uninhabitable, but there are dozens
+ of settlements and orbiting space stations around it and its moons.
+ It is a kind of miniature solar system.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+The Jovian System is responsible for growing and distributing most of the
+ food in the Outers and the Belt.
+ Most extrasolar astronomy was done in the Jovian System before the Uranian
+ System was colonized.
+ It is a vital piece of humanity’s survival in the furthest reaches of the
+ solar system, and of the Belt’s economy.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1137,7 +1208,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/jovian.png
+	filename output/jovianinner.png
 	lyxscale 50
 	width 100col%
 
@@ -1151,130 +1222,215 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
-xxx
+\begin_layout Standard
+Jupiter is primarily composed of hydrogen with a quarter of its mass being
+ helium, though helium comprises only about a tenth of the number of molecules.
 \end_layout
 
 \begin_layout Subsection
-Galilean Moons
+Ring System
 \end_layout
 
-\begin_layout Description
-Io xxx
+\begin_layout Standard
+The planet Jupiter has a system of rings known as the rings of Jupiter or
+ the Jovian ring system.
+ It was the third ring system to be discovered in the Solar System, after
+ those of Saturn and Uranus.
 \end_layout
 
-\begin_layout Description
-Europa xxx
+\begin_layout Standard
+The Jovian ring system is faint and consists mainly of dust.
+ It has four main components: a thick inner torus of particles known as
+ the "halo ring"; a relatively bright, exceptionally thin "main ring"; and
+ two wide, thick and faint outer "gossamer rings", named for the moons of
+ whose material they are composed: Amalthea and Thebe.
 \end_layout
 
-\begin_layout Description
-Ganymede xxx
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/jupiterrings.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Description
-Callisto xxx
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main and halo rings consist of dust ejected from the moons Metis, Adrastea,
+ and other unobserved parent bodies as the result of high-velocity impacts.
+ In visible and near-infrared light, the rings have a reddish color, except
+ the halo ring, which is neutral or blue in color.
 \end_layout
 
 \begin_layout Subsection
 Inner Moons
 \end_layout
 
-\begin_layout Description
-Amalthea xxx
+\begin_layout Standard
+Inner moons are unpopulated primarily due to their proximity to Jupiter
+ and location in its harsh radiation belt — even aboveground structures
+ on moons further from the planet require heavy shielding.
 \end_layout
 
 \begin_layout Description
-Thebe xxx
+Metis Metis is the innermost moon of Jupiter.
+ It is tidally locked to Jupiter, and its shape is strongly asymmetrical,
+ with one of the diameters being almost twice as large as the smallest one.
+ It is one of the two moons known to orbit Jupiter in less than the length
+ of Jupiter's day, the other being Adrastea.
+ It orbits within the main ring of Jupiter, and is a major contributor of
+ material to the rings.
+ The surface of Metis is heavily cratered, dark, and appears to be reddish
+ in color.
 \end_layout
 
 \begin_layout Description
-Adrastea xxx
+Adrastea Adrastea is the second by distance, and the smallest of the four
+ inner moons of Jupiter.
+ It also orbits Jupiter in less than the length of planet's day.
+ It orbits at the edge of Jupiter's Main Ring and, like Metis, is the main
+ contributor of material to the rings.
+ Adrastea has an irregular shape.
 \end_layout
 
 \begin_layout Description
-Metis xxx
+Amalthea Amalthea has the third closest orbit around Jupiter among known
+ moons.
+ It is in a close orbit around Jupiter and is within the outer edge of the
+ Amalthea Gossamer Ring which is formed from dust ejected from its surface.
+ Jupiter would appear 46.5 degrees in diameter from its surface.
+ Amalthea is the largest of the inner satellites of Jupiter and is irregularly
+ shaped and reddish in color.
+ Its surface features include large craters and ridges.
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/joviandelay.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
+\begin_layout Description
+Thebe Thebe is the fourth of Jupiter's moons by distance from the planet.
+ The second largest of the inner satellites of Jupiter, Thebe orbits within
+ the outer edge of the Thebe gossamer ring that is formed from dust ejected
+ from its surface.
+ It is irregularly shaped and reddish in colour Its surface features include
+ large craters and high mountains — some of them are comparable to the size
+ of the moon itself.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Subsection
+Galilean Moons
 \end_layout
 
-\begin_layout Plain Layout
-xxx
+\begin_layout Standard
+The Galilean moons are the four largest moons of Jupiter.
+ They were first seen by Galileo Galilei in December 1609 or January 1610.
+ They were the first objects found to orbit a planet other than the Earth.
+\end_layout
+
+\begin_layout Description
+Io One of Jupiter’s larger moons, Io is an extremely hostile and unforgiving
+ environment for colonists.
+ Its atmosphere of sulfur dixoide and hot spots of volcanic and tectonic
+ activity make Io a very dangerous environment for humanity.
+ Io’s volcanos produce vents of heat in excess of 2,000° K, and the moon
+ itself creates an intense electrical field when its nickel and iron core
+ passes through Jupiter’s magnetic field, producing in excess of 1 trillion
+ watts.
+ Power stations dotted around the surface converting heat transfer and atmospher
+ic electrical charge into usable energy have made Io one of the primary
+ storable energy production facilities in the Outers.
+\end_layout
+
+\begin_layout Description
+Europa One of the most populated of Jupiter’s moons, Europa has some similaritie
+s to Ganymede — they both have stable tectonics and aboveground dome greenhouses
+, and were amongst the first moons to be colonized.
+ Earthers, Belters, and Martians all store eggs and sperm on Europa and
+ Ganymede, as well as Luna and Earth.
+ However, while Ganymede has significantly increased its investment in agricultu
+ral and medical technology over the decades, Europa has fallen behind.
+ Now, the moon’s primary advantage is its thick surface layer of ice, which
+ allows its settlements to supply themselves with water and oxygen without
+ outside help.
+\end_layout
+
+\begin_layout Description
+Ganymede Ganymede Station is the bread basket and the main birthing center
+ for the Outers and the Belt, and a center of civilization in the far reaches
+ of the solar system.
+ It is the safest station in the Jovian system, where people come to give
+ birth, avoiding the defects that can come with carrying to term in low
+ or zero g.
+ As the only moon with any magnetosphere, it’s the only place where dome-grown
+ crops stand a chance in Jupiter’s harsh radiation belt, even with heavy
+ shielding on the domes and habitats.
+ Ganymede is also unique in its intricate system of orbital mirror stations
+ that shine concentrated sunlight down onto the dome greenhouses that produce
+ vegetables, fruits, and even some meat.
+ The moon’s ice, on the surface and reaching into the depths of the moon,
+ provides all the water necessary for life.
+\end_layout
+
+\begin_layout Description
+Callisto Callisto is the second-largest moon of Jupiter and the third-largest
+ in the Sol system.
+ Its orbit requires it to be tidally locked – one side constantly faces
+ Jupiter.
+ This large moon’s tectonic stability and significant deposits of rare minerals
+ made it an ideal location for Mars’ shipyards, the largest in the Outers.
+ Most of the MCRN’s fleet has been built orbiting Callisto, where the shipyards
+ are capable of building hulls up to 700 meters in length.
+ Callisto is one of the only moons of Jupiter where radioactive minerals
+ are close enough to the surface for easy extraction, however it hasn’t
+ created a strong economy.
+ Mining and shipbuilding are the only sources of revenue, and revenue that
+ comes only from Mars.
 \end_layout
 
 \begin_layout Subsection
 Outer Moons
 \end_layout
 
-\begin_layout Description
-Himalia xxx
+\begin_layout Standard
+These outer moons are all too small to support a colony, but they are, or
+ have been, used as scientific and mining outposts.
 \end_layout
 
 \begin_layout Description
-Elara xxx
+Themisto Themisto's orbit is unusual: unlike most of Jupiter's moons, which
+ orbit in distinct groups, Themisto orbits alone.
+ The moon is located midway between the Galilean moons and the first group
+ of prograde irregular moons, called the Himalia group.
+ It is about 8 kilometers in diameter.
 \end_layout
 
 \begin_layout Description
-Pasiphae xxx
+Leda Leda is a prograde irregular satellite of Jupiter.
+ It belongs to the Himalia group, five moons orbiting between 11 and 13
+ Gm from Jupiter at an inclination of about 28°.
+ Its orbit is continuously changing due to solar and planetary perturbations.
 \end_layout
 
 \begin_layout Description
-Sinope xxx
+Himalia Himalia is the largest irregular satellite of Jupiter, with a diameter
+ of 140 km.
+ It is the fifth largest Jovian satellite, after the four Galilean moons.
+ Himalia's rotational period is 7 h 47 m, and appears neutral in color (grey),
+ like the other members of its group.
 \end_layout
 
-\begin_layout Description
-Lysithea xxx
-\end_layout
-
-\begin_layout Description
-Carme xxx
-\end_layout
-
-\begin_layout Description
-Ananke xxx
-\end_layout
-
-\begin_layout Description
-Leda xxx
-\end_layout
-
-\begin_layout Description
-Themisto xxx
-\end_layout
-
-\begin_layout Description
-Kalyke xxx
-\end_layout
-
-\begin_layout Description
-Iocaste xxx
-\end_layout
-
-\begin_layout Description
-Praxidike xxx
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1283,7 +1439,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/jovian2.png
+	filename output/jovianouter.png
 	lyxscale 50
 	width 100col%
 
@@ -1297,11 +1453,100 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
-xxx
+\begin_layout Description
+Elara Elara is a prograde irregular satellite of Jupiter.
+ It is the eighth-largest moon of Jupiter.
+ It has a mean radius of just 43 kilometres, thus it is 2% of the size of
+ Europa.
+ However, it is half the size of Himalia, so it is the second-biggest moon
+ in the Himalia group.
+ It reflects very little light.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Description
+Lysithea Lysithea is a prograde irregular satellite of Jupiter.
+ It belongs to the Himalia group, five moons orbiting between 11 and 13
+ Gm from Jupiter at an inclination of about 28°.
+ Its orbit is continuously changing due to solar and planetary perturbations.
+\end_layout
+
+\begin_layout Description
+Iocaste Iocaste is a retrograde irregular satellite of Jupiter.
+ It orbits Jupiter at an average distance of 20.723 million kilometers in
+ 609.427 days, at an inclination of 147° to the ecliptic with an eccentricity
+ of 0.2874.
+ Iocaste belongs to the Ananke group, believed to be the remnants of a break-up
+ of a captured heliocentric asteroid.
+ The satellite is about 5 kilometres in diameter and appears grey.
+\end_layout
+
+\begin_layout Description
+Praxidike Praxidike is a retrograde irregular satellite of Jupiter.
+ It orbits Jupiter at an average distance of 20,824,000 km in 613.904 days,
+ at an inclination of 144° to the ecliptic, in a retrograde direction and
+ with an eccentricity of 0.1840.
+ Praxidike belongs to the Ananke group, believed to be the remnants of a
+ break-up of a captured heliocentric asteroid.
+ With a diameter of 7 km, Praxidike is the second largest member of the
+ group after Ananke itself.
+\end_layout
+
+\begin_layout Description
+Ananke Ananke is a retrograde irregular moon of Jupiter.
+ It gives its name to the Ananke group, retrograde irregular moons which
+ orbit Jupiter between 19.3 and 22.7 Gm, at inclinations of roughly 150°.
+ Ananke orbits Jupiter on a high-eccentricity and high-inclination retrograde
+ orbit.
+\end_layout
+
+\begin_layout Description
+Kalyke Kalyke is a retrograde irregular satellite of Jupiter.
+ Kalyke's albedo is measured at 2.9%, corresponding to a diameter of 6.9 kilometre
+s.
+ It belongs to the Carme group, made up of irregular retrograde moons orbiting
+ Jupiter at a distance ranging between 23 and 24 Gm and at an inclination
+ of about 165°.
+ 
+\end_layout
+
+\begin_layout Description
+Pasiphae Pasiphae is a retrograde irregular satellite of Jupiter.
+ Pasiphae orbits Jupiter on a high eccentricity and high inclination retrograde
+ orbit.
+ It gives its name to the Pasiphae group, irregular retrograde moons orbiting
+ Jupiter at distances ranging between 22.8 and 24.1 million km, and with inclinati
+ons ranging between 144.5° and 158.3°.
+ Pasiphae is also known to be in a secular resonance with Jupiter.
+ With diameter of 60 km Pasiphae is the largest retrograde and third largest
+ irregular satellite after Himalia and Elara.
+\end_layout
+
+\begin_layout Description
+Carme Carme is a retrograde irregular satellite of Jupiter.
+ It gives its name to the Carme group, made up of irregular retrograde moons
+ orbiting Jupiter at a distance ranging between 23 and 24 Gm and at an inclinati
+on of about 165°.
+ Its orbital elements are continuously changing due to solar and planetary
+ perturbations.
+ It has diameter of 47 km.
+\end_layout
+
+\begin_layout Description
+Sinope Sinope is a retrograde irregular satellite of Jupiter.
+ Sinope orbits Jupiter on a high-eccentricity and high-inclination retrograde
+ orbit.
+ Its orbit is continuously changing due to solar and planetary perturbations.
+ Sinope belongs to the Pasiphae group of retrograde irregular moons.
+ It is also known to be in a secular resonance with Jupiter, similar to
+ Pasiphae.
+\end_layout
+
+\begin_layout Standard
+Distances within Jovian system are vast, and while travel times aren't as
+ long as in interplanetary journeys, they are still quite significant.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1324,7 +1569,7 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1347,7 +1592,7 @@ status collapsed
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1370,9 +1615,306 @@ status collapsed
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Cronian System
+\end_layout
+
+\begin_layout Standard
+Surrounding the second largest gas giant in the solar system, the Saturnian
+ System has — or had — one large orbiting station functioning as a way point
+ for exploration and resource harvesting inside Saturn's rings, and a few
+ settled moons.
+ Pan, Atlas, Prometheus, Pandora, Epimetheus, Janus, Mimas, Enceladus, Tethys,
+ Telesto, Calypso, Dione, and Helene all exist within the rings of Saturn
+ and are too small to support any long-term habitat.
+ Hyperion has not yet been developed.
+\end_layout
+
+\begin_layout Subsection
+Ring System
+\end_layout
+
+\begin_layout Standard
+The rings of Saturn are the most extensive ring system of any planet in
+ the Solar System.
+ They consist of countless small particles, ranging in size from micrometers
+ to meters, that orbit about Saturn.
+ The ring particles are made almost entirely of water ice, with a trace
+ component of rocky material.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/saturnrings.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rings have numerous gaps where particle density drops sharply: two opened
+ by known moons embedded within them, and many others at locations of known
+ destabilizing orbital resonances with the moons of Saturn.
+ Other gaps remain unexplained.
+ Stabilizing resonances, on the other hand, are responsible for the longevity
+ of several rings, such as the Titan Ringlet and the G Ring.
+\end_layout
+
+\begin_layout Description
+D
+\begin_inset space ~
+\end_inset
+
+Ring Very faint innermost ring.
+\end_layout
+
+\begin_layout Description
+C
+\begin_inset space ~
+\end_inset
+
+Ring Wide but faint ring located inward of the B Ring.
+\end_layout
+
+\begin_layout Description
+B
+\begin_inset space ~
+\end_inset
+
+Ring The largest, brightest, and most massive of the rings.
+\end_layout
+
+\begin_layout Description
+A
+\begin_inset space ~
+\end_inset
+
+ring The outermost of the large, bright rings.
+\end_layout
+
+\begin_layout Subsection
+Inner Moons
+\end_layout
+
+\begin_layout Standard
+Shepherd satellites are small moons that orbit within, or just beyond, a
+ planet's ring system.
+ They have the effect of sculpting the rings: giving them sharp edges, and
+ creating gaps between them.
+ Saturn's shepherd moons are Pan, Daphnis, Atlas, Prometheus and Pandora.
+ These moons together with co-orbitals (see below) probably formed as a
+ result of accretion of the friable ring material on preexisting denser
+ cores.
+ The cores with sizes from one-third to one-half the present-day moons may
+ be themselves collisional shards formed when a parental satellite of the
+ rings disintegrated.
+\end_layout
+
+\begin_layout Standard
+Janus and Epimetheus are called co-orbital moons.
+ They are of roughly equal size, with Janus being slightly larger than Epimetheu
+s.
+ Janus and Epimetheus have orbits with only a few kilometers difference
+ in semi-major axis, close enough that they would collide if they attempted
+ to pass each other.
+ Instead of colliding, however, their gravitational interaction causes them
+ to swap orbits every four years.
+\end_layout
+
+\begin_layout Standard
+Trojan moons are a unique feature only known from the Saturnian system.
+ A trojan body orbits at either the leading L4 or trailing L5 Lagrange point
+ of a much larger object, such as a large moon or planet.
+ Tethys has two trojan moons, Telesto and Calypso, and Dione also has two,
+ Helene and Polydeuces.
+ Helene is by far the largest trojan moon, while Polydeuces is the smallest
+ and has the most chaotic orbit.
+ These moons are coated with dusty material that has smoothed out their
+ surfaces.
+\end_layout
+
+\begin_layout Description
+Prometheus Prometheus is extremely elongated, measuring approximately 136
+ km × 79 km × 59 km.
+ It has several ridges and valleys and a number of impact craters of about
+ 20 km diameter are visible, but it is less cratered than nearby Pandora,
+ Epimetheus, and Janus.
+\end_layout
+
+\begin_layout Description
+Pandora Pandora is more heavily cratered than nearby Prometheus, and has
+ at least two large craters 30 kilometres in diameter.
+ The majority of craters on Pandora are shallow as a result of being filled
+ with debris.
+ Ridges and grooves are also present on moon's surface.
+ The orbit of Pandora appears to be chaotic, as a consequence of a series
+ of four 118:121 mean-motion resonances with Prometheus.
+\end_layout
+
+\begin_layout Description
+Epimethus Epimetheus occupies essentially the same orbit as the moon Janus.
+ There are several Epimethean craters larger than 30 km in diameter, as
+ well as both large and small ridges and grooves.
+ The extensive cratering indicates that Epimetheus must be quite old.
+ Janus and Epimetheus may have formed from a disruption of a single parent
+ to form co-orbital satellites, but if this is the case the disruption must
+ have happened early in the history of the satellite system.n needed]
+\end_layout
+
+\begin_layout Description
+Janus Janus's orbit is co-orbital with that of Epimetheus.
+ Janus is extensively cratered with several craters larger than 30 km, but
+ has few linear features.
+ Janus's surface appears to be older than Prometheus's but younger than
+ Pandora's.
+\end_layout
+
+\begin_layout Description
+Mimas xxx
+\end_layout
+
+\begin_layout Description
+Enceladus xxx
+\end_layout
+
+\begin_layout Description
+Tethys xxx
+\end_layout
+
+\begin_layout Description
+Telesto xxx
+\end_layout
+
+\begin_layout Description
+Calypso xxx
+\end_layout
+
+\begin_layout Description
+Dione xxx
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/cronianinner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+xxx
+\end_layout
+
+\begin_layout Subsection
+Outer Moons
+\end_layout
+
+\begin_layout Standard
+xxx
+\end_layout
+
+\begin_layout Description
+Rhea One of the frontiers of human civilization, Rhea is only just large
+ enough for a colony, and primarily composed of water, ice, and rock.
+ The only thing the moon has to offer the rest of the system is Helium-3
+ deposits, and some small mineral mining operations.
+ Rhea’s several small underground habitats provide all the living space
+ required for its population, mostly comprised of miners and workers in
+ the Helium-3 refineries.
+ Most of their food must be imported from Titan, increasing costs, and mineral
+ and Helium-3 exports do not bring much money into the local economy.
+\end_layout
+
+\begin_layout Description
+Titan The most populous moon in the system has a thick cloud cover that
+ generates strange and beautiful solar wind displays as the moon moves in
+ and out of Saturn’s powerful magnetic field.
+ Titan is also the most chemically active body in the solar system, aside
+ from Earth.
+ Both the atmosphere and icy surface of the moon are filled with organic
+ compounds not found anywhere else.
+ Easy access to ice suitable for oxygen and water production and a lack
+ of available sunlight have put Titan on the forefront of sunlight-free
+ food production.
+\end_layout
+
+\begin_layout Description
+Hyperion xxx
+\end_layout
+
+\begin_layout Description
+Iapetus The moon is primarily known for its leading and trailing hemispheres
+ being radically different.
+ The albedo of most of the leading hemisphere is as dark as lampblack, while
+ the trailing hemisphere’s albedo is as bright as Europa.
+ The ‘dark’ side of Iapetus is covered in minerals ready for harvesting
+ right there on the surface.
+ The colonists have built special mechs that make regular runs to sweep
+ the surface for these materials for export and sale off-moon.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/cronianouter.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+xxx
 \end_layout
 
 \end_body
