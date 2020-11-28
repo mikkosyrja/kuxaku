@@ -1334,8 +1334,8 @@ Galilean Moons
 
 \begin_layout Standard
 The Galilean moons are the four largest moons of Jupiter.
- They were first seen by Galileo Galilei in December 1609 or January 1610.
- They were the first objects found to orbit a planet other than the Earth.
+ They were first seen by Galileo Galilei in 1609 and were the first objects
+ found to orbit a planet other than the Earth.
 \end_layout
 
 \begin_layout Description
@@ -1677,9 +1677,6 @@ status collapsed
 The rings have numerous gaps where particle density drops sharply: two opened
  by known moons embedded within them, and many others at locations of known
  destabilizing orbital resonances with the moons of Saturn.
- Other gaps remain unexplained.
- Stabilizing resonances, on the other hand, are responsible for the longevity
- of several rings, such as the Titan Ringlet and the G Ring.
 \end_layout
 
 \begin_layout Description
@@ -1712,6 +1709,22 @@ A
 \end_inset
 
 ring The outermost of the large, bright rings.
+\end_layout
+
+\begin_layout Description
+F
+\begin_inset space ~
+\end_inset
+
+Ring Very thin ring near the outer edge of the A ring.
+\end_layout
+
+\begin_layout Description
+E
+\begin_inset space ~
+\end_inset
+
+Ring Wide ring composed of microscopic particles.
 \end_layout
 
 \begin_layout Subsection
@@ -1780,7 +1793,7 @@ Epimethus Epimetheus occupies essentially the same orbit as the moon Janus.
  The extensive cratering indicates that Epimetheus must be quite old.
  Janus and Epimetheus may have formed from a disruption of a single parent
  to form co-orbital satellites, but if this is the case the disruption must
- have happened early in the history of the satellite system.n needed]
+ have happened early in the history of the satellite system.
 \end_layout
 
 \begin_layout Description
@@ -1789,30 +1802,6 @@ Janus Janus's orbit is co-orbital with that of Epimetheus.
  has few linear features.
  Janus's surface appears to be older than Prometheus's but younger than
  Pandora's.
-\end_layout
-
-\begin_layout Description
-Mimas xxx
-\end_layout
-
-\begin_layout Description
-Enceladus xxx
-\end_layout
-
-\begin_layout Description
-Tethys xxx
-\end_layout
-
-\begin_layout Description
-Telesto xxx
-\end_layout
-
-\begin_layout Description
-Calypso xxx
-\end_layout
-
-\begin_layout Description
-Dione xxx
 \end_layout
 
 \begin_layout Standard
@@ -1838,8 +1827,60 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
-xxx
+\begin_layout Description
+Mimas With a diameter of 396 kilometres, Mimas is the smallest astronomical
+ body that is known to still be rounded in shape because of self-gravitation.
+ The low density indicates that it is composed mostly of water ice with
+ only a small amount of rock.
+ Due to the tidal forces acting on it, Mimas is noticeably prolate; its
+ longest axis is about 10% longer than the shortest.
+ Mimas's most distinctive feature is a giant impact crater 130 km across,
+ named Herschel after the discoverer of Mimas.
+ Herschel's diameter is almost a third of Mimas's own diameter.
+ The Mimantean surface is saturated with smaller impact craters, but no
+ others are anywhere near the size of Herschel.
+\end_layout
+
+\begin_layout Description
+Enceladus Enceladus is about 500 kilometers in diameter.
+ It is mostly covered by fresh, clean ice, making it one of the most reflective
+ bodies of the Solar System.
+ Geyser observations, along with the finding of escaping internal heat and
+ very few impact craters in the south polar region, show that Enceladus
+ is currently geologically active.
+ Its resonance with Dione excites its orbital eccentricity, which is damped
+ by tidal forces, tidally heating its interior and driving the geological
+ activity.
+ Plumes from Enceladus, which are similar in composition to comets, have
+ been shown to be the source of the material in Saturn's E ring.
+\end_layout
+
+\begin_layout Description
+Tethys Tethys is a mid-sized moon of Saturn about 1,060 km across.
+ It has the lowest of all the major moons in the Solar System, indicating
+ that it is made of water ice with just a small fraction of rock.
+ The surface of Tethys is very bright, being the second-brightest of the
+ moons of Saturn after Enceladus, and neutral in color.
+ Tethys is heavily cratered and cut by a number of large faults/graben.
+ The largest impact crater, Odysseus, is about 400 km in diameter, whereas
+ the largest graben, Ithaca Chasma, is more than 2000 km long.
+ Tethys has two co-orbital moons, Telesto and Calypso orbiting near Tethys's
+ trojan points L4 and L5 respectively.
+\end_layout
+
+\begin_layout Description
+Dione At 1122 km in diameter, Dione is the 15th largest moon in the Solar
+ System.
+ About two thirds of Dione's mass is water ice, and the remaining is a dense
+ core.
+ Dione orbits Saturn with a semimajor axis about 2% less than that of the
+ Moon.
+ However, reflecting Saturn's greater mass, Dione's orbital period is one
+ tenth that of the Moon.
+ Dione is currently in a 1:2 mean-motion orbital resonance with moon Enceladus,
+ completing one orbit of Saturn for every two orbits completed by Enceladus.
+ Dione has two co-orbital, or trojan, moons, Helene and Polydeuces.
+ They are located within Dione's Lagrangian points L4 and L5 respectively.
 \end_layout
 
 \begin_layout Subsection
@@ -1847,7 +1888,7 @@ Outer Moons
 \end_layout
 
 \begin_layout Standard
-xxx
+These moons all orbit beyond the E Ring.
 \end_layout
 
 \begin_layout Description
@@ -1875,21 +1916,6 @@ Titan The most populous moon in the system has a thick cloud cover that
  food production.
 \end_layout
 
-\begin_layout Description
-Hyperion xxx
-\end_layout
-
-\begin_layout Description
-Iapetus The moon is primarily known for its leading and trailing hemispheres
- being radically different.
- The albedo of most of the leading hemisphere is as dark as lampblack, while
- the trailing hemisphere’s albedo is as bright as Europa.
- The ‘dark’ side of Iapetus is covered in minerals ready for harvesting
- right there on the surface.
- The colonists have built special mechs that make regular runs to sweep
- the surface for these materials for export and sale off-moon.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -1913,8 +1939,76 @@ status collapsed
 
 \end_layout
 
+\begin_layout Description
+Hyperion Hyperion is Titan's nearest neighbor in the Saturn system.
+ The two moons are locked in a 4:3 mean-motion resonance with each other,
+ meaning that while Titan makes four revolutions around Saturn, Hyperion
+ makes exactly three.
+ With an average diameter of about 270 km, Hyperion is smaller and lighter
+ than Mimas.
+ It has an extremely irregular shape, and a very odd, tan-colored icy surface
+ resembling a sponge.
+\end_layout
+
+\begin_layout Description
+Iapetus The moon is primarily known for its leading and trailing hemispheres
+ being radically different.
+ The albedo of most of the leading hemisphere is as dark as lampblack, while
+ the trailing hemisphere’s albedo is as bright as Europa.
+ The ‘dark’ side of Iapetus is covered in minerals ready for harvesting
+ right there on the surface.
+ The colonists have built special mechs that make regular runs to sweep
+ the surface for these materials for export and sale off-moon.
+\end_layout
+
 \begin_layout Standard
-xxx
+Travel times within Cronian system are quite short, usually just few hours.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/croniantravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/croniantravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

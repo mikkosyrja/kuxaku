@@ -24,7 +24,7 @@ Use of this data was just the easiest way to populate otherwise very empty space
 
 The most important thing here is that heavenly bodies move predictably during the campaign and their relative positions can be used as a plot point. Unfortunately, it also means that travel times and asteroid locations mentioned in some published adventures need adjustment. Communication delay and travel time tables in the rulebook are based on distances between orbits, not between actual objects. If two planets happen to be opposite sides of the Sun, the real distance is much longer.
 
-![inner system](images/inner.png)
+![inner system](images/systeminner.png)
 
 Because, in addition to dates, The Expanse universe lacks lots of other technical details, some additional improvisation is needed.
 

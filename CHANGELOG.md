@@ -22,4 +22,12 @@ Changed LyX document paper size to A5. More suitable for tablets and 13 inch lap
 
 Modified Lyx document style with borders.
 
-Renamed old communication delay and travel time tables with names systemdelay and systemtravel. Added Jovian outer moon orbits to separate jovian2.png map and calculated communication delay and travel time tables within Jovian system.
+Renamed old communication delay and travel time tables with names systemdelay and systemtravel.
+
+Added Jovian outer moon orbits to separate jovian2.png map and calculated communication delay and travel time tables within Jovian system.
+
+## 2020-11-28
+
+Added Cronian system maps and travel time tables.
+
+Improved label positioning with orbit dots and retrograde orbits.
