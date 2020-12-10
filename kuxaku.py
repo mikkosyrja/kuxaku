@@ -614,7 +614,7 @@ calculatedistances(cronianplaces, cronianpositions, croniandistances)
 #
 #	communication delay
 #
-def commdelay(name, places, distances, unit):
+def commdelay(name, places, distances, unit, system):
 	print('Writing:', outputdir + name + '.png')
 
 	plot.figure(0)
@@ -636,20 +636,20 @@ def commdelay(name, places, distances, unit):
 	axis.axis('off')
 	axis.axis('tight')
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title('Communication Delay in ' + unit + ' ' + titledate(), color = foreground)
+	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate(), color = foreground)
 	#axis.patch.set_facecolor(background)
 
 	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
 
-commdelay('systemdelay', systemplaces, systemdistances, 'Minutes')
-commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds')
-#commdelay('croniandelay', cronianplaces, croniandistances, 'Seconds')
+commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 'System')
+commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
+#commdelay('croniandelay', cronianplaces, croniandistances, 'Seconds', 'Cronian')
 
 #
 #	travel time
 #
-def traveltime(name, places, distances, unit, cruiseg, juiceg = 0, juicet = 0):
-	title = 'Travel Time in ' + unit + ' (' + str(cruiseg) + 'g'
+def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juicet = 0):
+	title = system + ' Travel Time in ' + unit + ' (' + str(cruiseg) + 'g'
 	filename = outputdir + name + '{:02.0f}'.format(cruiseg * 10)
 	if juiceg and juicet:
 		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
@@ -677,6 +677,8 @@ def traveltime(name, places, distances, unit, cruiseg, juiceg = 0, juicet = 0):
 					value = 2 * math.sqrt((distances[row][col]) * acc / juiceg) / 3600
 				if unit == 'Days':
 					cellrow.append('{0:.1f}'.format(value / 24))
+				elif unit == 'Hours.':
+					cellrow.append('{0:.1f}'.format(value))
 				else:
 					cellrow.append('{0:.0f}'.format(value))
 			elif col == row:	# diagonal
@@ -692,17 +694,17 @@ def traveltime(name, places, distances, unit, cruiseg, juiceg = 0, juicet = 0):
 	axis.set_title(title, color = foreground)
 	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
 
-traveltime('systemtravel', systemplaces, systemdistances, 'Days', 0.3)
-traveltime('systemtravel', systemplaces, systemdistances, 'Days', 0.5)
-traveltime('systemtravel', systemplaces, systemdistances, 'Days', 1.0)
-traveltime('systemtravel', systemplaces, systemdistances, 'Days', 0.5, 6, 4)
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.3)
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5)
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 1.0)
+traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5, 6, 4)
 if arguments.juiceg and arguments.juicet:
-	traveltime('systemtravel', systemplaces, systemdistances, 'Days', 0.5, arguments.juiceg, arguments.juicet)
+	traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5, arguments.juiceg, arguments.juicet)
 
-traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 0.3)
-traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 0.5)
-traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 1.0)
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 0.3)
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 0.5)
+traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 1.0)
 
-traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 0.3)
-traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 0.5)
-#traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 1.0)
+traveltime('croniantravel', cronianplaces, croniandistances, 'Hours.', 'Cronian', 0.3)
+traveltime('croniantravel', cronianplaces, croniandistances, 'Hours.', 'Cronian', 0.5)
+#traveltime('croniantravel', cronianplaces, croniandistances, 'Hours.', 'Cronian', 1.0)

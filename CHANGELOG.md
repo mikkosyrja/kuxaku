@@ -31,3 +31,7 @@ Added Jovian outer moon orbits to separate jovian2.png map and calculated commun
 Added Cronian system maps and travel time tables.
 
 Improved label positioning with orbit dots and retrograde orbits.
+
+## 2020-12-10
+
+Improved travel time and communication delay tables.
