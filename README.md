@@ -71,13 +71,13 @@ Optional parameters juiceg and juicet define faster acceleration at both ends of
 
 Coordinate system origin used in maps is the barycenter of the Solar System, which means that the Sun is not exactly at the center.
 
-Inner planet map (inner.png) shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant, and few trojans too). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
+Inner planet map (systeminner.png) shows positions of Jupiter, inner planets, important stations and selected asteroids (largest, heaviest or otherwise significant, and few trojans too). For planets and colonized asteroids partial future orbits are displayed as dots separated by one month interval.
 
-Outer planet map (outer.png) shows positions of some Centaurs (small Solar System bodies) and giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
+Outer planet map (systemouter.png) shows positions of some Centaurs (small Solar System bodies) and giants Jupiter, Saturn, Uranus and Neptune. Future orbit positions are plotted at one year intervals.
 
-Separate Jovian (jovian.png) and Cronian (cronian.png) maps display major moon positions around Jupiter and Saturnus, respectively. Future orbit positions for some moons are plotted at six hour intervals.
+Separate Jovian (jovianinner.png) and Cronian (cronianouter.png) maps display major moon positions around Jupiter and Saturnus, respectively. Future orbit positions for moons are plotted at six hour intervals.
 
-Jovian outer system map (jovian2.png) shows some Jupiter's outer moons with future orbit positions at one week intervals.
+Jovian outer system map (jovianouter.png) shows some Jupiter's outer moons with future orbit positions at one week intervals. Cronian inner system map (cronianinner.png) shows Saturnus' rings and inner moons with future orbit positions at one hour intervals
 
 Some objects (notably Eros, Sol Ring and Anderson Station) are currently commented out in the script. These can be turned on by removing the comment character.
 
@@ -91,7 +91,7 @@ Optional command line parameters juiceg and juicet can be used for faster accele
 
 ### Darian Calendar
 
-Separate Python module darian.py contains conversion from Gregorian calendar to Darian calendar used in Mars. Generated image titles display Darian date in parenthesis after the Gregorian date.
+Separate Python module darian.py contains conversion from Gregorian calendar to [Darian calendar](https://en.wikipedia.org/wiki/Darian_calendar) used in Mars. Generated image titles display Darian date in parenthesis after the Gregorian date.
 
 ### Solar System Document
 
@@ -101,7 +101,7 @@ Colonized asteroid information comes from the RPG rulebook. Other asteroid descr
 
 ## Ephemerides Data
 
-Following data files are downloaded from <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
+Following data files are downloaded from NASA NAIF site <https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/>:
 
 - de430.bsp (Mercury, Venus, Earth and Moon)
 - mar097.bsp (Mars, Phobos and Deimos)
@@ -144,3 +144,5 @@ Preloaded files required by the script can be found from the data subdirectory. 
 <http://www.projectrho.com/public_html/rocket/>
 
 <https://en.wikipedia.org/wiki/Darian_calendar>
+
+<https://naif.jpl.nasa.gov/naif/index.html>
