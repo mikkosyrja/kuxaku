@@ -46,10 +46,9 @@ outputdir = 'output/'
 if not os.path.exists(outputdir):
 	os.mkdir(outputdir)
 
-gravity = 9.80665			# standard gravity
-au = 149597870.691			# astronomical unit in kilometers
-delay = au / 17987547.48	# communication delay in minutes/au
-acc = au * 1000 / gravity	# acceleration scale factor
+gravity = 9.80665				# standard gravity
+aukm = 149597870.691			# astronomical unit in kilometers
+delay = aukm / 17987547.48		# communication delay in minutes/au
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
@@ -106,13 +105,13 @@ def addellipse(auposition, color, size):
 	maxy = max(maxy, auposition[1])
 
 def distance(position):		# position in kilometers
-	return math.sqrt(position[0] * position[0] + position[1] * position[1] + position[2] * position[2]) / au
+	return math.sqrt(position[0] * position[0] + position[1] * position[1] + position[2] * position[2]) / aukm
 
 def direction(position):	# direction in radians
 	return math.atan2(position[1], position[0])
 
-def plotposition(name, position, color, size, auedge = 0, orbit = False, retrograde = False):
-	auposition = position / au
+def plotposition(name, position, color, size, auedge = 0, orbit = False, retrograde = False, major = False):
+	auposition = position / aukm
 	addellipse(auposition, color, size / 2)
 	horizontal = ('right' if position[0] < 0 else 'left')	# away from sun
 	if orbit:
@@ -130,13 +129,14 @@ def plotposition(name, position, color, size, auedge = 0, orbit = False, retrogr
 			vertical = ('bottom' if position[0] > 0 else 'top')
 		else:
 			vertical = ('top' if position[0] > 0 else 'bottom')
-	plot.text(auposition[0], auposition[1], name, fontsize = 5, color = foreground, ha = horizontal, va = vertical)
+	font = (6 if major else 4)
+	plot.text(auposition[0], auposition[1], name, fontsize = font, color = foreground, ha = horizontal, va = vertical)
 
 def planetorbit(kernel, center, planet, months, color, size = orbitdotsize):
 	for index in range(30, months * 30 + 1, 30):
 		if julian + index < lastjulian:
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
-			addellipse(pos / au, color, size)
+			addellipse(pos / aukm, color, size)
 
 def titledate():
 	return ' ' + str(expansedate.date()) + ' (' + darian.string() + ')'
@@ -175,7 +175,7 @@ position = planets[1, 199].compute(julian) + planets[0,1].compute(julian)
 plotposition("Mercury", position, mooncolor, moonsize)
 
 systempositions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
-plotposition("Venus", systempositions[-1], planetcolor, moonsize, innersize, True)
+plotposition("Venus", systempositions[-1], planetcolor, moonsize, innersize, orbit = True, major = True)
 #position = planets[2, 299].compute(julian) + planets[0,2].compute(julian)
 #plotposition("Venus", position, planetcolor, moonsize)
 
@@ -186,7 +186,7 @@ earthbary = planets[0,3].compute(julian)
 planetorbit(planets, 3, 399, orbitdots, [0, 0, 1])
 
 systempositions.append(planets[3, 399].compute(julian) + earthbary)
-plotposition("Earth", systempositions[-1], [0, 0, 1], planetsize, innersize, True)
+plotposition("Earth", systempositions[-1], [0, 0, 1], planetsize, innersize, orbit = True, major = True)
 #plotposition("Moon", planets[3, 301].compute(julian) + earthbary, mooncolor, moonsize)
 
 #l4 = SPK.open('../original/ephemerides/L4_de431.bsp')
@@ -199,7 +199,7 @@ marsbary = martian[0,4].compute(julian)
 planetorbit(martian, 4, 499, orbitdots, [1, 0, 0])
 
 systempositions.append(martian[4, 499].compute(julian)[:3] + marsbary)
-plotposition("Mars", systempositions[-1], [1, 0, 0], planetsize, innersize, True)
+plotposition("Mars", systempositions[-1], [1, 0, 0], planetsize, innersize, orbit = True, major = True)
 #plotposition("Phobos", martian[4, 401].compute(julian)[:3] + marsbary, mooncolor, moonsize)
 #plotposition("Deimos", martian[4, 402].compute(julian)[:3] + marsbary, mooncolor, moonsize)	# destroyed by earth
 
@@ -207,13 +207,13 @@ def plotasteroid(name, id, color = asteroidcolor, size = asteroidsize, months = 
 	kernel = SPKType21.open("data/" + str(2000000 + id) + ".bsp")
 	for index in range(30, months * 30 + 1, 30):
 		pos = kernel.compute_type21(0, 2000000 + id, julian + index)[0]
-		addellipse(pos / au, color, orbitdotsize)
+		addellipse(pos / aukm, color, orbitdotsize)
 	pos = kernel.compute_type21(0, 2000000 + id, julian)[0]
 	if months:
 		systempositions.append(pos)
 	if id != 127 and id != 1677:
 		name = str(id) + ' ' + name
-	plotposition(name, pos, color, size, innersize, months)
+	plotposition(name, pos, color, size, innersize, orbit = months, major = months)
 
 #plotasteroid("Anderson", 127, stationcolor, stationsize)		# destroyed by earth, asteroid johanna
 plotasteroid("Tycho", 1677, stationcolor, stationsize, orbitdots)
@@ -272,7 +272,7 @@ jovian2 = SPK.open('data/jovian2.bsp')
 jupiterbary = jovian[0,5].compute(julian)
 planetorbit(jovian, 5, 599, 12, planetcolor)
 
-plotposition("Jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize, innersize, True)
+plotposition("Jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetcolor, gasgiantsize, innersize, orbit = True, major = True)
 
 axis.set_xlim(-innersize, innersize)
 axis.set_ylim(-innersize, innersize)
@@ -298,8 +298,8 @@ axis.tick_params(labelcolor = foreground, colors = foreground)
 
 plotposition("", sun, [1, 1, 0], sunsize * outerscale)
 
-plotposition("Earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], planetsize * outerscale)
-plotposition("Mars", martian[4,499].compute(julian)[:3] + marsbary, [1, 0, 0], planetsize * outerscale)
+plotposition("Earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], planetsize * outerscale, major = True)
+plotposition("Mars", martian[4,499].compute(julian)[:3] + marsbary, [1, 0, 0], planetsize * outerscale, major = True)
 
 plotasteroid("Ceres", 1, colonycolor, asteroidsize * outerscale)
 plotasteroid("Tycho", 1677, stationcolor, stationsize * outerscale)
@@ -308,12 +308,12 @@ def outerorbit(kernel, center, planet, years, color, size = orbitdotsize):
 	for index in range(365, years * 365 + 1, 365):
 		if julian + index < lastjulian:
 			pos = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
-			addellipse(pos / au, color, size * outerscale * outerscale)
+			addellipse(pos / aukm, color, size * outerscale * outerscale)
 
 outerorbit(jovian, 5, 599, orbitdots, planetcolor)
 
 systempositions.append(jovian[5,599].compute(julian)[:3] + jupiterbary)
-plotposition("Jupiter", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, True)
+plotposition("Jupiter", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 cronian = SPK.open('data/cronian.bsp')
 cronian2 = SPK.open('data/cronian2.bsp')
@@ -324,7 +324,7 @@ saturnbary = cronian[0,6].compute(julian)
 outerorbit(cronian, 6, 699, orbitdots, planetcolor)
 
 systempositions.append(cronian[6,699].compute(julian)[:3] + saturnbary)
-plotposition("Saturn", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, True)
+plotposition("Saturn", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 uranian = SPK.open('data/uranian.bsp')
 #print(uranian)
@@ -332,7 +332,7 @@ uranian = SPK.open('data/uranian.bsp')
 uranusbary = uranian[0,7].compute(julian)
 outerorbit(uranian, 7, 799, orbitdots, planetcolor)
 
-plotposition("Uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale, outersize, True)
+plotposition("Uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 #gatedistance = 22 * au	# "little less than 2 AU outside the orbit of Uranus"
 #gatedirection = -math.pi * 3 / 4 # “This is the Ring. And this is Uranus. They are literally the two spots furthest from each other in the universe that have humans near them”
@@ -345,14 +345,14 @@ neptunian = SPK.open('data/neptunian.bsp')
 neptunebary = neptunian[0,8].compute(julian)
 outerorbit(neptunian, 8, 899, orbitdots, planetcolor)
 
-plotposition("Neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale, outersize, True)
+plotposition("Neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 def plotcentaur(name, id, color = asteroidcolor, size = asteroidsize, years = 0):
 	kernel = SPKType21.open("data/" + str(2000000 + id) + ".bsp")
 #	for index in range(30, months * 30 + 1, 30):
 	for index in range(365, years * 365 + 1, 365):
 		pos = kernel.compute_type21(0, 2000000 + id, julian + index)[0]
-		addellipse(pos / au, color, orbitdotsize * outerscale * outerscale)
+		addellipse(pos / aukm, color, orbitdotsize * outerscale * outerscale)
 	pos = kernel.compute_type21(0, 2000000 + id, julian)[0]
 	plotposition(str(id) + ' ' + name, pos, color, size * outerscale, outersize, years)
 
@@ -385,17 +385,17 @@ axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
 
-def printjovian(name, id, color = mooncolor, size = moonsize, quarters = 0):
+def printjovian(name, id, color = mooncolor, size = moonsize, quarters = 0, major = False):
 	for index in range(1, quarters + 1, 1):
 		pos = jovian[5,id].compute(julian + index / 4)[:3]
-		addellipse(pos / au, color, orbitdotsize * outerscale * joviansize / 10)
-	plotposition(name, jovian[5,id].compute(julian)[:3], color, size * joviansize / 10, joviansize, quarters)
+		addellipse(pos / aukm, color, orbitdotsize * outerscale * joviansize / 10)
+	plotposition(name, jovian[5,id].compute(julian)[:3], color, size * joviansize / 10, joviansize, quarters, False, major)
 
 plotposition("", jovian[5,599].compute(julian)[:3], planetcolor, gasgiantsize * joviansize / 10)
-printjovian("Io", 501, colonycolor, moonsize, orbitdots)
-printjovian("Europa", 502, colonycolor, moonsize, orbitdots)
-printjovian("Ganymede", 503, colonycolor, moonsize, orbitdots)
-printjovian("Callisto", 504, colonycolor, moonsize, orbitdots)
+printjovian("Io", 501, colonycolor, moonsize, orbitdots, major = True)
+printjovian("Europa", 502, colonycolor, moonsize, orbitdots, major = True)
+printjovian("Ganymede", 503, colonycolor, moonsize, orbitdots, major = True)
+printjovian("Callisto", 504, colonycolor, moonsize, orbitdots, major = True)
 printjovian("Amalthea", 505)
 printjovian("Thebe", 514)
 printjovian("Adrastea", 515)
@@ -431,7 +431,7 @@ axis.tick_params(labelcolor = foreground, colors = foreground)
 def printjovian2(name, id, weeks = 0, retrograde = False):
 	for index in range(1, weeks + 1, 1):
 		pos = jovian2[5,id].compute(julian + index * 7)[:3]
-		addellipse(pos / au, mooncolor, orbitdotsize * outerscale * joviansize / 10)
+		addellipse(pos / aukm, mooncolor, orbitdotsize * outerscale * joviansize / 10)
 	plotposition(name, jovian2[5,id].compute(julian)[:3], mooncolor, moonsize * joviansize / 10, joviansize, weeks, retrograde)
 
 plotposition("", jovian[5,599].compute(julian)[:3], planetcolor, gasgiantsize * joviansize / 10)
@@ -487,10 +487,10 @@ axis.tick_params(labelcolor = foreground, colors = foreground)
 ringcolor = [0.1, 0.1, 0.1]
 
 def printring(inner, outer):
-	axis.add_artist(plot.Circle((0.0, 0.0), outer / au, fill = True, color = ringcolor, lw = 0.2))
-	axis.add_artist(plot.Circle((0.0, 0.0), inner / au, fill = True, color = background, lw = 0.2))
-	axis.add_artist(plot.Circle((0.0, 0.0), inner / au, fill = False, color = foreground, lw = 0.2))
-	axis.add_artist(plot.Circle((0.0, 0.0), outer / au, fill = False, color = foreground, lw = 0.2))
+	axis.add_artist(plot.Circle((0.0, 0.0), outer / aukm, fill = True, color = ringcolor, lw = 0.2))
+	axis.add_artist(plot.Circle((0.0, 0.0), inner / aukm, fill = True, color = background, lw = 0.2))
+	axis.add_artist(plot.Circle((0.0, 0.0), inner / aukm, fill = False, color = foreground, lw = 0.2))
+	axis.add_artist(plot.Circle((0.0, 0.0), outer / aukm, fill = False, color = foreground, lw = 0.2))
 
 printring(118000, 137000)	# a
 printring(92000, 118000)	# b
@@ -500,13 +500,13 @@ printring(67000, 75000)		# d
 def printcronianring(name, id, color = mooncolor, size = moonsize, hours = 0):
 	for index in range(1, hours + 1, 1):
 		pos = cronian2[6,id].compute(julian + index / 24)[:3]
-		addellipse(pos / au, color, orbitdotsize * outerscale * croniansize / 10)
+		addellipse(pos / aukm, color, orbitdotsize * outerscale * croniansize / 10)
 	plotposition(name, cronian2[6,id].compute(julian)[:3], color, size * croniansize / 10, croniansize, hours)
 
 def printcronianinner(name, id, color = mooncolor, size = moonsize, hours = 0):
 	for index in range(1, hours + 1, 1):
 		pos = cronian[6,id].compute(julian + index / 24)[:3]
-		addellipse(pos / au, color, orbitdotsize * outerscale * croniansize / 10)
+		addellipse(pos / aukm, color, orbitdotsize * outerscale * croniansize / 10)
 	plotposition(name, cronian[6,id].compute(julian)[:3], color, size * croniansize / 10, croniansize, hours)
 
 plotposition("", cronian[6,699].compute(julian)[:3], planetcolor, gasgiantsize * croniansize / 10)
@@ -556,23 +556,23 @@ axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
 axis.tick_params(labelcolor = foreground, colors = foreground)
 
-def printcronianouter(name, id, color = mooncolor, size = moonsize, quarters = 0):
+def printcronianouter(name, id, color = mooncolor, size = moonsize, quarters = 0, major = False):
 	for index in range(1, quarters + 1, 1):
 		pos = cronian[6,id].compute(julian + index / 4)[:3]
-		addellipse(pos / au, color, orbitdotsize * outerscale * croniansize / 10)
-	plotposition(name, cronian[6,id].compute(julian)[:3], color, size * croniansize / 10, croniansize, quarters)
+		addellipse(pos / aukm, color, orbitdotsize * outerscale * croniansize / 10)
+	plotposition(name, cronian[6,id].compute(julian)[:3], color, size * croniansize / 10, croniansize, quarters, False, major)
 
 plotposition("", cronian[6,699].compute(julian)[:3], planetcolor, gasgiantsize * croniansize / 10)
-axis.add_artist(plot.Circle((0.0, 0.0), 137000 / au, fill = False, color = foreground, lw = 0.2))
+axis.add_artist(plot.Circle((0.0, 0.0), 137000 / aukm, fill = False, color = foreground, lw = 0.2))
 
 printcronianouter("Mimas", 601)
 printcronianouter("Enceladus", 602)
 printcronianouter("Tethys", 603)
 printcronianouter("Dione", 604)
-printcronianouter("Rhea", 605, colonycolor, moonsize, orbitdots)
-printcronianouter("Titan", 606, colonycolor, moonsize, orbitdots)
-printcronianouter("Hyperion", 607, mooncolor, moonsize, orbitdots)
-printcronianouter("Iapetus", 608, colonycolor, moonsize, orbitdots)
+printcronianouter("Rhea", 605, colonycolor, moonsize, orbitdots, major = True)
+printcronianouter("Titan", 606, colonycolor, moonsize, orbitdots, major = True)
+printcronianouter("Hyperion", 607, mooncolor, moonsize, orbitdots, major = True)
+printcronianouter("Iapetus", 608, colonycolor, moonsize, orbitdots, major = True)
 #printcronianouter("Phoebe", 609)	# destroyed by mars
 
 cronianpositions.append(cronian[6,605].compute(julian)[:3])		# Rhea
@@ -668,13 +668,13 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 				jt = juicet * 3600
 				js = gravity * juiceg * jt
 				jd = js * jt
-				cd = distances[row][col] * au * 1000 - jd
+				cd = distances[row][col] * aukm * 1000 - jd
 				if cd > 0:	# juice + cruise
 					cg = gravity * cruiseg
 					ct = (math.sqrt(js * js + cg * cd) - js) / cg
 					value = (jt * 2 + ct * 2) / 3600
 				else:	# all juice
-					value = 2 * math.sqrt((distances[row][col]) * acc / juiceg) / 3600
+					value = 2 * math.sqrt((distances[row][col]) * (au * 1000 / gravity) / juiceg) / 3600
 				if unit == 'Days':
 					cellrow.append('{0:.1f}'.format(value / 24))
 				elif unit == 'Hours.':

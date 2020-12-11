@@ -35,3 +35,7 @@ Improved label positioning with orbit dots and retrograde orbits.
 ## 2020-12-10
 
 Improved travel time and communication delay tables.
+
+## 2020-12-12
+
+Used bigger font for major object labels in system maps.
