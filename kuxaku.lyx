@@ -1737,12 +1737,11 @@ Shepherd satellites are small moons that orbit within, or just beyond, a
  They have the effect of sculpting the rings: giving them sharp edges, and
  creating gaps between them.
  Saturn's shepherd moons are Pan, Daphnis, Atlas, Prometheus and Pandora.
- These moons together with co-orbitals (see below) probably formed as a
- result of accretion of the friable ring material on preexisting denser
- cores.
- The cores with sizes from one-third to one-half the present-day moons may
- be themselves collisional shards formed when a parental satellite of the
- rings disintegrated.
+ These moons together with co-orbitals formed as a result of accretion of
+ the friable ring material on preexisting denser cores.
+ The cores with sizes from one-third to one-half the present-day moons are
+ themselves collisional shards formed when a parental satellite of the rings
+ disintegrated.
 \end_layout
 
 \begin_layout Standard
@@ -1776,6 +1775,12 @@ Prometheus Prometheus is extremely elongated, measuring approximately 136
  Epimetheus, and Janus.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Prometheus is the site of a small mining and ice-processing station.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 Pandora Pandora is more heavily cratered than nearby Prometheus, and has
  at least two large craters 30 kilometres in diameter.
@@ -1948,6 +1953,7 @@ Hyperion Hyperion is Titan's nearest neighbor in the Saturn system.
  than Mimas.
  It has an extremely irregular shape, and a very odd, tan-colored icy surface
  resembling a sponge.
+ It was the first non-round moon to be discovered.
 \end_layout
 
 \begin_layout Description

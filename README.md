@@ -41,7 +41,7 @@ Instructions for Windows users not familiar with Python or GitHub:
 	- pip install matplotlib
 - Download kuxaku repository zip-package:
 	- top-right green button with text "Clone or download"
-	- Select download ZIP, currently about 100MB, includes orbit data
+	- Select download ZIP, currently about 160MB, includes orbit data
 - Extract downloaded package kuxaku-master.zip
 
 ## Running Program
@@ -83,9 +83,11 @@ Some objects (notably Eros, Sol Ring and Anderson Station) are currently comment
 
 ### Communication Delay and Travel Times
 
-Communication delay table (delay.png) shows one-way communication delay in minutes between following locations: Venus, Earth, Mars, Tycho, Ceres, Pallas, Vesta, Hygiea, Jupiter and Saturn. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
+Communication delay tables (*delay.png) show one-way communication delay in minutes between the most important locations. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
-Travel time tables (travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (systemtravel03.png) is comfortable for belters. The second (systemtravel05.png) is tolerable for belters and the third (systemtravel10.png) is suitable for earthers. Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that it does not currently check position of the Sun. Route may go directly through it.
+Travel time tables (\*travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (\*travel03.png) is comfortable for belters. Second one (\*travel05.png) is faster and still tolerable for most belters. Third one with full 1g acceleration (\*travel10.png) is suitable only for earthers. There are separate tables for Sol, Jovian and Cronian systems.
+
+Simple brachistochrone equation t=2*sqrt(d/a) is used for calculation. It assumes full acceleration to a halfway point, flip and deceleration to the destination. Note that the orbital movement of destination or possible obstacles like, for example, the Sun do not matter here.
 
 Optional command line parameters juiceg and juicet can be used for faster acceleration and deceleration at both ends of the journey. For example, values juiceg 6 and juicet 4 start the journey with 6g acceleration for 4 hours. After that the cruise acceleration of 0.5g is used normally. At the end of the journey, final deceleration is again done with 6g for 4 hours. Tables have given parameters in their names (systemtravel05+60x40.png).
 
