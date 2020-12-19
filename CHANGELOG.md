@@ -32,10 +32,12 @@ Added Cronian system maps and travel time tables.
 
 Improved label positioning with orbit dots and retrograde orbits.
 
-## 2020-12-10
+## 2020-12-12
 
 Improved travel time and communication delay tables.
 
-## 2020-12-12
-
 Used bigger font for major object labels in system maps.
+
+## 2020-12-19
+
+Labels are now away from the orbit dots, if the position is more than 20% from the Sun. This handles eccentric orbits better.
