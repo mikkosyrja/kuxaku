@@ -41,3 +41,9 @@ Used bigger font for major object labels in system maps.
 ## 2020-12-19
 
 Labels are now away from the orbit dots, if the position is more than 20% from the Sun. This handles eccentric orbits better.
+
+## 2020-12-31
+
+Added Cruithne and removed Mathilde from the inner system map. Cruithne is more interesting.
+
+Changed Jovian and Cronian system map units from AU to Gm and increased map resolution to 600 dpi.

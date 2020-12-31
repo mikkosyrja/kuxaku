@@ -171,9 +171,145 @@ Inner System
 \end_layout
 
 \begin_layout Standard
-The inner system map shows positions of notable objects inside Jupiter's
- orbit.
+The inner system map (
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "figure:Inner-System"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) shows positions of notable objects inside Jupiter's orbit.
  Future orbit positions are displayed for some bodies at one month intervals.
+\end_layout
+
+\begin_layout Subsection*
+Mercury
+\end_layout
+
+\begin_layout Standard
+Mercury is the closest planet to the Sun.
+ The smallest planet in the Solar System, it has no natural satellites.
+ Besides impact craters, its only known geological features are lobed ridges
+ or rupes that were probably produced by a period of contraction early in
+ its history.
+ Mercury's very tenuous atmosphere consists of atoms blasted off its surface
+ by the solar wind.
+ Its has relatively large iron core and thin mantle.
+\end_layout
+
+\begin_layout Subsection*
+Venus
+\end_layout
+
+\begin_layout Standard
+Venus is the solar system’s second planet, and while similar in size and
+ mass to Earth, it is strikingly different in almost every other way.
+ Venus has a retrograde rotation, meaning it rotates clockwise, as opposed
+ to the counter-clockwise rotations of most of the solar system’s other
+ planets.
+ Although Venus’ gravity is just slightly lower than that of Earth, the
+ planet’s incredibly dense carbon dioxide atmosphere results in crushing
+ atmospheric pressure at the surface 92 times greater than Earth’s.
+ It also creates a powerful greenhouse effect, leading to surface temperatures
+ of 735 K, making Venus the hottest planet in the solar system — hotter
+ even than the surface of Mercury.
+ Venus has no moons.
+\end_layout
+
+\begin_layout Subsection*
+Earth
+\end_layout
+
+\begin_layout Standard
+The third planet from the Sun and the birthplace of humanity, Earth stands
+ as the cultural, political, and economic center of the solar system.
+ It remains the only world in the system with a breathable atmosphere where
+ people can live outdoors under an open sky.
+ Home to 30 billion people, Earth struggles under the effects of climate
+ change, environmental pollution, overpopulation, and widespread unemployment,
+ but its corporations are the wealthiest and most powerful in the system.
+ It is heavily reliant on the resources of the Belt to keep the engine of
+ its economy running, yet the grip Earth once held on its interplanetary
+ colonies is slowly slipping away.
+\end_layout
+
+\begin_layout Description
+Luna Luna is Earth’s only natural satellite.
+ It is only a quarter of Earth’s diameter, with a gravity of 0.16 g — lighter
+ than many spin stations in the Belt.
+ Only 384,402 kilometers away from Earth, Luna was the site of humanity’s
+ first landing on another planet, as well as the location of Earth’s first
+ interplanetary colony, established in the early 21st century.
+ This first permanent lunar base was a shared military and scientific endeavor,
+ and while elements of both remain, Luna is now much more of a civilian
+ station.
+ Like Earth, Luna is governed by the United Nations, and the approximately
+ one billion inhabitants of Luna are considered full UN citizens.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Mars
+\end_layout
+
+\begin_layout Standard
+Mars is the fourth planet from the Sun and the second-smallest planet in
+ the Solar System, being larger than only Mercury.
+ The the iron oxide prevalent on Mars's surface gives it a reddish appearance
+ distinctive among the astronomical bodies visible to the naked eye.
+ Mars is a terrestrial planet with a thin atmosphere, with surface features
+ reminiscent of the impact craters of the Moon and the valleys, deserts
+ and polar ice caps of Earth.
+\end_layout
+
+\begin_layout Standard
+The Martian Congressional Republic rules over four billion people who are
+ spread across Mars, associated orbital stations, and the small but highly
+ advanced military fleets cruising the solar system.
+ Settled in the 21st century after a number of lengthy exploratory missions,
+ Mars is a world of dreamers, devoted to a single vision: the greening of
+ the red planet.
+\end_layout
+
+\begin_layout Description
+Phobos Phobos is the innermost and larger of the two natural satellites
+ of Mars.
+ It is a small, irregularly shaped object with a mean radius of 11 km.
+ Phobos orbits 6,000 km from the Martian surface, closer to its primary
+ body than any other known planetary moon.
+ It is so close that it orbits Mars much faster than Mars rotates, and completes
+ an orbit in just 7 hours and 39 minutes.
+ As a result, from the surface of Mars it appears to rise in the west, move
+ across the sky in 4 hours and 15 minutes or less, and set in the east,
+ twice each Martian day.
+\end_layout
+
+\begin_layout Description
+Deimos Deimos was the smaller and outermost of the two natural satellites
+ of Mars.
+ It no longer exists as such.
+ Following nuclear annihilation of the Earth-Mars joint Phoebe Research
+ Station and the Saturnian satellite in the wake of the Eros Incident, the
+ United Nations destroyed one of Mars’ two moons.
+ Prior to becoming a smudge in the Martian sky, Deimos hosted military facilitie
+s and a deep radar station.
+\end_layout
+
+\begin_layout Section
+Asteroid Belt
+\end_layout
+
+\begin_layout Standard
+The asteroid belt is a torus-shaped region in the Solar System, located
+ roughly between the orbits of the planets Jupiter and Mars, that is occupied
+ by a great many solid, irregularly shaped bodies, of many sizes but much
+ smaller than planets, called asteroids or minor planets.
+ About half the mass of the belt is contained in the four largest asteroids:
+ Ceres, Vesta, Pallas, and Hygiea.
+ The total mass of the asteroid belt is approximately 4% that of the Moon.
 \end_layout
 
 \begin_layout Description
@@ -261,6 +397,13 @@ status collapsed
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "figure:Inner-System"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -269,7 +412,7 @@ status collapsed
 \end_layout
 
 \begin_layout Subsection
-Other Notable asteroids
+Other Notable Asteroids
 \end_layout
 
 \begin_layout Description
@@ -416,6 +559,19 @@ Massalia Stony asteroid and the parent body of the Massalia family located
  in diameter.
  The family is fairly young, estimated to have been created by an impact
  150 to 200 million years ago.
+\end_layout
+
+\begin_layout Description
+21
+\begin_inset space ~
+\end_inset
+
+Lutetias A large asteroid in the asteroid belt of an unusual spectral type.
+ It measures about 100 kilometers in diameter and is heavily cratered, with
+ the largest impact crater reaching 45 km in diameter.
+ The surface is geologically heterogeneous and is intersected by a system
+ of grooves and scarps.
+ One of the few planetesimals in the Belt.
 \end_layout
 
 \begin_layout Description
@@ -626,7 +782,11 @@ Ida An asteroid in the Koronis family of the asteroid belt.
  of Ida.
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 253
 \begin_inset space ~
 \end_inset
@@ -641,10 +801,6 @@ Mathilde An asteroid with a relatively elliptical orbit that requires more
 n of carbon; giving it a dark surface that reflects only 4% of the light
  that falls on it.
 \end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
 
 \begin_layout Plain Layout
 324
@@ -765,6 +921,10 @@ Hidalgo A centaur and unusual object on an eccentric, cometary-like orbit
 \end_layout
 
 \begin_layout Description
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Description
 951
 \begin_inset space ~
 \end_inset
@@ -776,7 +936,8 @@ Gaspra An S-type asteroid that orbits very close to the inner edge of the
  on October 1990.
 \end_layout
 
-\begin_layout Description
+\end_inset
+
 1036
 \begin_inset space ~
 \end_inset
@@ -787,6 +948,20 @@ Ganymed A stony asteroid on a highly eccentric orbit, classified as a near-Earth
  objects.
  Amor asteroids is a subgroup of the near-Earth asteroids that approach
  the orbit of Earth from beyond, but do not cross.
+\end_layout
+
+\begin_layout Description
+3753
+\begin_inset space ~
+\end_inset
+
+Cruithne Aten Asteroid in orbit around the Sun in 1:1 orbital resonance
+ with Earth, making it a co-orbital object.
+ Cruithne is approximately 5 kilometres in diameter, and its closest approach
+ to Earth is 12 million kilometres (0.080 AU), approximately thirty times
+ the separation between Earth and the Moon.
+ The Aten asteroids are a dynamical group of asteroids whose orbits bring
+ them into proximity with Earth.
 \end_layout
 
 \begin_layout Standard
@@ -1185,9 +1360,8 @@ Jovian system
 \begin_layout Standard
 Named for the gas giant it surrounds, the Jovian System has drawn the largest
  population in the Outer Planets to Jupiter’s moons.
- The planet itself is — of course — uninhabitable, but there are dozens
- of settlements and orbiting space stations around it and its moons.
- It is a kind of miniature solar system.
+ There are dozens of settlements and orbiting space stations around it and
+ its moons.
 \end_layout
 
 \begin_layout Standard
@@ -1840,8 +2014,7 @@ Mimas With a diameter of 396 kilometres, Mimas is the smallest astronomical
  Due to the tidal forces acting on it, Mimas is noticeably prolate; its
  longest axis is about 10% longer than the shortest.
  Mimas's most distinctive feature is a giant impact crater 130 km across,
- named Herschel after the discoverer of Mimas.
- Herschel's diameter is almost a third of Mimas's own diameter.
+ named Herschel, with diameter almost a third of Mimas's own diameter.
  The Mimantean surface is saturated with smaller impact craters, but no
  others are anywhere near the size of Herschel.
 \end_layout
@@ -1862,15 +2035,21 @@ Enceladus Enceladus is about 500 kilometers in diameter.
 
 \begin_layout Description
 Tethys Tethys is a mid-sized moon of Saturn about 1,060 km across.
- It has the lowest of all the major moons in the Solar System, indicating
- that it is made of water ice with just a small fraction of rock.
- The surface of Tethys is very bright, being the second-brightest of the
- moons of Saturn after Enceladus, and neutral in color.
+ It has the lowest density of all the major moons in the Solar System, indicatin
+g that it is made of water ice with just a small fraction of rock.
+ The surface of Tethys is very bright and neutral in color.
  Tethys is heavily cratered and cut by a number of large faults/graben.
  The largest impact crater, Odysseus, is about 400 km in diameter, whereas
  the largest graben, Ithaca Chasma, is more than 2000 km long.
- Tethys has two co-orbital moons, Telesto and Calypso orbiting near Tethys's
- trojan points L4 and L5 respectively.
+ Tethys has two small co-orbital moons, 
+\series bold
+Telesto
+\series default
+ and 
+\series bold
+Calypso
+\series default
+ orbiting near Tethys's trojan points L4 and L5 respectively.
 \end_layout
 
 \begin_layout Description
@@ -1884,7 +2063,15 @@ Dione At 1122 km in diameter, Dione is the 15th largest moon in the Solar
  tenth that of the Moon.
  Dione is currently in a 1:2 mean-motion orbital resonance with moon Enceladus,
  completing one orbit of Saturn for every two orbits completed by Enceladus.
- Dione has two co-orbital, or trojan, moons, Helene and Polydeuces.
+ Dione has two small co-orbital, or trojan, moons, 
+\series bold
+Helene
+\series default
+ and 
+\series bold
+Polydeuces
+\series default
+.
  They are located within Dione's Lagrangian points L4 and L5 respectively.
 \end_layout
 
@@ -1909,16 +2096,14 @@ Rhea One of the frontiers of human civilization, Rhea is only just large
 \end_layout
 
 \begin_layout Description
-Titan The most populous moon in the system has a thick cloud cover that
- generates strange and beautiful solar wind displays as the moon moves in
- and out of Saturn’s powerful magnetic field.
- Titan is also the most chemically active body in the solar system, aside
- from Earth.
- Both the atmosphere and icy surface of the moon are filled with organic
- compounds not found anywhere else.
- Easy access to ice suitable for oxygen and water production and a lack
- of available sunlight have put Titan on the forefront of sunlight-free
- food production.
+Phoebe In the early days of Phoebe’s colonization, the story was that a
+ science station was established there by Mars in collaboration with the
+ Protogen corporation to study early solar system formation and Oort cloud
+ objects.
+ Study of the moon suggested, from its unique, eccentric, retrograde orbit
+ and unusual albedo, that it might have been a captured comet or Kuiper
+ Belt object.
+ Now, it’s nothing more than dust.
 \end_layout
 
 \begin_layout Standard
@@ -1942,6 +2127,19 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+Titan The most populous moon in the system has a thick cloud cover that
+ generates strange and beautiful solar wind displays as the moon moves in
+ and out of Saturn’s powerful magnetic field.
+ Titan is also the most chemically active body in the solar system, aside
+ from Earth.
+ Both the atmosphere and icy surface of the moon are filled with organic
+ compounds not found anywhere else.
+ Easy access to ice suitable for oxygen and water production and a lack
+ of available sunlight have put Titan on the forefront of sunlight-free
+ food production.
 \end_layout
 
 \begin_layout Description
