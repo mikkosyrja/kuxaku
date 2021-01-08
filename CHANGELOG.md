@@ -44,6 +44,14 @@ Labels are now away from the orbit dots, if the position is more than 20% from t
 
 ## 2020-12-31
 
+Added inner planet information to Lyx document.
+
 Added Cruithne and removed Mathilde from the inner system map. Cruithne is more interesting.
 
 Changed Jovian and Cronian system map units from AU to Gm and increased map resolution to 600 dpi.
+
+## 2021-01-08
+
+Changed Cronian outer system orbit dots interval to 12 hours.
+
+Added new LyX document kuxaku_daily.lyx for just orbit and time information for any given day.

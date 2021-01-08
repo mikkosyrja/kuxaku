@@ -1,0 +1,789 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{../kuxaku/kuxaku}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a5paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 1.5cm
+\rightmargin 1.5cm
+\bottommargin 1.5cm
+\headheight 1.5cm
+\headsep 1.5cm
+\footskip 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/mikko/Expanse/The_Expanse_logo.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size giant
+System
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notable Solar System bodies and distances between them for communication
+ and travel.
+ This is a living document: positions of bodies change over the time.
+ Effective date can be seen in the image and table titles.
+\end_layout
+
+\begin_layout Subsection*
+Legend
+\end_layout
+
+\begin_layout Standard
+System maps use two different scales: either Gm or AU.
+ Gm is a standard SI unit gigameter (million kilometers).
+ AU is an astronomical unit: distance from the Earth to the Sun (roughly
+ 150 million kilometers or 150 Gm).
+ Gm is used within gas giant systems (Jupiter and Saturn).
+\end_layout
+
+\begin_layout Standard
+System objects are displayed as small filled circles.
+ Sun is yellow, Earth is blue and Mars is red.
+ Otherwise, following color rules are used:
+\end_layout
+
+\begin_layout Description
+Green Important planets.
+\end_layout
+
+\begin_layout Description
+Purple Permanent human colonies.
+\end_layout
+
+\begin_layout Description
+Orange Artificial constructs.
+\end_layout
+
+\begin_layout Description
+Gray Other system objetcs.
+\end_layout
+
+\begin_layout Standard
+Some objects have orbit dots displaying their future positions.
+ Orbit dot color is is same as the object color.
+ Legend info in the map tells the time interval between dots.
+ Note that some objets may have retrograde orbits rotating in opposite direction.
+\end_layout
+
+\begin_layout Standard
+All asteroid labels include their number.
+ Objects without number are either planets, moons or artificial constructs.
+\end_layout
+
+\begin_layout Section
+Inner System
+\end_layout
+
+\begin_layout Standard
+The inner system map shows positions of notable objects inside Jupiter's
+ orbit.
+ Future orbit positions are displayed for some bodies at one month intervals.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systeminner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "figure:Inner-System"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The asteroid belt is a torus-shaped region in the Solar System, located
+ roughly between the orbits of the planets Jupiter and Mars, that is occupied
+ by a great many solid, irregularly shaped bodies, of many sizes but much
+ smaller than planets, called asteroids or minor planets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Outer System
+\end_layout
+
+\begin_layout Standard
+The outer system map shows positions of giant planets within the orbit of
+ Neptune.
+ Earth, Mars and some asteroid colonies are included for reference.
+ Future orbit positions are displayed for some objects at one year intervals.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemouter.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Centaurs are small Solar System bodies with either a perihelion or a semi-major
+ axis between those of the outer planets.
+ They generally have unstable orbits because they cross or have crossed
+ the orbits of one or more of the giant planets; almost all their orbits
+ have dynamic lifetimes of only a few million years.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Communication Delay
+\end_layout
+
+\begin_layout Standard
+One of the few true constants in the universe remains the speed of light.
+ Whether communications are sent as radio waves or on the laser of a tightbeam,
+ they travel 300,000 kilometers per second.
+ Most transmitted conversations are sent as recorded messages rather than
+ attempting a live conversation, unless the light-speed delay is only a
+ few seconds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemdelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jovian system outer moons are quite far away and communication delays between
+ them are significant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviandelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Delay between Earth and Moon is about 1.3 seconds.
+ Likewise, in Saturn's inner system, delays are always within 2 seconds.
+ Delay between outmost Iapetus and inner Saturn system is less than 15 seconds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+System Travel Times
+\end_layout
+
+\begin_layout Standard
+Following tables show the time to travel the average distance between the
+ two locations at an average acceleration of 0.3g, 0.5g and 1.0g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel10.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because the Epstein Drive removed ∆v limitations to space travel, ships
+ no longer needed to execute Hohmann transfers to maneuver between bodies.
+ To transfer, ships can simply burn prograde at a constant rate, then flip
+ around and decelerate by burning retrograde.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Jovian system
+\end_layout
+
+\begin_layout Standard
+Named for the gas giant it surrounds, the Jovian System has drawn the largest
+ population in the Outer Planets to Jupiter’s moons.
+ There are dozens of settlements and orbiting space stations around it and
+ its moons.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/jovianinner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inner moons are unpopulated primarily due to their proximity to Jupiter
+ and location in its harsh radiation belt.
+ The Galilean moons are the four largest moons of Jupiter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Jovian Outer System
+\end_layout
+
+\begin_layout Standard
+Outer moons are all too small to support a colony, but they are, or have
+ been, used as scientific and mining outposts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/jovianouter.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that some moons have retrograde orbits: clockwise instead of standard
+ counterclockwise rotation within the Solar System.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Jovian Travel Times
+\end_layout
+
+\begin_layout Standard
+Distances within Jovian system are vast, and while travel times aren't as
+ long as in interplanetary journeys, they are still quite significant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviantravel10.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cronian System
+\end_layout
+
+\begin_layout Standard
+Surrounding the second largest gas giant in the solar system, the Saturnian
+ System has — or had — one large orbiting station functioning as a way point
+ for exploration and resource harvesting inside Saturn's rings, and a few
+ settled moons
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/cronianinner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+.
+ Pan, Atlas, Prometheus, Pandora, Epimetheus, Janus, Mimas, Enceladus, Tethys,
+ Telesto, Calypso, Dione, and Helene all exist within the rings of Saturn
+ and are too small to support any long-term habitat.
+ Hyperion has not yet been developed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cronian Outer System
+\end_layout
+
+\begin_layout Standard
+Outer moons all orbit beyond the E Ring.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/cronianouter.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cronian Travel Times
+\end_layout
+
+\begin_layout Standard
+Travel times within Cronian system are quite short, usually just few hours.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/croniantravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/croniantravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
