@@ -155,7 +155,7 @@ Legend
 \end_layout
 
 \begin_layout Standard
-System maps use two different scales: either Gm or AU.
+System maps use two different scales, either Gm or AU.
  Gm is a standard SI unit gigameter (million kilometers).
  AU is an astronomical unit: distance from the Earth to the Sun (roughly
  150 million kilometers or 150 Gm).
@@ -181,11 +181,11 @@ Orange Artificial constructs.
 \end_layout
 
 \begin_layout Description
-Gray Other system objetcs.
+Gray Other system objetcs
 \end_layout
 
 \begin_layout Standard
-Some objects have orbit dots displaying their future positions.
+Notable objects have orbit dots displaying their future positions.
  Orbit dot color is is same as the object color.
  Legend info in the map tells the time interval between dots.
  Note that some objets may have retrograde orbits rotating in opposite direction.
@@ -698,7 +698,8 @@ Cronian Outer System
 \end_layout
 
 \begin_layout Standard
-Outer moons all orbit beyond the E Ring.
+These moons all orbit beyond the E Ring.
+ The circle around Saturnus in the outer system map is outer edge of A ring.
 \end_layout
 
 \begin_layout Standard

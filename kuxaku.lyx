@@ -171,7 +171,7 @@ Legend
 \end_layout
 
 \begin_layout Standard
-System maps use two different scales: either Gm or AU.
+System maps use two different scales, either Gm or AU.
  Gm is a standard SI unit gigameter (million kilometers).
  AU is an astronomical unit: distance from the Earth to the Sun (roughly
  150 million kilometers or 150 Gm).
@@ -201,7 +201,7 @@ Gray Other system objetcs.
 \end_layout
 
 \begin_layout Standard
-Some objects have orbit dots displaying their future positions.
+Notable objects have orbit dots displaying their future positions.
  Orbit dot color is is same as the object color.
  Legend info in the map tells the time interval between dots.
  Note that some objets may have retrograde orbits rotating in opposite direction.
@@ -1675,8 +1675,8 @@ Leda Leda is a prograde irregular satellite of Jupiter.
 Himalia Himalia is the largest irregular satellite of Jupiter, with a diameter
  of 140 km.
  It is the fifth largest Jovian satellite, after the four Galilean moons.
- Himalia's rotational period is 7 h 47 m, and appears neutral in color (grey),
- like the other members of its group.
+ Himalia's rotational period is 7 h 47 m.
+ There is an abandoned supply waystation for early mining operations.
 \end_layout
 
 \begin_layout Standard
@@ -2010,10 +2010,6 @@ Trojan moons are a unique feature only known from the Saturnian system.
  of a much larger object, such as a large moon or planet.
  Tethys has two trojan moons, Telesto and Calypso, and Dione also has two,
  Helene and Polydeuces.
- Helene is by far the largest trojan moon, while Polydeuces is the smallest
- and has the most chaotic orbit.
- These moons are coated with dusty material that has smoothed out their
- surfaces.
 \end_layout
 
 \begin_layout Description
@@ -2148,6 +2144,8 @@ Polydeuces
 \series default
 .
  They are located within Dione's Lagrangian points L4 and L5 respectively.
+ Helene is by far the largest trojan moon, while Polydeuces is the smallest
+ and has the most chaotic orbit.
 \end_layout
 
 \begin_layout Subsection
@@ -2156,6 +2154,7 @@ Outer Moons
 
 \begin_layout Standard
 These moons all orbit beyond the E Ring.
+ The circle around Saturnus in the outer system map is outer edge of A ring.
 \end_layout
 
 \begin_layout Description

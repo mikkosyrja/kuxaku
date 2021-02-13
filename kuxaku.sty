@@ -58,9 +58,14 @@
 \SetBgColor{electricblue}
 \SetBgContents{
 	\begin{tikzpicture}[remember picture]
-	\draw [line width=4pt,rounded corners=4pt]
-		($ (current page.north west) + (0.5cm,-0.5cm) $)rectangle
-		($ (current page.south east) + (-0.5cm,0.5cm) $);
+	\draw[line width=4pt]
+		($ (current page.north west) + (0.5cm,-0.5cm) $)--
+		($ (current page.north east) + (-1.0cm,-0.5cm) $)--
+		($ (current page.north east) + (-0.5cm,-1.0cm) $)--
+		($ (current page.south east) + (-0.5cm,0.5cm) $)--
+		($ (current page.south west) + (1.0cm,0.5cm) $)--
+		($ (current page.south west) + (0.5cm,1.0cm) $)--
+		cycle;
 	\end{tikzpicture}
 }
 
