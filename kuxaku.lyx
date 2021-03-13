@@ -359,6 +359,104 @@ s and a deep radar station.
 \end_layout
 
 \begin_layout Section
+Near-Earth Objects
+\end_layout
+
+\begin_layout Standard
+A near-Earth object is any small Solar System body whose orbit brings it
+ into proximity with Earth.
+\end_layout
+
+\begin_layout Standard
+Atira asteroids are asteroids whose orbits are entirely confined within
+ Earth's orbit.
+ They are by far the smallest group of near-Earth objects.
+\end_layout
+
+\begin_layout Standard
+Earth-crossers whose semi-major axes are smaller than Earth's are Aten asteroids.
+ The remaining ones are Apollo asteroids, which are the largest group of
+ near-Earth objects.
+\end_layout
+
+\begin_layout Standard
+Amor asteroids is a subgroup of the near-Earth asteroids that approach the
+ orbit of Earth from beyond, but do not cross.
+ The most famous of these is, of course, Eros.
+\end_layout
+
+\begin_layout Description
+433
+\begin_inset space ~
+\end_inset
+
+Eros Eros is a stony and elongated asteroid of the Amor group with a mean
+ diameter of approximately 16.8 kilometers.
+ Nowadays famous for the Venus Incident.
+\end_layout
+
+\begin_layout Description
+1036
+\begin_inset space ~
+\end_inset
+
+Ganymed A stony asteroid on a highly eccentric orbit, classified as a near-Earth
+ object of the Amor group.
+ With a diameter of 35 kilometers, it is the largest of all near-Earth objects.
+\end_layout
+
+\begin_layout Description
+1221
+\begin_inset space ~
+\end_inset
+
+Amor Amor is an S-type asteroid and near-Earth object on an eccentric orbit,
+ approximately 1 kilometer in diameter.
+ It is the namesake of the Amor asteroids.
+\end_layout
+
+\begin_layout Description
+1862
+\begin_inset space ~
+\end_inset
+
+Apollo Apollo is a stony asteroid, approximately 1.5 kilometers in diameter.
+ It is the namesake and the first recognized member of the Apollo asteroids.
+ In addition, since Apollo's orbit is highly eccentric, it crosses the orbits
+ of Venus and Mars and is therefore called a Venus-crosser and Mars-crosser
+ as well.
+\end_layout
+
+\begin_layout Description
+3753
+\begin_inset space ~
+\end_inset
+
+Cruithne Aten asteroid in orbit around the Sun in 1:1 orbital resonance
+ with Earth, making it a co-orbital object.
+ Cruithne is approximately 5 kilometres in diameter.
+\end_layout
+
+\begin_layout Description
+163693
+\begin_inset space ~
+\end_inset
+
+Atira Atira is a binary asteroid, a system of two asteroids orbiting their
+ common barycenter.
+ The primary component with a diameter of approximately 4.8 kilometers is
+ orbited by a minor-planet moon that measures about 1 km.
+ Atira is the namesake and the first numbered body of the Atira asteroids.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Asteroid Belt
 \end_layout
 
@@ -441,6 +539,34 @@ Hygiea The fourth largest asteroid in the Asteroid Belt and somewhat oblong.
  that made survival expensive and kept the population routinely destitute.
 \end_layout
 
+\begin_layout Subsection
+Notable Asteroids
+\end_layout
+
+\begin_layout Description
+3
+\begin_inset space ~
+\end_inset
+
+Juno One of the two largest stony asteroids, along with 15 Eunomia.
+ It contains about 1% of the total mass of the Asteroid Belt.
+ Its orbit has an extreme eccentricity which brings Juno closer to the Sun
+ at perihelion than Vesta and further out at aphelion than Ceres.
+\end_layout
+
+\begin_layout Description
+5
+\begin_inset space ~
+\end_inset
+
+Astraea The fifth asteroid discovered.
+ Physically unremarkable but notable because after its discovery, thousands
+ of other asteroids would follow.
+ The discovery of Astraea proved to be the starting point for the eventual
+ demotion of the four original asteroids (which were regarded as planets
+ at the time) to their current status.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -469,34 +595,6 @@ name "figure:Inner-System"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Notable Asteroids
-\end_layout
-
-\begin_layout Description
-3
-\begin_inset space ~
-\end_inset
-
-Juno One of the two largest stony asteroids, along with 15 Eunomia.
- It contains about 1% of the total mass of the Asteroid Belt.
- Its orbit has an extreme eccentricity which brings Juno closer to the Sun
- at perihelion than Vesta and further out at aphelion than Ceres.
-\end_layout
-
-\begin_layout Description
-5
-\begin_inset space ~
-\end_inset
-
-Astraea The fifth asteroid discovered.
- Physically unremarkable but notable because after its discovery, thousands
- of other asteroids would follow.
- The discovery of Astraea proved to be the starting point for the eventual
- demotion of the four original asteroids (which were regarded as planets
- at the time) to their current status.
 \end_layout
 
 \begin_layout Description
@@ -969,6 +1067,26 @@ Interamnia Large F-type asteroid with an estimated diameter of 350 kilometres.
  bodies and dwarf planets.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+884
+\begin_inset space ~
+\end_inset
+
+Priamus A large Jupiter trojan from the Trojan camp, approximately 110 kilometer
+s in diameter.
+ The dark D-type asteroid is one of the 20 largest Jupiter trojans and has
+ a rotation period of 6.9 hours.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 944
 \begin_inset space ~
@@ -980,7 +1098,7 @@ Hidalgo A centaur and unusual object on an eccentric, cometary-like orbit
  It is the first member of the dynamical class of centaurs ever to be discovered.
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -998,16 +1116,7 @@ Gaspra An S-type asteroid that orbits very close to the inner edge of the
 
 \end_inset
 
-1036
-\begin_inset space ~
-\end_inset
 
-Ganymed A stony asteroid on a highly eccentric orbit, classified as a near-Earth
- object of the Amor group.
- With a diameter of 35 kilometers, Ganymed is the largest of all near-Earth
- objects.
- Amor asteroids is a subgroup of the near-Earth asteroids that approach
- the orbit of Earth from beyond, but do not cross.
 \end_layout
 
 \begin_layout Description
@@ -1023,35 +1132,8 @@ Mentor Mentor is a large Jupiter trojan from the Trojan camp, approximately
  
 \end_layout
 
-\begin_layout Description
-3753
-\begin_inset space ~
-\end_inset
-
-Cruithne Aten Asteroid in orbit around the Sun in 1:1 orbital resonance
- with Earth, making it a co-orbital object.
- Cruithne is approximately 5 kilometres in diameter, and its closest approach
- to Earth is 12 million kilometres (0.080 AU), approximately thirty times
- the separation between Earth and the Moon.
- The Aten asteroids are a dynamical group of asteroids whose orbits bring
- them into proximity with Earth.
-\end_layout
-
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-884
-\begin_inset space ~
-\end_inset
-
-Priamus A large Jupiter trojan from the Trojan camp, approximately 110 kilometer
-s in diameter.
- The dark D-type asteroid is one of the 20 largest Jupiter trojans and has
- a rotation period of 6.9 hours.
-\end_layout
-
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -1086,6 +1168,21 @@ status collapsed
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Travel beyond Saturn orbit is quite rare.
+ There is a small colony in Uranian moon Titania.
+ Neptunian moon Triton has an astronomy lab and mining research station.
+ No human has ever ventured to Kuiper Belt, but several automated probes
+ have charted it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 

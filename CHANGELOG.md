@@ -55,3 +55,7 @@ Changed Jovian and Cronian system map units from AU to Gm and increased map reso
 Changed Cronian outer system orbit dots interval to 12 hours.
 
 Added new LyX document kuxaku_daily.lyx for just orbit and time information for any given day.
+
+## 2021-02-13
+
+Changed PDF page border layout from rounded corners to cutted corners.
