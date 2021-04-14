@@ -59,3 +59,11 @@ Added new LyX document kuxaku_daily.lyx for just orbit and time information for 
 ## 2021-02-13
 
 Changed PDF page border layout from rounded corners to cutted corners.
+
+## 2021-03-13
+
+Added some near-earth objects to maps.
+
+## 2021-04-04
+
+Used thinner PDF page border line.

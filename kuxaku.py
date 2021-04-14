@@ -300,7 +300,7 @@ plotposition("Jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetc
 
 savemap(axis, innersize, 'Inner System', 'systeminner.png', 'month')
 
-plotasteroid("Anderson", 127, stationcolor, stationsize, orbitdots)		# destroyed by earth, asteroid johanna
+plotasteroid("Anderson", 127, stationcolor, stationsize)		# destroyed by earth, asteroid johanna
 
 plotasteroid("Egeria", 13)
 plotasteroid("Melpomene", 18)
@@ -312,7 +312,7 @@ plotasteroid("Mathilde", 253)
 plotasteroid("Ida", 243)
 plotasteroid("Bamberga", 324)
 plotasteroid("Ursula", 375)
-plotasteroid("Eros", 433, colonycolor, asteroidsize, orbitdots)	# destroyed by protomolecule
+plotasteroid("Eros", 433, colonycolor, asteroidsize)	# destroyed by protomolecule
 plotasteroid("Hungaria", 434)
 plotasteroid("Patientia", 451)
 plotasteroid("Davida", 511)
