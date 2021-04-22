@@ -285,6 +285,7 @@ plotasteroid("Amor", 1221)
 plotasteroid("Apollo", 1862)
 plotasteroid("Mentor", 3451)
 plotasteroid("Cruithne", 3753)
+plotasteroid("Eureka", 5261)
 #plotasteroid("Apophis", 99942)
 plotasteroid("Atira", 163693)
 

@@ -181,7 +181,7 @@ System maps use two different scales, either Gm or AU.
 \begin_layout Standard
 System objects are displayed as small filled circles.
  Sun is yellow, Earth is blue and Mars is red.
- Otherwise, following color rules are used:
+ Otherwise, following colors are used:
 \end_layout
 
 \begin_layout Description
@@ -210,6 +210,28 @@ Notable objects have orbit dots displaying their future positions.
 \begin_layout Standard
 All asteroid labels include their number.
  Objects without number are either planets, moons or artificial constructs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/planets.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1129,7 +1151,20 @@ Mentor Mentor is a large Jupiter trojan from the Trojan camp, approximately
  The uncommon Jovian X-type asteroid is one of the largest Jupiter trojans
  and orbits the Sun at a distance of 4.8–5.5 AU once every 11 years and 8
  months.
- 
+\end_layout
+
+\begin_layout Description
+5261
+\begin_inset space ~
+\end_inset
+
+Eureka Eureka is a trojan trailing Mars at the L5 point.
+ The asteroid is located deep within a stable Lagrangian zone of Mars, which
+ is considered indicative of a primordial origin — meaning the asteroid
+ has most likely been in this orbit for much of the history of the Solar
+ System.
+ It has one natural satellite about 0.46 km in diameter and orbiting 2.1 km
+ from Eureka.
 \end_layout
 
 \begin_layout Standard
