@@ -26,16 +26,16 @@ arguments = parser.parse_args()
 expansedate = dateutil.parser.parse(arguments.date)
 if expansedate.year < 2350 or expansedate.year >= 2360:
 	print("illegal date:", expansedate, "Year must be between 2350 - 2359")
-	sys.exit(1)
+	os._exit(1)
 
 date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
 julian = ephem.julian_date(date)
 darian = darian.Darian(expansedate.year, expansedate.month, expansedate.day)
 
-print("expanse date:", arguments.date)
-print("darian date:", darian.string())
+#print("expanse date:", arguments.date)
+#print("darian date:", darian.string())
 print("gregorian date:", date.datetime().date().isoformat())
-print("julian day:", julian)
+#print("julian day:", julian)
 
 lastdate = ephem.Date(expansedate.replace(year = 2029))
 lastjulian = ephem.julian_date(lastdate)
@@ -61,11 +61,15 @@ mapdpi = 600
 
 foreground = 'white'
 background = 'black'
+expansecolor = '#80C0FF'
 legendbox = [0.6, 0.6, 0.6]
+ringcolor = [0.1, 0.1, 0.1]
 if arguments.printer:
 	foreground = 'black'
 	background = 'white'
-	legendbox = [0.9, 0.9, 0.9]
+	expansecolor = 'white'
+	legendbox = 'white'
+	ringcolor = 'white'
 
 plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
@@ -75,7 +79,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
 
 suncolor = [1.0, 1.0, 0]			# yellow
 planetcolor = [0, 0.5, 0]			# green
@@ -188,12 +191,13 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 	if abs(miny) > abs(maxy):
 		ypos = 0.95
 		vertical = 'top'
-	axis.text(xpos, ypos, 'orbit dot = ' + dots + '\naxis units in ' + unit, horizontalalignment = horizontal, verticalalignment = vertical,
-		transform = axis.transAxes, fontsize = legendfont, bbox = dict(boxstyle='round', facecolor = legendbox))
+	axis.text(xpos, ypos, 'orbit dot = ' + dots + '\naxis units in ' + unit, horizontalalignment = horizontal,
+		verticalalignment = vertical, transform = axis.transAxes, fontsize = legendfont,
+		bbox = dict(boxstyle='round', facecolor = legendbox, edgecolor = foreground, linewidth = 0.7))
 	plot.xticks(fontsize = axisfont)
 	plot.yticks(fontsize = axisfont)
-	plot.title(title + titledate(), color = foreground, fontsize = 8)
-	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = background, bbox_inches = 'tight')
+	plot.title(title + titledate(), fontsize = 8)
+	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = expansecolor, bbox_inches = 'tight')
 
 #
 #	inner planets
@@ -287,6 +291,7 @@ plotasteroid("Mentor", 3451)
 plotasteroid("Cruithne", 3753)
 plotasteroid("Eureka", 5261)
 #plotasteroid("Apophis", 99942)
+plotasteroid("Bennu", 101955)
 plotasteroid("Atira", 163693)
 
 jovian = SPK.open('data/jovian.bsp')
@@ -339,7 +344,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
 
 plotposition("", sun, [1, 1, 0], sunsize * outerscale, outersize)
 
@@ -428,7 +432,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
 
 def printjovian(name, id, color = mooncolor, size = moonsize, quarters = 0, major = False):
 	for index in range(1, quarters + 1, 1):
@@ -468,7 +471,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
 
 def printjovianouter(name, id, weeks = 0, retrograde = False):
 	for index in range(1, weeks + 1, 1):
@@ -522,9 +524,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
-
-ringcolor = [0.1, 0.1, 0.1]
 
 def printring(name, kminner, kmouter):
 	if cronianunit == 'AU':
@@ -598,7 +597,6 @@ axis.spines['bottom'].set_color(foreground)
 axis.spines['top'].set_color(foreground)
 axis.spines['right'].set_color(foreground)
 axis.spines['left'].set_color(foreground)
-axis.tick_params(labelcolor = foreground, colors = foreground)
 
 def printcronianouter(name, id, color = mooncolor, size = moonsize, halfs = 0, major = False):
 	for index in range(1, halfs + 1, 1):
@@ -674,10 +672,10 @@ def commdelay(name, places, distances, unit, system):
 	axis.axis('off')
 	axis.axis('tight')
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate(), color = foreground)
+	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate())
 	#axis.patch.set_facecolor(background)
 
-	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = background, bbox_inches = 'tight')
+	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = expansecolor, bbox_inches = 'tight')
 
 commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 'System')
 commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
@@ -728,9 +726,9 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 	axis.axis('off')
 	axis.axis('tight')
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.patch.set_facecolor(background)
-	axis.set_title(title, color = foreground)
-	plot.savefig(filename, dpi = 300, facecolor = background, bbox_inches = 'tight')
+#	axis.patch.set_facecolor(background)
+	axis.set_title(title)
+	plot.savefig(filename, dpi = 300, facecolor = expansecolor, bbox_inches = 'tight')
 
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.3)
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5)

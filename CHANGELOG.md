@@ -67,3 +67,13 @@ Added some near-earth objects to maps.
 ## 2021-04-04
 
 Used thinner PDF page border line.
+
+## 2021-07-03
+
+Used double line for PDF page border line.
+
+Moved line number to right bottom corner and clipped all other corners.
+
+Added darian to gregorian conversion function.
+
+Changed table and axis backgrounds to same blue as section titles.
