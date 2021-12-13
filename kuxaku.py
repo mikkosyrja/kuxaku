@@ -61,13 +61,11 @@ mapdpi = 600
 
 foreground = 'white'
 background = 'black'
-expansecolor = '#80C0FF'
 legendbox = [0.6, 0.6, 0.6]
 ringcolor = [0.1, 0.1, 0.1]
 if arguments.printer:
 	foreground = 'black'
 	background = 'white'
-	expansecolor = 'white'
 	legendbox = 'white'
 	ringcolor = 'white'
 
@@ -197,7 +195,7 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 	plot.xticks(fontsize = axisfont)
 	plot.yticks(fontsize = axisfont)
 	plot.title(title + titledate(), fontsize = 8)
-	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = expansecolor, bbox_inches = 'tight')
+	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = 'white', bbox_inches = 'tight')
 
 #
 #	inner planets
@@ -675,7 +673,7 @@ def commdelay(name, places, distances, unit, system):
 	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate())
 	#axis.patch.set_facecolor(background)
 
-	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = expansecolor, bbox_inches = 'tight')
+	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = 'white', bbox_inches = 'tight')
 
 commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 'System')
 commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
@@ -728,7 +726,7 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
 #	axis.patch.set_facecolor(background)
 	axis.set_title(title)
-	plot.savefig(filename, dpi = 300, facecolor = expansecolor, bbox_inches = 'tight')
+	plot.savefig(filename, dpi = 300, facecolor = 'white', bbox_inches = 'tight')
 
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.3)
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5)
