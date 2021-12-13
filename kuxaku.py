@@ -62,21 +62,18 @@ mapdpi = 600
 foreground = 'white'
 background = 'black'
 legendbox = [0.6, 0.6, 0.6]
+legendframe = legendbox
 ringcolor = [0.1, 0.1, 0.1]
 if arguments.printer:
 	foreground = 'black'
 	background = 'white'
 	legendbox = 'white'
+	legendframe = 'black'
 	ringcolor = 'white'
 
 plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
-
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
 
 suncolor = [1.0, 1.0, 0]			# yellow
 planetcolor = [0, 0.5, 0]			# green
@@ -191,11 +188,11 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 		vertical = 'top'
 	axis.text(xpos, ypos, 'orbit dot = ' + dots + '\naxis units in ' + unit, horizontalalignment = horizontal,
 		verticalalignment = vertical, transform = axis.transAxes, fontsize = legendfont,
-		bbox = dict(boxstyle='round', facecolor = legendbox, edgecolor = foreground, linewidth = 0.7))
+		bbox = dict(boxstyle='round', facecolor = legendbox, edgecolor = legendframe, linewidth = 0.7))
 	plot.xticks(fontsize = axisfont)
 	plot.yticks(fontsize = axisfont)
 	plot.title(title + titledate(), fontsize = 8)
-	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = 'white', bbox_inches = 'tight')
+	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = legendbox, bbox_inches = 'tight')
 
 #
 #	inner planets
@@ -338,11 +335,6 @@ plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
-
 plotposition("", sun, [1, 1, 0], sunsize * outerscale, outersize)
 
 plotposition("Earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], planetsize * outerscale, outersize, major = True)
@@ -426,11 +418,6 @@ plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
 
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
-
 def printjovian(name, id, color = mooncolor, size = moonsize, quarters = 0, major = False):
 	for index in range(1, quarters + 1, 1):
 		position = jovian[5,id].compute(julian + index / 4)[:3]
@@ -464,11 +451,6 @@ minx = miny = maxx = maxy = 0
 plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
-
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
 
 def printjovianouter(name, id, weeks = 0, retrograde = False):
 	for index in range(1, weeks + 1, 1):
@@ -517,11 +499,6 @@ minx = miny = maxx = maxy = 0
 plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
-
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
 
 def printring(name, kminner, kmouter):
 	if cronianunit == 'AU':
@@ -590,11 +567,6 @@ minx = miny = maxx = maxy = 0
 plot.figure(0)
 figure, axis = plot.subplots(subplot_kw={'aspect': 'equal'})
 axis.patch.set_facecolor(background)
-
-axis.spines['bottom'].set_color(foreground)
-axis.spines['top'].set_color(foreground)
-axis.spines['right'].set_color(foreground)
-axis.spines['left'].set_color(foreground)
 
 def printcronianouter(name, id, color = mooncolor, size = moonsize, halfs = 0, major = False):
 	for index in range(1, halfs + 1, 1):
@@ -673,7 +645,7 @@ def commdelay(name, places, distances, unit, system):
 	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate())
 	#axis.patch.set_facecolor(background)
 
-	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = 'white', bbox_inches = 'tight')
+	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = legendbox, bbox_inches = 'tight')
 
 commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 'System')
 commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
@@ -726,7 +698,7 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
 #	axis.patch.set_facecolor(background)
 	axis.set_title(title)
-	plot.savefig(filename, dpi = 300, facecolor = 'white', bbox_inches = 'tight')
+	plot.savefig(filename, dpi = 300, facecolor = legendbox, bbox_inches = 'tight')
 
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.3)
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5)
