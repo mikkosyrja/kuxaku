@@ -128,15 +128,9 @@ System
 
 \begin_layout Standard
 \align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-today
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "date.tex"
 
 \end_inset
 

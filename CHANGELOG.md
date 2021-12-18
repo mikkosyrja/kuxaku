@@ -77,3 +77,15 @@ Moved line number to right bottom corner and clipped all other corners.
 Added darian to gregorian conversion function.
 
 Changed table and axis backgrounds to same blue as section titles.
+
+## 2021-12-13
+
+Changed map and table frame backgrounds to grey.
+
+## 2021-12-18
+
+Lyx documents use now in universe dates provided by kuxaku.py script.
+
+Added Itokawa asteroid. Used as an example of astereid image.
+
+Changed system document asteroid picture to Itokawa image.

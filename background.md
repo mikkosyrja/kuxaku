@@ -4,7 +4,7 @@ There is a very good reason why every fantasy world should have a map. If in a m
 
 The fantasy world of The Expanse doesn't have a map. Yes, we have familiar names like Mars and Jupiter, but no real information where they are or even how far apart they are. Alex makes a call to Bobbie while flying by Mars. It's a short call because of Rocinante's high speed at that moment. Very cool indeed, but the orbital position of Mars must have been in the route of Rocinante towards outer planets. How convenient.
 
-Planets and asteroids really don't exist all over their orbits like described in the RPG rulebook. They have their own constantly changing locations around the Sun. Miller does a quite remarkably orbital detective work when tracking down the location of Scopuli. In the universe of The Expanse, this kind of newtonian knowledge should be as common as ideas of north and east are for us earthers.
+Planets and asteroids really don't exist all over their orbits like described in the RPG rulebook. They have their own constantly changing locations around the Sun. Miller does quite remarkable orbital detective work when tracking down the location of Scopuli. In the universe of The Expanse, this kind of newtonian knowledge should be as common as ideas of north and east are for us earthers.
 
 # Calendars
 
@@ -26,7 +26,7 @@ The most important thing here is that heavenly bodies move predictably during th
 
 ![inner system](images/systeminner.png)
 
-Because, in addition to dates, The Expanse universe lacks lots of other technical details, some additional improvisation is needed.
+Because, in addition to dates, The Expanse universe lacks lots of other technical details, some improvisation is needed.
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 

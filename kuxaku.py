@@ -167,7 +167,7 @@ def planetorbit(kernel, center, planet, months, color, size = orbitdotsize):
 			addellipse(position, color, size)
 
 def titledate():
-	return ' ' + str(expansedate.date()) + ' (' + darian.string() + ')'
+	return str(expansedate.date()) + ' (' + darian.string() + ')'
 
 def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 	if unit == 'AU':
@@ -191,7 +191,7 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 		bbox = dict(boxstyle='round', facecolor = legendbox, edgecolor = legendframe, linewidth = 0.7))
 	plot.xticks(fontsize = axisfont)
 	plot.yticks(fontsize = axisfont)
-	plot.title(title + titledate(), fontsize = 8)
+	plot.title(title + ' ' + titledate(), fontsize = 8)
 	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = legendbox, bbox_inches = 'tight')
 
 #
@@ -320,6 +320,7 @@ plotasteroid("Davida", 511)
 plotasteroid("Priamus", 884)
 plotasteroid("Agamemnon", 911)
 plotasteroid("Gaspra", 951)
+plotasteroid("Itokawa", 25143)
 plotasteroid("Ryugu", 162173)
 
 savemap(axis, innersize, 'Inner System', 'systeminner_all.png', 'month')
@@ -660,7 +661,7 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 	if juiceg and juicet:
 		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
 		filename += '+' + '{:02.0f}'.format(juiceg * 10) + 'x' + '{:02.0f}'.format(juicet * 10)
-	title += ')' + titledate()
+	title += ') ' + titledate()
 	filename += '.png'
 	print('Writing:', filename)
 
@@ -714,3 +715,10 @@ traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 1.0
 traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 'Cronian', 0.3)
 traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 'Cronian', 0.5)
 #traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 'Cronian', 1.0)
+
+# write data to tex file for lyx
+datefile = open("date.tex", "w")
+datefile.write("\\textbf{\\large{}")
+datefile.write(titledate())
+datefile.write("}{\\large\\par}\n")
+datefile.close()

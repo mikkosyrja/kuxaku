@@ -128,15 +128,9 @@ System
 
 \begin_layout Standard
 \align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-today
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "date.tex"
 
 \end_inset
 
@@ -860,28 +854,6 @@ Sylvia The 8th-largest asteroid in the asteroid belt.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/asteroid.jpg
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -1083,6 +1055,28 @@ Hektor The largest Jupiter trojan and the namesake of the Hektor family,
  It has one small 12-kilometer sized satellite, Skamandrios.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/itokawa.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 704
 \begin_inset space ~
@@ -1157,6 +1151,29 @@ Mentor Mentor is a large Jupiter trojan from the Trojan camp, approximately
  The uncommon Jovian X-type asteroid is one of the largest Jupiter trojans
  and orbits the Sun at a distance of 4.8–5.5 AU once every 11 years and 8
  months.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+25143
+\begin_inset space ~
+\end_inset
+
+Itokawa Itokawa is a sub-kilometer near-Earth object of the Apollo group.
+ The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and
+ measures approximately 330 meters in diameter.
+ Due to its low density and high porosity, Itokawa is considered to be a
+ rubble pile, consisting of numerous boulders of different sizes rather
+ than of a single solid body.
+ It was the first asteroid to be the target of a sample return mission.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
