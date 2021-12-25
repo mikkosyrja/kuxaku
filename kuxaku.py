@@ -320,6 +320,7 @@ plotasteroid("Davida", 511)
 plotasteroid("Priamus", 884)
 plotasteroid("Agamemnon", 911)
 plotasteroid("Gaspra", 951)
+plotasteroid("Oshima", 5592)
 plotasteroid("Itokawa", 25143)
 plotasteroid("Ryugu", 162173)
 

@@ -89,3 +89,7 @@ Lyx documents use now in universe dates provided by kuxaku.py script.
 Added Itokawa asteroid. Used as an example of astereid image.
 
 Changed system document asteroid picture to Itokawa image.
+
+## 2021-12-24
+
+Added Oshima asteroid.
