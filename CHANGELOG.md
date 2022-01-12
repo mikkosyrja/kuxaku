@@ -93,3 +93,9 @@ Changed system document asteroid picture to Itokawa image.
 ## 2021-12-24
 
 Added Oshima asteroid.
+
+## 2022-01-11
+
+Added asteroids Parthenope, Victoria, Kalliope and Elektra.
+
+Document asteroid description improvements.

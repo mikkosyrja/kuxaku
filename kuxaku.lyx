@@ -671,6 +671,18 @@ Metis One of the larger main-belt asteroids.
 status collapsed
 
 \begin_layout Plain Layout
+11
+\begin_inset space ~
+\end_inset
+
+Parthenope
+\end_layout
+
+\begin_layout Plain Layout
+12 Victoria
+\end_layout
+
+\begin_layout Plain Layout
 13
 \begin_inset space ~
 \end_inset
@@ -679,6 +691,14 @@ Egeria Large main-belt G-type asteroid having a size of 215×192 km.
  Spectral analysis of Egeria shows it to be unusually high in water content,
  10.5–11.5% water by mass.
  This makes Egeria a prominent candidate for water-mining ventures.
+\end_layout
+
+\begin_layout Plain Layout
+14
+\begin_inset space ~
+\end_inset
+
+Irene
 \end_layout
 
 \end_inset
@@ -714,6 +734,14 @@ Psyche One of the most massive asteroids in the asteroid belt.
 status collapsed
 
 \begin_layout Plain Layout
+17
+\begin_inset space ~
+\end_inset
+
+Thetis
+\end_layout
+
+\begin_layout Plain Layout
 18
 \begin_inset space ~
 \end_inset
@@ -722,6 +750,14 @@ Melpomene Large, bright main-belt asteroid that was discovered on 1852,
  and named after Melpomenē, the Muse of tragedy in Greek mythology.
  It is classified as an S-type asteroid and is composed of silicates and
  metals.
+\end_layout
+
+\begin_layout Plain Layout
+19
+\begin_inset space ~
+\end_inset
+
+Fortuna
 \end_layout
 
 \end_inset
@@ -746,7 +782,7 @@ Massalia Stony asteroid and the parent body of the Massalia family located
 \begin_inset space ~
 \end_inset
 
-Lutetias A large asteroid in the asteroid belt of an unusual spectral type.
+Lutetia A large asteroid in the asteroid belt of an unusual spectral type.
  It measures about 100 kilometers in diameter and is heavily cratered, with
  the largest impact crater reaching 45 km in diameter.
  The surface is geologically heterogeneous and is intersected by a system
@@ -992,7 +1028,12 @@ Patientia The 15th-largest asteroid in the asteroid belt with a diameter
  of 225 km.
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 511
 \begin_inset space ~
 \end_inset
@@ -1002,11 +1043,6 @@ Davida One of the ten most-massive asteroids, and the 7th-largest asteroid.
  of the total mass of the Asteroid Belt.
  It is a C-type asteroid, which means that it is dark in colouring with
  a carbonaceous chondrite composition.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -1037,11 +1073,12 @@ Achilles Large Jupiter trojan from the Greek camp.
 \begin_inset space ~
 \end_inset
 
-Patroclus A binary Jupiter trojan approximately 140 kilometers in diameter.
- It was the second trojan to be discovered and the only member of the Trojan
- camp named after a Greek character.
- The dark D-type asteroid is also slow rotator and one of the largest Jupiter
- trojans.
+Patroclus A binary Jupiter trojan is is a slow rotator due to the 103-hour
+ orbital period of its two components.
+ Patroclus (110 kilometer in diameter) and slightly smaller Menoetius orbit
+ around each other at a distance of roughly 700 km It was the second trojan
+ to be discovered and the only member of the Trojan camp named after a Greek
+ character.
 \end_layout
 
 \begin_layout Description
@@ -1107,17 +1144,6 @@ s in diameter.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-944
-\begin_inset space ~
-\end_inset
-
-Hidalgo A centaur and unusual object on an eccentric, cometary-like orbit
- between the asteroid belt and the outer Solar System, approximately 52
- kilometers in diameter.
- It is the first member of the dynamical class of centaurs ever to be discovered.
 \end_layout
 
 \begin_layout Standard
@@ -1263,12 +1289,11 @@ Centaurs are small Solar System bodies with either a perihelion or a semi-major
 \begin_inset space ~
 \end_inset
 
-Hidalgo The first member of the dynamical class of centaurs ever to be discovere
-d.
+Hidalgo The first member of centaurs ever to be discovered.
  The dark D-type object has a rotation period of 10.1 hours and an elongated
- shape.
- Its orbit takes it to the inner edge of the Asteroid Belt and as far out
- as to the orbit of Saturn.
+ shape with mean diameter of 52 kilometers.
+ Its cometary-like orbit takes it to the inner edge of the Asteroid Belt
+ and as far out as to the orbit of Saturn.
 \end_layout
 
 \begin_layout Description
@@ -1277,9 +1302,12 @@ d.
 \end_inset
 
 Chiron Although Chiron was initially called an asteroid and classified only
- as a minor planet with the designation "2060 Chiron", it was later found
- to exhibit behavior typical of a comet.
- Today it is classified as both a minor planet and a comet.
+ as a minor planet, it was later found to exhibit behavior typical of a
+ comet.
+ Now it is classified as both a minor planet and a comet.
+ Chiron's orbit is highly eccentric (0.37), with perihelion just inside the
+ orbit of Saturn and aphelion just outside the perihelion of Uranus.
+ Its diameter is 200 kilometers.
 \end_layout
 
 \begin_layout Description
@@ -1287,8 +1315,8 @@ Chiron Although Chiron was initially called an asteroid and classified only
 \begin_inset space ~
 \end_inset
 
-Pholus An eccentric centaur in the outer Solar System, approximately 180
- kilometers in diameter, that crosses the orbit of both Saturn and Neptune.
+Pholus An eccentric centaur in the outer Solar System, 180 kilometers in
+ diameter, that crosses the orbit of both Saturn and Neptune.
  The very reddish object has an elongated shape and a rotation period of
  9.98 hours.
  It was the second centaur to be discovered.
@@ -1301,8 +1329,8 @@ Pholus An eccentric centaur in the outer Solar System, approximately 180
 
 Nessus A centaur on an eccentric orbit, located beyond Saturn in the outer
  Solar System.
- The dark and reddish minor planet is elongated and measures approximately
- 60 kilometers in diameter.
+ The dark and reddish minor planet is elongated and measures 60 kilometers
+ in diameter.
  It has a relatively long orbital half-life of about 4.9 million years.
 \end_layout
 
@@ -1313,8 +1341,8 @@ Nessus A centaur on an eccentric orbit, located beyond Saturn in the outer
 
 Asbolus A centaur orbiting in the outer Solar System between the orbits
  of Jupiter and Neptune.
- It measures approximately 80 kilometers in diameter and has a fresh impact
- crater on its surface, less than 10 million years old.
+ It measures 80 kilometers in diameter and has a fresh impact crater on
+ its surface, less than 10 million years old.
 \end_layout
 
 \begin_layout Description

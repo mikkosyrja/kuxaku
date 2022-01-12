@@ -303,11 +303,15 @@ savemap(axis, innersize, 'Inner System', 'systeminner.png', 'month')
 
 plotasteroid("Anderson", 127, stationcolor, stationsize)		# destroyed by earth, asteroid johanna
 
+plotasteroid("Parthenope", 11)
+plotasteroid("Victoria", 12)
 plotasteroid("Egeria", 13)
 plotasteroid("Melpomene", 18)
+plotasteroid("Kalliope", 22)
 plotasteroid("Euphrosyne", 31)
 plotasteroid("Doris", 48)
 plotasteroid("Thisbe", 88)
+plotasteroid("Elektra", 130)
 plotasteroid("Nausikaa", 192)
 plotasteroid("Mathilde", 253)
 plotasteroid("Ida", 243)
@@ -323,6 +327,20 @@ plotasteroid("Gaspra", 951)
 plotasteroid("Oshima", 5592)
 plotasteroid("Itokawa", 25143)
 plotasteroid("Ryugu", 162173)
+
+# https://www.syfy.com/syfy-wire/asteroids-the-universe-and-everything-meet-42-space-rocks
+# 29 Amphitrite
+# 41 Daphne
+# 354 Eleonora
+# 128 Nemesis
+# 51 Nemausa
+# 173 Ino
+# 145 Adeona
+# 187 Lamberta
+# 89 Julia
+# 230 Athamantis
+# 63 Ausonia
+# 30 Urania
 
 savemap(axis, innersize, 'Inner System', 'systeminner_all.png', 'month')
 
