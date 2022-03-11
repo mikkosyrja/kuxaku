@@ -76,7 +76,7 @@ Moved line number to right bottom corner and clipped all other corners.
 
 Added darian to gregorian conversion function.
 
-Changed table and axis backgrounds to same blue as section titles.
+Changed table and axiddeds backgrounds to same blue as section titles.
 
 ## 2021-12-13
 
@@ -99,3 +99,7 @@ Added Oshima asteroid.
 Added asteroids Parthenope, Victoria, Kalliope and Elektra.
 
 Document asteroid description improvements.
+
+## 2022-01-25
+
+Added some shipping container battlemaps.
