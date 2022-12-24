@@ -1,4 +1,5 @@
 \usepackage{colortbl,titlesec,titling,background,fancyhdr}
+\usepackage{enumitem}
 
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
@@ -10,7 +11,7 @@
 \setlength{\extrarowheight}{2pt}
 
 \definecolor{expansecolor}{RGB}{128, 192, 255}
-\definecolor{expanselight}{RGB}{160, 216, 255}
+\definecolor{expanselight}{RGB}{181, 225, 255}
 \definecolor{electricblue}{RGB}{0, 128, 216}
 \definecolor{lightgray}{RGB}{246,246,246}
 
@@ -51,7 +52,13 @@
   \colorbox{expanselight}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
 
 \titleformat{name=\subsubsection}[block]
-  {\normalfont\large\bfseries}{}{0pt}{}
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsection}
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsubsubsection}[1]{%
+  \colorbox{expanselight}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
+
+% \titleformat{name=\subsubsection}[block]
+%   {\normalfont\normalsize\bfseries}{}{0pt}{}
 
 \titleformat{name=\subsubsection,numberless}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{}
