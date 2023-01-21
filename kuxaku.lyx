@@ -214,9 +214,33 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/planets.png
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -241,13 +265,20 @@ Image above shows relative sizes major Solar system objects.
 
 \begin_layout Section
 Inner System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Inner-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The inner system map (
+The inner system map (page 
 \begin_inset CommandInset ref
-LatexCommand vpageref
-reference "figure:Inner-System"
+LatexCommand pageref
+reference "fig:Inner-System"
 plural "false"
 caps "false"
 noprefix "false"
@@ -380,6 +411,13 @@ s and a deep radar station.
 
 \begin_layout Subsection
 Near-Earth Objects
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Near-Earth-Objects"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -480,6 +518,13 @@ Atira Atira is a binary asteroid, a system of two asteroids orbiting their
 
 \begin_layout Section
 Asteroid Belt
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Asteroid-Belt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -505,6 +550,13 @@ Station The Belt headquarters of Tycho Manufacturing and Engineering Concern
 
 \begin_layout Subsection
 Colonized Asteroids
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Colonized-Asteroids"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -563,6 +615,13 @@ Hygiea The fourth largest asteroid in the asteroid Belt and somewhat oblong.
 
 \begin_layout Subsection
 Notable Asteroids
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Notable-Asteroids"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -576,24 +635,30 @@ Juno One of the two largest stony asteroids, along with 15 Eunomia.
  at perihelion than Vesta and further out at aphelion than Ceres.
 \end_layout
 
-\begin_layout Description
-5
-\begin_inset space ~
-\end_inset
-
-Astraea The fifth asteroid discovered.
- Physically unremarkable but notable because after its discovery, thousands
- of other asteroids would follow.
- The discovery of Astraea proved to be the starting point for the eventual
- demotion of the four original asteroids (which were regarded as planets
- at the time) to their current status.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
 sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
 status collapsed
 
 \begin_layout Plain Layout
@@ -607,7 +672,7 @@ status collapsed
 
 \begin_inset CommandInset label
 LatexCommand label
-name "figure:Inner-System"
+name "fig:Inner-System"
 
 \end_inset
 
@@ -617,6 +682,24 @@ name "figure:Inner-System"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+5
+\begin_inset space ~
+\end_inset
+
+Astraea The fifth asteroid discovered.
+ Physically unremarkable but notable because after its discovery, thousands
+ of other asteroids would follow.
+ The discovery of Astraea proved to be the starting point for the eventual
+ demotion of the four original asteroids (which were regarded as planets
+ at the time) to their current status.
 \end_layout
 
 \begin_layout Description
@@ -1105,9 +1188,33 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/itokawa.jpg
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1229,6 +1336,13 @@ Eureka Eureka is a trojan trailing Mars at the L5 point.
 
 \begin_layout Section
 Outer System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Outer-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1246,10 +1360,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/systemouter.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1278,6 +1416,13 @@ Travel beyond Saturn orbit is quite rare.
 
 \begin_layout Subsection
 Centaurs
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Centaurs"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1375,6 +1520,13 @@ ly 75 kilometers in diameter.
 
 \begin_layout Section
 Communication Delay
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Communication-Delay"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1403,10 +1555,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/systemdelay.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1431,10 +1607,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/joviandelay.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1454,6 +1654,13 @@ Delay between Earth and Moon is about 1.3 seconds.
 
 \begin_layout Section
 Travel Times
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Travel-Times"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1522,10 +1729,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/systemtravel03.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1542,6 +1773,25 @@ status collapsed
 placement H
 wide false
 sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
 status collapsed
 
 \begin_layout Plain Layout
@@ -1560,11 +1810,35 @@ status collapsed
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
 status collapsed
 
 \begin_layout Plain Layout
@@ -1583,6 +1857,11 @@ status collapsed
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement H
@@ -1591,10 +1870,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/systemtravel05+60x40.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1615,6 +1918,13 @@ status collapsed
 
 \begin_layout Section
 Jovian System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Jovian-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1641,10 +1951,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/jovianinner.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1663,6 +1997,13 @@ Jupiter is primarily composed of hydrogen with a quarter of its mass being
 
 \begin_layout Subsection
 Ring System
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Jovian-Ring-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1688,10 +2029,33 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/jupiterrings.png
-	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1712,6 +2076,13 @@ The main and halo rings consist of dust ejected from the moons Metis, Adrastea,
 
 \begin_layout Subsection
 Inner Moons
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Jovian-Inner-Moons"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1764,6 +2135,13 @@ Thebe Thebe is the fourth of Jupiter's moons by distance from the planet.
 
 \begin_layout Subsection
 Galilean Moons
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Galilean-Moons"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1834,6 +2212,13 @@ Callisto Callisto is the second-largest moon of Jupiter and the third-largest
 
 \begin_layout Subsection
 Outer Moons
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Jovian-Outer-Moons"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1874,10 +2259,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/jovianouter.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1990,10 +2399,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/joviantravel03.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2010,6 +2443,25 @@ status collapsed
 placement h
 wide false
 sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
 status collapsed
 
 \begin_layout Plain Layout
@@ -2028,6 +2480,11 @@ status collapsed
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -2036,10 +2493,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/joviantravel10.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2075,6 +2556,13 @@ Surrounding the second largest gas giant in the solar system, the Saturnian
 
 \begin_layout Subsection
 Ring System
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cronian-Ring-System"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2094,10 +2582,33 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename images/saturnrings.png
-	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2165,6 +2676,13 @@ Ring Wide ring composed of microscopic particles.
 
 \begin_layout Subsection
 Inner Moons
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cronian-Inner-Moons"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2249,10 +2767,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/cronianinner.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2337,6 +2879,13 @@ Polydeuces
 
 \begin_layout Subsection
 Outer Moons
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cronian-Outer-Moons"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2375,10 +2924,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/cronianouter.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2438,10 +3011,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/croniantravel03.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2461,10 +3058,34 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/croniantravel05.png
 	lyxscale 50
 	width 100col%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
