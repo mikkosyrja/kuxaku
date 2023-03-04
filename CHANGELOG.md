@@ -103,3 +103,7 @@ Document asteroid description improvements.
 ## 2022-01-25
 
 Added some shipping container battlemaps.
+
+## 2023-03-04
+
+Some style file updates.

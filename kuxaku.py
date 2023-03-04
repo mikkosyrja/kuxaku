@@ -52,6 +52,7 @@ delay = aukm / 17987547.48		# communication delay in minutes/au
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
+#systemplaces = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')
 systemplaces = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
 systempositions = []	# must be filled in above order
 
@@ -391,7 +392,8 @@ uranian = SPK.open('data/uranian.bsp')
 uranusbary = uranian[0,7].compute(julian)
 outerorbit(uranian, 7, 799, orbitdots, planetcolor)
 
-plotposition("Uranus", uranian[7, 799].compute(julian)[:3] + uranusbary, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
+systempositions.append(uranian[7, 799].compute(julian)[:3] + uranusbary)
+plotposition("Uranus", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 neptunian = SPK.open('data/neptunian.bsp')
 #print(neptunian)
@@ -399,7 +401,8 @@ neptunian = SPK.open('data/neptunian.bsp')
 neptunebary = neptunian[0,8].compute(julian)
 outerorbit(neptunian, 8, 899, orbitdots, planetcolor)
 
-plotposition("Neptune", neptunian[8, 899].compute(julian)[:3] + neptunebary, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
+systempositions.append(neptunian[8, 899].compute(julian)[:3] + neptunebary)
+plotposition("Neptune", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 def plotcentaur(name, id, color = asteroidcolor, size = asteroidsize, years = 0):
 	kernel = SPKType21.open("data/" + str(2000000 + id) + ".bsp")
