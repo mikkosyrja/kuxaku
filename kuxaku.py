@@ -238,6 +238,7 @@ plotposition("Mars", systempositions[-1], [1, 0, 0], planetsize * innerscale, in
 #plotposition("Phobos", martian[4, 401].compute(julian)[:3] + marsbary, mooncolor, moonsize * innerscale)
 #plotposition("Deimos", martian[4, 402].compute(julian)[:3] + marsbary, mooncolor, moonsize * innerscale)	# destroyed by earth
 
+# old format with id offset 2000000 and barycenter (0)
 def plotasteroid(name, id, color = asteroidcolor, size = asteroidsize, months = 0, major = False):
 	kernel = SPKType21.open("data/" + str(2000000 + id) + ".bsp")
 	for index in range(30, months * 30 + 1, 30):
@@ -249,6 +250,18 @@ def plotasteroid(name, id, color = asteroidcolor, size = asteroidsize, months = 
 	if id != 127 and id != 1677:
 		name = str(id) + ' ' + name
 	plotposition(name, pos, color, size * innerscale, innersize, orbit = months, major = (months or major))
+
+# new format with id offset 20000000 and sun (10) as center
+def plotasteroid2(name, id, color = asteroidcolor, size = asteroidsize, months = 0, major = False):
+	kernel = SPKType21.open("data/" + str(20000000 + id) + ".bsp")
+	for index in range(30, months * 30 + 1, 30):
+		position = kernel.compute_type21(10, 20000000 + id, julian + index)[0]
+		addellipse(position, color, orbitdotsize)
+	pos = kernel.compute_type21(10, 20000000 + id, julian)[0]
+	if months:
+		systempositions.append(pos)
+	plotposition(name, pos, color, size * innerscale, innersize, orbit = months, major = (months or major))
+
 
 plotasteroid("Tycho", 1677, stationcolor, stationsize, orbitdots)
 
@@ -274,6 +287,7 @@ plotasteroid("Sylvia", 87)
 plotasteroid("Antiope", 90)
 plotasteroid("Camilla", 107)
 plotasteroid("Kleopatra", 216)
+plotasteroid("Davida", 511)
 plotasteroid("Herculina", 532)
 plotasteroid("Achilles", 588)
 plotasteroid("Patroclus", 617)
@@ -309,19 +323,30 @@ plotasteroid("Victoria", 12)
 plotasteroid("Egeria", 13)
 plotasteroid("Melpomene", 18)
 plotasteroid("Kalliope", 22)
+plotasteroid2("Amphitrite", 29)
+plotasteroid2("Urania", 30)
 plotasteroid("Euphrosyne", 31)
+plotasteroid2("Daphne", 41)
 plotasteroid("Doris", 48)
+plotasteroid2("Nemausa", 51)
+plotasteroid2("Ausonia", 63)
 plotasteroid("Thisbe", 88)
+plotasteroid2("Julia", 89)
+plotasteroid2("Nemesis", 128)
 plotasteroid("Elektra", 130)
+plotasteroid2("Adeona", 145)
+plotasteroid2("Ino", 173)
+plotasteroid2("Lamberta", 187)
 plotasteroid("Nausikaa", 192)
+plotasteroid2("Athamantis", 230)
 plotasteroid("Mathilde", 253)
 plotasteroid("Ida", 243)
 plotasteroid("Bamberga", 324)
+plotasteroid2("Eleonora", 354)
 plotasteroid("Ursula", 375)
 plotasteroid("Eros", 433, colonycolor, asteroidsize)	# destroyed by protomolecule
 plotasteroid("Hungaria", 434)
 plotasteroid("Patientia", 451)
-plotasteroid("Davida", 511)
 plotasteroid("Priamus", 884)
 plotasteroid("Agamemnon", 911)
 plotasteroid("Gaspra", 951)
@@ -329,26 +354,12 @@ plotasteroid("Oshima", 5592)
 plotasteroid("Itokawa", 25143)
 plotasteroid("Ryugu", 162173)
 
-# https://www.syfy.com/syfy-wire/asteroids-the-universe-and-everything-meet-42-space-rocks
-# 29 Amphitrite
-# 41 Daphne
-# 354 Eleonora
-# 128 Nemesis
-# 51 Nemausa
-# 173 Ino
-# 145 Adeona
-# 187 Lamberta
-# 89 Julia
-# 230 Athamantis
-# 63 Ausonia
-# 30 Urania
-
 savemap(axis, innersize, 'Inner System', 'systeminner_all.png', 'month')
 
 #
 #	outer planets
 #
-outersize = 32		# ±au
+outersize = 48		# ±au
 outerscale = 3		# plot scale
 minx = miny = maxx = maxy = 0
 
@@ -362,7 +373,6 @@ plotposition("Earth", planets[3,399].compute(julian) + earthbary, [0, 0, 1], pla
 plotposition("Mars", martian[4,499].compute(julian)[:3] + marsbary, [1, 0, 0], planetsize * outerscale, outersize, major = True)
 
 plotasteroid("Ceres", 1, colonycolor, asteroidsize * outerscale, major = True)
-plotasteroid("Tycho", 1677, stationcolor, stationsize * outerscale, major = True)
 
 def outerorbit(kernel, center, planet, years, color, size = orbitdotsize):
 	for index in range(365, years * 365 + 1, 365):
@@ -404,15 +414,25 @@ outerorbit(neptunian, 8, 899, orbitdots, planetcolor)
 systempositions.append(neptunian[8, 899].compute(julian)[:3] + neptunebary)
 plotposition("Neptune", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
+# old format with id offset 2000000 and barycenter (0)
 def plotcentaur(name, id, color = asteroidcolor, size = asteroidsize, years = 0):
 	kernel = SPKType21.open("data/" + str(2000000 + id) + ".bsp")
-#	for index in range(30, months * 30 + 1, 30):
 	for index in range(365, years * 365 + 1, 365):
 		position = kernel.compute_type21(0, 2000000 + id, julian + index)[0]
 		addellipse(position, color, orbitdotsize * outerscale * outerscale)
 	pos = kernel.compute_type21(0, 2000000 + id, julian)[0]
 	plotposition(str(id) + ' ' + name, pos, color, size * outerscale, outersize, years)
 
+# new format with id offset 20000000 and sun (10) as center
+def plotcentaur2(name, id, color = asteroidcolor, size = asteroidsize, years = 0):
+	kernel = SPKType21.open("data/" + str(20000000 + id) + ".bsp")
+	for index in range(365, years * 365 + 1, 365):
+		position = kernel.compute_type21(10, 20000000 + id, julian + index)[0]
+		addellipse(position, color, orbitdotsize * outerscale * outerscale)
+	pos = kernel.compute_type21(10, 20000000 + id, julian)[0]
+	plotposition(str(id) + ' ' + name, pos, color, size * outerscale, outersize, years)
+
+# actual centaurs
 plotcentaur("Hidalgo", 944, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur("Chiron", 2060, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur("Pholus", 5145, asteroidcolor, asteroidsize, orbitdots)
@@ -420,6 +440,32 @@ plotcentaur("Nessus", 7066, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur("Asbolus", 8405, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur("Chariklo", 10199, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur("Hylonome", 10370, asteroidcolor, asteroidsize, orbitdots)
+
+# kuiper belt objects
+plotcentaur2("Arrokoth", 486958, asteroidcolor, asteroidsize, orbitdots)
+#plotcentaur2("Eris", 136199, asteroidcolor, asteroidsize, orbitdots)		# too far away
+plotcentaur2("Haumea", 136108, asteroidcolor, asteroidsize, orbitdots)
+plotcentaur2("Makemake", 136472, asteroidcolor, asteroidsize, orbitdots)
+#plotcentaur2("Gonggong", 225088, asteroidcolor, asteroidsize, orbitdots)	# too far away
+plotcentaur2("Quaoar", 50000, asteroidcolor, asteroidsize, orbitdots)
+#plotcentaur2("Sedna", 90377, asteroidcolor, asteroidsize, orbitdots)		# too far away
+plotcentaur2("Orcus", 90482, asteroidcolor, asteroidsize, orbitdots)
+
+def plutororbit(kernel, center, planet, years, color, size = orbitdotsize):
+	for index in range(365, years * 365 + 1, 365):
+		if julian + index < lastjulian:
+			position = kernel[center, planet].compute(julian + index)[:3] + kernel[0, center].compute(julian + index)
+			addellipse(position, color, size * outerscale * outerscale)
+
+
+pluto = SPK.open('data/pluto.bsp')
+#print(pluto)
+
+plutobary = pluto[0,9].compute(julian)
+plutororbit(pluto, 9, 999, orbitdots, asteroidcolor)
+
+systempositions.append(pluto[9, 999].compute(julian)[:3] + plutobary)
+plotposition("134340 Pluto", systempositions[-1], asteroidcolor, asteroidsize * outerscale, outersize, orbit = True)
 
 savemap(axis, outersize, 'Outer System', 'systemouter.png', 'year')
 

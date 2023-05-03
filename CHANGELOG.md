@@ -98,12 +98,21 @@ Added Oshima asteroid.
 
 Added asteroids Parthenope, Victoria, Kalliope and Elektra.
 
-Document asteroid description improvements.
+Asteroid description improvements in the system document.
 
 ## 2022-01-25
 
-Added some shipping container battlemaps.
+Added shipping container battlemaps.
 
 ## 2023-03-04
 
 Some style file updates.
+
+## 2023-05-03
+
+Changed the outer planets map to include the nearest Kuiper belt objects.
+
+Added some significant asteroids from https://www.syfy.com/syfy-wire/asteroids-the-universe-and-everything-meet-42-space-rocks.
+
+Added support to the new asteroid orbit data with sun as center instead of barycenter.
+

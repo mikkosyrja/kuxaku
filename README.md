@@ -113,6 +113,7 @@ Following data files are downloaded from NASA NAIF site <https://naif.jpl.nasa.g
 - sat393.bsp (Saturn's ring moons)
 - ura111.bsp (Uranus and its moons)
 - nep081.bsp (Neptune and its moons)
+- plu058.bsp (Pluto and its moons)
 
 To make files smaller, ten year perioid is extracted from them:
 
@@ -129,11 +130,15 @@ Jovian outer moons proved to be somewhat problematic. Jplephem couldn't extract 
 	python3 -m jplephem excerpt --targets 506,507,508,509,510,511,512,513,517,518,519,520,\
 		521,522,523,524,525,526,527,528,529,530 2020/1/1 2030/1/1 jup341.bsp jovian2.bsp
 
+Pluto needed similar handling:
+
+	python3 -m jplephem excerpt --targets 9,999 2020/1/1 2030/1/1 plu058.bsp pluto.bsp
+
 Asteroid data is fetched separately with following URL:
 
 <https://ssd.jpl.nasa.gov/x/smb_spk.cgi?OBJECT=1&OPT=Make+SPK&OPTION=Make+SPK&START=2020-JAN-01&STOP=2030-JAN-01&EMAIL=foo@bar.org&TYPE=-B>
 
-Just change the OBJECT parameter to asteroid id number (for example, OBJECT=433 for Eros). Downloaded files have name <2000000+id>.bsp (2000433.bsp for Eros).
+Just change the OBJECT parameter to asteroid id number (for example, OBJECT=433 for Eros). Downloaded files used to have name <2000000+id>.bsp (2000433.bsp for Eros). That changed at some point. Newer downloads have name <20000000+id>.bsp (one more zero in the name). Also, new files use sun as a center instead of the barycenter.
 
 Preloaded files required by the script can be found from the data subdirectory. They all cover real time period between 2020-01-01 and 2030-01-01.
 
