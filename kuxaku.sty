@@ -72,10 +72,24 @@
 \SetBgScale{1}
 \SetBgAngle{0}
 \SetBgOpacity{1}
-\SetBgColor{blue}
 \SetBgContents{
 	\begin{tikzpicture}[remember picture]
-	\draw[double,line width=1pt]
+	\fill[color=white]
+		($ (current page.south east) $)--
+		($ (current page.north east) $)--
+		($ (current page.north west) $)--
+		($ (current page.south west) $)--
+		($ (current page.south east) $)--
+		($ (current page.south east) + (-0.5cm,0.5cm) $)--
+		($ (current page.south west) + (1.0cm,0.5cm) $)--
+		($ (current page.south west) + (0.5cm,1.0cm) $)--
+		($ (current page.north west) + (0.5cm,-1.0cm) $)--
+		($ (current page.north west) + (1.0cm,-0.5cm) $)--
+		($ (current page.north east) + (-1.0cm,-0.5cm) $)--
+		($ (current page.north east) + (-0.5cm,-1.0cm) $)--
+		($ (current page.south east) + (-0.5cm,0.5cm) $)--
+		cycle;
+	\draw[color=blue,double,line width=1pt]
 		($ (current page.south east) + (-0.5cm,0.5cm) $)--
 		($ (current page.south west) + (1.0cm,0.5cm) $)--
 		($ (current page.south west) + (0.5cm,1.0cm) $)--

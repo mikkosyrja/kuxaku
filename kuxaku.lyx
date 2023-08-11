@@ -1131,28 +1131,51 @@ status collapsed
 Thetis
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 18
 \begin_inset space ~
 \end_inset
 
-Melpomene Large, bright main-belt asteroid that was discovered on 1852,
- and named after Melpomenē, the Muse of tragedy in Greek mythology.
+Melpomene
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Melpomene
+\end_layout
+
+\end_inset
+
+ Large, bright main-belt asteroid that was discovered on 1852, and named
+ after Melpomenē, the Muse of tragedy in Greek mythology.
  It is classified as an S-type asteroid and is composed of silicates and
  metals.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Description
 19
 \begin_inset space ~
 \end_inset
 
 Fortuna
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Fortuna
 \end_layout
 
 \end_inset
 
-
+ Fortuna is one of the largest main-belt asteroids.
+ It has a composition similar to Ceres: a darkly colored surface that is
+ heavily space-weathered with the composition of primitive organic compounds,
+ including tholins.
 \end_layout
 
 \begin_layout Description
@@ -1221,26 +1244,25 @@ Themis
  or reddish color in optical spectra.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
+\begin_layout Description
 31
 \begin_inset space ~
 \end_inset
 
-Euphrosyne It is perhaps the 12th-largest asteroid in the asteroid belt,
- and possibly one of the half-dozen or so most massive.
- In 2019 a small companion was discovered.
- Euphrosyne has a high orbital inclination and eccentricity having nodes
- near perihelion and aphelion, Euphrosyne's perihelion lies at the northernmost
- point of its orbit.
+Euphrosyne
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Euphrosyne
 \end_layout
 
 \end_inset
 
-
+ Euphrosyne is the 12th-largest asteroid in the asteroid belt, and one of
+ the half-dozen or so most massive.
+ It has a high orbital inclination and eccentricity having nodes near perihelion
+ and aphelion, Its perihelion lies at the northernmost point of its orbit.
 \end_layout
 
 \begin_layout Description
@@ -1635,52 +1657,6 @@ Hektor
  It has one small 12-kilometer sized satellite, Skamandrios.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/itokawa.jpg
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Description
 704
 \begin_inset space ~
@@ -1766,29 +1742,6 @@ Mentor
  months.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-25143
-\begin_inset space ~
-\end_inset
-
-Itokawa Itokawa is a sub-kilometer near-Earth object of the Apollo group.
- The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and
- measures approximately 330 meters in diameter.
- Due to its low density and high porosity, Itokawa is considered to be a
- rubble pile, consisting of numerous boulders of different sizes rather
- than of a single solid body.
- It was the first asteroid to be the target of a sample return mission.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Description
 5261
 \begin_inset space ~
@@ -1813,32 +1766,6 @@ Eureka
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Outer System
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Outer-System"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The outer system map shows positions of notable objects beyond the orbit
- of Jupiter.
- These include some centaurs and the nearest Kuiper Belt objects.
- Earth, Mars and Ceres are included for the reference.
- Future orbit positions are displayed at one year intervals.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1866,8 +1793,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename output/systemouter.png
-	lyxscale 50
+	filename images/itokawa.jpg
 	width 100col%
 
 \end_inset
@@ -1885,742 +1811,25 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
-Travel beyond the Saturn orbit is quite rare.
- There is a small colony in the Uranian moon Titania.
- Neptunian moon Triton has an astronomy lab and mining research station.
- No human has ever ventured to Kuiper Belt, but several automated probes
- have charted it.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Centaurs
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Centaurs"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Centaurs are small Solar System bodies with either a perihelion or a semi-major
- axis between those of the outer planets.
- They generally have unstable orbits because they cross or have crossed
- the orbits of one or more of the giant planets; almost all their orbits
- have dynamic lifetimes of only a few million years.
- Centaurs typically behave with characteristics of both asteroids and comets.
-\end_layout
-
 \begin_layout Description
-944
+25143
 \begin_inset space ~
 \end_inset
 
-Hidalgo
+Itokawa
 \begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
-Hidalgo
+Itokawa
 \end_layout
 
 \end_inset
 
- The first member of centaurs ever to be discovered.
- The dark D-type object has a rotation period of 10.1 hours and an elongated
- shape with mean diameter of 52 kilometers.
- Its cometary-like orbit takes it to the inner edge of the Asteroid Belt
- and as far out as to the orbit of Saturn.
-\end_layout
-
-\begin_layout Description
-2060
-\begin_inset space ~
-\end_inset
-
-Chiron
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Chiron
-\end_layout
-
-\end_inset
-
- Although Chiron was initially called an asteroid and classified only as
- a minor planet, it was later found to exhibit behavior typical of a comet.
- Now it is classified as both a minor planet and a comet.
- Chiron's orbit is highly eccentric (0.37), with perihelion just inside the
- orbit of Saturn and aphelion just outside the perihelion of Uranus.
- Its diameter is 200 kilometers.
-\end_layout
-
-\begin_layout Description
-5145
-\begin_inset space ~
-\end_inset
-
-Pholus
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Pholus
-\end_layout
-
-\end_inset
-
- An eccentric centaur in the outer Solar System, 180 kilometers in diameter,
- that crosses the orbit of both Saturn and Neptune.
- The very reddish object has an elongated shape and a rotation period of
- 9.98 hours.
- It was the second centaur to be discovered.
-\end_layout
-
-\begin_layout Description
-7066
-\begin_inset space ~
-\end_inset
-
-Nessus
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Nessus
-\end_layout
-
-\end_inset
-
- A centaur on an eccentric orbit, located beyond Saturn in the outer Solar
- System.
- The dark and reddish minor planet is elongated and measures 60 kilometers
- in diameter.
- It has a relatively long orbital half-life of about 4.9 million years.
-\end_layout
-
-\begin_layout Description
-8405
-\begin_inset space ~
-\end_inset
-
-Asbolus
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Asbolus
-\end_layout
-
-\end_inset
-
- A centaur orbiting in the outer Solar System between the orbits of Jupiter
- and Neptune.
- It measures 80 kilometers in diameter and has a fresh impact crater on
- its surface, less than 10 million years old.
-\end_layout
-
-\begin_layout Description
-10199
-\begin_inset space ~
-\end_inset
-
-Chariklo
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Chariklo
-\end_layout
-
-\end_inset
-
- The largest centaur with a diameter of 232 km.
- It orbits the Sun between Saturn and Uranus, grazing the orbit of Uranus.
- Chariklo has two ice rings (named Oiapoque and Chuí) with radii 396 and
- 405 km and widths of about 7 km and 3.5 km respectively.
-\end_layout
-
-\begin_layout Description
-10370
-\begin_inset space ~
-\end_inset
-
-Hylonome
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Hylonome
-\end_layout
-
-\end_inset
-
- A minor planet orbiting in the outer Solar System.
- The dark and icy body belongs to the class of centaurs and measures approximate
-ly 75 kilometers in diameter.
- It is a Neptune-crosser, and an outer-grazer of the orbit of Uranus, which
- it hence does not cross.
-\end_layout
-
-\begin_layout Subsection
-Kuiper Belt
-\begin_inset CommandInset label
-LatexCommand label
-name "subsec:Kuiper-Belt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The Kuiper belt is a circumstellar disc in the outer Solar System, extending
- from the orbit of Neptune at 30 AU to approximately 50 AU from the Sun.
- It is similar to the asteroid belt, but is far larger — 20 times as wide
- and 20–200 times as massive.
- Like the asteroid belt, it consists mainly of small bodies or remnants
- from when the Solar System formed.
- While many asteroids are composed primarily of rock and metal, most Kuiper
- belt objects are composed largely of frozen volatiles, such as methane,
- ammonia, and water.
-\end_layout
-
-\begin_layout Description
-134340
-\begin_inset space ~
-\end_inset
-
-Pluto
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Pluto
-\end_layout
-
-\end_inset
-
- Pluto is the ninth-largest and tenth-most-massive known object to directly
- orbit the Sun.
- It is the largest known trans-Neptunian object by volume, by a small margin,
- but is slightly less massive than Eris.
- Like other Kuiper belt objects, Pluto is made primarily of ice and rock
- and is much smaller than the inner planets.
- Pluto has only one sixth the mass of Earth's moon, and one third its volume.
-\end_layout
-
-\begin_layout Description
-136108
-\begin_inset space ~
-\end_inset
-
-Haumea
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Haumea
-\end_layout
-
-\end_inset
-
- Haumea is the third-largest known trans-Neptunian object, after Eris and
- Pluto, and approximately the size of Uranus's moon Titania.
-\end_layout
-
-\begin_layout Description
-136472
-\begin_inset space ~
-\end_inset
-
-Makemake
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Makemake
-\end_layout
-
-\end_inset
-
- Makemake is the second-largest of what are known as the classical population
- of Kuiper belt objects, with a diameter approximately that of Saturn's
- moon Iapetus, or 60% that of Pluto.
- It has one known satellite.
- Its extremely low average temperature, about −230 °C, means its surface
- is covered with methane, ethane, and possibly nitrogen ices.
-\end_layout
-
-\begin_layout Description
-50000
-\begin_inset space ~
-\end_inset
-
-Quaoar
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Quaoar
-\end_layout
-
-\end_inset
-
- Quaoar measures approximately 1,110 km in diameter, about the size of Saturn's
- moon Dione or half the size of Pluto.
- Signs of water ice on the surface of Quaoar have been found, which suggests
- that cryovolcanism may be occurring on Quaoar.
- A small amount of methane is present on its surface, which can only be
- retained by the largest Kuiper belt objects.
-\end_layout
-
-\begin_layout Description
-90482
-\begin_inset space ~
-\end_inset
-
-Orcus
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Orcus
-\end_layout
-
-\end_inset
-
- Orcus has a diameter of 870 to 960 km, the size of or somewhat smaller
- than the asteroid Ceres.
- The surface of Orcus is relatively bright with albedo reaching 23 percent,
- neutral in color and rich in water ice.
- The ice is predominantly in crystalline form, which may be related to past
- cryovolcanic activity.
- Other compounds like methane or ammonia may also be present on its surface.
- 
-\end_layout
-
-\begin_layout Description
-486958
-\begin_inset space ~
-\end_inset
-
-Arrokoth
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Arrokoth
-\end_layout
-
-\end_inset
-
- Arrokoth is a contact binary 36 km, composed of two planetesimals 21 and
- 15 km across, that are joined along their major axes.
- With an orbital period of about 298 years and a low orbital inclination
- and eccentricity, Arrokoth is classified as a cold classical Kuiper belt
- object.
-\end_layout
-
-\begin_layout Section
-Communication Delay
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Communication-Delay"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-One of the few true constants in the universe remains the speed of light.
- Whether communications are sent as radio waves or on the laser of a tightbeam,
- they travel 300,000 kilometers per second.
- Often a message can be slowed while the receiver waits for redundant copies
- of lost packets of data to arrive, or for a message to work its way to
- the top of the queue at a tightbeam relay station and get passed along
- on the next stage of its journey.
- Worse, a distance of 15 light minutes between Earth and Ceres doesn’t mean
- it takes 15 minutes to establish a connection: it means it takes 15 minutes
- for the first part of the message to travel the distance (“How are you?”),
- then another 15 minutes for the reply to return (“I’m fine, thanks.”).
- Conversations of alternating messages can take hours or days to complete.
- Because of this, most transmitted conversations are sent as recorded messages
- rather than attempting a live conversation, unless the light-speed delay
- is only a few seconds.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systemdelay.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Jovian system outer moons are quite far away and communication delays between
- them are significant.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/joviandelay.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Delay between Earth and Moon is about 1.3 seconds.
- Likewise, in Saturn's inner system, delays are always within 2 seconds.
- Delay between outmost Iapetus and inner Saturn system is less than 15 seconds.
-\end_layout
-
-\begin_layout Section
-Travel Times
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Travel-Times"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Because the Epstein Drive removed ∆v limitations to space travel, ships
- no longer needed to execute Hohmann transfers to maneuver between bodies.
- To transfer, ships can simply burn prograde at a constant rate, then flip
- around and decelerate by burning retrograde.
- This maneuver is called a Brachistochrone trajectory, from the Greek meaning
- “shortest time.” A course using this maneuver tends to be curved as it uses
- the sun’s gravity to increase the ship’s acceleration.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/brachistochrone.png
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The time it takes to execute a flight path along a Brachistochrone trajectory
- depends on two factors: the distance between the two points, and the accelerati
-on of the ship.
- The greater the acceleration, the less time it takes to travel, but the
- multiple g-forces created by these “hard burns” are extremely stressful
- on the human body.
- Crash couches and pharmaceutical cocktails like “the juice” alleviate some,
- but not all, of the damage inflicted by the hardest burns.
-\end_layout
-
-\begin_layout Standard
-Following tables show the time to travel the average distance between the
- two locations at an average acceleration of 0.3g, 0.5g and 1.0g, presented
- as total required travel time under acceleration without any of the necessary
- breaks taken into consideration.
- The first acceleration is belter standard, the second one is tolerable
- for belters and the third is suitable for earthers.
-\end_layout
-
-\begin_layout Standard
-The last table starts and ends the journey with an acceleration boost.
- The central part of the journey uses normal 0.5g acceleration and flip at
- the middle.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systemtravel03.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systemtravel05.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systemtravel10.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systemtravel05+60x40.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+ Itokawa is a sub-kilometer near-Earth object of the Apollo group.
+ The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and
+ measures approximately 330 meters in diameter.
+ It was the first asteroid to be the target of a sample return mission.
 \end_layout
 
 \begin_layout Standard
@@ -4159,6 +3368,849 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/croniantravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Ring and Outer System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Outer-System"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The outer system map shows positions of notable objects beyond the orbit
+ of Jupiter.
+ These include some centaurs and the nearest Kuiper Belt objects.
+ Earth, Mars and Ceres are included for the reference.
+ Future orbit positions are displayed at one year intervals.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemouter.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Travel beyond the Saturn orbit is quite rare.
+ There is a small colony in the Uranian moon Titania.
+ Neptunian moon Triton has an astronomy lab and mining research station.
+ No human has ever ventured to Kuiper Belt, but several automated probes
+ have charted it.
+\end_layout
+
+\begin_layout Subsection
+Uranus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Uranus
+\end_layout
+
+\end_inset
+
+ and Neptune
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Neptune
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+xxx
+\end_layout
+
+\begin_layout Subsection
+The Ring
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Ring
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+xxx
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Centaurs
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Centaurs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Centaurs are small Solar System bodies with either a perihelion or a semi-major
+ axis between those of the outer planets.
+ They generally have unstable orbits because they cross or have crossed
+ the orbits of one or more of the giant planets; almost all their orbits
+ have dynamic lifetimes of only a few million years.
+ Centaurs typically behave with characteristics of both asteroids and comets.
+\end_layout
+
+\begin_layout Description
+944
+\begin_inset space ~
+\end_inset
+
+Hidalgo
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Hidalgo
+\end_layout
+
+\end_inset
+
+ The first member of centaurs ever to be discovered.
+ The dark D-type object has a rotation period of 10.1 hours and an elongated
+ shape with mean diameter of 52 kilometers.
+ Its cometary-like orbit takes it to the inner edge of the Asteroid Belt
+ and as far out as to the orbit of Saturn.
+\end_layout
+
+\begin_layout Description
+2060
+\begin_inset space ~
+\end_inset
+
+Chiron
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Chiron
+\end_layout
+
+\end_inset
+
+ Although Chiron was initially called an asteroid and classified only as
+ a minor planet, it was later found to exhibit behavior typical of a comet.
+ Now it is classified as both a minor planet and a comet.
+ Chiron's orbit is highly eccentric (0.37), with perihelion just inside the
+ orbit of Saturn and aphelion just outside the perihelion of Uranus.
+ Its diameter is 200 kilometers.
+\end_layout
+
+\begin_layout Description
+5145
+\begin_inset space ~
+\end_inset
+
+Pholus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Pholus
+\end_layout
+
+\end_inset
+
+ An eccentric centaur in the outer Solar System, 180 kilometers in diameter,
+ that crosses the orbit of both Saturn and Neptune.
+ The very reddish object has an elongated shape and a rotation period of
+ 9.98 hours.
+ It was the second centaur to be discovered.
+\end_layout
+
+\begin_layout Description
+7066
+\begin_inset space ~
+\end_inset
+
+Nessus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Nessus
+\end_layout
+
+\end_inset
+
+ A centaur on an eccentric orbit, located beyond Saturn in the outer Solar
+ System.
+ The dark and reddish minor planet is elongated and measures 60 kilometers
+ in diameter.
+ It has a relatively long orbital half-life of about 4.9 million years.
+\end_layout
+
+\begin_layout Description
+8405
+\begin_inset space ~
+\end_inset
+
+Asbolus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Asbolus
+\end_layout
+
+\end_inset
+
+ A centaur orbiting in the outer Solar System between the orbits of Jupiter
+ and Neptune.
+ It measures 80 kilometers in diameter and has a fresh impact crater on
+ its surface, less than 10 million years old.
+\end_layout
+
+\begin_layout Description
+10199
+\begin_inset space ~
+\end_inset
+
+Chariklo
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Chariklo
+\end_layout
+
+\end_inset
+
+ The largest centaur with a diameter of 232 km.
+ It orbits the Sun between Saturn and Uranus, grazing the orbit of Uranus.
+ Chariklo has two ice rings (named Oiapoque and Chuí) with radii 396 and
+ 405 km and widths of about 7 km and 3.5 km respectively.
+\end_layout
+
+\begin_layout Description
+10370
+\begin_inset space ~
+\end_inset
+
+Hylonome
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Hylonome
+\end_layout
+
+\end_inset
+
+ A minor planet orbiting in the outer Solar System.
+ The dark and icy body belongs to the class of centaurs and measures approximate
+ly 75 kilometers in diameter.
+ It is a Neptune-crosser, and an outer-grazer of the orbit of Uranus, which
+ it hence does not cross.
+\end_layout
+
+\begin_layout Subsection
+Kuiper Belt
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Kuiper-Belt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Kuiper belt is a circumstellar disc in the outer Solar System, extending
+ from the orbit of Neptune at 30 AU to approximately 50 AU from the Sun.
+ It is similar to the asteroid belt, but is far larger — 20 times as wide
+ and 20 – 200 times as massive.
+ Like the asteroid belt, it consists mainly of small bodies or remnants
+ from when the Solar System formed.
+ While many asteroids are composed primarily of rock and metal, most Kuiper
+ belt objects are composed largely of frozen volatiles, such as methane,
+ ammonia, and water.
+\end_layout
+
+\begin_layout Description
+134340
+\begin_inset space ~
+\end_inset
+
+Pluto
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Pluto
+\end_layout
+
+\end_inset
+
+ Pluto is the ninth-largest and tenth-most-massive known object to directly
+ orbit the Sun.
+ It is the largest known trans-Neptunian object by volume, by a small margin,
+ but is slightly less massive than Eris.
+ Like other Kuiper belt objects, Pluto is made primarily of ice and rock
+ and is much smaller than the inner planets.
+ Pluto has only one sixth the mass of Earth's moon, and one third its volume.
+\end_layout
+
+\begin_layout Description
+136108
+\begin_inset space ~
+\end_inset
+
+Haumea
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Haumea
+\end_layout
+
+\end_inset
+
+ Haumea is the third-largest known trans-Neptunian object, after Eris and
+ Pluto, and approximately the size of Uranus's moon Titania.
+\end_layout
+
+\begin_layout Description
+136472
+\begin_inset space ~
+\end_inset
+
+Makemake
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Makemake
+\end_layout
+
+\end_inset
+
+ Makemake is the second-largest of what are known as the classical population
+ of Kuiper belt objects, with a diameter approximately that of Saturn's
+ moon Iapetus, or 60% that of Pluto.
+ It has one known satellite.
+ Its extremely low average temperature, about −230 °C, means its surface
+ is covered with methane, ethane, and possibly nitrogen ices.
+\end_layout
+
+\begin_layout Description
+50000
+\begin_inset space ~
+\end_inset
+
+Quaoar
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Quaoar
+\end_layout
+
+\end_inset
+
+ Quaoar measures approximately 1,110 km in diameter, about the size of Saturn's
+ moon Dione or half the size of Pluto.
+ Signs of water ice on the surface of Quaoar have been found, which suggests
+ that cryovolcanism may be occurring on Quaoar.
+ A small amount of methane is present on its surface, which can only be
+ retained by the largest Kuiper belt objects.
+\end_layout
+
+\begin_layout Description
+90482
+\begin_inset space ~
+\end_inset
+
+Orcus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Orcus
+\end_layout
+
+\end_inset
+
+ Orcus has a diameter of 870 to 960 km, the size of or somewhat smaller
+ than the asteroid Ceres.
+ The surface of Orcus is relatively bright with albedo reaching 23 percent,
+ neutral in color and rich in water ice.
+ The ice is predominantly in crystalline form, which may be related to past
+ cryovolcanic activity.
+ Other compounds like methane or ammonia may also be present on its surface.
+ 
+\end_layout
+
+\begin_layout Description
+486958
+\begin_inset space ~
+\end_inset
+
+Arrokoth
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Arrokoth
+\end_layout
+
+\end_inset
+
+ Arrokoth is a contact binary 36 km long, composed of two planetesimals
+ 21 and 15 km across, that are joined along their major axes.
+ With an orbital period of about 298 years and a low orbital inclination
+ and eccentricity, Arrokoth is classified as a cold classical Kuiper belt
+ object.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Communication and Travel Times
+\end_layout
+
+\begin_layout Standard
+One of the few true constants in the universe remains the speed of light.
+ Whether communications are sent as radio waves or on the laser of a tightbeam,
+ they travel 300,000 kilometers per second.
+ Often a message can be slowed while the receiver waits for redundant copies
+ of lost packets of data to arrive, or for a message to work its way to
+ the top of the queue at a tightbeam relay station and get passed along
+ on the next stage of its journey.
+ Worse, a distance of 15 light minutes between Earth and Ceres doesn’t mean
+ it takes 15 minutes to establish a connection: it means it takes 15 minutes
+ for the first part of the message to travel the distance (“How are you?”),
+ then another 15 minutes for the reply to return (“I’m fine, thanks.”).
+ Conversations of alternating messages can take hours or days to complete.
+ Because of this, most transmitted conversations are sent as recorded messages
+ rather than attempting a live conversation, unless the light-speed delay
+ is only a few seconds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemdelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jovian system outer moons are quite far away and communication delays between
+ them are significant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/joviandelay.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Delay between Earth and Moon is about 1.3 seconds.
+ Likewise, in Saturn's inner system, delays are always within 2 seconds.
+ Delay between outmost Iapetus and inner Saturn system is less than 15 seconds.
+\end_layout
+
+\begin_layout Subsection*
+Travel Times
+\end_layout
+
+\begin_layout Standard
+Because the Epstein Drive removed ∆v limitations to space travel, ships
+ no longer needed to execute Hohmann transfers to maneuver between bodies.
+ To transfer, ships can simply burn prograde at a constant rate, then flip
+ around and decelerate by burning retrograde.
+ This maneuver is called a Brachistochrone trajectory, from the Greek meaning
+ “shortest time.” A course using this maneuver tends to be curved as it uses
+ the sun’s gravity to increase the ship’s acceleration.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/brachistochrone.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The time it takes to execute a flight path along a Brachistochrone trajectory
+ depends on two factors: the distance between the two points, and the accelerati
+on of the ship.
+ The greater the acceleration, the less time it takes to travel, but the
+ multiple g-forces created by these “hard burns” are extremely stressful
+ on the human body.
+ Crash couches and pharmaceutical cocktails like “the juice” alleviate some,
+ but not all, of the damage inflicted by the hardest burns.
+\end_layout
+
+\begin_layout Standard
+Following tables show the time to travel the average distance between the
+ two locations at an average acceleration of 0.3g, 0.5g and 1.0g, presented
+ as total required travel time under acceleration without any of the necessary
+ breaks taken into consideration.
+ The first acceleration is belter standard, the second one is tolerable
+ for belters and the third is suitable for earthers.
+\end_layout
+
+\begin_layout Standard
+The last table starts and ends the journey with an acceleration boost.
+ The central part of the journey uses normal 0.5g acceleration and flip at
+ the middle.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel03.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel05.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel10.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systemtravel05+60x40.png
 	lyxscale 50
 	width 100col%
 
