@@ -24,11 +24,11 @@ parser.add_argument("-p", "--printer", help = "printable images with white backg
 arguments = parser.parse_args()
 
 expansedate = dateutil.parser.parse(arguments.date)
-if expansedate.year < 2350 or expansedate.year >= 2360:
-	print("illegal date:", expansedate, "Year must be between 2350 - 2359")
+if expansedate.year < 2355 or expansedate.year >= 2361:
+	print("illegal date:", expansedate, "Year must be between 2355 - 2360")
 	os._exit(1)
 
-date = ephem.Date(expansedate.replace(year = expansedate.year - 330))
+date = ephem.Date(expansedate.replace(year = expansedate.year - 336))
 julian = ephem.julian_date(date)
 darian = darian.Darian(expansedate.year, expansedate.month, expansedate.day)
 
@@ -287,7 +287,6 @@ plotasteroid("Eugenia", 45)
 plotasteroid("Europa", 52)
 plotasteroid("Cybele", 65)
 plotasteroid("Sylvia", 87)
-plotasteroid("Antiope", 90)
 plotasteroid("Camilla", 107)
 plotasteroid("Kleopatra", 216)
 plotasteroid("Davida", 511)
@@ -334,6 +333,7 @@ plotasteroid2("Nemausa", 51)
 plotasteroid2("Ausonia", 63)
 plotasteroid("Thisbe", 88)
 plotasteroid2("Julia", 89)
+plotasteroid("Antiope", 90)
 plotasteroid2("Nemesis", 128)
 plotasteroid("Elektra", 130)
 plotasteroid2("Adeona", 145)
@@ -469,14 +469,12 @@ plutororbit(pluto, 9, 999, orbitdots, asteroidcolor)
 systempositions.append(pluto[9, 999].compute(julian)[:3] + plutobary)
 plotposition("134340 Pluto", systempositions[-1], asteroidcolor, asteroidsize * outerscale, outersize, orbit = True)
 
-savemap(axis, outersize, 'Outer System', 'systemouter.png', 'year')
-
 gatedistance = 22 * aukm	# "little less than 2 AU outside the orbit of Uranus"
 gatedirection = -math.pi * 3 / 4 # “This is the Ring. And this is Uranus. They are literally the two spots furthest from each other in the universe that have humans near them”
 solgate = numpy.array([gatedistance * math.cos(gatedirection), gatedistance * math.sin(gatedirection), 0.0])
 plotposition("Sol Gate", solgate, stationcolor, stationsize * outerscale, outersize)
 
-savemap(axis, outersize, 'Outer System', 'systemouter_all.png', 'year')
+savemap(axis, outersize, 'Outer System', 'systemouter.png', 'year')
 
 #
 #	jovian inner system

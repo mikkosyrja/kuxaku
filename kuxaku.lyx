@@ -6,6 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\newfontfamily\protomolecule[Extension=.ttf]{protomolecule}
+
 \usepackage[texindy]{imakeidx} 
 \makeindex[columns=4]
 
@@ -17,12 +19,12 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "default" "Latin Modern Sans"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family sfdefault
-\use_non_tex_fonts false
+\font_default_family default
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -126,7 +128,20 @@ status collapsed
 
 \series bold
 \size giant
-System
+\color black
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+protomolecule kuxaku
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -256,7 +271,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Image above shows relative sizes major Solar system objects.
+Image above shows relative sizes of major Solar system objects.
 \end_layout
 
 \begin_layout Standard
@@ -703,6 +718,16 @@ name "sec:Asteroid-Belt"
 \end_inset
 
 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Belt
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -710,12 +735,40 @@ The asteroid belt is a torus-shaped region in the Solar System, located
  roughly between the orbits of the planets Jupiter and Mars, that is occupied
  by a great many solid, irregularly shaped bodies, of many sizes but much
  smaller than planets, called asteroids or minor planets.
+\end_layout
+
+\begin_layout Standard
+The identified objects are of many sizes, but much smaller than planets,
+ and, on average, are about one million kilometers apart.
  About half the mass of the belt is contained in the four largest asteroids:
  Ceres, Vesta, Pallas, and Hygiea.
  The total mass of the asteroid belt is approximately 4% that of the Moon.
 \end_layout
 
+\begin_layout Standard
+The three broad composition classes of asteroids are C-, S-, and M-types:
+\end_layout
+
 \begin_layout Description
+C-type C-type (chondrite) asteroids are most common.
+ They probably consist of clay and silicate rocks, and are dark in appearance.
+ They are among the most ancient objects in the solar system.
+\end_layout
+
+\begin_layout Description
+S-type S-types ("stony") are made up of silicate materials and nickel-iron.
+\end_layout
+
+\begin_layout Description
+M-type M-types are metallic (nickel-iron).
+ The asteroids' compositional differences are related to how far from the
+ Sun they formed.
+ Some experienced high temperatures after they formed and partly melted,
+ with iron sinking to the center and forcing basaltic (volcanic) lava to
+ the surface.
+\end_layout
+
+\begin_layout Subsection*
 Tycho
 \begin_inset space ~
 \end_inset
@@ -730,7 +783,11 @@ Tycho
 
 \end_inset
 
- The Belt headquarters of Tycho Manufacturing and Engineering Concern is
+
+\end_layout
+
+\begin_layout Standard
+The Belt headquarters of Tycho Manufacturing and Engineering Concern is
  the largest mobile construction platform in the Sol System.
  Fifteen thousand workers and their families live within Tycho, building
  megastructures or massive ships far beyond the reach of a planet.
@@ -871,60 +928,6 @@ Juno
  It contains about 1% of the total mass of the asteroid Belt.
  Its orbit has an extreme eccentricity which brings Juno closer to the Sun
  at perihelion than Vesta and further out at aphelion than Ceres.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/systeminner.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Inner-System"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -1097,6 +1100,60 @@ Eunomia
  or approximately 1.4% of all asteroids in the asteroid Belt.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename output/systeminner.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Inner-System"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 16
 \begin_inset space ~
@@ -1151,8 +1208,8 @@ Melpomene
 
 \end_inset
 
- Large, bright main-belt asteroid that was discovered on 1852, and named
- after Melpomenē, the Muse of tragedy in Greek mythology.
+ Large, bright main-belt asteroid named after Melpomenē, the Muse of tragedy
+ in Greek mythology.
  It is classified as an S-type asteroid and is composed of silicates and
  metals.
 \end_layout
@@ -1197,6 +1254,52 @@ Massalia
  inner region of the asteroid belt, approximately 145 kilometers in diameter.
  The family is fairly young, estimated to have been created by an impact
  150 to 200 million years ago.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/lutetia.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -1385,12 +1488,7 @@ Thisbe The 13th largest main-belt asteroids.
  232 km.
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
+\begin_layout Plain Layout
 90
 \begin_inset space ~
 \end_inset
@@ -1410,6 +1508,11 @@ Antiope
  other.
  At average diameters of about 88 km and 84 km, both components are among
  the 500 largest asteroids.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -3387,10 +3490,30 @@ status collapsed
 \end_layout
 
 \begin_layout Section
-The Ring and Outer System
+Outer System
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Outer-System"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The Ring and Outer System
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Outer-System-1"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3453,7 +3576,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Travel beyond the Saturn orbit is quite rare.
+Travel beyond the Saturn orbit used to be quite rare.
  There is a small colony in the Uranian moon Titania.
  Neptunian moon Triton has an astronomy lab and mining research station.
  No human has ever ventured to Kuiper Belt, but several automated probes
@@ -3461,35 +3584,7 @@ Travel beyond the Saturn orbit is quite rare.
 \end_layout
 
 \begin_layout Subsection
-Uranus
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Uranus
-\end_layout
-
-\end_inset
-
- and Neptune
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Neptune
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-xxx
-\end_layout
-
-\begin_layout Subsection
-The Ring
+The Sol Gate
 \begin_inset Index idx
 status collapsed
 
@@ -3500,10 +3595,111 @@ Ring
 \end_inset
 
 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Sol Gate
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-xxx
+The Sol Gate, also known as Sol Ring or simply "the Ring", is a ring-shaped
+ megastructure with a rough diameter of 1000 km; it is in a stationary position
+ roughly 2 AU outside the orbit of Uranus.
+ It was created by the protomolecule out of the remnants of Eros Station,
+ having departed Venus after incubating in Eros' impact crater for some
+ time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/solgate.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Ring is a wormhole gate, existing as a part of an ancient network built
+ by an alien civilization many billions of years ago.
+ It connects the Sol system to this intragalactic network and to some 1,372
+ other systems in the galaxy — many of them with habitable planets — thus
+ bringing humanity the newfound abilities of interstellar travel and colonizatio
+n.
+ The Ring is among the most highly contested structures in the Sol system
+ given its immense strategic and economic potential.
+\end_layout
+
+\begin_layout Subsubsection
+Medina Station
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Medina
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The LDSS Nauvoo, later known as OPAS Behemoth and then Medina Station, is
+ a generation ship constructed at Tycho Station.
+ Cylindrical in shape, it measured just over two kilometers long and half
+ a kilometer wide.
+ Four Donnager-class battleships would fit in her belly and not touch the
+ walls.
+\end_layout
+
+\begin_layout Standard
+Following the conclusion of the Free Navy Conflict, Medina Station is taken
+ over by the newly established Transport Union to control ship traffic through
+ the Ring space.
 \end_layout
 
 \begin_layout Standard
@@ -3518,6 +3714,16 @@ Centaurs
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Centaurs"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Centaurs
+\end_layout
 
 \end_inset
 
@@ -3691,6 +3897,16 @@ Kuiper Belt
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Kuiper-Belt"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Kuiper Belt
+\end_layout
 
 \end_inset
 

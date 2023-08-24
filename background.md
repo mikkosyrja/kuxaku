@@ -18,7 +18,7 @@ Also, each longer spaceship journey either decides or automatically generates it
 
 # Solar System Maps
 
-Program uses real orbit data from NASA, but not real year 2350 locations. Some ephemerides files contain orbit data only until year 2050 and we have to cheat a little. Python script subtracts 330 years and uses locations starting from year 2020. This is quite acceptable for gaming purposes and especially for The Expanse, where actual dates are somewhat vague anyway.
+Program uses real orbit data from NASA, but not real year 2357 locations. Some ephemerides files contain orbit data only until year 2050 and we have to cheat a little. Python script subtracts 336 years and uses locations starting from year 2021. This is quite acceptable for gaming purposes and especially for The Expanse, where actual dates have always been somewhat vague anyway. Current NASA data seems to include all asteroid and centaur positions covering campaign dates 2356-02-01 - 2360-01-01.
 
 Use of this data was just the easiest way to populate otherwise very empty space with real asteroids and moons without too much work. You may never visit 7066 Nessus, but its strange orbit alone makes outer planet map so much more interesting.
 
@@ -28,7 +28,7 @@ The most important thing here is that heavenly bodies move predictably during th
 
 Because, in addition to dates, The Expanse universe lacks lots of other technical details, some improvisation is needed.
 
-For example, location and orbit of Tycho Brahe (asteroid 1677) is used for Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
+For example, location and orbit of Tycho Brahe (asteroid 1677) is used for the Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
 Same goes with the destroyed Anderson Station. It is mentioned that it is located "at the far end of the colonized Belt, almost at the opposite side from the major port Ceres". Suitably located asteroid (127 Johanna) with more or less same orbital period is used for its position.
 

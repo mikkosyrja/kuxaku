@@ -116,3 +116,17 @@ Added some significant asteroids from https://www.syfy.com/syfy-wire/asteroids-t
 
 Added support to the new asteroid orbit data with sun as center instead of barycenter.
 
+## 2023-08-24
+
+LyX style file now clips margins for the new cover images.
+
+Added asteroid type descriptions and couple of new asteroids.
+
+Lutetia and Itokawa asteroid pictures are now in corret locations.
+
+Moved campaing date to year 2357, just after the end of TV series.
+
+Added protomolecule font for document titles.
+
+Added Sol Gate to the outer system map.
+
