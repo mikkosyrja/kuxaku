@@ -52,8 +52,8 @@ delay = aukm / 17987547.48		# communication delay in minutes/au
 
 minx = miny = maxx = maxy = 0	# current boundaries
 
-#systemplaces = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')
-systemplaces = ('Venus', 'Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn')
+#systemplaces = ('Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')
+systemplaces = ('Earth', 'Mars', 'Tycho', 'Ceres', 'Pallas', 'Vesta', 'Hygiea', 'Jupiter', 'Saturn', 'Ring')
 systempositions = []	# must be filled in above order
 
 numpy.set_printoptions(precision=5)
@@ -211,8 +211,8 @@ plotposition("", sun, suncolor, sunsize * innerscale, innersize)
 position = planets[1, 199].compute(julian) + planets[0,1].compute(julian)
 plotposition("Mercury", position, mooncolor, moonsize * innerscale, innersize)
 
-systempositions.append(planets[2, 299].compute(julian) + planets[0,2].compute(julian))
-plotposition("Venus", systempositions[-1], planetcolor, moonsize * innerscale, innersize, orbit = True, major = True)
+position = planets[2, 299].compute(julian) + planets[0,2].compute(julian)
+plotposition("Venus", position, planetcolor, moonsize * innerscale, innersize, orbit = True, major = True)
 
 planetorbit(planets, 1, 199, 1, mooncolor)		# mercury
 planetorbit(planets, 2, 299, 3, planetcolor)	# venus
@@ -404,8 +404,8 @@ uranian = SPK.open('data/uranian.bsp')
 uranusbary = uranian[0,7].compute(julian)
 outerorbit(uranian, 7, 799, orbitdots, planetcolor)
 
-systempositions.append(uranian[7, 799].compute(julian)[:3] + uranusbary)
-plotposition("Uranus", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
+position = uranian[7, 799].compute(julian)[:3] + uranusbary
+plotposition("Uranus", position, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 neptunian = SPK.open('data/neptunian.bsp')
 #print(neptunian)
@@ -413,8 +413,8 @@ neptunian = SPK.open('data/neptunian.bsp')
 neptunebary = neptunian[0,8].compute(julian)
 outerorbit(neptunian, 8, 899, orbitdots, planetcolor)
 
-systempositions.append(neptunian[8, 899].compute(julian)[:3] + neptunebary)
-plotposition("Neptune", systempositions[-1], planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
+position = neptunian[8, 899].compute(julian)[:3] + neptunebary
+plotposition("Neptune", position, planetcolor, gasgiantsize * outerscale, outersize, orbit = True, major = True)
 
 # old format with id offset 2000000 and barycenter (0)
 def plotcentaur(name, id, color = asteroidcolor, size = asteroidsize, years = 0):
@@ -466,13 +466,13 @@ pluto = SPK.open('data/pluto.bsp')
 plutobary = pluto[0,9].compute(julian)
 plutororbit(pluto, 9, 999, orbitdots, asteroidcolor)
 
-systempositions.append(pluto[9, 999].compute(julian)[:3] + plutobary)
-plotposition("134340 Pluto", systempositions[-1], asteroidcolor, asteroidsize * outerscale, outersize, orbit = True)
+position = pluto[9, 999].compute(julian)[:3] + plutobary
+plotposition("134340 Pluto", position, asteroidcolor, asteroidsize * outerscale, outersize, orbit = True)
 
 gatedistance = 22 * aukm	# "little less than 2 AU outside the orbit of Uranus"
 gatedirection = -math.pi * 3 / 4 # “This is the Ring. And this is Uranus. They are literally the two spots furthest from each other in the universe that have humans near them”
-solgate = numpy.array([gatedistance * math.cos(gatedirection), gatedistance * math.sin(gatedirection), 0.0])
-plotposition("Sol Gate", solgate, stationcolor, stationsize * outerscale, outersize)
+systempositions.append(numpy.array([gatedistance * math.cos(gatedirection), gatedistance * math.sin(gatedirection), 0.0]))
+plotposition("Sol Gate", systempositions[-1], stationcolor, stationsize * outerscale, outersize)
 
 savemap(axis, outersize, 'Outer System', 'systemouter.png', 'year')
 

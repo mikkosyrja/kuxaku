@@ -130,3 +130,7 @@ Added protomolecule font for document titles.
 
 Added Sol Gate to the outer system map.
 
+## 2023-09-01
+
+Removed Venus and added Sol Gate to travel and communication time tables
+

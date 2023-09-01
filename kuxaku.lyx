@@ -82,7 +82,7 @@
 \headsep 1.5cm
 \footskip 0.5cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -169,6 +169,10 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Kuxaku
 \end_layout
 
 \begin_layout Standard
@@ -407,6 +411,13 @@ The third planet from the Sun and the birthplace of humanity, Earth stands
  It is heavily reliant on the resources of the Belt to keep the engine of
  its economy running, yet the grip Earth once held on its interplanetary
  colonies is slowly slipping away.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -2964,8 +2975,7 @@ Shepherd satellites are small moons that orbit within, or just beyond, a
 
 \begin_layout Standard
 Janus and Epimetheus are called co-orbital moons.
- They are of roughly equal size, with Janus being slightly larger than Epimetheu
-s.
+ They are of roughly equal size, with Janus being slightly larger.
  Janus and Epimetheus have orbits with only a few kilometers difference
  in semi-major axis, close enough that they would collide if they attempted
  to pass each other.

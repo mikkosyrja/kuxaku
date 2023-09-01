@@ -10,7 +10,7 @@
 >
 > -- <https://twitter.com/Nfarmerlinguist/status/692757569236959232>
 
-Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2350 locations. For background and examples, see: [background.md](background.md)
+Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2357 locations. For background and examples, see: [background.md](background.md)
 
 Latest changes can be found from [CHANGELOG.md](CHANGELOG.md)
 
@@ -48,7 +48,7 @@ Instructions for Windows users not familiar with Python or GitHub:
 
 Go to the program directory and run script kuxaku.py with desired date as a parameter. Date must be given in ISO standard format YYYY-MM-DD. For example:
 
-	kuxaku.py 2351-05-16
+	kuxaku.py 2357-02-06
 
 Program creates maps and tables as PNG images and puts them into the output subdirectory.
 
