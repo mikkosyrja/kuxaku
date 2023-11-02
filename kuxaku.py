@@ -99,7 +99,8 @@ stationsize = 0.3
 orbitdots = 6
 orbitdotsize = 0.04		# in AU
 
-edgetolerance = 0.8		# 20% from the edge
+hortolerance = 0.8		# 20% from the edge horizontally
+vertolerance = 0.95		# 5% from the edge vertically
 orbittolerance = 0.2	# 20% from the Sun
 
 def addellipse(kmposition, color, ausize, unit = 'AU'):
@@ -130,7 +131,7 @@ def direction(position):	# direction in radians
 #	2) Away from the orbit dots with following exceptions:
 #		a) No horizontally, if vertically within 20% from the Sun.
 #		b) No vertically, if horizontally within 20% from the Sun.
-#	3) Away from edge if within 20% from it
+#	3) Away from the map edge if within 20% (horizontally) or 5% (vertically) from it
 def plotlabel(name, kmposition, auedge, orbit = False, retrograde = False, major = False, unit = 'AU'):
 	if unit == 'AU':
 		position = kmposition / aukm
@@ -144,9 +145,9 @@ def plotlabel(name, kmposition, auedge, orbit = False, retrograde = False, major
 			horizontal = ('left' if position[1] < 0 else 'right')	# away from orbit
 		else:
 			horizontal = ('right' if position[1] < 0 else 'left')	# away from orbit
-	if edge and position[0] < edge * -edgetolerance:
+	if edge and position[0] < edge * -hortolerance:
 		horizontal = 'left'		# keep text inside
-	if edge and position[0] > edge * edgetolerance:
+	if edge and position[0] > edge * hortolerance:
 		horizontal = 'right'	# keep text inside
 	vertical = ('top' if position[1] < 0 else 'bottom')		# away from sun
 	if orbit and abs(position[0]) > edge * orbittolerance:
@@ -154,6 +155,10 @@ def plotlabel(name, kmposition, auedge, orbit = False, retrograde = False, major
 			vertical = ('bottom' if position[0] > 0 else 'top')		# away from orbit
 		else:
 			vertical = ('top' if position[0] > 0 else 'bottom')		# away from orbit
+	if edge and position[1] < edge * -vertolerance:
+		vertical = 'bottom'		# keep text inside
+	if edge and position[1] > edge * vertolerance:
+		vertical = 'top'		# keep text inside
 	font = (majorfont if major else minorfont)
 	plot.text(position[0], position[1], name, fontsize = font, color = foreground, ha = horizontal, va = vertical)
 
@@ -711,7 +716,7 @@ def commdelay(name, places, distances, unit, system):
 	axis.axis('off')
 	axis.axis('tight')
 	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title(system + ' Communication Delay in ' + unit + ' ' + titledate())
+	axis.set_title(system + ' Communication Delays in ' + unit + ' ' + titledate())
 	#axis.patch.set_facecolor(background)
 
 	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = framecolor, bbox_inches = 'tight')
@@ -724,7 +729,7 @@ commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
 #	travel time
 #
 def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juicet = 0):
-	title = system + ' Travel Time in ' + unit + ' (' + str(cruiseg) + 'g'
+	title = system + ' Travel Times in ' + unit + ' (' + str(cruiseg) + 'g'
 	filename = outputdir + name + '{:02.0f}'.format(cruiseg * 10)
 	if juiceg and juicet:
 		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'

@@ -4210,7 +4210,7 @@ Travel Times
 \end_layout
 
 \begin_layout Standard
-Because the Epstein Drive removed ∆v limitations to space travel, ships
+Because the Epstein Drive removed Δv limitations to space travel, ships
  no longer needed to execute Hohmann transfers to maneuver between bodies.
  To transfer, ships can simply burn prograde at a constant rate, then flip
  around and decelerate by burning retrograde.
@@ -4259,6 +4259,12 @@ Following tables show the time to travel the average distance between the
  breaks taken into consideration.
  The first acceleration is belter standard, the second one is tolerable
  for belters and the third is suitable for earthers.
+\end_layout
+
+\begin_layout Standard
+Note that the actual travel times will be somewhat longer.
+ Spaceport bureaucracy and technicalities with other travel regulations
+ usually need at least one hour at both ends of the journey.
 \end_layout
 
 \begin_layout Standard
