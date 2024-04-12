@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -14,11 +14,11 @@
 \usepackage{../kuxaku/kuxaku}
 \end_preamble
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "Latin Modern Sans"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -26,7 +26,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -48,7 +50,7 @@
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\papersize a5paper
+\papersize a5
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
@@ -69,7 +71,9 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -92,11 +96,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -104,6 +113,7 @@
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -149,6 +159,7 @@ protomolecule kuxaku
 \begin_inset CommandInset include
 LatexCommand input
 filename "date.tex"
+literal "true"
 
 \end_inset
 
@@ -176,9 +187,9 @@ Kuxaku
 \end_layout
 
 \begin_layout Standard
-Here we have notable Solar System bodies and distances between them for
- communication and travel.
- This is a living document: positions of bodies change over the time.
+Here we have notable Solar System bodies and distances between them for communication and travel.
+ This is a living document:
+ positions of bodies change over the time.
  Effective date can be seen in image and table titles.
 \end_layout
 
@@ -187,17 +198,20 @@ Legend
 \end_layout
 
 \begin_layout Standard
-System maps use two different scales, either Gm or AU.
+System maps use two different scales,
+ either Gm or AU.
  Gm is a standard SI unit gigameter (million kilometers).
- AU is an astronomical unit: distance from the Earth to the Sun (roughly
- 150 million kilometers or 150 Gm).
+ AU is an astronomical unit:
+ distance from the Earth to the Sun (roughly 150 million kilometers or 150 Gm).
  Gm is used within gas giant systems (Jupiter and Saturn).
 \end_layout
 
 \begin_layout Standard
 System objects are displayed as small filled circles.
- Sun is yellow, Earth is blue and Mars is red.
- Otherwise, following colors are used:
+ Sun is yellow,
+ Earth is blue and Mars is red.
+ Otherwise,
+ following colors are used:
 \end_layout
 
 \begin_layout Description
@@ -225,12 +239,14 @@ Notable objects have orbit dots displaying their future positions.
 
 \begin_layout Standard
 All asteroid labels include their number.
- Objects without number are either planets, moons or artificial constructs.
+ Objects without number are either planets,
+ moons or artificial constructs.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -304,6 +320,7 @@ reference "fig:Inner-System"
 plural "false"
 caps "false"
 noprefix "false"
+nolink "false"
 
 \end_inset
 
@@ -314,6 +331,8 @@ noprefix "false"
 \begin_layout Subsection*
 Mercury
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -334,18 +353,19 @@ name "subsec:Mercury"
 
 \begin_layout Standard
 Mercury is the closest planet to the Sun.
- The smallest planet in the Solar System, it has no natural satellites.
- Besides impact craters, its only known geological features are lobed ridges
- or rupes that were probably produced by a period of contraction early in
- its history.
- Mercury's very tenuous atmosphere consists of atoms blasted off its surface
- by the solar wind.
+ The smallest planet in the Solar System,
+ it has no natural satellites.
+ Besides impact craters,
+ its only known geological features are lobed ridges or rupes that were probably produced by a period of contraction early in its history.
+ Mercury's very tenuous atmosphere consists of atoms blasted off its surface by the solar wind.
  Its has relatively large iron core and thin mantle.
 \end_layout
 
 \begin_layout Subsection*
 Venus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -365,23 +385,26 @@ name "subsec:Venus"
 \end_layout
 
 \begin_layout Standard
-Venus is the solar system’s second planet, and while similar in size and
- mass to Earth, it is strikingly different in almost every other way.
- Venus has a retrograde rotation, meaning it rotates clockwise, as opposed
- to the counter-clockwise rotations of most of the solar system’s other
- planets.
- Although Venus’ gravity is just slightly lower than that of Earth, the
- planet’s incredibly dense carbon dioxide atmosphere results in crushing
- atmospheric pressure at the surface 92 times greater than Earth’s.
- It also creates a powerful greenhouse effect, leading to surface temperatures
- of 735 K, making Venus the hottest planet in the solar system — hotter
- even than the surface of Mercury.
+Venus is the solar system’s second planet,
+ and while similar in size and mass to Earth,
+ it is strikingly different in almost every other way.
+ Venus has a retrograde rotation,
+ meaning it rotates clockwise,
+ as opposed to the counter-clockwise rotations of most of the solar system’s other planets.
+ Although Venus’ gravity is just slightly lower than that of Earth,
+ the planet’s incredibly dense carbon dioxide atmosphere results in crushing atmospheric pressure at the surface 92 times greater than Earth’s.
+ It also creates a powerful greenhouse effect,
+ leading to surface temperatures of 735 K,
+ making Venus the hottest planet in the solar system —
+ hotter even than the surface of Mercury.
  Venus has no moons.
 \end_layout
 
 \begin_layout Subsection*
 Earth
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -401,16 +424,19 @@ name "subsec:Earth"
 \end_layout
 
 \begin_layout Standard
-The third planet from the Sun and the birthplace of humanity, Earth stands
- as the cultural, political, and economic center of the solar system.
- It remains the only world in the system with a breathable atmosphere where
- people can live outdoors under an open sky.
- Home to 30 billion people, Earth struggles under the effects of climate
- change, environmental pollution, overpopulation, and widespread unemployment,
+The third planet from the Sun and the birthplace of humanity,
+ Earth stands as the cultural,
+ political,
+ and economic center of the solar system.
+ It remains the only world in the system with a breathable atmosphere where people can live outdoors under an open sky.
+ Home to 30 billion people,
+ Earth struggles under the effects of climate change,
+ environmental pollution,
+ overpopulation,
+ and widespread unemployment,
  but its corporations are the wealthiest and most powerful in the system.
- It is heavily reliant on the resources of the Belt to keep the engine of
- its economy running, yet the grip Earth once held on its interplanetary
- colonies is slowly slipping away.
+ It is heavily reliant on the resources of the Belt to keep the engine of its economy running,
+ yet the grip Earth once held on its interplanetary colonies is slowly slipping away.
 \end_layout
 
 \begin_layout Standard
@@ -423,6 +449,8 @@ The third planet from the Sun and the birthplace of humanity, Earth stands
 \begin_layout Description
 Luna
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -432,22 +460,27 @@ Luna
 \end_inset
 
  Luna is Earth’s only natural satellite.
- It is only a quarter of Earth’s diameter, with a gravity of 0.16 g — lighter
- than many spin stations in the Belt.
- Only 384,402 kilometers away from Earth, Luna was the site of humanity’s
- first landing on another planet, as well as the location of Earth’s first
- interplanetary colony, established in the early 21st century.
+ It is only a quarter of Earth’s diameter,
+ with a gravity of 0.16 g —
+ lighter than many spin stations in the Belt.
+ Only 384,402 kilometers away from Earth,
+ Luna was the site of humanity’s first landing on another planet,
+ as well as the location of Earth’s first interplanetary colony,
+ established in the early 21st century.
  This first permanent lunar base was a shared military and scientific endeavor,
- and while elements of both remain, Luna is now much more of a civilian
- station.
- Like Earth, Luna is governed by the United Nations, and the approximately
- one billion inhabitants of Luna are considered full UN citizens.
+ and while elements of both remain,
+ Luna is now much more of a civilian station.
+ Like Earth,
+ Luna is governed by the United Nations,
+ and the approximately one billion inhabitants of Luna are considered full UN citizens.
  
 \end_layout
 
 \begin_layout Subsection*
 Mars
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -467,27 +500,29 @@ name "subsec:Mars"
 \end_layout
 
 \begin_layout Standard
-Mars is the fourth planet from the Sun and the second-smallest planet in
- the Solar System, being larger than only Mercury.
- The the iron oxide prevalent on Mars's surface gives it a reddish appearance
- distinctive among the astronomical bodies visible to the naked eye.
- Mars is a terrestrial planet with a thin atmosphere, with surface features
- reminiscent of the impact craters of the Moon and the valleys, deserts
- and polar ice caps of Earth.
+Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System,
+ being larger than only Mercury.
+ The the iron oxide prevalent on Mars's surface gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye.
+ Mars is a terrestrial planet with a thin atmosphere,
+ with surface features reminiscent of the impact craters of the Moon and the valleys,
+ deserts and polar ice caps of Earth.
 \end_layout
 
 \begin_layout Standard
-The Martian Congressional Republic rules over four billion people who are
- spread across Mars, associated orbital stations, and the small but highly
- advanced military fleets cruising the solar system.
+The Martian Congressional Republic rules over four billion people who are spread across Mars,
+ associated orbital stations,
+ and the small but highly advanced military fleets cruising the solar system.
  Settled in the 21st century after a number of lengthy exploratory missions,
- Mars is a world of dreamers, devoted to a single vision: the greening of
- the red planet.
+ Mars is a world of dreamers,
+ devoted to a single vision:
+ the greening of the red planet.
 \end_layout
 
 \begin_layout Description
 Phobos
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -497,19 +532,24 @@ Phobos
 \end_inset
 
  Phobos is the innermost and larger of the two natural satellites of Mars.
- It is a small, irregularly shaped object with a mean radius of 11 km.
- Phobos orbits 6,000 km from the Martian surface, closer to its primary
- body than any other known planetary moon.
- It is so close that it orbits Mars much faster than Mars rotates, and completes
- an orbit in just 7 hours and 39 minutes.
- As a result, from the surface of Mars it appears to rise in the west, move
- across the sky in 4 hours and 15 minutes or less, and set in the east,
+ It is a small,
+ irregularly shaped object with a mean radius of 11 km.
+ Phobos orbits 6,000 km from the Martian surface,
+ closer to its primary body than any other known planetary moon.
+ It is so close that it orbits Mars much faster than Mars rotates,
+ and completes an orbit in just 7 hours and 39 minutes.
+ As a result,
+ from the surface of Mars it appears to rise in the west,
+ move across the sky in 4 hours and 15 minutes or less,
+ and set in the east,
  twice each Martian day.
 \end_layout
 
 \begin_layout Description
 Deimos
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -520,11 +560,10 @@ Deimos
 
  Deimos was the smaller and outermost of the two natural satellites of Mars.
  It no longer exists as such.
- Following nuclear annihilation of the Earth-Mars joint Phoebe Research
- Station and the Saturnian satellite in the wake of the Eros Incident, the
- United Nations destroyed one of Mars’ two moons.
- Prior to becoming a smudge in the Martian sky, Deimos hosted military facilitie
-s and a deep radar station.
+ Following nuclear annihilation of the Earth-Mars joint Phoebe Research Station and the Saturnian satellite in the wake of the Eros Incident,
+ the United Nations destroyed one of Mars’ two moons.
+ Prior to becoming a smudge in the Martian sky,
+ Deimos hosted military facilities and a deep radar station.
 \end_layout
 
 \begin_layout Standard
@@ -546,24 +585,23 @@ name "subsec:Near-Earth-Objects"
 \end_layout
 
 \begin_layout Standard
-A near-Earth object is any small Solar System body whose orbit brings it
- into proximity with Earth.
+A near-Earth object is any small Solar System body whose orbit brings it into proximity with Earth.
 \end_layout
 
 \begin_layout Standard
-Atira asteroids are asteroids whose orbits are entirely confined within
- Earth's orbit.
+Atira asteroids are asteroids whose orbits are entirely confined within Earth's orbit.
  They are by far the smallest group of near-Earth objects.
- Earth-crossers whose semi-major axes are smaller than Earth's are Aten
- asteroids.
- The remaining ones are Apollo asteroids, which are the largest group of
- near-Earth objects.
+ Earth-crossers whose semi-major axes are smaller than Earth's are Aten asteroids.
+ The remaining ones are Apollo asteroids,
+ which are the largest group of near-Earth objects.
 \end_layout
 
 \begin_layout Standard
-Amor asteroids is a subgroup of the near-Earth asteroids that approach the
- orbit of Earth from beyond, but do not cross.
- The most famous of these is, of course, Eros.
+Amor asteroids is a subgroup of the near-Earth asteroids that approach the orbit of Earth from beyond,
+ but do not cross.
+ The most famous of these is,
+ of course,
+ Eros.
 \end_layout
 
 \begin_layout Description
@@ -573,6 +611,8 @@ Amor asteroids is a subgroup of the near-Earth asteroids that approach the
 
 Eros
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -581,10 +621,8 @@ Eros
 
 \end_inset
 
- Eros was a stony and elongated asteroid of the Amor group with a mean diameter
- of approximately 16.8 kilometers.
- The first artificially rotated asteroid habitat and often called as a birthplac
-e of the Belt.
+ Eros was a stony and elongated asteroid of the Amor group with a mean diameter of approximately 16.8 kilometers.
+ The first artificially rotated asteroid habitat and often called as a birthplace of the Belt.
  Nowadays famous for the Venus Incident.
 \end_layout
 
@@ -595,6 +633,8 @@ e of the Belt.
 
 Ganymed
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -603,9 +643,10 @@ Ganymed
 
 \end_inset
 
- A stony asteroid on a highly eccentric orbit, classified as a near-Earth
- object of the Amor group.
- With a diameter of 35 kilometers, it is the largest of all near-Earth objects.
+ A stony asteroid on a highly eccentric orbit,
+ classified as a near-Earth object of the Amor group.
+ With a diameter of 35 kilometers,
+ it is the largest of all near-Earth objects.
 \end_layout
 
 \begin_layout Description
@@ -615,6 +656,8 @@ Ganymed
 
 Amor
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -635,6 +678,8 @@ Amor
 
 Apollo
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -643,11 +688,12 @@ Apollo
 
 \end_inset
 
- Apollo is a stony asteroid, approximately 1.5 kilometers in diameter.
+ Apollo is a stony asteroid,
+ approximately 1.5 kilometers in diameter.
  It is the namesake and the first recognized member of the Apollo asteroids.
- In addition, since Apollo's orbit is highly eccentric, it crosses the orbits
- of Venus and Mars and is therefore called a Venus-crosser and Mars-crosser
- as well.
+ In addition,
+ since Apollo's orbit is highly eccentric,
+ it crosses the orbits of Venus and Mars and is therefore called a Venus-crosser and Mars-crosser as well.
 \end_layout
 
 \begin_layout Description
@@ -657,6 +703,8 @@ Apollo
 
 Cruithne
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -677,6 +725,8 @@ Cruithne
 
 Bennu
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -685,10 +735,9 @@ Bennu
 
 \end_inset
 
- Bennu is a carbonaceous asteroid in the Apollo group with a mean diameter
- of 490 m.
- It is an active asteroid, sporadically emitting plumes of particles and
- rocks as large as 10 cm.
+ Bennu is a carbonaceous asteroid in the Apollo group with a mean diameter of 490 m.
+ It is an active asteroid,
+ sporadically emitting plumes of particles and rocks as large as 10 cm.
 \end_layout
 
 \begin_layout Description
@@ -698,6 +747,8 @@ Bennu
 
 Atira
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -706,10 +757,9 @@ Atira
 
 \end_inset
 
- Atira is a binary asteroid, a system of two asteroids orbiting their common
- barycenter.
- The primary component with a diameter of approximately 4.8 kilometers is
- orbited by a minor-planet moon that measures about 1 km.
+ Atira is a binary asteroid,
+ a system of two asteroids orbiting their common barycenter.
+ The primary component with a diameter of approximately 4.8 kilometers is orbited by a minor-planet moon that measures about 1 km.
  Atira is the namesake and the first numbered body of the Atira asteroids.
 \end_layout
 
@@ -730,6 +780,8 @@ name "sec:Asteroid-Belt"
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -742,27 +794,38 @@ Belt
 \end_layout
 
 \begin_layout Standard
-The asteroid belt is a torus-shaped region in the Solar System, located
- roughly between the orbits of the planets Jupiter and Mars, that is occupied
- by a great many solid, irregularly shaped bodies, of many sizes but much
- smaller than planets, called asteroids or minor planets.
+The asteroid belt is a torus-shaped region in the Solar System,
+ located roughly between the orbits of the planets Jupiter and Mars,
+ that is occupied by a great many solid,
+ irregularly shaped bodies,
+ of many sizes but much smaller than planets,
+ called asteroids or minor planets.
 \end_layout
 
 \begin_layout Standard
-The identified objects are of many sizes, but much smaller than planets,
- and, on average, are about one million kilometers apart.
+The identified objects are of many sizes,
+ but much smaller than planets,
+ and,
+ on average,
+ are about one million kilometers apart.
  About half the mass of the belt is contained in the four largest asteroids:
- Ceres, Vesta, Pallas, and Hygiea.
+ Ceres,
+ Vesta,
+ Pallas,
+ and Hygiea.
  The total mass of the asteroid belt is approximately 4% that of the Moon.
 \end_layout
 
 \begin_layout Standard
-The three broad composition classes of asteroids are C-, S-, and M-types:
+The three broad composition classes of asteroids are C-,
+ S-,
+ and M-types:
 \end_layout
 
 \begin_layout Description
 C-type C-type (chondrite) asteroids are most common.
- They probably consist of clay and silicate rocks, and are dark in appearance.
+ They probably consist of clay and silicate rocks,
+ and are dark in appearance.
  They are among the most ancient objects in the solar system.
 \end_layout
 
@@ -772,11 +835,9 @@ S-type S-types ("stony") are made up of silicate materials and nickel-iron.
 
 \begin_layout Description
 M-type M-types are metallic (nickel-iron).
- The asteroids' compositional differences are related to how far from the
- Sun they formed.
+ The asteroids' compositional differences are related to how far from the Sun they formed.
  Some experienced high temperatures after they formed and partly melted,
- with iron sinking to the center and forcing basaltic (volcanic) lava to
- the surface.
+ with iron sinking to the center and forcing basaltic (volcanic) lava to the surface.
 \end_layout
 
 \begin_layout Subsection*
@@ -786,6 +847,8 @@ Tycho
 
 Station
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -798,10 +861,9 @@ Tycho
 \end_layout
 
 \begin_layout Standard
-The Belt headquarters of Tycho Manufacturing and Engineering Concern is
- the largest mobile construction platform in the Sol System.
- Fifteen thousand workers and their families live within Tycho, building
- megastructures or massive ships far beyond the reach of a planet.
+The Belt headquarters of Tycho Manufacturing and Engineering Concern is the largest mobile construction platform in the Sol System.
+ Fifteen thousand workers and their families live within Tycho,
+ building megastructures or massive ships far beyond the reach of a planet.
 \end_layout
 
 \begin_layout Subsection
@@ -822,6 +884,8 @@ name "subsec:Colonized-Asteroids"
 
 Ceres
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -830,13 +894,12 @@ Ceres
 
 \end_inset
 
- The only dwarf planet in the inner solar system, and the first asteroid
- discovered by humanity.
+ The only dwarf planet in the inner solar system,
+ and the first asteroid discovered by humanity.
  Only object in the asteroid belt rounded by its own gravity.
  Tycho corporation spun up the asteroid in a dramatic feat of engineering,
  granting it a gravity of 0.3g.
- Now the most important port of call in the Belt with population of approximatel
-y six million permanent residents
+ Now the most important port of call in the Belt with population of approximately six million permanent residents
 \end_layout
 
 \begin_layout Description
@@ -846,6 +909,8 @@ y six million permanent residents
 
 Pallas
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -854,14 +919,16 @@ Pallas
 
 \end_inset
 
- The third largest asteroid in the asteroid Belt, and the second asteroid
- discovered by humanity.
- It hosts one of the oldest stations, Pallas Station, in the outer planets,
+ The third largest asteroid in the asteroid Belt,
+ and the second asteroid discovered by humanity.
+ It hosts one of the oldest stations,
+ Pallas Station,
+ in the outer planets,
  but is also known for a revolt at its colony.
- The station itself has a long history of a refinement station for the mining
- operations of the Belt.
- Due to this legacy, it continues to have its infrastructure maintained
- and upgraded, making use of its older equipment as overflow capacity.
+ The station itself has a long history of a refinement station for the mining operations of the Belt.
+ Due to this legacy,
+ it continues to have its infrastructure maintained and upgraded,
+ making use of its older equipment as overflow capacity.
 \end_layout
 
 \begin_layout Description
@@ -871,6 +938,8 @@ Pallas
 
 Vesta
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -879,13 +948,11 @@ Vesta
 
 \end_inset
 
- The second-most-massive asteroid in the asteroid Belt after Ceres and the
- only known remaining rocky protoplanet of the kind that formed the terrestrial
- planets.
+ The second-most-massive asteroid in the asteroid Belt after Ceres and the only known remaining rocky protoplanet of the kind that formed the terrestrial planets.
  It hosts one of the largest settlements in the outer planets.
- At some time during the UN-MCR Cold War, Vesta was the site of the Vesta
- Blockade, a confrontation between the UN and MCR that would delay the Martian
- terraforming efforts for over a century.
+ At some time during the UN-MCR Cold War,
+ Vesta was the site of the Vesta Blockade,
+ a confrontation between the UN and MCR that would delay the Martian terraforming efforts for over a century.
 \end_layout
 
 \begin_layout Description
@@ -895,6 +962,8 @@ Vesta
 
 Hygiea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -905,8 +974,8 @@ Hygiea
 
  The fourth largest asteroid in the asteroid Belt and somewhat oblong.
  It hosts Hygeia Station.
- Like many places in the Belt, its population suffered from high UN taxes
- that made survival expensive and kept the population routinely destitute.
+ Like many places in the Belt,
+ its population suffered from high UN taxes that made survival expensive and kept the population routinely destitute.
 \end_layout
 
 \begin_layout Subsection
@@ -927,6 +996,8 @@ name "subsec:Notable-Asteroids"
 
 Juno
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -935,10 +1006,10 @@ Juno
 
 \end_inset
 
- One of the two largest stony asteroids, along with 15 Eunomia.
+ One of the two largest stony asteroids,
+ along with 15 Eunomia.
  It contains about 1% of the total mass of the asteroid Belt.
- Its orbit has an extreme eccentricity which brings Juno closer to the Sun
- at perihelion than Vesta and further out at aphelion than Ceres.
+ Its orbit has an extreme eccentricity which brings Juno closer to the Sun at perihelion than Vesta and further out at aphelion than Ceres.
 \end_layout
 
 \begin_layout Description
@@ -948,6 +1019,8 @@ Juno
 
 Astraea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -957,11 +1030,9 @@ Astraea
 \end_inset
 
  The fifth asteroid discovered.
- Physically unremarkable but notable because after its discovery, thousands
- of other asteroids would follow.
- The discovery of Astraea proved to be the starting point for the eventual
- demotion of the four original asteroids (which were regarded as planets
- at the time) to their current status.
+ Physically unremarkable but notable because after its discovery,
+ thousands of other asteroids would follow.
+ The discovery of Astraea proved to be the starting point for the eventual demotion of the four original asteroids (which were regarded as planets at the time) to their current status.
 \end_layout
 
 \begin_layout Description
@@ -971,6 +1042,8 @@ Astraea
 
 Hebe
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -979,10 +1052,12 @@ Hebe
 
 \end_inset
 
- Large main-belt asteroid, containing around 0.5% of the mass of the Belt.
- This high bulk density means an extremely solid body that has not been
- impacted by collisions, which is not typical of asteroids of its size.
- In brightness, Hebe is the fifth-brightest object in the asteroid Belt.
+ Large main-belt asteroid,
+ containing around 0.5% of the mass of the Belt.
+ This high bulk density means an extremely solid body that has not been impacted by collisions,
+ which is not typical of asteroids of its size.
+ In brightness,
+ Hebe is the fifth-brightest object in the asteroid Belt.
 \end_layout
 
 \begin_layout Description
@@ -992,6 +1067,8 @@ Hebe
 
 Iris
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1002,7 +1079,8 @@ Iris
 
  Large main-belt asteroid orbiting the Sun between Mars and Jupiter.
  It is the fourth-brightest object in the asteroid belt.
- It is classified as an S-type asteroid, meaning that it has a stony composition.
+ It is classified as an S-type asteroid,
+ meaning that it has a stony composition.
  
 \end_layout
 
@@ -1013,6 +1091,8 @@ Iris
 
 Flora
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1021,11 +1101,11 @@ Flora
 
 \end_inset
 
- Large, bright main-belt asteroid.
- It is the innermost large asteroid: no asteroid closer to the Sun has a
- diameter above 25 kilometres or two-elevenths that of Flora itself, and
- not until the tiny 149 Medusa was discovered was a single asteroid orbiting
- at a closer mean distance known.
+ Large,
+ bright main-belt asteroid.
+ It is the innermost large asteroid:
+ no asteroid closer to the Sun has a diameter above 25 kilometres or two-elevenths that of Flora itself,
+ and not until the tiny 149 Medusa was discovered was a single asteroid orbiting at a closer mean distance known.
 \end_layout
 
 \begin_layout Description
@@ -1035,6 +1115,8 @@ Flora
 
 Metis
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1044,10 +1126,9 @@ Metis
 \end_inset
 
  One of the larger main-belt asteroids.
- It is composed of silicates and metallic nickel-iron, and may be the core
- remnant of a large asteroid that was destroyed by an ancient collision.
- Metis is estimated to contain just under half a percent of the total mass
- of the asteroid Belt.
+ It is composed of silicates and metallic nickel-iron,
+ and may be the core remnant of a large asteroid that was destroyed by an ancient collision.
+ Metis is estimated to contain just under half a percent of the total mass of the asteroid Belt.
 \end_layout
 
 \begin_layout Standard
@@ -1097,6 +1178,8 @@ Irene
 
 Eunomia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1106,14 +1189,14 @@ Eunomia
 \end_inset
 
  The largest of the stony asteroids with mean diameter of 268 km.
- Eunomian family is the most prominent family in the intermediate asteroid
- belt and the 6th-largest family with nearly six thousand known members,
+ Eunomian family is the most prominent family in the intermediate asteroid belt and the 6th-largest family with nearly six thousand known members,
  or approximately 1.4% of all asteroids in the asteroid Belt.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -1172,6 +1255,8 @@ name "fig:Inner-System"
 
 Psyche
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1181,10 +1266,9 @@ Psyche
 \end_inset
 
  One of the most massive asteroids in the asteroid belt.
- This object is over 200 km in diameter and contains about 1% of the mass
- of the entire asteroid belt.
- It is thought to be the exposed iron core of a protoplanet, and is the
- most massive metallic M-type asteroid.
+ This object is over 200 km in diameter and contains about 1% of the mass of the entire asteroid belt.
+ It is thought to be the exposed iron core of a protoplanet,
+ and is the most massive metallic M-type asteroid.
 \end_layout
 
 \begin_layout Standard
@@ -1211,6 +1295,8 @@ Thetis
 
 Melpomene
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1219,10 +1305,10 @@ Melpomene
 
 \end_inset
 
- Large, bright main-belt asteroid named after Melpomenē, the Muse of tragedy
- in Greek mythology.
- It is classified as an S-type asteroid and is composed of silicates and
- metals.
+ Large,
+ bright main-belt asteroid named after Melpomenē,
+ the Muse of tragedy in Greek mythology.
+ It is classified as an S-type asteroid and is composed of silicates and metals.
 \end_layout
 
 \begin_layout Description
@@ -1232,6 +1318,8 @@ Melpomene
 
 Fortuna
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1241,8 +1329,8 @@ Fortuna
 \end_inset
 
  Fortuna is one of the largest main-belt asteroids.
- It has a composition similar to Ceres: a darkly colored surface that is
- heavily space-weathered with the composition of primitive organic compounds,
+ It has a composition similar to Ceres:
+ a darkly colored surface that is heavily space-weathered with the composition of primitive organic compounds,
  including tholins.
 \end_layout
 
@@ -1253,6 +1341,8 @@ Fortuna
 
 Massalia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1261,15 +1351,16 @@ Massalia
 
 \end_inset
 
- Stony asteroid and the parent body of the Massalia family located in the
- inner region of the asteroid belt, approximately 145 kilometers in diameter.
- The family is fairly young, estimated to have been created by an impact
- 150 to 200 million years ago.
+ Stony asteroid and the parent body of the Massalia family located in the inner region of the asteroid belt,
+ approximately 145 kilometers in diameter.
+ The family is fairly young,
+ estimated to have been created by an impact 150 to 200 million years ago.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -1320,6 +1411,8 @@ status collapsed
 
 Lutetia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1329,10 +1422,9 @@ Lutetia
 \end_inset
 
  A large asteroid in the asteroid belt of an unusual spectral type.
- It measures about 100 kilometers in diameter and is heavily cratered, with
- the largest impact crater reaching 45 km in diameter.
- The surface is geologically heterogeneous and is intersected by a system
- of grooves and scarps.
+ It measures about 100 kilometers in diameter and is heavily cratered,
+ with the largest impact crater reaching 45 km in diameter.
+ The surface is geologically heterogeneous and is intersected by a system of grooves and scarps.
  One of the few planetesimals in the Belt.
 \end_layout
 
@@ -1343,6 +1435,8 @@ Lutetia
 
 Themis
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1351,11 +1445,10 @@ Themis
 
 \end_inset
 
- The largest member of the Themistian family with surface completely covered
- in ice.
- There is also organic compounds in the form of tholins, high-molecular
- weight organics found in the outer solar system, distinguished by a brown
- or reddish color in optical spectra.
+ The largest member of the Themistian family with surface completely covered in ice.
+ There is also organic compounds in the form of tholins,
+ high-molecular weight organics found in the outer solar system,
+ distinguished by a brown or reddish color in optical spectra.
 \end_layout
 
 \begin_layout Description
@@ -1365,6 +1458,8 @@ Themis
 
 Euphrosyne
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1373,10 +1468,10 @@ Euphrosyne
 
 \end_inset
 
- Euphrosyne is the 12th-largest asteroid in the asteroid belt, and one of
- the half-dozen or so most massive.
- It has a high orbital inclination and eccentricity having nodes near perihelion
- and aphelion, Its perihelion lies at the northernmost point of its orbit.
+ Euphrosyne is the 12th-largest asteroid in the asteroid belt,
+ and one of the half-dozen or so most massive.
+ It has a high orbital inclination and eccentricity having nodes near perihelion and aphelion,
+ Its perihelion lies at the northernmost point of its orbit.
 \end_layout
 
 \begin_layout Description
@@ -1386,6 +1481,8 @@ Euphrosyne
 
 Eugenia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1394,10 +1491,12 @@ Eugenia
 
 \end_inset
 
- Famed as one of the first asteroids to be found to have a moon orbiting
- it, and the first one to been discovered by an Earth-based telescope.
- Eugenia I Petit-Prince is the larger (diameter of 13 km), outer moon.
- A second, smaller (diameter of 6 km) satellite orbits closer to Eugenia.
+ Famed as one of the first asteroids to be found to have a moon orbiting it,
+ and the first one to been discovered by an Earth-based telescope.
+ Eugenia I Petit-Prince is the larger (diameter of 13 km),
+ outer moon.
+ A second,
+ smaller (diameter of 6 km) satellite orbits closer to Eugenia.
 \end_layout
 
 \begin_layout Standard
@@ -1424,6 +1523,8 @@ Doris
 
 Europa
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1432,12 +1533,11 @@ Europa
 
 \end_inset
 
- The 6th-largest asteroid in the asteroid belt, having an average diameter
- of around 315 km.
- It is not round but is shaped like an ellipsoid of approximately 380×330×250
- km.
- Europa is a very dark carbonaceous C-type, and is the second largest of
- this group.
+ The 6th-largest asteroid in the asteroid belt,
+ having an average diameter of around 315 km.
+ It is not round but is shaped like an ellipsoid of approximately 380×330×250 km.
+ Europa is a very dark carbonaceous C-type,
+ and is the second largest of this group.
 \end_layout
 
 \begin_layout Description
@@ -1447,6 +1547,8 @@ Europa
 
 Cybele
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1455,10 +1557,8 @@ Cybele
 
 \end_inset
 
- One of the largest asteroids in the Solar System and is located in the
- outer asteroid belt.
- It gives its name to the Cybele group of asteroids that orbit outward from
- the Sun from the 2:1 orbital resonance with Jupiter.
+ One of the largest asteroids in the Solar System and is located in the outer asteroid belt.
+ It gives its name to the Cybele group of asteroids that orbit outward from the Sun from the 2:1 orbital resonance with Jupiter.
  The last outpost of an extended asteroid belt.
 \end_layout
 
@@ -1469,6 +1569,8 @@ Cybele
 
 Sylvia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1478,8 +1580,7 @@ Sylvia
 \end_inset
 
  The 8th-largest asteroid in the asteroid belt.
- It is the parent body of the Sylvia family and member of Cybele group located
- beyond the core of the belt.
+ It is the parent body of the Sylvia family and member of Cybele group located beyond the core of the belt.
  Sylvia was the first asteroid known to possess more than one moon.
  They have been named (87) Sylvia I Romulus and (87) Sylvia II Remus.
 \end_layout
@@ -1494,9 +1595,9 @@ status collapsed
 \end_inset
 
 Thisbe The 13th largest main-belt asteroids.
- An occultation of a star by Thisbe was observed on October 7, 1981.
- Results from the occultation indicate a larger than expected diameter of
- 232 km.
+ An occultation of a star by Thisbe was observed on October 7,
+ 1981.
+ Results from the occultation indicate a larger than expected diameter of 232 km.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1506,6 +1607,8 @@ Thisbe The 13th largest main-belt asteroids.
 
 Antiope
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1515,10 +1618,9 @@ Antiope
 \end_inset
 
  A double asteroid in the outer asteroid belt.
- It was found to consist of two almost-equally-sized bodies orbiting each
- other.
- At average diameters of about 88 km and 84 km, both components are among
- the 500 largest asteroids.
+ It was found to consist of two almost-equally-sized bodies orbiting each other.
+ At average diameters of about 88 km and 84 km,
+ both components are among the 500 largest asteroids.
 \end_layout
 
 \end_inset
@@ -1533,6 +1635,8 @@ Antiope
 
 Camilla
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1552,8 +1656,7 @@ Camilla
 status collapsed
 
 \begin_layout Plain Layout
-130 Elektra https://www.syfy.com/syfy-wire/bad-astronomy-quadruple-asteroid-elektr
-a-has-three-moons
+130 Elektra https://www.syfy.com/syfy-wire/bad-astronomy-quadruple-asteroid-elektra-has-three-moons
 \end_layout
 
 \begin_layout Plain Layout
@@ -1562,9 +1665,10 @@ a-has-three-moons
 \end_inset
 
 Nausikaa Large main-belt S-type asteroid.
- A shape model of Nausikaa has been constructed, also based on the lightcurve
- data.
- It indicates a roughly cut, but not very elongated body.
+ A shape model of Nausikaa has been constructed,
+ also based on the lightcurve data.
+ It indicates a roughly cut,
+ but not very elongated body.
 \end_layout
 
 \end_inset
@@ -1579,6 +1683,8 @@ Nausikaa Large main-belt S-type asteroid.
 
 Kleopatra
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1587,10 +1693,12 @@ Kleopatra
 
 \end_inset
 
- A metallic, ham-bone-shaped asteroid and trinary system orbiting in the
- central region of the asteroid belt, approximately 138 kilometers in diameter.
- It is believed that Kleopatra's shape, rotation, and moons are due to an
- oblique impact perhaps 100 million years ago.
+ A metallic,
+ ham-bone-shaped asteroid and trinary system orbiting in the central region of the asteroid belt,
+ approximately 138 kilometers in diameter.
+ It is believed that Kleopatra's shape,
+ rotation,
+ and moons are due to an oblique impact perhaps 100 million years ago.
 \end_layout
 
 \begin_layout Standard
@@ -1603,10 +1711,9 @@ status collapsed
 \end_inset
 
 Ida An asteroid in the Koronis family of the asteroid belt.
- It was the second asteroid visited by a spacecraft and the first found
- to have a natural satellite.
- Ida's moon Dactyl is only 1.4 kilometres in diameter, about 1/20 the size
- of Ida.
+ It was the second asteroid visited by a spacecraft and the first found to have a natural satellite.
+ Ida's moon Dactyl is only 1.4 kilometres in diameter,
+ about 1/20 the size of Ida.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1614,15 +1721,15 @@ Ida An asteroid in the Koronis family of the asteroid belt.
 \begin_inset space ~
 \end_inset
 
-Mathilde An asteroid with a relatively elliptical orbit that requires more
- than four years to circle the Sun.
- Nonetheless, the orbit lies entirely between the orbits of Mars and Jupiter;
+Mathilde An asteroid with a relatively elliptical orbit that requires more than four years to circle the Sun.
+ Nonetheless,
+ the orbit lies entirely between the orbits of Mars and Jupiter;
  it does not cross the planetary orbits.
- This tumbling asteroid has an unusually slow rate of rotation, requiring
- 17.4 days to complete a 360° revolution about its axis.
- It is a primitive C-type asteroid, which means the surface has a high proportio
-n of carbon; giving it a dark surface that reflects only 4% of the light
- that falls on it.
+ This tumbling asteroid has an unusually slow rate of rotation,
+ requiring 17.4 days to complete a 360° revolution about its axis.
+ It is a primitive C-type asteroid,
+ which means the surface has a high proportion of carbon;
+ giving it a dark surface that reflects only 4% of the light that falls on it.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1632,7 +1739,8 @@ n of carbon; giving it a dark surface that reflects only 4% of the light
 
 Bamberga One of the largest asteroids in the asteroid belt.
  Bamberga is the tenth-brightest main-belt asteroid.
- Its high eccentricity (for comparison 36% higher than that of Pluto), though,
+ Its high eccentricity (for comparison 36% higher than that of Pluto),
+ though,
  means that at most oppositions other asteroids reach higher magnitudes.
 \end_layout
 
@@ -1641,11 +1749,10 @@ Bamberga One of the largest asteroids in the asteroid belt.
 \begin_inset space ~
 \end_inset
 
-Ursula A dark asteroid and parent body of the Ursula family from the outer
- regions of the asteroid belt.
- It is one of the largest asteroids with a diameter of approximately 200
- kilometers.
- In the Tholen classification, Ursula is a carbonaceous C-type asteroid.
+Ursula A dark asteroid and parent body of the Ursula family from the outer regions of the asteroid belt.
+ It is one of the largest asteroids with a diameter of approximately 200 kilometers.
+ In the Tholen classification,
+ Ursula is a carbonaceous C-type asteroid.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1653,8 +1760,7 @@ Ursula A dark asteroid and parent body of the Ursula family from the outer
 \begin_inset space ~
 \end_inset
 
-Patientia The 15th-largest asteroid in the asteroid belt with a diameter
- of 225 km.
+Patientia The 15th-largest asteroid in the asteroid belt with a diameter of 225 km.
 \end_layout
 
 \end_inset
@@ -1669,6 +1775,8 @@ Patientia The 15th-largest asteroid in the asteroid belt with a diameter
 
 Davida
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1677,11 +1785,11 @@ Davida
 
 \end_inset
 
- One of the ten most-massive asteroids, and the 7th-largest asteroid.
- It is approximately 270–310 km in diameter and comprises an estimated 1.5%
- of the total mass of the Asteroid Belt.
- It is a C-type asteroid, which means that it is dark in colouring with
- a carbonaceous chondrite composition.
+ One of the ten most-massive asteroids,
+ and the 7th-largest asteroid.
+ It is approximately 270–310 km in diameter and comprises an estimated 1.5% of the total mass of the Asteroid Belt.
+ It is a C-type asteroid,
+ which means that it is dark in colouring with a carbonaceous chondrite composition.
 \end_layout
 
 \begin_layout Description
@@ -1691,6 +1799,8 @@ Davida
 
 Herculina
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1699,11 +1809,13 @@ Herculina
 
 \end_inset
 
- One of the larger members of the main asteroid belt with size of 260×220×215
- km.
- It is not spherical, but a blocky shape not unlike a battered cuboid -
- or, as the original analysis described it, it "resembles a toaster".
- It has multiple largish craters, but no major variation in albedo.
+ One of the larger members of the main asteroid belt with size of 260×220×215 km.
+ It is not spherical,
+ but a blocky shape not unlike a battered cuboid - or,
+ as the original analysis described it,
+ it "resembles a toaster".
+ It has multiple largish craters,
+ but no major variation in albedo.
 \end_layout
 
 \begin_layout Description
@@ -1713,6 +1825,8 @@ Herculina
 
 Achilles
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1723,8 +1837,7 @@ Achilles
 
  Large Jupiter trojan from the Greek camp.
  Archillies was the first Jupiter trojan to be discovered.
- The dark D-type asteroid measures 133 kilometers in diameter which makes
- it one of the 10 largest Jupiter trojans.
+ The dark D-type asteroid measures 133 kilometers in diameter which makes it one of the 10 largest Jupiter trojans.
 \end_layout
 
 \begin_layout Description
@@ -1734,6 +1847,8 @@ Achilles
 
 Patroclus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1742,12 +1857,8 @@ Patroclus
 
 \end_inset
 
- A binary Jupiter trojan is is a slow rotator due to the 103-hour orbital
- period of its two components.
- Patroclus (110 kilometer in diameter) and slightly smaller Menoetius orbit
- around each other at a distance of roughly 700 km It was the second trojan
- to be discovered and the only member of the Trojan camp named after a Greek
- character.
+ A binary Jupiter trojan is is a slow rotator due to the 103-hour orbital period of its two components.
+ Patroclus (110 kilometer in diameter) and slightly smaller Menoetius orbit around each other at a distance of roughly 700 km It was the second trojan to be discovered and the only member of the Trojan camp named after a Greek character.
 \end_layout
 
 \begin_layout Description
@@ -1757,6 +1868,8 @@ Patroclus
 
 Hektor
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1765,10 +1878,10 @@ Hektor
 
 \end_inset
 
- The largest Jupiter trojan and the namesake of the Hektor family, with
- a highly elongated shape equivalent in volume to a sphere of approximately
- 225 to 250 kilometers diameter.
- It has one small 12-kilometer sized satellite, Skamandrios.
+ The largest Jupiter trojan and the namesake of the Hektor family,
+ with a highly elongated shape equivalent in volume to a sphere of approximately 225 to 250 kilometers diameter.
+ It has one small 12-kilometer sized satellite,
+ Skamandrios.
 \end_layout
 
 \begin_layout Description
@@ -1778,6 +1891,8 @@ Hektor
 
 Interamnia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1787,10 +1902,8 @@ Interamnia
 \end_inset
 
  Large F-type asteroid with an estimated diameter of 350 kilometres.
- It is the fifth-most-massive asteroid with a mass estimated to be 1.2% of
- the mass of the Asteroid Belt.
- Interamnia may represent a transitional body between small solar system
- bodies and dwarf planets.
+ It is the fifth-most-massive asteroid with a mass estimated to be 1.2% of the mass of the Asteroid Belt.
+ Interamnia may represent a transitional body between small solar system bodies and dwarf planets.
 \end_layout
 
 \begin_layout Standard
@@ -1802,10 +1915,9 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-Priamus A large Jupiter trojan from the Trojan camp, approximately 110 kilometer
-s in diameter.
- The dark D-type asteroid is one of the 20 largest Jupiter trojans and has
- a rotation period of 6.9 hours.
+Priamus A large Jupiter trojan from the Trojan camp,
+ approximately 110 kilometers in diameter.
+ The dark D-type asteroid is one of the 20 largest Jupiter trojans and has a rotation period of 6.9 hours.
 \end_layout
 
 \end_inset
@@ -1822,11 +1934,9 @@ status collapsed
 \begin_inset space ~
 \end_inset
 
-Gaspra An S-type asteroid that orbits very close to the inner edge of the
- asteroid belt.
- Gaspra was the first asteroid ever to be closely approached when it was
- visited by the Galileo spacecraft, which flew by on its way to Jupiter
- on October 1990.
+Gaspra An S-type asteroid that orbits very close to the inner edge of the asteroid belt.
+ Gaspra was the first asteroid ever to be closely approached when it was visited by the Galileo spacecraft,
+ which flew by on its way to Jupiter on October 1990.
 \end_layout
 
 \end_inset
@@ -1841,6 +1951,8 @@ Gaspra An S-type asteroid that orbits very close to the inner edge of the
 
 Mentor
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1849,11 +1961,9 @@ Mentor
 
 \end_inset
 
- Mentor is a large Jupiter trojan from the Trojan camp, approximately 120
- kilometers in diameter.
- The uncommon Jovian X-type asteroid is one of the largest Jupiter trojans
- and orbits the Sun at a distance of 4.8–5.5 AU once every 11 years and 8
- months.
+ Mentor is a large Jupiter trojan from the Trojan camp,
+ approximately 120 kilometers in diameter.
+ The uncommon Jovian X-type asteroid is one of the largest Jupiter trojans and orbits the Sun at a distance of 4.8–5.5 AU once every 11 years and 8 months.
 \end_layout
 
 \begin_layout Description
@@ -1863,6 +1973,8 @@ Mentor
 
 Eureka
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1872,16 +1984,16 @@ Eureka
 \end_inset
 
  Eureka is a trojan trailing Mars at the L5 point.
- The asteroid is located deep within a stable Lagrangian zone of Mars, which
- is considered indicative of a primordial origin — meaning the asteroid
- has most likely been in this orbit for much of the history of the Solar
- System.
+ The asteroid is located deep within a stable Lagrangian zone of Mars,
+ which is considered indicative of a primordial origin —
+ meaning the asteroid has most likely been in this orbit for much of the history of the Solar System.
  It has one natural satellite orbiting 2.1 km from Eureka.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -1932,6 +2044,8 @@ status collapsed
 
 Itokawa
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1941,8 +2055,7 @@ Itokawa
 \end_inset
 
  Itokawa is a sub-kilometer near-Earth object of the Apollo group.
- The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and
- measures approximately 330 meters in diameter.
+ The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and measures approximately 330 meters in diameter.
  It was the first asteroid to be the target of a sample return mission.
 \end_layout
 
@@ -1956,6 +2069,8 @@ Itokawa
 \begin_layout Section
 Jovian
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1975,9 +2090,11 @@ name "sec:Jovian-System"
 \end_layout
 
 \begin_layout Standard
-Named for the gas giant it surrounds, the Jovian System has drawn the largest
- population in the Outer Planets to Jupiter
+Named for the gas giant it surrounds,
+ the Jovian System has drawn the largest population in the Outer Planets to Jupiter
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -1987,22 +2104,20 @@ Jupiter
 \end_inset
 
 ’s moons.
- There are dozens of settlements and orbiting space stations around it and
- its moons.
+ There are dozens of settlements and orbiting space stations around it and its moons.
 \end_layout
 
 \begin_layout Standard
-The Jovian System is responsible for growing and distributing most of the
- food in the Outers and the Belt.
- Most extrasolar astronomy was done in the Jovian System before the Uranian
- System was colonized.
- It is a vital piece of humanity’s survival in the furthest reaches of the
- solar system, and of the Belt’s economy.
+The Jovian System is responsible for growing and distributing most of the food in the Outers and the Belt.
+ Most extrasolar astronomy was done in the Jovian System before the Uranian System was colonized.
+ It is a vital piece of humanity’s survival in the furthest reaches of the solar system,
+ and of the Belt’s economy.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2048,8 +2163,8 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Jupiter is primarily composed of hydrogen with a quarter of its mass being
- helium, though helium comprises only about a tenth of the number of molecules.
+Jupiter is primarily composed of hydrogen with a quarter of its mass being helium,
+ though helium comprises only about a tenth of the number of molecules.
 \end_layout
 
 \begin_layout Subsection
@@ -2064,23 +2179,27 @@ name "subsec:Jovian-Ring-System"
 \end_layout
 
 \begin_layout Standard
-The planet Jupiter has a system of rings known as the rings of Jupiter or
- the Jovian ring system.
- It was the third ring system to be discovered in the Solar System, after
- those of Saturn and Uranus.
+The planet Jupiter has a system of rings known as the rings of Jupiter or the Jovian ring system.
+ It was the third ring system to be discovered in the Solar System,
+ after those of Saturn and Uranus.
 \end_layout
 
 \begin_layout Standard
 The Jovian ring system is faint and consists mainly of dust.
- It has four main components: a thick inner torus of particles known as
- the "halo ring"; a relatively bright, exceptionally thin "main ring"; and
- two wide, thick and faint outer "gossamer rings", named for the moons of
- whose material they are composed: Amalthea and Thebe.
+ It has four main components:
+ a thick inner torus of particles known as the "halo ring";
+ a relatively bright,
+ exceptionally thin "main ring";
+ and two wide,
+ thick and faint outer "gossamer rings",
+ named for the moons of whose material they are composed:
+ Amalthea and Thebe.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2125,10 +2244,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-The main and halo rings consist of dust ejected from the moons Metis, Adrastea,
+The main and halo rings consist of dust ejected from the moons Metis,
+ Adrastea,
  and other unobserved parent bodies as the result of high-velocity impacts.
- In visible and near-infrared light, the rings have a reddish color, except
- the halo ring, which is neutral or blue in color.
+ In visible and near-infrared light,
+ the rings have a reddish color,
+ except the halo ring,
+ which is neutral or blue in color.
 \end_layout
 
 \begin_layout Subsection
@@ -2143,14 +2265,15 @@ name "subsec:Jovian-Inner-Moons"
 \end_layout
 
 \begin_layout Standard
-Inner moons are unpopulated primarily due to their proximity to Jupiter
- and location in its harsh radiation belt — even aboveground structures
- on moons further from the planet require heavy shielding.
+Inner moons are unpopulated primarily due to their proximity to Jupiter and location in its harsh radiation belt —
+ even aboveground structures on moons further from the planet require heavy shielding.
 \end_layout
 
 \begin_layout Description
 Metis
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2160,19 +2283,23 @@ Metis
 \end_inset
 
  Metis is the innermost moon of Jupiter.
- It is tidally locked to Jupiter, and its shape is strongly asymmetrical,
+ It is tidally locked to Jupiter,
+ and its shape is strongly asymmetrical,
  with one of the diameters being almost twice as large as the smallest one.
- It is one of the two moons known to orbit Jupiter in less than the length
- of Jupiter's day, the other being Adrastea.
- It orbits within the main ring of Jupiter, and is a major contributor of
- material to the rings.
- The surface of Metis is heavily cratered, dark, and appears to be reddish
- in color.
+ It is one of the two moons known to orbit Jupiter in less than the length of Jupiter's day,
+ the other being Adrastea.
+ It orbits within the main ring of Jupiter,
+ and is a major contributor of material to the rings.
+ The surface of Metis is heavily cratered,
+ dark,
+ and appears to be reddish in color.
 \end_layout
 
 \begin_layout Description
 Adrastea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2181,17 +2308,20 @@ Adrastea
 
 \end_inset
 
- Adrastea is the second by distance, and the smallest of the four inner
- moons of Jupiter.
+ Adrastea is the second by distance,
+ and the smallest of the four inner moons of Jupiter.
  It also orbits Jupiter in less than the length of planet's day.
- It orbits at the edge of Jupiter's Main Ring and, like Metis, is the main
- contributor of material to the rings.
+ It orbits at the edge of Jupiter's Main Ring and,
+ like Metis,
+ is the main contributor of material to the rings.
  Adrastea has an irregular shape.
 \end_layout
 
 \begin_layout Description
 Amalthea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2201,17 +2331,17 @@ Amalthea
 \end_inset
 
  Amalthea has the third closest orbit around Jupiter among known moons.
- It is in a close orbit around Jupiter and is within the outer edge of the
- Amalthea Gossamer Ring which is formed from dust ejected from its surface.
+ It is in a close orbit around Jupiter and is within the outer edge of the Amalthea Gossamer Ring which is formed from dust ejected from its surface.
  Jupiter would appear 46.5 degrees in diameter from its surface.
- Amalthea is the largest of the inner satellites of Jupiter and is irregularly
- shaped and reddish in color.
+ Amalthea is the largest of the inner satellites of Jupiter and is irregularly shaped and reddish in color.
  Its surface features include large craters and ridges.
 \end_layout
 
 \begin_layout Description
 Thebe
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2221,12 +2351,10 @@ Thebe
 \end_inset
 
  Thebe is the fourth of Jupiter's moons by distance from the planet.
- The second largest of the inner satellites of Jupiter, Thebe orbits within
- the outer edge of the Thebe gossamer ring that is formed from dust ejected
- from its surface.
- It is irregularly shaped and reddish in colour Its surface features include
- large craters and high mountains — some of them are comparable to the size
- of the moon itself.
+ The second largest of the inner satellites of Jupiter,
+ Thebe orbits within the outer edge of the Thebe gossamer ring that is formed from dust ejected from its surface.
+ It is irregularly shaped and reddish in colour Its surface features include large craters and high mountains —
+ some of them are comparable to the size of the moon itself.
 \end_layout
 
 \begin_layout Subsection
@@ -2242,13 +2370,14 @@ name "subsec:Galilean-Moons"
 
 \begin_layout Standard
 The Galilean moons are the four largest moons of Jupiter.
- They were first seen by Galileo Galilei in 1609 and were the first objects
- found to orbit a planet other than the Earth.
+ They were first seen by Galileo Galilei in 1609 and were the first objects found to orbit a planet other than the Earth.
 \end_layout
 
 \begin_layout Description
 Io
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2257,22 +2386,20 @@ Io
 
 \end_inset
 
- One of Jupiter’s larger moons, Io is an extremely hostile and unforgiving
- environment for colonists.
- Its atmosphere of sulfur dixoide and hot spots of volcanic and tectonic
- activity make Io a very dangerous environment for humanity.
- Io’s volcanos produce vents of heat in excess of 2,000° K, and the moon
- itself creates an intense electrical field when its nickel and iron core
- passes through Jupiter’s magnetic field, producing in excess of 1 trillion
- watts.
- Power stations dotted around the surface converting heat transfer and atmospher
-ic electrical charge into usable energy have made Io one of the primary
- storable energy production facilities in the Outers.
+ One of Jupiter’s larger moons,
+ Io is an extremely hostile and unforgiving environment for colonists.
+ Its atmosphere of sulfur dixoide and hot spots of volcanic and tectonic activity make Io a very dangerous environment for humanity.
+ Io’s volcanos produce vents of heat in excess of 2,000° K,
+ and the moon itself creates an intense electrical field when its nickel and iron core passes through Jupiter’s magnetic field,
+ producing in excess of 1 trillion watts.
+ Power stations dotted around the surface converting heat transfer and atmospheric electrical charge into usable energy have made Io one of the primary storable energy production facilities in the Outers.
 \end_layout
 
 \begin_layout Description
 Europa
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2281,21 +2408,27 @@ Europa
 
 \end_inset
 
- One of the most populated of Jupiter’s moons, Europa has some similarities
- to Ganymede — they both have stable tectonics and aboveground dome greenhouses,
+ One of the most populated of Jupiter’s moons,
+ Europa has some similarities to Ganymede —
+ they both have stable tectonics and aboveground dome greenhouses,
  and were amongst the first moons to be colonized.
- Earthers, Belters, and Martians all store eggs and sperm on Europa and
- Ganymede, as well as Luna and Earth.
- However, while Ganymede has significantly increased its investment in agricultu
-ral and medical technology over the decades, Europa has fallen behind.
- Now, the moon’s primary advantage is its thick surface layer of ice, which
- allows its settlements to supply themselves with water and oxygen without
- outside help.
+ Earthers,
+ Belters,
+ and Martians all store eggs and sperm on Europa and Ganymede,
+ as well as Luna and Earth.
+ However,
+ while Ganymede has significantly increased its investment in agricultural and medical technology over the decades,
+ Europa has fallen behind.
+ Now,
+ the moon’s primary advantage is its thick surface layer of ice,
+ which allows its settlements to supply themselves with water and oxygen without outside help.
 \end_layout
 
 \begin_layout Description
 Ganymede
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2304,25 +2437,27 @@ Ganymede
 
 \end_inset
 
- Ganymede Station is the bread basket and the main birthing center for the
- Outers and the Belt, and a center of civilization in the far reaches of
- the solar system.
- It is the safest station in the Jovian system, where people come to give
- birth, avoiding the defects that can come with carrying to term in low
- or zero g.
- As the only moon with any magnetosphere, it’s the only place where dome-grown
- crops stand a chance in Jupiter’s harsh radiation belt, even with heavy
- shielding on the domes and habitats.
- Ganymede is also unique in its intricate system of orbital mirror stations
- that shine concentrated sunlight down onto the dome greenhouses that produce
- vegetables, fruits, and even some meat.
- The moon’s ice, on the surface and reaching into the depths of the moon,
+ Ganymede Station is the bread basket and the main birthing center for the Outers and the Belt,
+ and a center of civilization in the far reaches of the solar system.
+ It is the safest station in the Jovian system,
+ where people come to give birth,
+ avoiding the defects that can come with carrying to term in low or zero g.
+ As the only moon with any magnetosphere,
+ it’s the only place where dome-grown crops stand a chance in Jupiter’s harsh radiation belt,
+ even with heavy shielding on the domes and habitats.
+ Ganymede is also unique in its intricate system of orbital mirror stations that shine concentrated sunlight down onto the dome greenhouses that produce vegetables,
+ fruits,
+ and even some meat.
+ The moon’s ice,
+ on the surface and reaching into the depths of the moon,
  provides all the water necessary for life.
 \end_layout
 
 \begin_layout Description
 Callisto
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2331,19 +2466,16 @@ Callisto
 
 \end_inset
 
- Callisto is the second-largest moon of Jupiter and the third-largest in
- the Sol system.
- Its orbit requires it to be tidally locked – one side constantly faces
- Jupiter.
- This large moon’s tectonic stability and significant deposits of rare minerals
- made it an ideal location for Mars’ shipyards, the largest in the Outers.
- Most of the MCRN’s fleet has been built orbiting Callisto, where the shipyards
- are capable of building hulls up to 700 meters in length.
- Callisto is one of the only moons of Jupiter where radioactive minerals
- are close enough to the surface for easy extraction, however it hasn’t
- created a strong economy.
- Mining and shipbuilding are the only sources of revenue, and revenue that
- comes only from Mars.
+ Callisto is the second-largest moon of Jupiter and the third-largest in the Sol system.
+ Its orbit requires it to be tidally locked – one side constantly faces Jupiter.
+ This large moon’s tectonic stability and significant deposits of rare minerals made it an ideal location for Mars’ shipyards,
+ the largest in the Outers.
+ Most of the MCRN’s fleet has been built orbiting Callisto,
+ where the shipyards are capable of building hulls up to 700 meters in length.
+ Callisto is one of the only moons of Jupiter where radioactive minerals are close enough to the surface for easy extraction,
+ however it hasn’t created a strong economy.
+ Mining and shipbuilding are the only sources of revenue,
+ and revenue that comes only from Mars.
 \end_layout
 
 \begin_layout Subsection
@@ -2358,15 +2490,19 @@ name "subsec:Jovian-Outer-Moons"
 \end_layout
 
 \begin_layout Standard
-These outer moons are all too small to support a colony, but they are, or
- have been, used as scientific and mining outposts.
- Note that some of them have retrograde orbits: clockwise instead of standard
- counterclockwise rotation within the Solar System.
+These outer moons are all too small to support a colony,
+ but they are,
+ or have been,
+ used as scientific and mining outposts.
+ Note that some of them have retrograde orbits:
+ clockwise instead of standard counterclockwise rotation within the Solar System.
 \end_layout
 
 \begin_layout Description
 Themisto
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2375,16 +2511,20 @@ Themisto
 
 \end_inset
 
- Themisto's orbit is unusual: unlike most of Jupiter's moons, which orbit
- in distinct groups, Themisto orbits alone.
- The moon is located midway between the Galilean moons and the first group
- of prograde irregular moons, called the Himalia group.
+ Themisto's orbit is unusual:
+ unlike most of Jupiter's moons,
+ which orbit in distinct groups,
+ Themisto orbits alone.
+ The moon is located midway between the Galilean moons and the first group of prograde irregular moons,
+ called the Himalia group.
  It is about 8 kilometers in diameter.
 \end_layout
 
 \begin_layout Description
 Leda
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2394,14 +2534,16 @@ Leda
 \end_inset
 
  Leda is a prograde irregular satellite of Jupiter.
- It belongs to the Himalia group, five moons orbiting between 11 and 13
- Gm from Jupiter at an inclination of about 28°.
+ It belongs to the Himalia group,
+ five moons orbiting between 11 and 13 Gm from Jupiter at an inclination of about 28°.
  Its orbit is continuously changing due to solar and planetary perturbations.
 \end_layout
 
 \begin_layout Description
 Himalia
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2410,9 +2552,10 @@ Himalia
 
 \end_inset
 
- Himalia is the largest irregular satellite of Jupiter, with a diameter
- of 140 km.
- It is the fifth largest Jovian satellite, after the four Galilean moons.
+ Himalia is the largest irregular satellite of Jupiter,
+ with a diameter of 140 km.
+ It is the fifth largest Jovian satellite,
+ after the four Galilean moons.
  Himalia's rotational period is 7 h 47 m.
  There is an abandoned supply waystation for early mining operations.
 \end_layout
@@ -2420,6 +2563,7 @@ Himalia
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2467,6 +2611,8 @@ status collapsed
 \begin_layout Description
 Elara
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2477,16 +2623,19 @@ Elara
 
  Elara is a prograde irregular satellite of Jupiter.
  It is the eighth-largest moon of Jupiter.
- It has a mean radius of just 43 kilometres, thus it is 2% of the size of
- Europa.
- However, it is half the size of Himalia, so it is the second-biggest moon
- in the Himalia group.
+ It has a mean radius of just 43 kilometres,
+ thus it is 2% of the size of Europa.
+ However,
+ it is half the size of Himalia,
+ so it is the second-biggest moon in the Himalia group.
  It reflects very little light.
 \end_layout
 
 \begin_layout Description
 Lysithea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2496,14 +2645,16 @@ Lysithea
 \end_inset
 
  Lysithea is a prograde irregular satellite of Jupiter.
- It belongs to the Himalia group, five moons orbiting between 11 and 13
- Gm from Jupiter at an inclination of about 28°.
+ It belongs to the Himalia group,
+ five moons orbiting between 11 and 13 Gm from Jupiter at an inclination of about 28°.
  Its orbit is continuously changing due to solar and planetary perturbations.
 \end_layout
 
 \begin_layout Description
 Iocaste
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2513,17 +2664,18 @@ Iocaste
 \end_inset
 
  Iocaste is a retrograde irregular satellite of Jupiter.
- It orbits Jupiter at an average distance of 20.723 million kilometers in
- 609.427 days, at an inclination of 147° to the ecliptic with an eccentricity
- of 0.2874.
- Iocaste belongs to the Ananke group, believed to be the remnants of a break-up
- of a captured heliocentric asteroid.
+ It orbits Jupiter at an average distance of 20.723 million kilometers in 609.427 days,
+ at an inclination of 147° to the ecliptic with an eccentricity of 0.2874.
+ Iocaste belongs to the Ananke group,
+ believed to be the remnants of a break-up of a captured heliocentric asteroid.
  The satellite is about 5 kilometres in diameter and appears grey.
 \end_layout
 
 \begin_layout Description
 Praxidike
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2534,17 +2686,19 @@ Praxidike
 
  Praxidike is a retrograde irregular satellite of Jupiter.
  It orbits Jupiter at an average distance of 20,824,000 km in 613.904 days,
- at an inclination of 144° to the ecliptic, in a retrograde direction and
- with an eccentricity of 0.1840.
- Praxidike belongs to the Ananke group, believed to be the remnants of a
- break-up of a captured heliocentric asteroid.
- With a diameter of 7 km, Praxidike is the second largest member of the
- group after Ananke itself.
+ at an inclination of 144° to the ecliptic,
+ in a retrograde direction and with an eccentricity of 0.1840.
+ Praxidike belongs to the Ananke group,
+ believed to be the remnants of a break-up of a captured heliocentric asteroid.
+ With a diameter of 7 km,
+ Praxidike is the second largest member of the group after Ananke itself.
 \end_layout
 
 \begin_layout Description
 Ananke
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2554,15 +2708,17 @@ Ananke
 \end_inset
 
  Ananke is a retrograde irregular moon of Jupiter.
- It gives its name to the Ananke group, retrograde irregular moons which
- orbit Jupiter between 19.3 and 22.7 Gm, at inclinations of roughly 150°.
- Ananke orbits Jupiter on a high-eccentricity and high-inclination retrograde
- orbit.
+ It gives its name to the Ananke group,
+ retrograde irregular moons which orbit Jupiter between 19.3 and 22.7 Gm,
+ at inclinations of roughly 150°.
+ Ananke orbits Jupiter on a high-eccentricity and high-inclination retrograde orbit.
 \end_layout
 
 \begin_layout Description
 Kalyke
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2572,17 +2728,18 @@ Kalyke
 \end_inset
 
  Kalyke is a retrograde irregular satellite of Jupiter.
- Kalyke's albedo is measured at 2.9%, corresponding to a diameter of 6.9 kilometre
-s.
- It belongs to the Carme group, made up of irregular retrograde moons orbiting
- Jupiter at a distance ranging between 23 and 24 Gm and at an inclination
- of about 165°.
+ Kalyke's albedo is measured at 2.9%,
+ corresponding to a diameter of 6.9 kilometres.
+ It belongs to the Carme group,
+ made up of irregular retrograde moons orbiting Jupiter at a distance ranging between 23 and 24 Gm and at an inclination of about 165°.
  
 \end_layout
 
 \begin_layout Description
 Pasiphae
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2592,19 +2749,19 @@ Pasiphae
 \end_inset
 
  Pasiphae is a retrograde irregular satellite of Jupiter.
- Pasiphae orbits Jupiter on a high eccentricity and high inclination retrograde
- orbit.
- It gives its name to the Pasiphae group, irregular retrograde moons orbiting
- Jupiter at distances ranging between 22.8 and 24.1 million km, and with inclinati
-ons ranging between 144.5° and 158.3°.
+ Pasiphae orbits Jupiter on a high eccentricity and high inclination retrograde orbit.
+ It gives its name to the Pasiphae group,
+ irregular retrograde moons orbiting Jupiter at distances ranging between 22.8 and 24.1 million km,
+ and with inclinations ranging between 144.5° and 158.3°.
  Pasiphae is also known to be in a secular resonance with Jupiter.
- With diameter of 60 km Pasiphae is the largest retrograde and third largest
- irregular satellite after Himalia and Elara.
+ With diameter of 60 km Pasiphae is the largest retrograde and third largest irregular satellite after Himalia and Elara.
 \end_layout
 
 \begin_layout Description
 Carme
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2614,17 +2771,17 @@ Carme
 \end_inset
 
  Carme is a retrograde irregular satellite of Jupiter.
- It gives its name to the Carme group, made up of irregular retrograde moons
- orbiting Jupiter at a distance ranging between 23 and 24 Gm and at an inclinati
-on of about 165°.
- Its orbital elements are continuously changing due to solar and planetary
- perturbations.
+ It gives its name to the Carme group,
+ made up of irregular retrograde moons orbiting Jupiter at a distance ranging between 23 and 24 Gm and at an inclination of about 165°.
+ Its orbital elements are continuously changing due to solar and planetary perturbations.
  It has diameter of 47 km.
 \end_layout
 
 \begin_layout Description
 Sinope
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2634,22 +2791,23 @@ Sinope
 \end_inset
 
  Sinope is a retrograde irregular satellite of Jupiter.
- Sinope orbits Jupiter on a high-eccentricity and high-inclination retrograde
- orbit.
+ Sinope orbits Jupiter on a high-eccentricity and high-inclination retrograde orbit.
  Its orbit is continuously changing due to solar and planetary perturbations.
  Sinope belongs to the Pasiphae group of retrograde irregular moons.
- It is also known to be in a secular resonance with Jupiter, similar to
- Pasiphae.
+ It is also known to be in a secular resonance with Jupiter,
+ similar to Pasiphae.
 \end_layout
 
 \begin_layout Standard
-Distances within Jovian system are vast, and while travel times aren't as
- long as in interplanetary journeys, they are still quite significant.
+Distances within Jovian system are vast,
+ and while travel times aren't as long as in interplanetary journeys,
+ they are still quite significant.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2697,6 +2855,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2744,6 +2903,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2798,6 +2958,8 @@ status collapsed
 \begin_layout Section
 Cronian
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2810,13 +2972,27 @@ Cronian
 \end_layout
 
 \begin_layout Standard
-Surrounding the second largest gas giant in the solar system, the Saturnian
- System has — or had — one large orbiting station functioning as a way point
- for exploration and resource harvesting inside Saturn's rings, and a few
- settled moons.
- Pan, Atlas, Prometheus, Pandora, Epimetheus, Janus, Mimas, Enceladus, Tethys,
- Telesto, Calypso, Dione, and Helene all exist within the rings of Saturn
+Surrounding the second largest gas giant in the solar system,
+ the Saturnian System has —
+ or had —
+ one large orbiting station functioning as a way point for exploration and resource harvesting inside Saturn's rings,
+ and a few settled moons.
+ Pan,
+ Atlas,
+ Prometheus,
+ Pandora,
+ Epimetheus,
+ Janus,
+ Mimas,
+ Enceladus,
+ Tethys,
+ Telesto,
+ Calypso,
+ Dione,
+ and Helene all exist within the rings of Saturn
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -2841,17 +3017,18 @@ name "subsec:Cronian-Ring-System"
 \end_layout
 
 \begin_layout Standard
-The rings of Saturn are the most extensive ring system of any planet in
- the Solar System.
- They consist of countless small particles, ranging in size from micrometers
- to meters, that orbit about Saturn.
- The ring particles are made almost entirely of water ice, with a trace
- component of rocky material.
+The rings of Saturn are the most extensive ring system of any planet in the Solar System.
+ They consist of countless small particles,
+ ranging in size from micrometers to meters,
+ that orbit about Saturn.
+ The ring particles are made almost entirely of water ice,
+ with a trace component of rocky material.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -2896,9 +3073,9 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-The rings have numerous gaps where particle density drops sharply: two opened
- by known moons embedded within them, and many others at locations of known
- destabilizing orbital resonances with the moons of Saturn.
+The rings have numerous gaps where particle density drops sharply:
+ two opened by known moons embedded within them,
+ and many others at locations of known destabilizing orbital resonances with the moons of Saturn.
 \end_layout
 
 \begin_layout Description
@@ -2922,7 +3099,9 @@ B
 \begin_inset space ~
 \end_inset
 
-Ring The largest, brightest, and most massive of the rings.
+Ring The largest,
+ brightest,
+ and most massive of the rings.
 \end_layout
 
 \begin_layout Description
@@ -2930,7 +3109,8 @@ A
 \begin_inset space ~
 \end_inset
 
-ring The outermost of the large, bright rings.
+ring The outermost of the large,
+ bright rings.
 \end_layout
 
 \begin_layout Description
@@ -2961,39 +3141,46 @@ name "subsec:Cronian-Inner-Moons"
 \end_layout
 
 \begin_layout Standard
-Shepherd satellites are small moons that orbit within, or just beyond, a
- planet's ring system.
- They have the effect of sculpting the rings: giving them sharp edges, and
- creating gaps between them.
- Saturn's shepherd moons are Pan, Daphnis, Atlas, Prometheus and Pandora.
- These moons together with co-orbitals formed as a result of accretion of
- the friable ring material on preexisting denser cores.
- The cores with sizes from one-third to one-half the present-day moons are
- themselves collisional shards formed when a parental satellite of the rings
- disintegrated.
+Shepherd satellites are small moons that orbit within,
+ or just beyond,
+ a planet's ring system.
+ They have the effect of sculpting the rings:
+ giving them sharp edges,
+ and creating gaps between them.
+ Saturn's shepherd moons are Pan,
+ Daphnis,
+ Atlas,
+ Prometheus and Pandora.
+ These moons together with co-orbitals formed as a result of accretion of the friable ring material on preexisting denser cores.
+ The cores with sizes from one-third to one-half the present-day moons are themselves collisional shards formed when a parental satellite of the rings disintegrated.
 \end_layout
 
 \begin_layout Standard
 Janus and Epimetheus are called co-orbital moons.
- They are of roughly equal size, with Janus being slightly larger.
- Janus and Epimetheus have orbits with only a few kilometers difference
- in semi-major axis, close enough that they would collide if they attempted
- to pass each other.
- Instead of colliding, however, their gravitational interaction causes them
- to swap orbits every four years.
+ They are of roughly equal size,
+ with Janus being slightly larger.
+ Janus and Epimetheus have orbits with only a few kilometers difference in semi-major axis,
+ close enough that they would collide if they attempted to pass each other.
+ Instead of colliding,
+ however,
+ their gravitational interaction causes them to swap orbits every four years.
 \end_layout
 
 \begin_layout Standard
 Trojan moons are a unique feature only known from the Saturnian system.
- A trojan body orbits at either the leading L4 or trailing L5 Lagrange point
- of a much larger object, such as a large moon or planet.
- Tethys has two trojan moons, Telesto and Calypso, and Dione also has two,
+ A trojan body orbits at either the leading L4 or trailing L5 Lagrange point of a much larger object,
+ such as a large moon or planet.
+ Tethys has two trojan moons,
+ Telesto and Calypso,
+ and Dione also has two,
  Helene and Polydeuces.
 \end_layout
 
 \begin_layout Description
 Prometheus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3002,11 +3189,12 @@ Prometheus
 
 \end_inset
 
- Prometheus is extremely elongated, measuring approximately 136 km × 79
- km × 59 km.
- It has several ridges and valleys and a number of impact craters of about
- 20 km diameter are visible, but it is less cratered than nearby Pandora,
- Epimetheus, and Janus.
+ Prometheus is extremely elongated,
+ measuring approximately 136 km × 79 km × 59 km.
+ It has several ridges and valleys and a number of impact craters of about 20 km diameter are visible,
+ but it is less cratered than nearby Pandora,
+ Epimetheus,
+ and Janus.
 \end_layout
 
 \begin_deeper
@@ -3018,6 +3206,8 @@ Prometheus is the site of a small mining and ice-processing station.
 \begin_layout Description
 Pandora
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3026,18 +3216,19 @@ Pandora
 
 \end_inset
 
- Pandora is more heavily cratered than nearby Prometheus, and has at least
- two large craters 30 kilometres in diameter.
- The majority of craters on Pandora are shallow as a result of being filled
- with debris.
+ Pandora is more heavily cratered than nearby Prometheus,
+ and has at least two large craters 30 kilometres in diameter.
+ The majority of craters on Pandora are shallow as a result of being filled with debris.
  Ridges and grooves are also present on moon's surface.
- The orbit of Pandora appears to be chaotic, as a consequence of a series
- of four 118:121 mean-motion resonances with Prometheus.
+ The orbit of Pandora appears to be chaotic,
+ as a consequence of a series of four 118:121 mean-motion resonances with Prometheus.
 \end_layout
 
 \begin_layout Description
 Epimethus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3047,17 +3238,18 @@ Epimethus
 \end_inset
 
  Epimetheus occupies essentially the same orbit as the moon Janus.
- There are several Epimethean craters larger than 30 km in diameter, as
- well as both large and small ridges and grooves.
+ There are several Epimethean craters larger than 30 km in diameter,
+ as well as both large and small ridges and grooves.
  The extensive cratering indicates that Epimetheus must be quite old.
- Janus and Epimetheus may have formed from a disruption of a single parent
- to form co-orbital satellites, but if this is the case the disruption must
- have happened early in the history of the satellite system.
+ Janus and Epimetheus may have formed from a disruption of a single parent to form co-orbital satellites,
+ but if this is the case the disruption must have happened early in the history of the satellite system.
 \end_layout
 
 \begin_layout Description
 Janus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3067,15 +3259,15 @@ Janus
 \end_inset
 
  Janus's orbit is co-orbital with that of Epimetheus.
- Janus is extensively cratered with several craters larger than 30 km, but
- has few linear features.
- Janus's surface appears to be older than Prometheus's but younger than
- Pandora's.
+ Janus is extensively cratered with several craters larger than 30 km,
+ but has few linear features.
+ Janus's surface appears to be older than Prometheus's but younger than Pandora's.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3123,6 +3315,8 @@ status collapsed
 \begin_layout Description
 Mimas
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3131,21 +3325,24 @@ Mimas
 
 \end_inset
 
- With a diameter of 396 kilometres, Mimas is the smallest astronomical body
- that is known to still be rounded in shape because of self-gravitation.
- The low density indicates that it is composed mostly of water ice with
- only a small amount of rock.
- Due to the tidal forces acting on it, Mimas is noticeably prolate; its
- longest axis is about 10% longer than the shortest.
+ With a diameter of 396 kilometres,
+ Mimas is the smallest astronomical body that is known to still be rounded in shape because of self-gravitation.
+ The low density indicates that it is composed mostly of water ice with only a small amount of rock.
+ Due to the tidal forces acting on it,
+ Mimas is noticeably prolate;
+ its longest axis is about 10% longer than the shortest.
  Mimas's most distinctive feature is a giant impact crater 130 km across,
- named Herschel, with diameter almost a third of Mimas's own diameter.
- The Mimantean surface is saturated with smaller impact craters, but no
- others are anywhere near the size of Herschel.
+ named Herschel,
+ with diameter almost a third of Mimas's own diameter.
+ The Mimantean surface is saturated with smaller impact craters,
+ but no others are anywhere near the size of Herschel.
 \end_layout
 
 \begin_layout Description
 Enceladus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3155,21 +3352,25 @@ Enceladus
 \end_inset
 
  Enceladus is about 500 kilometers in diameter.
- It is mostly covered by fresh, clean ice, making it one of the most reflective
- bodies of the Solar System.
- Geyser observations, along with the finding of escaping internal heat and
- very few impact craters in the south polar region, show that Enceladus
- is currently geologically active.
- Its resonance with Dione excites its orbital eccentricity, which is damped
- by tidal forces, tidally heating its interior and driving the geological
- activity.
- Plumes from Enceladus, which are similar in composition to comets, have
- been shown to be the source of the material in Saturn's E ring.
+ It is mostly covered by fresh,
+ clean ice,
+ making it one of the most reflective bodies of the Solar System.
+ Geyser observations,
+ along with the finding of escaping internal heat and very few impact craters in the south polar region,
+ show that Enceladus is currently geologically active.
+ Its resonance with Dione excites its orbital eccentricity,
+ which is damped by tidal forces,
+ tidally heating its interior and driving the geological activity.
+ Plumes from Enceladus,
+ which are similar in composition to comets,
+ have been shown to be the source of the material in Saturn's E ring.
 \end_layout
 
 \begin_layout Description
 Tethys
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3179,13 +3380,18 @@ Tethys
 \end_inset
 
  Tethys is a mid-sized moon of Saturn about 1,060 km across.
- It has the lowest density of all the major moons in the Solar System, indicatin
-g that it is made of water ice with just a small fraction of rock.
+ It has the lowest density of all the major moons in the Solar System,
+ indicating that it is made of water ice with just a small fraction of rock.
  The surface of Tethys is very bright and neutral in color.
  Tethys is heavily cratered and cut by a number of large faults/graben.
- The largest impact crater, Odysseus, is about 400 km in diameter, whereas
- the largest graben, Ithaca Chasma, is more than 2000 km long.
- Tethys has two small co-orbital moons, 
+ The largest impact crater,
+ Odysseus,
+ is about 400 km in diameter,
+ whereas the largest graben,
+ Ithaca Chasma,
+ is more than 2000 km long.
+ Tethys has two small co-orbital moons,
+ 
 \series bold
 Telesto
 \series default
@@ -3199,6 +3405,8 @@ Calypso
 \begin_layout Description
 Dione
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3207,16 +3415,20 @@ Dione
 
 \end_inset
 
- At 1122 km in diameter, Dione is the 15th largest moon in the Solar System.
- About two thirds of Dione's mass is water ice, and the remaining is a dense
- core.
- Dione orbits Saturn with a semimajor axis about 2% less than that of the
- Moon.
- However, reflecting Saturn's greater mass, Dione's orbital period is one
- tenth that of the Moon.
+ At 1122 km in diameter,
+ Dione is the 15th largest moon in the Solar System.
+ About two thirds of Dione's mass is water ice,
+ and the remaining is a dense core.
+ Dione orbits Saturn with a semimajor axis about 2% less than that of the Moon.
+ However,
+ reflecting Saturn's greater mass,
+ Dione's orbital period is one tenth that of the Moon.
  Dione is currently in a 1:2 mean-motion orbital resonance with moon Enceladus,
  completing one orbit of Saturn for every two orbits completed by Enceladus.
- Dione has two small co-orbital, or trojan, moons, 
+ Dione has two small co-orbital,
+ or trojan,
+ moons,
+ 
 \series bold
 Helene
 \series default
@@ -3226,8 +3438,8 @@ Polydeuces
 \series default
 .
  They are located within Dione's Lagrangian points L4 and L5 respectively.
- Helene is by far the largest trojan moon, while Polydeuces is the smallest
- and has the most chaotic orbit.
+ Helene is by far the largest trojan moon,
+ while Polydeuces is the smallest and has the most chaotic orbit.
 \end_layout
 
 \begin_layout Subsection
@@ -3249,6 +3461,8 @@ These moons all orbit beyond the E Ring.
 \begin_layout Description
 Rhea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3257,20 +3471,25 @@ Rhea
 
 \end_inset
 
- One of the frontiers of human civilization, Rhea is only just large enough
- for a colony, and primarily composed of water, ice, and rock.
- The only thing the moon has to offer the rest of the system is Helium-3
- deposits, and some small mineral mining operations.
- Rhea’s several small underground habitats provide all the living space
- required for its population, mostly comprised of miners and workers in
- the Helium-3 refineries.
- Most of their food must be imported from Titan, increasing costs, and mineral
- and Helium-3 exports do not bring much money into the local economy.
+ One of the frontiers of human civilization,
+ Rhea is only just large enough for a colony,
+ and primarily composed of water,
+ ice,
+ and rock.
+ The only thing the moon has to offer the rest of the system is Helium-3 deposits,
+ and some small mineral mining operations.
+ Rhea’s several small underground habitats provide all the living space required for its population,
+ mostly comprised of miners and workers in the Helium-3 refineries.
+ Most of their food must be imported from Titan,
+ increasing costs,
+ and mineral and Helium-3 exports do not bring much money into the local economy.
 \end_layout
 
 \begin_layout Description
 Phoebe
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3279,18 +3498,21 @@ Phoebe
 
 \end_inset
 
- In the early days of Phoebe’s colonization, the story was that a science
- station was established there by Mars in collaboration with the Protogen
- corporation to study early solar system formation and Oort cloud objects.
- Study of the moon suggested, from its unique, eccentric, retrograde orbit
- and unusual albedo, that it might have been a captured comet or Kuiper
- Belt object.
- Now, it’s nothing more than dust.
+ In the early days of Phoebe’s colonization,
+ the story was that a science station was established there by Mars in collaboration with the Protogen corporation to study early solar system formation and Oort cloud objects.
+ Study of the moon suggested,
+ from its unique,
+ eccentric,
+ retrograde orbit and unusual albedo,
+ that it might have been a captured comet or Kuiper Belt object.
+ Now,
+ it’s nothing more than dust.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3338,6 +3560,8 @@ status collapsed
 \begin_layout Description
 Titan
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3346,21 +3570,18 @@ Titan
 
 \end_inset
 
- The most populous moon in the system has a thick cloud cover that generates
- strange and beautiful solar wind displays as the moon moves in and out
- of Saturn’s powerful magnetic field.
- Titan is also the most chemically active body in the solar system, aside
- from Earth.
- Both the atmosphere and icy surface of the moon are filled with organic
- compounds not found anywhere else.
- Easy access to ice suitable for oxygen and water production and a lack
- of available sunlight have put Titan on the forefront of sunlight-free
- food production.
+ The most populous moon in the system has a thick cloud cover that generates strange and beautiful solar wind displays as the moon moves in and out of Saturn’s powerful magnetic field.
+ Titan is also the most chemically active body in the solar system,
+ aside from Earth.
+ Both the atmosphere and icy surface of the moon are filled with organic compounds not found anywhere else.
+ Easy access to ice suitable for oxygen and water production and a lack of available sunlight have put Titan on the forefront of sunlight-free food production.
 \end_layout
 
 \begin_layout Description
 Hyperion
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3371,18 +3592,21 @@ Hyperion
 
  Hyperion is Titan's nearest neighbor in the Saturn system.
  The two moons are locked in a 4:3 mean-motion resonance with each other,
- meaning that while Titan makes four revolutions around Saturn, Hyperion
- makes exactly three.
- With an average diameter of about 270 km, Hyperion is smaller and lighter
- than Mimas.
- It has an extremely irregular shape, and a very odd, tan-colored icy surface
- resembling a sponge.
+ meaning that while Titan makes four revolutions around Saturn,
+ Hyperion makes exactly three.
+ With an average diameter of about 270 km,
+ Hyperion is smaller and lighter than Mimas.
+ It has an extremely irregular shape,
+ and a very odd,
+ tan-colored icy surface resembling a sponge.
  It was the first non-round moon to be discovered.
 \end_layout
 
 \begin_layout Description
 Iapetus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3391,23 +3615,22 @@ Iapetus
 
 \end_inset
 
- The moon is primarily known for its leading and trailing hemispheres being
- radically different.
- The albedo of most of the leading hemisphere is as dark as lampblack, while
- the trailing hemisphere’s albedo is as bright as Europa.
- The ‘dark’ side of Iapetus is covered in minerals ready for harvesting
- right there on the surface.
- The colonists have built special mechs that make regular runs to sweep
- the surface for these materials for export and sale off-moon.
+ The moon is primarily known for its leading and trailing hemispheres being radically different.
+ The albedo of most of the leading hemisphere is as dark as lampblack,
+ while the trailing hemisphere’s albedo is as bright as Europa.
+ The ‘dark’ side of Iapetus is covered in minerals ready for harvesting right there on the surface.
+ The colonists have built special mechs that make regular runs to sweep the surface for these materials for export and sale off-moon.
 \end_layout
 
 \begin_layout Standard
-Travel times within Cronian system are quite short, usually just few hours.
+Travel times within Cronian system are quite short,
+ usually just few hours.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3455,6 +3678,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3531,16 +3755,17 @@ name "sec:Outer-System-1"
 \end_layout
 
 \begin_layout Standard
-The outer system map shows positions of notable objects beyond the orbit
- of Jupiter.
+The outer system map shows positions of notable objects beyond the orbit of Jupiter.
  These include some centaurs and the nearest Kuiper Belt objects.
- Earth, Mars and Ceres are included for the reference.
+ Earth,
+ Mars and Ceres are included for the reference.
  Future orbit positions are displayed at one year intervals.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3589,13 +3814,15 @@ status collapsed
 Travel beyond the Saturn orbit used to be quite rare.
  There is a small colony in the Uranian moon Titania.
  Neptunian moon Triton has an astronomy lab and mining research station.
- No human has ever ventured to Kuiper Belt, but several automated probes
- have charted it.
+ No human has ever ventured to Kuiper Belt,
+ but several automated probes have charted it.
 \end_layout
 
 \begin_layout Subsection
 The Sol Gate
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3606,6 +3833,8 @@ Ring
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3618,17 +3847,18 @@ Sol Gate
 \end_layout
 
 \begin_layout Standard
-The Sol Gate, also known as Sol Ring or simply "the Ring", is a ring-shaped
- megastructure with a rough diameter of 1000 km; it is in a stationary position
- roughly 2 AU outside the orbit of Uranus.
+The Sol Gate,
+ also known as Sol Ring or simply "the Ring",
+ is a ring-shaped megastructure with a rough diameter of 1000 km;
+ it is in a stationary position roughly 2 AU outside the orbit of Uranus.
  It was created by the protomolecule out of the remnants of Eros Station,
- having departed Venus after incubating in Eros' impact crater for some
- time.
+ having departed Venus after incubating in Eros' impact crater for some time.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -3673,19 +3903,19 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-The Ring is a wormhole gate, existing as a part of an ancient network built
- by an alien civilization many billions of years ago.
- It connects the Sol system to this intragalactic network and to some 1,372
- other systems in the galaxy — many of them with habitable planets — thus
- bringing humanity the newfound abilities of interstellar travel and colonizatio
-n.
- The Ring is among the most highly contested structures in the Sol system
- given its immense strategic and economic potential.
+The Ring is a wormhole gate,
+ existing as a part of an ancient network built by an alien civilization many billions of years ago.
+ It connects the Sol system to this intragalactic network and to some 1,372 other systems in the galaxy —
+ many of them with habitable planets —
+ thus bringing humanity the newfound abilities of interstellar travel and colonization.
+ The Ring is among the most highly contested structures in the Sol system given its immense strategic and economic potential.
 \end_layout
 
 \begin_layout Subsubsection
 Medina Station
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3698,18 +3928,17 @@ Medina
 \end_layout
 
 \begin_layout Standard
-The LDSS Nauvoo, later known as OPAS Behemoth and then Medina Station, is
- a generation ship constructed at Tycho Station.
- Cylindrical in shape, it measured just over two kilometers long and half
- a kilometer wide.
- Four Donnager-class battleships would fit in her belly and not touch the
- walls.
+The LDSS Nauvoo,
+ later known as OPAS Behemoth and then Medina Station,
+ is a generation ship constructed at Tycho Station.
+ Cylindrical in shape,
+ it measured just over two kilometers long and half a kilometer wide.
+ Four Donnager-class battleships would fit in her belly and not touch the walls.
 \end_layout
 
 \begin_layout Standard
-Following the conclusion of the Free Navy Conflict, Medina Station is taken
- over by the newly established Transport Union to control ship traffic through
- the Ring space.
+Following the conclusion of the Free Navy Conflict,
+ Medina Station is taken over by the newly established Transport Union to control ship traffic through the Ring space.
 \end_layout
 
 \begin_layout Standard
@@ -3729,6 +3958,8 @@ name "subsec:Centaurs"
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3741,11 +3972,9 @@ Centaurs
 \end_layout
 
 \begin_layout Standard
-Centaurs are small Solar System bodies with either a perihelion or a semi-major
- axis between those of the outer planets.
- They generally have unstable orbits because they cross or have crossed
- the orbits of one or more of the giant planets; almost all their orbits
- have dynamic lifetimes of only a few million years.
+Centaurs are small Solar System bodies with either a perihelion or a semi-major axis between those of the outer planets.
+ They generally have unstable orbits because they cross or have crossed the orbits of one or more of the giant planets;
+ almost all their orbits have dynamic lifetimes of only a few million years.
  Centaurs typically behave with characteristics of both asteroids and comets.
 \end_layout
 
@@ -3756,6 +3985,8 @@ Centaurs are small Solar System bodies with either a perihelion or a semi-major
 
 Hidalgo
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3765,10 +3996,8 @@ Hidalgo
 \end_inset
 
  The first member of centaurs ever to be discovered.
- The dark D-type object has a rotation period of 10.1 hours and an elongated
- shape with mean diameter of 52 kilometers.
- Its cometary-like orbit takes it to the inner edge of the Asteroid Belt
- and as far out as to the orbit of Saturn.
+ The dark D-type object has a rotation period of 10.1 hours and an elongated shape with mean diameter of 52 kilometers.
+ Its cometary-like orbit takes it to the inner edge of the Asteroid Belt and as far out as to the orbit of Saturn.
 \end_layout
 
 \begin_layout Description
@@ -3778,6 +4007,8 @@ Hidalgo
 
 Chiron
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3786,11 +4017,11 @@ Chiron
 
 \end_inset
 
- Although Chiron was initially called an asteroid and classified only as
- a minor planet, it was later found to exhibit behavior typical of a comet.
+ Although Chiron was initially called an asteroid and classified only as a minor planet,
+ it was later found to exhibit behavior typical of a comet.
  Now it is classified as both a minor planet and a comet.
- Chiron's orbit is highly eccentric (0.37), with perihelion just inside the
- orbit of Saturn and aphelion just outside the perihelion of Uranus.
+ Chiron's orbit is highly eccentric (0.37),
+ with perihelion just inside the orbit of Saturn and aphelion just outside the perihelion of Uranus.
  Its diameter is 200 kilometers.
 \end_layout
 
@@ -3801,6 +4032,8 @@ Chiron
 
 Pholus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3809,10 +4042,10 @@ Pholus
 
 \end_inset
 
- An eccentric centaur in the outer Solar System, 180 kilometers in diameter,
+ An eccentric centaur in the outer Solar System,
+ 180 kilometers in diameter,
  that crosses the orbit of both Saturn and Neptune.
- The very reddish object has an elongated shape and a rotation period of
- 9.98 hours.
+ The very reddish object has an elongated shape and a rotation period of 9.98 hours.
  It was the second centaur to be discovered.
 \end_layout
 
@@ -3823,6 +4056,8 @@ Pholus
 
 Nessus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3831,10 +4066,9 @@ Nessus
 
 \end_inset
 
- A centaur on an eccentric orbit, located beyond Saturn in the outer Solar
- System.
- The dark and reddish minor planet is elongated and measures 60 kilometers
- in diameter.
+ A centaur on an eccentric orbit,
+ located beyond Saturn in the outer Solar System.
+ The dark and reddish minor planet is elongated and measures 60 kilometers in diameter.
  It has a relatively long orbital half-life of about 4.9 million years.
 \end_layout
 
@@ -3845,6 +4079,8 @@ Nessus
 
 Asbolus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3853,10 +4089,9 @@ Asbolus
 
 \end_inset
 
- A centaur orbiting in the outer Solar System between the orbits of Jupiter
- and Neptune.
- It measures 80 kilometers in diameter and has a fresh impact crater on
- its surface, less than 10 million years old.
+ A centaur orbiting in the outer Solar System between the orbits of Jupiter and Neptune.
+ It measures 80 kilometers in diameter and has a fresh impact crater on its surface,
+ less than 10 million years old.
 \end_layout
 
 \begin_layout Description
@@ -3866,6 +4101,8 @@ Asbolus
 
 Chariklo
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3875,9 +4112,9 @@ Chariklo
 \end_inset
 
  The largest centaur with a diameter of 232 km.
- It orbits the Sun between Saturn and Uranus, grazing the orbit of Uranus.
- Chariklo has two ice rings (named Oiapoque and Chuí) with radii 396 and
- 405 km and widths of about 7 km and 3.5 km respectively.
+ It orbits the Sun between Saturn and Uranus,
+ grazing the orbit of Uranus.
+ Chariklo has two ice rings (named Oiapoque and Chuí) with radii 396 and 405 km and widths of about 7 km and 3.5 km respectively.
 \end_layout
 
 \begin_layout Description
@@ -3887,6 +4124,8 @@ Chariklo
 
 Hylonome
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3896,10 +4135,10 @@ Hylonome
 \end_inset
 
  A minor planet orbiting in the outer Solar System.
- The dark and icy body belongs to the class of centaurs and measures approximate
-ly 75 kilometers in diameter.
- It is a Neptune-crosser, and an outer-grazer of the orbit of Uranus, which
- it hence does not cross.
+ The dark and icy body belongs to the class of centaurs and measures approximately 75 kilometers in diameter.
+ It is a Neptune-crosser,
+ and an outer-grazer of the orbit of Uranus,
+ which it hence does not cross.
 \end_layout
 
 \begin_layout Subsection
@@ -3912,6 +4151,8 @@ name "subsec:Kuiper-Belt"
 
 
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3924,15 +4165,18 @@ Kuiper Belt
 \end_layout
 
 \begin_layout Standard
-The Kuiper belt is a circumstellar disc in the outer Solar System, extending
- from the orbit of Neptune at 30 AU to approximately 50 AU from the Sun.
- It is similar to the asteroid belt, but is far larger — 20 times as wide
- and 20 – 200 times as massive.
- Like the asteroid belt, it consists mainly of small bodies or remnants
- from when the Solar System formed.
- While many asteroids are composed primarily of rock and metal, most Kuiper
- belt objects are composed largely of frozen volatiles, such as methane,
- ammonia, and water.
+The Kuiper belt is a circumstellar disc in the outer Solar System,
+ extending from the orbit of Neptune at 30 AU to approximately 50 AU from the Sun.
+ It is similar to the asteroid belt,
+ but is far larger —
+ 20 times as wide and 20 – 200 times as massive.
+ Like the asteroid belt,
+ it consists mainly of small bodies or remnants from when the Solar System formed.
+ While many asteroids are composed primarily of rock and metal,
+ most Kuiper belt objects are composed largely of frozen volatiles,
+ such as methane,
+ ammonia,
+ and water.
 \end_layout
 
 \begin_layout Description
@@ -3942,6 +4186,8 @@ The Kuiper belt is a circumstellar disc in the outer Solar System, extending
 
 Pluto
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3950,13 +4196,14 @@ Pluto
 
 \end_inset
 
- Pluto is the ninth-largest and tenth-most-massive known object to directly
- orbit the Sun.
- It is the largest known trans-Neptunian object by volume, by a small margin,
+ Pluto is the ninth-largest and tenth-most-massive known object to directly orbit the Sun.
+ It is the largest known trans-Neptunian object by volume,
+ by a small margin,
  but is slightly less massive than Eris.
- Like other Kuiper belt objects, Pluto is made primarily of ice and rock
- and is much smaller than the inner planets.
- Pluto has only one sixth the mass of Earth's moon, and one third its volume.
+ Like other Kuiper belt objects,
+ Pluto is made primarily of ice and rock and is much smaller than the inner planets.
+ Pluto has only one sixth the mass of Earth's moon,
+ and one third its volume.
 \end_layout
 
 \begin_layout Description
@@ -3966,6 +4213,8 @@ Pluto
 
 Haumea
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3974,8 +4223,9 @@ Haumea
 
 \end_inset
 
- Haumea is the third-largest known trans-Neptunian object, after Eris and
- Pluto, and approximately the size of Uranus's moon Titania.
+ Haumea is the third-largest known trans-Neptunian object,
+ after Eris and Pluto,
+ and approximately the size of Uranus's moon Titania.
 \end_layout
 
 \begin_layout Description
@@ -3985,6 +4235,8 @@ Haumea
 
 Makemake
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -3993,12 +4245,15 @@ Makemake
 
 \end_inset
 
- Makemake is the second-largest of what are known as the classical population
- of Kuiper belt objects, with a diameter approximately that of Saturn's
- moon Iapetus, or 60% that of Pluto.
+ Makemake is the second-largest of what are known as the classical population of Kuiper belt objects,
+ with a diameter approximately that of Saturn's moon Iapetus,
+ or 60% that of Pluto.
  It has one known satellite.
- Its extremely low average temperature, about −230 °C, means its surface
- is covered with methane, ethane, and possibly nitrogen ices.
+ Its extremely low average temperature,
+ about −230 °C,
+ means its surface is covered with methane,
+ ethane,
+ and possibly nitrogen ices.
 \end_layout
 
 \begin_layout Description
@@ -4008,6 +4263,8 @@ Makemake
 
 Quaoar
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -4016,12 +4273,12 @@ Quaoar
 
 \end_inset
 
- Quaoar measures approximately 1,110 km in diameter, about the size of Saturn's
- moon Dione or half the size of Pluto.
- Signs of water ice on the surface of Quaoar have been found, which suggests
- that cryovolcanism may be occurring on Quaoar.
- A small amount of methane is present on its surface, which can only be
- retained by the largest Kuiper belt objects.
+ Quaoar measures approximately 1,110 km in diameter,
+ about the size of Saturn's moon Dione or half the size of Pluto.
+ Signs of water ice on the surface of Quaoar have been found,
+ which suggests that cryovolcanism may be occurring on Quaoar.
+ A small amount of methane is present on its surface,
+ which can only be retained by the largest Kuiper belt objects.
 \end_layout
 
 \begin_layout Description
@@ -4031,6 +4288,8 @@ Quaoar
 
 Orcus
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -4039,12 +4298,12 @@ Orcus
 
 \end_inset
 
- Orcus has a diameter of 870 to 960 km, the size of or somewhat smaller
- than the asteroid Ceres.
+ Orcus has a diameter of 870 to 960 km,
+ the size of or somewhat smaller than the asteroid Ceres.
  The surface of Orcus is relatively bright with albedo reaching 23 percent,
  neutral in color and rich in water ice.
- The ice is predominantly in crystalline form, which may be related to past
- cryovolcanic activity.
+ The ice is predominantly in crystalline form,
+ which may be related to past cryovolcanic activity.
  Other compounds like methane or ammonia may also be present on its surface.
  
 \end_layout
@@ -4056,6 +4315,8 @@ Orcus
 
 Arrokoth
 \begin_inset Index idx
+range none
+pageformat default
 status collapsed
 
 \begin_layout Plain Layout
@@ -4064,11 +4325,11 @@ Arrokoth
 
 \end_inset
 
- Arrokoth is a contact binary 36 km long, composed of two planetesimals
- 21 and 15 km across, that are joined along their major axes.
- With an orbital period of about 298 years and a low orbital inclination
- and eccentricity, Arrokoth is classified as a cold classical Kuiper belt
- object.
+ Arrokoth is a contact binary 36 km long,
+ composed of two planetesimals 21 and 15 km across,
+ that are joined along their major axes.
+ With an orbital period of about 298 years and a low orbital inclination and eccentricity,
+ Arrokoth is classified as a cold classical Kuiper belt object.
 \end_layout
 
 \begin_layout Standard
@@ -4086,23 +4347,23 @@ Communication and Travel Times
 One of the few true constants in the universe remains the speed of light.
  Whether communications are sent as radio waves or on the laser of a tightbeam,
  they travel 300,000 kilometers per second.
- Often a message can be slowed while the receiver waits for redundant copies
- of lost packets of data to arrive, or for a message to work its way to
- the top of the queue at a tightbeam relay station and get passed along
- on the next stage of its journey.
- Worse, a distance of 15 light minutes between Earth and Ceres doesn’t mean
- it takes 15 minutes to establish a connection: it means it takes 15 minutes
- for the first part of the message to travel the distance (“How are you?”),
- then another 15 minutes for the reply to return (“I’m fine, thanks.”).
+ Often a message can be slowed while the receiver waits for redundant copies of lost packets of data to arrive,
+ or for a message to work its way to the top of the queue at a tightbeam relay station and get passed along on the next stage of its journey.
+ Worse,
+ a distance of 15 light minutes between Earth and Ceres doesn’t mean it takes 15 minutes to establish a connection:
+ it means it takes 15 minutes for the first part of the message to travel the distance (“How are you?”),
+ then another 15 minutes for the reply to return (“I’m fine,
+ thanks.”).
  Conversations of alternating messages can take hours or days to complete.
- Because of this, most transmitted conversations are sent as recorded messages
- rather than attempting a live conversation, unless the light-speed delay
- is only a few seconds.
+ Because of this,
+ most transmitted conversations are sent as recorded messages rather than attempting a live conversation,
+ unless the light-speed delay is only a few seconds.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4148,13 +4409,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-Jovian system outer moons are quite far away and communication delays between
- them are significant.
+Jovian system outer moons are quite far away and communication delays between them are significant.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4201,7 +4462,9 @@ status collapsed
 
 \begin_layout Standard
 Delay between Earth and Moon is about 1.3 seconds.
- Likewise, in Saturn's inner system, delays are always within 2 seconds.
+ Likewise,
+ in Saturn's inner system,
+ delays are always within 2 seconds.
  Delay between outmost Iapetus and inner Saturn system is less than 15 seconds.
 \end_layout
 
@@ -4210,18 +4473,19 @@ Travel Times
 \end_layout
 
 \begin_layout Standard
-Because the Epstein Drive removed Δv limitations to space travel, ships
- no longer needed to execute Hohmann transfers to maneuver between bodies.
- To transfer, ships can simply burn prograde at a constant rate, then flip
- around and decelerate by burning retrograde.
- This maneuver is called a Brachistochrone trajectory, from the Greek meaning
- “shortest time.” A course using this maneuver tends to be curved as it uses
- the sun’s gravity to increase the ship’s acceleration.
+Because the Epstein Drive removed Δv limitations to space travel,
+ ships no longer needed to execute Hohmann transfers to maneuver between bodies.
+ To transfer,
+ ships can simply burn prograde at a constant rate,
+ then flip around and decelerate by burning retrograde.
+ This maneuver is called a Brachistochrone trajectory,
+ from the Greek meaning “shortest time.” A course using this maneuver tends to be curved as it uses the sun’s gravity to increase the ship’s acceleration.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4242,40 +4506,39 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-The time it takes to execute a flight path along a Brachistochrone trajectory
- depends on two factors: the distance between the two points, and the accelerati
-on of the ship.
- The greater the acceleration, the less time it takes to travel, but the
- multiple g-forces created by these “hard burns” are extremely stressful
- on the human body.
+The time it takes to execute a flight path along a Brachistochrone trajectory depends on two factors:
+ the distance between the two points,
+ and the acceleration of the ship.
+ The greater the acceleration,
+ the less time it takes to travel,
+ but the multiple g-forces created by these “hard burns” are extremely stressful on the human body.
  Crash couches and pharmaceutical cocktails like “the juice” alleviate some,
- but not all, of the damage inflicted by the hardest burns.
+ but not all,
+ of the damage inflicted by the hardest burns.
 \end_layout
 
 \begin_layout Standard
-Following tables show the time to travel the average distance between the
- two locations at an average acceleration of 0.3g, 0.5g and 1.0g, presented
- as total required travel time under acceleration without any of the necessary
- breaks taken into consideration.
- The first acceleration is belter standard, the second one is tolerable
- for belters and the third is suitable for earthers.
+Following tables show the time to travel the average distance between the two locations at an average acceleration of 0.3g,
+ 0.5g and 1.0g,
+ presented as total required travel time under acceleration without any of the necessary breaks taken into consideration.
+ The first acceleration is belter standard,
+ the second one is tolerable for belters and the third is suitable for earthers.
 \end_layout
 
 \begin_layout Standard
 Note that the actual travel times will be somewhat longer.
- Spaceport bureaucracy and technicalities with other travel regulations
- usually need at least one hour at both ends of the journey.
+ Spaceport bureaucracy and technicalities with other travel regulations usually need at least one hour at both ends of the journey.
 \end_layout
 
 \begin_layout Standard
 The last table starts and ends the journey with an acceleration boost.
- The central part of the journey uses normal 0.5g acceleration and flip at
- the middle.
+ The central part of the journey uses normal 0.5g acceleration and flip at the middle.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4323,6 +4586,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4370,6 +4634,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4417,6 +4682,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
