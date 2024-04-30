@@ -134,6 +134,6 @@ Added Sol Gate to the outer system map.
 
 Removed Venus and added Sol Gate to travel and communication time tables
 
-## 2024-04-12
+## 2024-04-30
 
 Updated documents to LyX 2.4

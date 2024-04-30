@@ -10,7 +10,7 @@
 >
 > -- <https://twitter.com/Nfarmerlinguist/status/692757569236959232>
 
-Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2357 locations. For background and examples, see: [background.md](background.md)
+This is a Solar System object location calculation and map creation for The Expanse role-playing game. Program uses real orbit data from NASA, but not real year 2357 locations. For background and examples, see: [background.md](background.md)
 
 Latest changes can be found from [CHANGELOG.md](CHANGELOG.md)
 
@@ -40,8 +40,8 @@ Instructions for Windows users not familiar with Python or GitHub:
 	- pip install spktype21
 	- pip install matplotlib
 - Download kuxaku repository zip-package:
-	- top-right green button with text "Clone or download"
-	- Select download ZIP, currently about 160MB, includes orbit data
+	- Creen button with text "Code"
+	- Select download ZIP, currently about 170MB, includes orbit data
 - Extract downloaded package kuxaku-master.zip
 
 ## Running Program
@@ -65,7 +65,7 @@ There are some command line options:
 	  -h, --help     show this help message and exit
 	  -p, --printer  printable images with white background
 
-Optional parameters juiceg and juicet define faster acceleration at both ends of the journey. Option -p creates printer-friendly images with white background.
+Optional parameters juiceg and juicet define faster acceleration at both ends of the journey. Option -p creates ink-friendly images for printer with white background.
 
 ### Solar System Maps
 
@@ -79,11 +79,9 @@ Separate Jovian (jovianinner.png) and Cronian (cronianouter.png) maps display ma
 
 Jovian outer system map (jovianouter.png) shows some Jupiter's outer moons with future orbit positions at one week intervals. Cronian inner system map (cronianinner.png) shows Saturnus' rings and inner moons with future orbit positions at one hour intervals
 
-Some objects (notably Eros, Sol Ring and Anderson Station) are currently commented out in the script. These can be turned on by removing the comment character.
-
 ### Communication Delay and Travel Times
 
-Communication delay tables (*delay.png) show one-way communication delay in minutes between the most important locations. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
+Communication delay tables (\*delay.png) show one-way communication delay in minutes between the most important locations. Delay between planet's moons is usually less than 10 seconds. Delay between Earth and Moon is about 1.3 seconds.
 
 Travel time tables (\*travel\*.png) show travel times in days between same locations using 0.3, 0.5g and 1.0g accelerations. The first one (\*travel03.png) is comfortable for belters. Second one (\*travel05.png) is faster and still tolerable for most belters. Third one with full 1g acceleration (\*travel10.png) is suitable only for earthers. There are separate tables for Sol, Jovian and Cronian systems.
 

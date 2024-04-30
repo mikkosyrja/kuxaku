@@ -1,6 +1,6 @@
 # Background
 
-There is a very good reason why every fantasy world should have a map. If in a modern day thriller somebody in Paris says that "Let's go to Tokyo", we all have some idea what that would mean. We know where to head and how much gear to pack. Kind of mental subway map.
+There is a very good reason why every fantasy world should have a map. If in a modern day thriller somebody in Paris says that "Let's go to Tokyo", we all have some general idea what that would mean. We know where to head and how much gear to pack. Kind of mental subway map.
 
 The fantasy world of The Expanse doesn't have a map. Yes, we have familiar names like Mars and Jupiter, but no real information where they are or even how far apart they are. Alex makes a call to Bobbie while flying by Mars. It's a short call because of Rocinante's high speed at that moment. Very cool indeed, but the orbital position of Mars must have been in the route of Rocinante towards outer planets. How convenient.
 
@@ -26,7 +26,7 @@ The most important thing here is that heavenly bodies move predictably during th
 
 ![inner system](images/systeminner.png)
 
-Because, in addition to dates, The Expanse universe lacks lots of other technical details, some improvisation is needed.
+Because, in addition to exact dates, The Expanse universe lacks lots of other technical details, some improvisation is needed.
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for the Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 
