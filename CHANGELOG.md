@@ -132,8 +132,14 @@ Added Sol Gate to the outer system map.
 
 ## 2023-09-01
 
-Removed Venus and added Sol Gate to travel and communication time tables
+Removed Venus and added Sol Gate to travel and communication time tables.
 
 ## 2024-04-30
 
 Updated documents to LyX 2.4
+
+## 2024-08-20
+
+New layout style: red color for all image, table and box borders.
+
+Narrower borders in images and tables.

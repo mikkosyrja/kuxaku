@@ -1,5 +1,5 @@
 \usepackage{colortbl,titlesec,titling,background,fancyhdr}
-\usepackage{enumitem}
+\usepackage{enumitem, caption}
 
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
@@ -10,62 +10,71 @@
 
 \setlength{\extrarowheight}{2pt}
 
-\definecolor{expansecolor}{RGB}{160, 192, 255}
-\definecolor{expanselight}{RGB}{192, 224, 255}
-\definecolor{electricblue}{RGB}{64, 128, 255}
+\definecolor{expanseblue}{RGB}{160, 192, 255}
+\definecolor{expansered}{RGB}{224, 112, 112}
 \definecolor{lightgray}{RGB}{246,246,246}
 
-\newcommand{\rt}{\rowcolor{expanselight}}       % table title bacground
+\newcommand{\rt}{\rowcolor{expansered}}         % table title bacground
 \newcommand{\rc}{\rowcolor{lightgray}}          % table row bacground
 \newcommand{\mi}{\setlength{\parindent}{1em}}   % minipage paragraph indent
 
 \AtBeginDocument{
-	\hypersetup{
-		urlcolor=red,
-		citecolor=blue,
-		linkcolor=blue,
-	}
+  \hypersetup{urlcolor=red, citecolor=blue, linkcolor=blue}
 }
+
+\captionsetup[table]{labelfont=bf,textfont=bf,aboveskip=-2pt,belowskip=0pt}
 
 \titleformat{name=\section}[block]
   {\normalfont\Large\bfseries}{}{0pt}{\colorsection}
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsection}[1]{%
-  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
 
 \titleformat{name=\section,numberless}[block]
   {\normalfont\Large\bfseries}{}{0pt}{\colorsectionnumberless}
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsectionnumberless}[1]{%
-  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
 
 \titleformat{name=\subsection}[block]
   {\normalfont\large\bfseries}{}{0pt}{\colorsubsection}
 \titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsubsection}[1]{%
-  \colorbox{expansecolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
 
 \titleformat{name=\subsection,numberless}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsectionnumberless}
-\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsubsectionnumberless}[1]{%
-  \colorbox{expanselight}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
 
 \titleformat{name=\subsubsection}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsection}
 \titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsubsubsection}[1]{%
-  \colorbox{expanselight}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
-
-% \titleformat{name=\subsubsection}[block]
-%   {\normalfont\normalsize\bfseries}{}{0pt}{}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
 
 \titleformat{name=\subsubsection,numberless}[block]
-  {\normalfont\normalsize\bfseries}{}{0pt}{}
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsectionnumberless}
+\newcommand{\colorsubsubsectionnumberless}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+% paragraph style for box titles
+\titleformat{name=\paragraph}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorparagraph}
+\titlespacing*{\paragraph}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorparagraph}[1]{%
+  \colorbox{expansered}{\parbox{\dimexpr\columnwidth-2\fboxsep}{#1}}}
+
+% subparagraph style for table titles
+\titleformat{name=\subparagraph}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubparagraph}
+\titlespacing*{\subparagraph}{0pt}{0pt}{0pt}
+\newcommand{\colorsubparagraph}[5]{%
+  \colorbox{expansered}{\parbox{\dimexpr\linewidth-2\fboxsep}{#1}}}
 
 \renewcommand\labelenumi{\bfseries\theenumi}
 
-\let\oldquote\quote \renewcommand\quote{\oldquote\small}
+\let\oldquote\quote \renewcommand\quote{\oldquote\small\bfseries}
 
 \usetikzlibrary{calc}
 

@@ -63,8 +63,9 @@ mapdpi = 600
 foreground = 'white'
 background = 'black'
 legendbox = [0.6, 0.6, 0.6]
-framecolor = [0.75, 0.875, 1.0]		# 192, 224, 255
+framecolor = [0.875, 0.4375, 0.4375]    # 224, 112, 112
 ringcolor = [0.1, 0.1, 0.1]
+
 if arguments.printer:
 	foreground = 'black'
 	background = 'white'
@@ -83,10 +84,10 @@ colonycolor = [0.6, 0, 0.6]			# purple
 stationcolor = [1.0, 0.6, 0]		# orange
 asteroidcolor = [0.4, 0.4, 0.4]		# gray
 
-majorfont = 5		# important places
-minorfont = 4		# not so important
-legendfont = 6		# legend texts
-axisfont = 6		# axis texts
+majorfont = 7		# important places
+minorfont = 6		# not so important
+legendfont = 8		# legend texts
+axisfont = 8		# axis texts
 
 # relative sizes
 sunsize = 0.8
@@ -198,6 +199,7 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 	plot.xticks(fontsize = axisfont)
 	plot.yticks(fontsize = axisfont)
 	plot.title(title + ' ' + titledate(), fontsize = 8)
+	plot.subplots_adjust(left=-0.05, right=1.05, top=1.05, bottom=-0.05)
 	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = framecolor, bbox_inches = 'tight')
 
 #
@@ -698,7 +700,7 @@ def commdelay(name, places, distances, unit, system):
 	print('Writing:', outputdir + name + '.png')
 
 	plot.figure(0)
-	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
+	figure, axis = plot.subplots(figsize=(10, 2.5), subplot_kw={'aspect': 'equal'})
 
 	celltext = []
 	for row in range(len(places)):
@@ -739,7 +741,7 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 	print('Writing:', filename)
 
 	plot.figure(0)
-	figure, axis = plot.subplots(figsize=(10, 3), subplot_kw={'aspect': 'equal'})
+	figure, axis = plot.subplots(figsize=(10, 2.5), subplot_kw={'aspect': 'equal'})
 	celltext = []
 	for row in range(len(places)):
 		cellrow = []
