@@ -1,5 +1,5 @@
 \usepackage{colortbl,titlesec,titling,background,fancyhdr}
-\usepackage{enumitem, caption}
+\usepackage{enumitem, caption,tocloft}
 
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
@@ -7,6 +7,8 @@
 \fancyfoot{}
 \addtolength{\headwidth}{1.3pc}
 \fancyfoot[R]{\thepage}
+
+\setlength\cftsubsecnumwidth{2.6em}     % more room for big subsection numbers in toc
 
 \setlength{\extrarowheight}{2pt}
 

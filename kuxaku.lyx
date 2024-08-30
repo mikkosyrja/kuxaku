@@ -8,6 +8,7 @@
 \begin_preamble
 \newfontfamily\protomolecule[Extension=.ttf]{protomolecule}
 
+% this seems to break index hyperlinks
 \usepackage[texindy]{imakeidx} 
 \makeindex[columns=4]
 
@@ -38,6 +39,8 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -3264,6 +3267,32 @@ Janus
  Janus's surface appears to be older than Prometheus's but younger than Pandora's.
 \end_layout
 
+\begin_layout Description
+Mimas
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Mimas
+\end_layout
+
+\end_inset
+
+ With a diameter of 396 kilometres,
+ Mimas is the smallest astronomical body that is known to still be rounded in shape because of self-gravitation.
+ The low density indicates that it is composed mostly of water ice with only a small amount of rock.
+ Due to the tidal forces acting on it,
+ Mimas is noticeably prolate;
+ its longest axis is about 10% longer than the shortest.
+ Mimas's most distinctive feature is a giant impact crater 130 km across,
+ named Herschel,
+ with diameter almost a third of Mimas's own diameter.
+ The Mimantean surface is saturated with smaller impact craters,
+ but no others are anywhere near the size of Herschel.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -3310,32 +3339,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-Mimas
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Mimas
-\end_layout
-
-\end_inset
-
- With a diameter of 396 kilometres,
- Mimas is the smallest astronomical body that is known to still be rounded in shape because of self-gravitation.
- The low density indicates that it is composed mostly of water ice with only a small amount of rock.
- Due to the tidal forces acting on it,
- Mimas is noticeably prolate;
- its longest axis is about 10% longer than the shortest.
- Mimas's most distinctive feature is a giant impact crater 130 km across,
- named Herschel,
- with diameter almost a third of Mimas's own diameter.
- The Mimantean surface is saturated with smaller impact craters,
- but no others are anywhere near the size of Herschel.
 \end_layout
 
 \begin_layout Description
@@ -3483,6 +3486,13 @@ Rhea
  Most of their food must be imported from Titan,
  increasing costs,
  and mineral and Helium-3 exports do not bring much money into the local economy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
