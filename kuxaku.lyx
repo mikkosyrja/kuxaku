@@ -8,9 +8,9 @@
 \begin_preamble
 \newfontfamily\protomolecule[Extension=.ttf]{protomolecule}
 
-% this seems to break index hyperlinks
-\usepackage[texindy]{imakeidx} 
-\makeindex[columns=4]
+\usepackage[imakeidx]{xindex}
+\usepackage{hvindex}
+\makeindex[columns=4,options=--fix_hyperref]	% still breaks links
 
 \usepackage{../kuxaku/kuxaku}
 \end_preamble
@@ -38,7 +38,7 @@
 \default_output_format default
 \output_sync 0
 \bibtex_command default
-\index_command default
+\index_command xindex
 \float_placement class
 \float_alignment class
 \paperfontsize default
@@ -179,6 +179,22 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -193,7 +209,7 @@ Kuxaku
 Here we have notable Solar System bodies and distances between them for communication and travel.
  This is a living document:
  positions of bodies change over the time.
- Effective date can be seen in image and table titles.
+ Effective date can be seen in image and table titles.x
 \end_layout
 
 \begin_layout Subsection*

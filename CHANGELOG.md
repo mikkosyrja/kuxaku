@@ -72,7 +72,7 @@ Used thinner PDF page border line.
 
 Used double line for PDF page border line.
 
-Moved line number to right bottom corner and clipped all other corners.
+Moved page number to right bottom corner and clipped all other corners.
 
 Added darian to gregorian conversion function.
 
@@ -143,3 +143,7 @@ Updated documents to LyX 2.4
 New layout style: red color for all image, table and box borders.
 
 Narrower borders in images and tables.
+
+## 2024-09-12
+
+Used xindex for index generation.
