@@ -59,11 +59,12 @@ systempositions = []	# must be filled in above order
 numpy.set_printoptions(precision=5)
 
 mapdpi = 600
+tabledpi = 300
 
 foreground = 'white'
 background = 'black'
 legendbox = [0.6, 0.6, 0.6]
-framecolor = [0.875, 0.4375, 0.4375]    # 224, 112, 112
+framecolor = [1.0, 0.5, 0.5]    # 255, 128, 128
 ringcolor = [0.1, 0.1, 0.1]
 
 if arguments.printer:
@@ -84,21 +85,22 @@ colonycolor = [0.6, 0, 0.6]			# purple
 stationcolor = [1.0, 0.6, 0]		# orange
 asteroidcolor = [0.4, 0.4, 0.4]		# gray
 
-majorfont = 7		# important places
-minorfont = 6		# not so important
-legendfont = 8		# legend texts
+majorfont = 8		# important places
+minorfont = 7		# not so important
+legendfont = 9		# legend texts
+titlefont = 9		# title text
 axisfont = 8		# axis texts
 
 # relative sizes
-sunsize = 0.8
-planetsize = 0.6
-moonsize = 0.5
-asteroidsize = 0.4
-gasgiantsize = 0.7
-stationsize = 0.3
+sunsize = 0.9
+planetsize = 0.7	# planets and moons are never in the same picture
+moonsize = 0.7
+asteroidsize = 0.5
+gasgiantsize = 0.8
+stationsize = 0.5
 
 orbitdots = 6
-orbitdotsize = 0.04		# in AU
+orbitdotsize = 0.05		# in AU
 
 hortolerance = 0.8		# 20% from the edge horizontally
 vertolerance = 0.95		# 5% from the edge vertically
@@ -196,9 +198,9 @@ def savemap(axis, ausize, title, name, dots, unit = 'AU'):
 	axis.text(xpos, ypos, 'orbit dot = ' + dots + '\naxis units in ' + unit, horizontalalignment = horizontal,
 		verticalalignment = vertical, transform = axis.transAxes, fontsize = legendfont,
 		bbox = dict(boxstyle='round', facecolor = legendbox, edgecolor = 'black', linewidth = 0.7))
-	plot.xticks(fontsize = axisfont)
-	plot.yticks(fontsize = axisfont)
-	plot.title(title + ' ' + titledate(), fontsize = 8)
+	plot.xticks(fontsize = axisfont, fontweight = 'bold')
+	plot.yticks(fontsize = axisfont, fontweight = 'bold')
+	plot.title(title + ' ' + titledate(), fontsize = titlefont, fontweight = 'bold')
 	plot.subplots_adjust(left=-0.05, right=1.05, top=1.05, bottom=-0.05)
 	plot.savefig(outputdir + name, dpi = mapdpi, facecolor = framecolor, bbox_inches = 'tight')
 
@@ -270,6 +272,7 @@ def plotasteroid2(name, id, color = asteroidcolor, size = asteroidsize, months =
 	plotposition(name, pos, color, size * innerscale, innersize, orbit = months, major = (months or major))
 
 
+plotasteroid2("Hades’ Garden", 277, stationcolor, stationsize)		# asteroid elvira
 plotasteroid("Tycho", 1677, stationcolor, stationsize, orbitdots)
 
 plotasteroid("Ceres", 1, colonycolor, asteroidsize, orbitdots)
@@ -294,8 +297,11 @@ plotasteroid("Eugenia", 45)
 plotasteroid("Europa", 52)
 plotasteroid("Cybele", 65)
 plotasteroid("Sylvia", 87)
+plotasteroid("Antiope", 90)
 plotasteroid("Camilla", 107)
 plotasteroid("Kleopatra", 216)
+plotasteroid("Bamberga", 324)
+plotasteroid("Ursula", 375)
 plotasteroid("Davida", 511)
 plotasteroid("Herculina", 532)
 plotasteroid("Achilles", 588)
@@ -304,14 +310,10 @@ plotasteroid("Hektor", 624)
 plotasteroid("Interamnia", 704)
 plotasteroid("Hidalgo", 944)
 plotasteroid("Ganymed", 1036)
-plotasteroid("Amor", 1221)
 plotasteroid("Apollo", 1862)
 plotasteroid("Mentor", 3451)
-plotasteroid("Cruithne", 3753)
 plotasteroid("Eureka", 5261)
 plotasteroid("Itokawa", 25143)
-#plotasteroid("Apophis", 99942)
-plotasteroid("Bennu", 101955)
 plotasteroid("Atira", 163693)
 
 jovian = SPK.open('data/jovian.bsp')
@@ -326,7 +328,7 @@ plotposition("Jupiter", jovian[5,599].compute(julian)[:3] + jupiterbary, planetc
 
 savemap(axis, innersize, 'Inner System', 'systeminner.png', 'month')
 
-plotasteroid("Anderson", 127, stationcolor, stationsize)		# destroyed by earth, asteroid johanna
+plotasteroid("Anderson", 127, stationcolor, stationsize)			# destroyed by earth, asteroid johanna
 
 plotasteroid("Parthenope", 11)
 plotasteroid("Victoria", 12)
@@ -340,7 +342,6 @@ plotasteroid2("Nemausa", 51)
 plotasteroid2("Ausonia", 63)
 plotasteroid("Thisbe", 88)
 plotasteroid2("Julia", 89)
-plotasteroid("Antiope", 90)
 plotasteroid2("Nemesis", 128)
 plotasteroid("Elektra", 130)
 plotasteroid2("Adeona", 145)
@@ -350,17 +351,19 @@ plotasteroid("Nausikaa", 192)
 plotasteroid2("Athamantis", 230)
 plotasteroid("Mathilde", 253)
 plotasteroid("Ida", 243)
-plotasteroid("Bamberga", 324)
 plotasteroid2("Eleonora", 354)
-plotasteroid("Ursula", 375)
 plotasteroid("Eros", 433, colonycolor, asteroidsize)	# destroyed by protomolecule
 plotasteroid("Hungaria", 434)
 plotasteroid("Patientia", 451)
 plotasteroid("Priamus", 884)
 plotasteroid("Agamemnon", 911)
 plotasteroid("Gaspra", 951)
+plotasteroid("Amor", 1221)
+plotasteroid("Cruithne", 3753)
 plotasteroid("Oshima", 5592)
 plotasteroid2("Didymos", 65803)
+plotasteroid("Apophis", 99942)
+plotasteroid("Bennu", 101955)
 plotasteroid("Ryugu", 162173)
 
 savemap(axis, innersize, 'Inner System', 'systeminner_all.png', 'month')
@@ -700,7 +703,7 @@ def commdelay(name, places, distances, unit, system):
 	print('Writing:', outputdir + name + '.png')
 
 	plot.figure(0)
-	figure, axis = plot.subplots(figsize=(10, 2.5), subplot_kw={'aspect': 'equal'})
+	figure, axis = plot.subplots(figsize=(10, 3.4), subplot_kw={'aspect': 'equal'})
 
 	celltext = []
 	for row in range(len(places)):
@@ -717,11 +720,12 @@ def commdelay(name, places, distances, unit, system):
 
 	axis.axis('off')
 	axis.axis('tight')
-	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-	axis.set_title(system + ' Communication Delays in ' + unit + ' ' + titledate())
-	#axis.patch.set_facecolor(background)
-
-	plot.savefig(outputdir + name + '.png', dpi = 300, facecolor = framecolor, bbox_inches = 'tight')
+	axis.set_title(system + ' Communication Delays in ' + unit + ' ' + titledate(), fontweight = 'bold')
+	table = axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+	table.auto_set_font_size(False)
+	table.set_fontsize(12)
+	table.scale(1, 1.4)
+	plot.savefig(outputdir + name + '.png', dpi = tabledpi, facecolor = framecolor, bbox_inches = 'tight')
 
 commdelay('systemdelay', systemplaces, systemdistances, 'Minutes', 'System')
 commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
@@ -731,17 +735,17 @@ commdelay('joviandelay', jovianplaces, joviandistances, 'Seconds', 'Jovian')
 #	travel time
 #
 def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juicet = 0):
-	title = system + ' Travel Times in ' + unit + ' (' + str(cruiseg) + 'g'
+	title = system + ' Travel Times in ' + unit + ' (' + str(cruiseg) + ' g'
 	filename = outputdir + name + '{:02.0f}'.format(cruiseg * 10)
 	if juiceg and juicet:
-		title += ' + ' + str(juiceg) + 'g x ' + str(juicet) + 'h'
+		title += ' + ' + str(juiceg) + ' g x ' + str(juicet) + 'h'
 		filename += '+' + '{:02.0f}'.format(juiceg * 10) + 'x' + '{:02.0f}'.format(juicet * 10)
 	title += ') ' + titledate()
 	filename += '.png'
 	print('Writing:', filename)
 
 	plot.figure(0)
-	figure, axis = plot.subplots(figsize=(10, 2.5), subplot_kw={'aspect': 'equal'})
+	figure, axis = plot.subplots(figsize=(10, 3.4), subplot_kw={'aspect': 'equal'})
 	celltext = []
 	for row in range(len(places)):
 		cellrow = []
@@ -771,10 +775,12 @@ def traveltime(name, places, distances, unit, system, cruiseg, juiceg = 0, juice
 
 	axis.axis('off')
 	axis.axis('tight')
-	axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
-#	axis.patch.set_facecolor(background)
-	axis.set_title(title)
-	plot.savefig(filename, dpi = 300, facecolor = framecolor, edgecolor = framecolor, bbox_inches = 'tight')
+	axis.set_title(title, fontweight = 'bold')
+	table = axis.table(cellText = celltext, rowLabels = places, colLabels = places, loc = 'center')
+	table.auto_set_font_size(False)
+	table.set_fontsize(12)
+	table.scale(1, 1.4)
+	plot.savefig(filename, dpi = tabledpi, facecolor = framecolor, edgecolor = framecolor, bbox_inches = 'tight')
 
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.3)
 traveltime('systemtravel', systemplaces, systemdistances, 'Days', 'System', 0.5)
@@ -785,7 +791,7 @@ if arguments.juiceg and arguments.juicet:
 
 traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 0.3)
 traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 0.5)
-traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 1.0)
+#traveltime('joviantravel', jovianplaces, joviandistances, 'Hours', 'Jovian', 1.0)
 
 traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 'Cronian', 0.3)
 traveltime('croniantravel', cronianplaces, croniandistances, 'Hours', 'Cronian', 0.5)

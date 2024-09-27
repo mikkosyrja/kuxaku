@@ -1,0 +1,124 @@
+\usepackage{colortbl,titlesec,titling,background,fancyhdr}
+\usepackage{enumitem,caption,tocloft}
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+%\fancyhead{}
+\fancyfoot{}
+\addtolength{\headwidth}{1.3pc}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}      % remove horizontal line at the top of pdf
+
+\setlength\cftsubsecnumwidth{2.6em}     % more room for big subsection numbers in toc
+
+\setlength{\extrarowheight}{2pt}
+
+\definecolor{expanseblue}{RGB}{192, 224, 255}
+\definecolor{expansered}{RGB}{255, 128, 128}
+\definecolor{lightgray}{RGB}{246,246,246}
+
+\newcommand{\rt}{\rowcolor{expansered}}         % table title bacground
+\newcommand{\rc}{\rowcolor{lightgray}}          % table row bacground
+\newcommand{\mi}{\setlength{\parindent}{1em}}   % minipage paragraph indent
+
+\AtBeginDocument{
+  \hypersetup{urlcolor=red, citecolor=blue, linkcolor=blue}
+}
+
+\captionsetup[table]{labelfont=bf,textfont=bf,aboveskip=-2pt,belowskip=0pt}
+
+\titleformat{name=\section}[block]
+  {\normalfont\Large\bfseries}{}{0pt}{\colorsection}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsection}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+
+\titleformat{name=\section,numberless}[block]
+  {\normalfont\Large\bfseries}{}{0pt}{\colorsectionnumberless}
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsectionnumberless}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+\titleformat{name=\subsection}[block]
+  {\normalfont\large\bfseries}{}{0pt}{\colorsubsection}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsubsection}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+
+\titleformat{name=\subsection,numberless}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsectionnumberless}
+\newcommand{\colorsubsectionnumberless}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+\titleformat{name=\subsubsection}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsection}
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorsubsubsection}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
+
+\titleformat{name=\subsubsection,numberless}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsectionnumberless}
+\newcommand{\colorsubsubsectionnumberless}[1]{%
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+
+% paragraph style for box titles
+\titleformat{name=\paragraph}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorparagraph}
+\titlespacing*{\paragraph}{0pt}{\baselineskip}{\baselineskip}
+\newcommand{\colorparagraph}[1]{%
+  \colorbox{expansered}{\parbox{\dimexpr\columnwidth-2\fboxsep}{#1}}}
+
+% subparagraph style for table titles
+\titleformat{name=\subparagraph}[block]
+  {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubparagraph}
+\titlespacing*{\subparagraph}{0pt}{0pt}{0pt}
+\newcommand{\colorsubparagraph}[5]{%
+  \colorbox{expansered}{\parbox{\dimexpr\linewidth-2\fboxsep}{#1}}}
+
+\renewcommand\labelenumi{\bfseries\theenumi}
+
+\let\oldquote\quote \renewcommand\quote{\oldquote\small\bfseries}
+
+\usetikzlibrary{calc}
+
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgOpacity{1}
+\SetBgContents{
+  \begin{tikzpicture}[remember picture]
+    \ifodd\value{page}{%
+      \draw[color=blue,double,line width=1pt]
+        ($ (current page.south east) + (-0.0cm,0.8cm) $)--
+        ($ (current page.south west) + (2.0cm,0.8cm) $)--
+        ($ (current page.south west) + (1.5cm,1.3cm) $)--
+        ($ (current page.north west) + (1.5cm,-1.3cm) $)--
+        ($ (current page.north west) + (2.0cm,-0.8cm) $)--
+        ($ (current page.north east) + (-0.5cm,-0.8cm) $)--
+        ($ (current page.north east) + (-0.0cm,-1.3cm) $)--
+        cycle;
+    }\else{%
+      \draw[color=blue,double,line width=1pt]
+        ($ (current page.south west) + (0.0cm,0.8cm) $)--
+        ($ (current page.south east) + (-2.0cm,0.8cm) $)--
+        ($ (current page.south east) + (-1.5cm,1.3cm) $)--
+        ($ (current page.north east) + (-1.5cm,-1.3cm) $)--
+        ($ (current page.north east) + (-2.0cm,-0.8cm) $)--
+        ($ (current page.north west) + (0.5cm,-0.8cm) $)--
+        ($ (current page.north west) + (0.0cm,-1.3cm) $)--
+        cycle;
+    }\fi%
+  \end{tikzpicture}
+}
+
+\pretitle{% add some rules
+  \begin{center}
+    \normalfont\Huge\bfseries
+}
+\posttitle{%
+  \end{center}%
+}
+
+\usepackage{etoolbox}
+
+\BeforeBeginEnvironment{wrapfigure}{\setlength{\intextsep}{10pt}}

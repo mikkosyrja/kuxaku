@@ -142,8 +142,26 @@ Updated documents to LyX 2.4
 
 New layout style: red color for all image, table and box borders.
 
-Narrower borders in images and tables.
+Used narrower borders in images and tables.
 
 ## 2024-09-12
 
 Used xindex for index generation.
+
+## 2024-09-27
+
+Added Snow line description to the Kuxaku document.
+
+Moved Itokawa to near-Earth objects and added some large asteroids.
+
+Added Hades' Garden station to the location of asteroid 277 Elvira.
+
+Changed layout to two-page format for booklet printing.
+
+Changed title colors lighter for paper printing.
+
+Used larger fonts and bigger circle symbols for paper printing.
+
+Used bold fonts for map and table titles for paper printing.
+
+Added initial printing instructions.

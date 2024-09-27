@@ -140,6 +140,17 @@ Just change the OBJECT parameter to asteroid id number (for example, OBJECT=433 
 
 Preloaded files required by the script can be found from the data subdirectory. They all cover real time period between 2020-01-01 and 2030-01-01.
 
+## Printing
+
+The example document is meant to be printed as a booklet to A4 paper. Following procedure is tested in Linux CUPS system with Brother color laser printer:
+
+- Update images with kuxaku.py script.
+- Create A5 PDF document from the original source kuxaku.lyx (tested with XeTeX export).
+- Create printable document with pdfbook2:
+	- pdfbook2 --no-crop --paper=a4paper kuxaku.pdf
+- Print the resulting kuxaku-book.pdf with following option:
+	- Fit to full page.
+
 ## Sources
 
 <https://greenroninstore.com/collections/the-expanse-rpg>
