@@ -165,3 +165,10 @@ Used larger fonts and bigger circle symbols for paper printing.
 Used bold fonts for map and table titles for paper printing.
 
 Added initial printing instructions.
+
+## 2024-11-15
+
+Changed Callisto to Themisto in the travel tables, Callisto was too near to Ganymede.
+
+Removed some outer system objects and added some main belt asteroids.
+

@@ -251,7 +251,7 @@ Gray Other system objetcs.
 
 \begin_layout Standard
 Notable objects have orbit dots displaying their future positions.
- Orbit dot color is is same as the object color.
+ Orbit dot color is the same as the object color.
  Legend info in the map tells the time interval between dots.
  Note that some objets may have retrograde orbits rotating in opposite direction.
 \end_layout
@@ -530,6 +530,7 @@ name "subsec:Mars"
 \begin_layout Standard
 Mars is the fourth planet from the Sun and the second-smallest planet in the Sol System,
  being larger than only Mercury.
+ It has a surface gravity of 0.38 g and a surface area only slightly less than the total area of Earth's dry land.
  The the iron oxide prevalent on Mars's surface gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye.
  Mars is a terrestrial planet with a thin atmosphere,
  with surface features reminiscent of the impact craters of the Moon and the valleys,
@@ -778,6 +779,28 @@ Cruithne
 
 \end_layout
 
+\begin_layout Description
+25143
+\begin_inset space ~
+\end_inset
+
+Itokawa
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Itokawa
+\end_layout
+
+\end_inset
+
+ Itokawa is a sub-kilometer near-Earth object of the Apollo group.
+ The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and measures approximately 330 meters in diameter.
+ It was the first asteroid to be the target of a sample return mission.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -823,28 +846,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Description
-25143
-\begin_inset space ~
-\end_inset
-
-Itokawa
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Itokawa
-\end_layout
-
-\end_inset
-
- Itokawa is a sub-kilometer near-Earth object of the Apollo group.
- The peanut-shaped S-type asteroid has a rotation period of 12.1 hours and measures approximately 330 meters in diameter.
- It was the first asteroid to be the target of a sample return mission.
 \end_layout
 
 \begin_layout Standard
@@ -1045,7 +1046,7 @@ status collapsed
 \uwave off
 \noun off
 \color none
-Hades’ Garden
+Hades’
 \end_layout
 
 \end_inset
@@ -1402,32 +1403,6 @@ Irene
 
 \end_layout
 
-\begin_layout Description
-15
-\begin_inset space ~
-\end_inset
-
-Eunomia
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Eunomia
-\end_layout
-
-\end_inset
-
- The largest of the stony asteroids with mean diameter of 268
-\begin_inset space ~
-\end_inset
-
-km.
- Eunomian family is the most prominent family in the intermediate asteroid belt and the 6th-largest family with nearly six thousand known members,
- or approximately 1.4% of all asteroids in the asteroid Belt.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -1481,6 +1456,32 @@ name "fig:Inner-System"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+15
+\begin_inset space ~
+\end_inset
+
+Eunomia
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Eunomia
+\end_layout
+
+\end_inset
+
+ The largest of the stony asteroids with mean diameter of 268
+\begin_inset space ~
+\end_inset
+
+km.
+ Eunomian family is the most prominent family in the intermediate asteroid belt and the 6th-largest family with nearly six thousand known members,
+ or approximately 1.4% of all asteroids in the asteroid Belt.
 \end_layout
 
 \begin_layout Description
@@ -1596,6 +1597,34 @@ Massalia
  estimated to have been created by an impact 150 to 200 million years ago.
 \end_layout
 
+\begin_layout Description
+21
+\begin_inset space ~
+\end_inset
+
+Lutetia
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Lutetia
+\end_layout
+
+\end_inset
+
+ A large asteroid in the asteroid belt of an unusual spectral type.
+ It measures about 100 kilometers in diameter and is heavily cratered,
+ with the largest impact crater reaching 45
+\begin_inset space ~
+\end_inset
+
+km in diameter.
+ The surface is geologically heterogeneous and is intersected by a system of grooves and scarps.
+ One of the few planetesimals in the Belt.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 placement h
@@ -1644,31 +1673,42 @@ status collapsed
 \end_layout
 
 \begin_layout Description
-21
+22
 \begin_inset space ~
 \end_inset
 
-Lutetia
+Kalliope
 \begin_inset Index idx
 range none
 pageformat default
 status collapsed
 
 \begin_layout Plain Layout
-Lutetia
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Kalliope
 \end_layout
 
 \end_inset
 
- A large asteroid in the asteroid belt of an unusual spectral type.
- It measures about 100 kilometers in diameter and is heavily cratered,
- with the largest impact crater reaching 45
-\begin_inset space ~
-\end_inset
-
-km in diameter.
- The surface is geologically heterogeneous and is intersected by a system of grooves and scarps.
- One of the few planetesimals in the Belt.
+ Kalliope is a large M-type asteroid.
+ Kalliope has one known natural satellite,
+ called Linus.
+ It is quite large – about 28 km in diameter – and would be a sizeable asteroid by itself.
+ It orbits about 1100 km from the center of Kalliope,
+ equivalent to about 13.2 Kalliope radii.
 \end_layout
 
 \begin_layout Description
@@ -1922,6 +1962,44 @@ Camilla
  The X-type asteroid is a rare trinary asteroid with two minor-planet moons.
 \end_layout
 
+\begin_layout Description
+130
+\begin_inset space ~
+\end_inset
+
+Elektra
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Elektra
+\end_layout
+
+\end_inset
+
+ Elektra is a large (about 260 x 200 x 164 kilometers) outer main-belt asteroid and quadruple system with three minor-planet moons.
+ Their sizes are about 6.0,
+ 2.0 and 1,6 kilometres.
+ Given their similar spectra,
+ these satellites are thought to be fragments of Elektra that were created from a disruptive impact.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -1972,27 +2050,122 @@ Kleopatra
  and moons are due to an oblique impact perhaps 100 million years ago.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
+\begin_layout Description
 243
 \begin_inset space ~
 \end_inset
 
-Ida An asteroid in the Koronis family of the asteroid belt.
+Ida
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Ida
+\end_layout
+
+\end_inset
+
+ An asteroid in the Koronis family of the asteroid belt.
  It was the second asteroid visited by a spacecraft and the first found to have a natural satellite.
  Ida's moon Dactyl is only 1.4 kilometres in diameter,
  about 1/20 the size of Ida.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+alignment document
+wide false
+sideways false
+status collapsed
+
 \begin_layout Plain Layout
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "0pt"
+shadowsize "4pt"
+framecolor "blue"
+backgroundcolor "white"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/ida.jpg
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 253
 \begin_inset space ~
 \end_inset
 
-Mathilde An asteroid with a relatively elliptical orbit that requires more than four years to circle the Sun.
+Mathilde
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Mathilde
+\end_layout
+
+\end_inset
+
+ An asteroid with a relatively elliptical orbit that requires more than four years to circle the Sun.
  Nonetheless,
  the orbit lies entirely between the orbits of Mars and Jupiter;
  it does not cross the planetary orbits.
@@ -2001,11 +2174,6 @@ Mathilde An asteroid with a relatively elliptical orbit that requires more than 
  It is a primitive C-type asteroid,
  which means the surface has a high proportion of carbon;
  giving it a dark surface that reflects only 4% of the light that falls on it.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
@@ -2083,6 +2251,44 @@ Ursula
  Ursula is a carbonaceous C-type asteroid.
 \end_layout
 
+\begin_layout Description
+434
+\begin_inset space ~
+\end_inset
+
+Hungaria
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Hungaria
+\end_layout
+
+\end_inset
+
+ Hungaria is a relatively small asteroid orbiting in the inner asteroid belt.
+ It is an E-type (high-albedo) asteroid,
+ It is the namesake of the Hungaria asteroids,
+ which orbit the Sun on the inside of the 1:4 Kirkwood gap,
+ standing out of the core of the asteroid belt.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status collapsed
@@ -2123,7 +2329,7 @@ Davida
 
  One of the ten most-massive asteroids,
  and the 7th-largest asteroid.
- It is approximately 270–310
+ It is 298
 \begin_inset space ~
 \end_inset
 
@@ -2249,7 +2455,7 @@ Interamnia
 
 \end_inset
 
- Large F-type asteroid with an estimated diameter of 350 kilometres.
+ Large F-type asteroid with a diameter of 350 kilometres.
  It is the fifth-most-massive asteroid with a mass estimated to be 1.2% of the mass of the Asteroid Belt.
  Interamnia may represent a transitional body between small solar system bodies and dwarf planets.
 \end_layout
@@ -2268,19 +2474,45 @@ Priamus A large Jupiter trojan from the Trojan camp,
  The dark D-type asteroid is one of the 20 largest Jupiter trojans and has a rotation period of 6.9 hours.
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 951
 \begin_inset space ~
 \end_inset
 
-Gaspra An S-type asteroid that orbits very close to the inner edge of the asteroid belt.
- Gaspra was the first asteroid ever to be closely approached when it was visited by the Galileo spacecraft,
- which flew by on its way to Jupiter on October 1990.
+Gaspra
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Gaspra
 \end_layout
 
 \end_inset
 
-
+ A small S-type asteroid that orbits very close to the inner edge of the asteroid belt.
+ Gaspra's surface lacks unambiguous craters of a size comparable to its radius.
+ A probable reason is that the collision that produced the Flora family and Gaspra was relatively recent on an astronomical timescale.
 \end_layout
 
 \begin_layout Description
@@ -2779,7 +3011,11 @@ g.
  As the only moon with any magnetosphere,
  it’s the only place where dome-grown crops stand a chance in Jupiter’s harsh radiation belt,
  even with heavy shielding on the domes and habitats.
- Ganymede is also unique in its intricate system of orbital mirror stations that shine concentrated sunlight down onto the dome greenhouses that produce vegetables,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ganymede is also unique in its intricate system of orbital mirror stations that shine concentrated sunlight down onto the dome greenhouses that produce vegetables,
  fruits,
  and even some meat.
  The moon’s ice,
@@ -2787,6 +3023,7 @@ g.
  provides all the water necessary for life.
 \end_layout
 
+\end_deeper
 \begin_layout Description
 Callisto
 \begin_inset Index idx
@@ -2806,10 +3043,22 @@ Callisto
  the largest in the Outers.
  Most of the MCRN’s fleet has been built orbiting Callisto,
  where the shipyards are capable of building hulls up to 700 meters in length.
- Callisto is one of the only moons of Jupiter where radioactive minerals are close enough to the surface for easy extraction,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Callisto is one of the only moons of Jupiter where radioactive minerals are close enough to the surface for easy extraction,
  however it hasn’t created a strong economy.
  Mining and shipbuilding are the only sources of revenue,
  and revenue that comes only from Mars.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2830,28 +3079,6 @@ These outer moons are all too small to support a colony,
  used as scientific and mining outposts.
  Note that some of them have retrograde orbits:
  clockwise instead of standard counterclockwise rotation within the Sol System.
-\end_layout
-
-\begin_layout Description
-Themisto
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Themisto
-\end_layout
-
-\end_inset
-
- Themisto's orbit is unusual:
- unlike most of Jupiter's moons,
- which orbit in distinct groups,
- Themisto orbits alone.
- The moon is located midway between the Galilean moons and the first group of prograde irregular moons,
- called the Himalia group.
- It is about 8 kilometers in diameter.
 \end_layout
 
 \begin_layout Standard
@@ -2900,6 +3127,28 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+Themisto
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Themisto
+\end_layout
+
+\end_inset
+
+ Themisto's orbit is unusual:
+ unlike most of Jupiter's moons,
+ which orbit in distinct groups,
+ Themisto orbits alone.
+ The moon is located midway between the Galilean moons and the first group of prograde irregular moons,
+ called the Himalia group.
+ It is about 9 kilometers in diameter.
 \end_layout
 
 \begin_layout Description
@@ -3157,8 +3406,8 @@ Sinope
 \end_layout
 
 \begin_layout Standard
-Distances within Jovian system are vast,
- and while travel times aren't as long as in interplanetary journeys,
+Distances within the Jovian system are vast,
+ and while the travel times aren't as long as in interplanetary journeys,
  they are still quite significant.
 \end_layout
 
@@ -3964,6 +4213,49 @@ Titan
  Easy access to ice suitable for oxygen and water production and a lack of available sunlight have put Titan on the forefront of sunlight-free food production.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Titan is home to more than three dozen dome resorts that offer pampering and exclusive vacations.
+ Each dome is a large resort that occupies a significant amount of space,
+ and due to the environment are all connected by skyways and tunnels.
+\end_layout
+
+\begin_layout Standard
+Teardrop shaped Coulton
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Coulton
+\end_layout
+
+\end_inset
+
+ Station under the Titanian ice used to be a prestige research destination.
+ There were encouraging signs that life might be present,
+ even if it hadn’t been captured for study yet.
+ Then the protomolecule changed the game.
+ While the patents they developed have kept the station funded,
+ the interest in their findings has diminished to a handful of fellow academics.
+\end_layout
+
+\end_deeper
 \begin_layout Description
 Hyperion
 \begin_inset Index idx
@@ -4014,7 +4306,7 @@ Iapetus
 \end_layout
 
 \begin_layout Standard
-Travel times within Cronian system are quite short,
+Travel times within the Cronian system are quite short,
  usually just few hours.
 \end_layout
 
@@ -4048,67 +4340,6 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename output/croniantravel03.png
-	lyxscale 50
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-vspace{-5pt}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-alignment document
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "red"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename output/croniantravel05.png
 	lyxscale 50
 	width 100col%
 
@@ -4375,6 +4606,55 @@ Sol Gate
 \end_layout
 
 \begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement r
+overhang 0in
+width "40col%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-10pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/solgate.jpg
+	width 40col%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-10pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The Sol Gate,
  also known as Sol Ring or simply "the Ring",
  is a ring-shaped megastructure with a rough diameter of 1000
@@ -4392,96 +4672,12 @@ AU outside the orbit of Uranus.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement h
-alignment document
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "0pt"
-shadowsize "4pt"
-framecolor "blue"
-backgroundcolor "white"
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename images/solgate.jpg
-	width 100col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The Ring is a wormhole gate,
  existing as a part of an ancient network built by an alien civilization many billions of years ago.
  It connects the Sol System to this intragalactic network and to some 1,372 other systems in the galaxy —
  many of them with habitable planets —
  thus bringing humanity the newfound abilities of interstellar travel and colonization.
  The Ring is among the most highly contested structures in the Sol System given its immense strategic and economic potential.
-\end_layout
-
-\begin_layout Subsubsection
-Medina Station
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Medina
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The LDSS Nauvoo,
- later known as OPAS Behemoth and then Medina Station,
- is a generation ship constructed at Tycho Station.
- Cylindrical in shape,
- it measured just over two kilometers long and half a kilometer wide.
- Four Donnager-class battleships would fit in her belly and not touch the walls.
-\end_layout
-
-\begin_layout Standard
-Following the conclusion of the Free Navy Conflict,
- Medina Station is taken over by the newly established Transport Union to control ship traffic through the Ring space.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4669,6 +4865,10 @@ km and 3.5
 km respectively.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Description
 10370
 \begin_inset space ~
@@ -4691,6 +4891,11 @@ Hylonome
  It is a Neptune-crosser,
  and an outer-grazer of the orbit of Uranus,
  which it hence does not cross.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4737,6 +4942,35 @@ AU from the Sun.
  such as methane,
  ammonia,
  and water.
+\end_layout
+
+\begin_layout Description
+50000
+\begin_inset space ~
+\end_inset
+
+Quaoar
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Quaoar
+\end_layout
+
+\end_inset
+
+ Quaoar measures approximately 1,110
+\begin_inset space ~
+\end_inset
+
+km in diameter,
+ about the size of Saturn's moon Dione or half the size of Pluto.
+ Signs of water ice on the surface of Quaoar have been found,
+ which suggests that cryovolcanism may be occurring on Quaoar.
+ A small amount of methane is present on its surface,
+ which can only be retained by the largest Kuiper belt objects.
 \end_layout
 
 \begin_layout Description
@@ -4789,6 +5023,42 @@ Haumea
 \end_layout
 
 \begin_layout Description
+486958
+\begin_inset space ~
+\end_inset
+
+Arrokoth
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Arrokoth
+\end_layout
+
+\end_inset
+
+ Arrokoth is a contact binary 36
+\begin_inset space ~
+\end_inset
+
+km long,
+ composed of two planetesimals 21 and 15
+\begin_inset space ~
+\end_inset
+
+km across,
+ that are joined along their major axes.
+ With an orbital period of about 298 years and a low orbital inclination and eccentricity,
+ Arrokoth is classified as a cold classical Kuiper belt object.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Description
 136472
 \begin_inset space ~
 \end_inset
@@ -4814,35 +5084,6 @@ Makemake
  means its surface is covered with methane,
  ethane,
  and possibly nitrogen ices.
-\end_layout
-
-\begin_layout Description
-50000
-\begin_inset space ~
-\end_inset
-
-Quaoar
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
-
-\begin_layout Plain Layout
-Quaoar
-\end_layout
-
-\end_inset
-
- Quaoar measures approximately 1,110
-\begin_inset space ~
-\end_inset
-
-km in diameter,
- about the size of Saturn's moon Dione or half the size of Pluto.
- Signs of water ice on the surface of Quaoar have been found,
- which suggests that cryovolcanism may be occurring on Quaoar.
- A small amount of methane is present on its surface,
- which can only be retained by the largest Kuiper belt objects.
 \end_layout
 
 \begin_layout Description
@@ -4876,36 +5117,9 @@ km,
  
 \end_layout
 
-\begin_layout Description
-486958
-\begin_inset space ~
 \end_inset
 
-Arrokoth
-\begin_inset Index idx
-range none
-pageformat default
-status collapsed
 
-\begin_layout Plain Layout
-Arrokoth
-\end_layout
-
-\end_inset
-
- Arrokoth is a contact binary 36
-\begin_inset space ~
-\end_inset
-
-km long,
- composed of two planetesimals 21 and 15
-\begin_inset space ~
-\end_inset
-
-km across,
- that are joined along their major axes.
- With an orbital period of about 298 years and a low orbital inclination and eccentricity,
- Arrokoth is classified as a cold classical Kuiper belt object.
 \end_layout
 
 \begin_layout Standard

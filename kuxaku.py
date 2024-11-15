@@ -291,6 +291,7 @@ plotasteroid("Melpomene", 18)
 plotasteroid2("Fortuna", 19)
 plotasteroid("Massalia", 20)
 plotasteroid("Lutetia", 21)
+plotasteroid("Kalliope", 22)
 plotasteroid("Themis", 24)
 plotasteroid("Euphrosyne", 31)
 plotasteroid("Eugenia", 45)
@@ -299,9 +300,13 @@ plotasteroid("Cybele", 65)
 plotasteroid("Sylvia", 87)
 plotasteroid("Antiope", 90)
 plotasteroid("Camilla", 107)
+plotasteroid("Elektra", 130)
 plotasteroid("Kleopatra", 216)
+plotasteroid("Ida", 243)
+plotasteroid("Mathilde", 253)
 plotasteroid("Bamberga", 324)
 plotasteroid("Ursula", 375)
+plotasteroid("Hungaria", 434)
 plotasteroid("Davida", 511)
 plotasteroid("Herculina", 532)
 plotasteroid("Achilles", 588)
@@ -309,6 +314,7 @@ plotasteroid("Patroclus", 617)
 plotasteroid("Hektor", 624)
 plotasteroid("Interamnia", 704)
 plotasteroid("Hidalgo", 944)
+plotasteroid("Gaspra", 951)
 plotasteroid("Ganymed", 1036)
 plotasteroid("Apollo", 1862)
 plotasteroid("Mentor", 3451)
@@ -333,7 +339,6 @@ plotasteroid("Anderson", 127, stationcolor, stationsize)			# destroyed by earth,
 plotasteroid("Parthenope", 11)
 plotasteroid("Victoria", 12)
 plotasteroid("Egeria", 13)
-plotasteroid("Kalliope", 22)
 plotasteroid2("Amphitrite", 29)
 plotasteroid2("Urania", 30)
 plotasteroid2("Daphne", 41)
@@ -343,21 +348,16 @@ plotasteroid2("Ausonia", 63)
 plotasteroid("Thisbe", 88)
 plotasteroid2("Julia", 89)
 plotasteroid2("Nemesis", 128)
-plotasteroid("Elektra", 130)
 plotasteroid2("Adeona", 145)
 plotasteroid2("Ino", 173)
 plotasteroid2("Lamberta", 187)
 plotasteroid("Nausikaa", 192)
 plotasteroid2("Athamantis", 230)
-plotasteroid("Mathilde", 253)
-plotasteroid("Ida", 243)
 plotasteroid2("Eleonora", 354)
 plotasteroid("Eros", 433, colonycolor, asteroidsize)	# destroyed by protomolecule
-plotasteroid("Hungaria", 434)
 plotasteroid("Patientia", 451)
 plotasteroid("Priamus", 884)
 plotasteroid("Agamemnon", 911)
-plotasteroid("Gaspra", 951)
 plotasteroid("Amor", 1221)
 plotasteroid("Cruithne", 3753)
 plotasteroid("Oshima", 5592)
@@ -371,7 +371,9 @@ savemap(axis, innersize, 'Inner System', 'systeminner_all.png', 'month')
 #
 #	outer planets
 #
-outersize = 48		# ±au
+# outersize = 48		# ±au
+# outersize = 32		# ±au
+outersize = 42		# ±au
 outerscale = 3		# plot scale
 minx = miny = maxx = maxy = 0
 
@@ -457,11 +459,11 @@ plotcentaur("Hylonome", 10370, asteroidcolor, asteroidsize, orbitdots)
 plotcentaur2("Arrokoth", 486958, asteroidcolor, asteroidsize, orbitdots)
 #plotcentaur2("Eris", 136199, asteroidcolor, asteroidsize, orbitdots)		# too far away
 plotcentaur2("Haumea", 136108, asteroidcolor, asteroidsize, orbitdots)
-plotcentaur2("Makemake", 136472, asteroidcolor, asteroidsize, orbitdots)
+#plotcentaur2("Makemake", 136472, asteroidcolor, asteroidsize, orbitdots)
 #plotcentaur2("Gonggong", 225088, asteroidcolor, asteroidsize, orbitdots)	# too far away
 plotcentaur2("Quaoar", 50000, asteroidcolor, asteroidsize, orbitdots)
 #plotcentaur2("Sedna", 90377, asteroidcolor, asteroidsize, orbitdots)		# too far away
-plotcentaur2("Orcus", 90482, asteroidcolor, asteroidsize, orbitdots)
+#plotcentaur2("Orcus", 90482, asteroidcolor, asteroidsize, orbitdots)
 
 def plutororbit(kernel, center, planet, years, color, size = orbitdotsize):
 	for index in range(365, years * 365 + 1, 365):
@@ -513,11 +515,10 @@ printjovian("Thebe", 514)
 printjovian("Adrastea", 515)
 printjovian("Metis", 516)
 
-jovianplaces = ('Ganym.', 'Callisto', 'Leda', 'Himalia', 'Elara', 'Lysithea', 'Ananke', 'Pasiphae', 'Carme', 'Sinope')
+jovianplaces = ('Ganym.', 'Themisto', 'Leda', 'Himalia', 'Elara', 'Lysithea', 'Ananke', 'Pasiphae', 'Carme', 'Sinope')
 jovianpositions = []	# must be filled in above order
 
 jovianpositions.append(jovian[5,503].compute(julian)[:3])	# Ganymede
-jovianpositions.append(jovian[5,504].compute(julian)[:3])	# Callisto
 
 savemap(axis, joviansize, 'Jovian Inner System', 'jovianinner.png', '6 hours', jovianunit)
 
@@ -557,6 +558,7 @@ printjovianouter("Kalyke", 523, orbitdots, True)
 printjovianouter("Iocaste", 524, orbitdots, True)
 printjovianouter("Praxidike", 527, orbitdots, True)
 
+jovianpositions.append(jovian2[5,518].compute(julian)[:3])	# Themisto
 jovianpositions.append(jovian2[5,513].compute(julian)[:3])	# Leda
 jovianpositions.append(jovian2[5,506].compute(julian)[:3])	# Himalia
 jovianpositions.append(jovian2[5,507].compute(julian)[:3])	# Elara
