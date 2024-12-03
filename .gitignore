@@ -8,4 +8,5 @@
 \#*#
 *.pdf
 !example.pdf
+!example-book.pdf
 date.tex

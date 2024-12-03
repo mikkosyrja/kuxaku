@@ -26,7 +26,7 @@ The most important thing here is that heavenly bodies move predictably during th
 
 ![inner system](images/systeminner.png)
 
-Because, in addition to exact dates, The Expanse universe lacks lots of other technical details, some improvisation is needed.
+Because the Expanse universe lacks lots of technical and temporal details, some improvisation is needed.
 
 For example, location and orbit of Tycho Brahe (asteroid 1677) is used for the Tycho Station. Yes, Tycho Station has drives and can be moved, but that doesn't happen too often. Most of the time it just circles around the sun like any other asteroid.
 

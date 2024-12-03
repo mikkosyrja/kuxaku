@@ -147,7 +147,7 @@ The example document is meant to be printed as a booklet to A4 paper. Following 
 - Update images with kuxaku.py script.
 - Create A5 PDF document from the original source kuxaku.lyx (tested with XeTeX export).
 - Create printable document with pdfbook2:
-	- pdfbook2 --no-crop --paper=a4paper kuxaku.pdf
+	- pdfbook2 --no-crop --paper=a4paper example.pdf
 - Print the resulting kuxaku-book.pdf with following option:
 	- Fit to full page.
 

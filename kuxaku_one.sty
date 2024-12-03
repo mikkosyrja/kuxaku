@@ -1,30 +1,40 @@
 \usepackage{colortbl,titlesec,titling,background,fancyhdr}
-\usepackage{enumitem,caption,tocloft}
+\usepackage{enumitem,caption,tocloft,changepage}
 
-\fancypagestyle{plain}{}
 \pagestyle{fancy}
-%\fancyhead{}
-\fancyfoot{}
-\addtolength{\headwidth}{1.3pc}
+\renewcommand{\sectionmark}[1]{\markboth{\thesection\ #1}{}}
+\setlength{\headheight}{2.8cm}
+\setlength{\headsep}{0.25cm}
+\setlength{\headwidth}{13.6cm}
+\fancyhf{}
+\fboxsep1pt                     % margin around text
+\setlength{\fboxrule}{1pt}      % border width
+\fancyheadoffset[L]{0.9cm}
+\fancyhead[L]{\fcolorbox{blue}{white}{\strut \ \leftmark\ }}
+\fancyfootoffset[R]{0.6cm}
 \fancyfoot[R]{\thepage}
 
-\renewcommand{\headrulewidth}{0pt}      % remove horizontal line at the top of pdf
+\renewcommand{\headrulewidth}{0pt}    % remove horizontal line at the top of pdf
 
-\setlength\cftsubsecnumwidth{2.6em}     % more room for big subsection numbers in toc
+\setlength\cftsubsecnumwidth{2.6em}   % more room for big subsection numbers in toc
 
 \setlength{\extrarowheight}{2pt}
 
-\definecolor{expanseblue}{RGB}{192, 224, 255}
-\definecolor{expansered}{RGB}{255, 128, 128}
+\definecolor{expanseblue}{RGB}{192,224,255}
+\definecolor{expansered}{RGB}{255,128,128}
 \definecolor{lightgray}{RGB}{246,246,246}
 
 \newcommand{\rt}{\rowcolor{expansered}}         % table title bacground
 \newcommand{\rc}{\rowcolor{lightgray}}          % table row bacground
-\newcommand{\mi}{\setlength{\parindent}{1em}}   % minipage paragraph indent
+
+\newcommand{\mb}{\vspace{-5pt}\setlength{\parindent}{1em}\begin{adjustwidth}{2mm}{2mm}} % minipage indent start
+\newcommand{\me}{\end{adjustwidth}\vspace{+5pt}}                                        % minipage indent end
 
 \AtBeginDocument{
   \hypersetup{urlcolor=red, citecolor=blue, linkcolor=blue}
 }
+
+\renewcommand{\contentsname}{\colorbox{expanseblue}Contents}
 
 \captionsetup[table]{labelfont=bf,textfont=bf,aboveskip=-2pt,belowskip=0pt}
 
@@ -32,42 +42,42 @@
   {\normalfont\Large\bfseries}{}{0pt}{\colorsection}
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsection}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ \thesection\ #1}}}
 
 \titleformat{name=\section,numberless}[block]
   {\normalfont\Large\bfseries}{}{0pt}{\colorsectionnumberless}
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsectionnumberless}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ #1}}}
 
 \titleformat{name=\subsection}[block]
   {\normalfont\large\bfseries}{}{0pt}{\colorsubsection}
 \titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsubsection}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ \thesubsection\ #1}}}
 
 \titleformat{name=\subsection,numberless}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsectionnumberless}
 \newcommand{\colorsubsectionnumberless}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ #1}}}
 
 \titleformat{name=\subsubsection}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsection}
 \titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorsubsubsection}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ \thesubsubsection\ #1}}}
 
 \titleformat{name=\subsubsection,numberless}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorsubsubsectionnumberless}
 \newcommand{\colorsubsubsectionnumberless}[1]{%
-  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{#1}}}
+  \colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ #1}}}
 
 % paragraph style for box titles
 \titleformat{name=\paragraph}[block]
   {\normalfont\normalsize\bfseries}{}{0pt}{\colorparagraph}
 \titlespacing*{\paragraph}{0pt}{\baselineskip}{\baselineskip}
 \newcommand{\colorparagraph}[1]{%
-  \colorbox{expansered}{\parbox{\dimexpr\columnwidth-2\fboxsep}{#1}}}
+  \colorbox{expansered}{\parbox{\dimexpr\columnwidth-2\fboxsep}{\strut\ #1}}}
 
 % subparagraph style for table titles
 \titleformat{name=\subparagraph}[block]
@@ -93,23 +103,21 @@
       ($ (current page.north west) $)--
       ($ (current page.south west) $)--
       ($ (current page.south east) $)--
-      ($ (current page.south east) + (-0.8cm,0.8cm) $)--
-      ($ (current page.south west) + (1.3cm,0.8cm) $)--
-      ($ (current page.south west) + (0.8cm,1.3cm) $)--
-      ($ (current page.north west) + (0.8cm,-1.3cm) $)--
-      ($ (current page.north west) + (1.3cm,-0.8cm) $)--
-      ($ (current page.north east) + (-1.3cm,-0.8cm) $)--
-      ($ (current page.north east) + (-0.8cm,-1.3cm) $)--
-      ($ (current page.south east) + (-0.8cm,0.8cm) $)--
+      ($ (current page.south east) + (-0.7cm,0.8cm) $)--
+      ($ (current page.south west) + (1.2cm,0.8cm) $)--
+      ($ (current page.south west) + (0.7cm,1.3cm) $)--
+      ($ (current page.north west) + (0.7cm,-0.9cm) $)--
+      ($ (current page.north east) + (-1.2cm,-0.9cm) $)--
+      ($ (current page.north east) + (-0.7cm,-1.4cm) $)--
+      ($ (current page.south east) + (-0.7cm,0.8cm) $)--
       cycle;
     \draw[color=blue,double,line width=1pt]
-      ($ (current page.south east) + (-0.8cm,0.8cm) $)--
-      ($ (current page.south west) + (1.3cm,0.8cm) $)--
-      ($ (current page.south west) + (0.8cm,1.3cm) $)--
-      ($ (current page.north west) + (0.8cm,-1.3cm) $)--
-      ($ (current page.north west) + (1.3cm,-0.8cm) $)--
-      ($ (current page.north east) + (-1.3cm,-0.8cm) $)--
-      ($ (current page.north east) + (-0.8cm,-1.3cm) $)--
+      ($ (current page.south east) + (-0.7cm,0.8cm) $)--
+      ($ (current page.south west) + (1.2cm,0.8cm) $)--
+      ($ (current page.south west) + (0.7cm,1.3cm) $)--
+      ($ (current page.north west) + (0.7cm,-0.9cm) $)--
+      ($ (current page.north east) + (-1.2cm,-0.9cm) $)--
+      ($ (current page.north east) + (-0.7cm,-1.4cm) $)--
       cycle;
     \end{tikzpicture}
 }

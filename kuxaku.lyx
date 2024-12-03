@@ -38,7 +38,7 @@
 \default_output_format default
 \output_sync 0
 \bibtex_command default
-\index_command xindex
+\index_command default
 \float_placement class
 \float_alignment class
 \paperfontsize default
@@ -186,7 +186,7 @@ status open
 
 
 \backslash
-thispagestyle{empty} 
+thispagestyle{empty}
 \end_layout
 
 \end_inset
@@ -203,6 +203,68 @@ thispagestyle{empty}
 
 \begin_layout Section*
 Kuxaku
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+markboth{Kuxaku}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Noun
+\end_layout
+
+\begin_layout Quote
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+1.
+ space,
+ void,
+ vacuum
+\end_layout
+
+\begin_layout Quote
+Etymology
+\end_layout
+
+\begin_layout Quote
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Japanese kuuhaku
 \end_layout
 
 \begin_layout Standard
@@ -946,17 +1008,10 @@ The asteroid belt is a torus-shaped region in the Sol System,
 \end_layout
 
 \begin_layout Standard
-The identified objects are of many sizes,
- but much smaller than planets,
- and,
+The identified objects are of many sizes and,
  on average,
  are about one million kilometers apart.
- About half the mass of the belt is contained in the four largest asteroids:
- Ceres,
- Vesta,
- Pallas,
- and Hygiea.
- The total mass of the asteroid belt is approximately 4% that of the Moon.
+ About half the mass of the belt is contained in the four largest asteroids and the total mass is approximately 4% that of the Moon.
 \end_layout
 
 \begin_layout Standard
@@ -1051,8 +1106,8 @@ Hades’
 
 \end_inset
 
- A deceptively low-tech station run by a Belter group known as Persephone’s Scythe,
- the heart of the Garden is the Cerberus,
+ A deceptively low-tech station run by a Belter group known as Persephone’s Scythe.
+ The heart of the Garden is the Cerberus,
  an old bulk hauler that has been converted to serve as laboratory and living quarters for the small but highly dedicated group of biohackers,
  guerilla farmers,
  and occasional eco-terrorists.
@@ -1356,7 +1411,7 @@ Metis
  One of the larger main-belt asteroids.
  It is composed of silicates and metallic nickel-iron,
  and may be the core remnant of a large asteroid that was destroyed by an ancient collision.
- Metis is estimated to contain just under half a percent of the total mass of the asteroid Belt.
+ Metis contains just under half a percent of the total mass of the asteroid Belt.
 \end_layout
 
 \begin_layout Standard
@@ -3073,7 +3128,7 @@ name "subsec:Jovian-Outer-Moons"
 \end_layout
 
 \begin_layout Standard
-These outer moons are all too small to support a colony,
+These Jovian outer moons are all too small to support a colony,
  but they are,
  or have been,
  used as scientific and mining outposts.
@@ -5130,7 +5185,7 @@ km,
 \end_layout
 
 \begin_layout Section
-Communication and Travel Times
+Distances
 \end_layout
 
 \begin_layout Standard
@@ -5566,6 +5621,24 @@ vspace{-5pt}
 
 \begin_layout Standard
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{gobble}
+\backslash
+setcounter{page}{32}
+\end_layout
+
 \end_inset
 
 

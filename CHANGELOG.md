@@ -172,3 +172,12 @@ Changed Callisto to Themisto in the travel tables, Callisto was too near to Gany
 
 Removed some outer system objects and added some main belt asteroids.
 
+## 2024-12-04
+
+Added section names to page headers.
+
+Increased caption background box areas.
+
+Increased minipage (info box, character data, ship dat) margins
+
+Updated example PDF.
