@@ -30,13 +30,11 @@
 \newcommand{\mb}{\vspace{-5pt}\setlength{\parindent}{1em}\begin{adjustwidth}{2mm}{2mm}} % minipage indent start
 \newcommand{\me}{\end{adjustwidth}\vspace{+5pt}}                                        % minipage indent end
 
-\AtBeginDocument{
-  \hypersetup{urlcolor=red, citecolor=blue, linkcolor=blue}
-}
-
-\renewcommand{\contentsname}{\colorbox{expanseblue}Contents}
+\AtBeginDocument{\hypersetup{urlcolor=red, citecolor=blue, linkcolor=blue}}
 
 \captionsetup[table]{labelfont=bf,textfont=bf,aboveskip=-2pt,belowskip=0pt}
+
+\renewcommand{\contentsname}{\colorbox{expanseblue}{\parbox{\dimexpr\textwidth-2\fboxsep}{\strut\ Contents}}}
 
 \titleformat{name=\section}[block]
   {\normalfont\Large\bfseries}{}{0pt}{\colorsection}

@@ -178,6 +178,10 @@ Added section names to page headers.
 
 Increased caption background box areas.
 
-Increased minipage (info box, character data, ship dat) margins
+Increased minipage (info box, character data, ship dat) margins.
 
 Updated example PDF.
+
+## 2024-12-11
+
+Fixed Contents title background.
